@@ -1,0 +1,445 @@
+// !$*UTF8*$!
+{
+	0339CFFC0E240ECC009C5D0D /* ALifeController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {600, 504}}";
+			sepNavSelRange = "{271, 0}";
+			sepNavVisRange = "{0, 838}";
+		};
+	};
+	0339D00D0E241596009C5D0D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0339CFFC0E240ECC009C5D0D /* ALifeController.h */;
+		name = "ALifeController.h: 16";
+		rLen = 0;
+		rLoc = 271;
+		rType = 0;
+		vrLen = 838;
+		vrLoc = 0;
+	};
+	0339D00E0E241596009C5D0D /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 0365F8140E1C29890074AA88 /* Statistics.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			statistics,
+			0,
+		);
+		name = "/Users/d/Desktop/ALife Plugin/Statistics.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	0339D0100E241596009C5D0D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0365F81D0E1C2AF30074AA88 /* LifeModel.h */;
+		name = "LifeModel.h: 15";
+		rLen = 0;
+		rLoc = 241;
+		rType = 0;
+		vrLen = 406;
+		vrLoc = 0;
+	};
+	0339D0110E241596009C5D0D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0365F81E0E1C2AF30074AA88 /* LifeModel.m */;
+		name = "LifeModel.m: 14";
+		rLen = 0;
+		rLoc = 232;
+		rType = 0;
+		vrLen = 420;
+		vrLoc = 0;
+	};
+	0339D0120E241596009C5D0D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0365F81A0E1C2AB50074AA88 /* StatisticsCollector.h */;
+		name = "StatisticsCollector.h: 25";
+		rLen = 0;
+		rLoc = 494;
+		rType = 0;
+		vrLen = 500;
+		vrLoc = 0;
+	};
+	0339D0150E241596009C5D0D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0365F8170E1C29D10074AA88 /* LifeController.h */;
+		name = "LifeController.h: 19";
+		rLen = 0;
+		rLoc = 388;
+		rType = 0;
+		vrLen = 428;
+		vrLoc = 0;
+	};
+	0339D01E0E241596009C5D0D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0339CFFC0E240ECC009C5D0D /* ALifeController.h */;
+		name = "ALifeController.h: 16";
+		rLen = 0;
+		rLoc = 271;
+		rType = 0;
+		vrLen = 838;
+		vrLoc = 0;
+	};
+	0339D01F0E241596009C5D0D /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 0339CFFE0E24100C009C5D0D /* ALifePlugin.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			configuration,
+			0,
+			minValue,
+		);
+		name = "/Users/d/Desktop/ALife Plugin/ALifePlugin.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	0339D06C0E241FDF009C5D0D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0339D06D0E241FDF009C5D0D /* NSStringDrawing.h */;
+		name = "NSStringDrawing.h: 16";
+		rLen = 70;
+		rLoc = 395;
+		rType = 0;
+		vrLen = 1418;
+		vrLoc = 0;
+	};
+	0339D06D0E241FDF009C5D0D /* NSStringDrawing.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = NSStringDrawing.h;
+		path = /Developer/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/AppKit.framework/Versions/C/Headers/NSStringDrawing.h;
+		sourceTree = "<absolute>";
+	};
+	0339D1620E25B919009C5D0D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0365F8230E1C2B000074AA88 /* LifeView.m */;
+		name = "LifeView.m: 34";
+		rLen = 94;
+		rLoc = 506;
+		rType = 0;
+		vrLen = 768;
+		vrLoc = 141;
+	};
+	0365F8100E1C29390074AA88 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+	};
+	0365F8110E1C29390074AA88 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	0365F8170E1C29D10074AA88 /* LifeController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {562, 485}}";
+			sepNavSelRange = "{388, 0}";
+			sepNavVisRange = "{0, 428}";
+		};
+	};
+	0365F8180E1C29D10074AA88 /* LifeController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {684, 1316}}";
+			sepNavSelRange = "{1548, 0}";
+			sepNavVisRange = "{961, 857}";
+		};
+	};
+	0365F81A0E1C2AB50074AA88 /* StatisticsCollector.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {600, 485}}";
+			sepNavSelRange = "{494, 0}";
+			sepNavVisRange = "{0, 500}";
+		};
+	};
+	0365F81B0E1C2AB50074AA88 /* StatisticsCollector.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {666, 882}}";
+			sepNavSelRange = "{614, 0}";
+			sepNavVisRange = "{153, 753}";
+		};
+	};
+	0365F81D0E1C2AF30074AA88 /* LifeModel.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {600, 485}}";
+			sepNavSelRange = "{241, 0}";
+			sepNavVisRange = "{0, 406}";
+		};
+	};
+	0365F81E0E1C2AF30074AA88 /* LifeModel.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {600, 485}}";
+			sepNavSelRange = "{232, 0}";
+			sepNavVisRange = "{0, 420}";
+		};
+	};
+	0365F8220E1C2B000074AA88 /* LifeView.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {519, 426}}";
+			sepNavSelRange = "{244, 47}";
+			sepNavVisRange = "{0, 297}";
+		};
+	};
+	0365F8230E1C2B000074AA88 /* LifeView.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1380, 714}}";
+			sepNavSelRange = "{506, 94}";
+			sepNavVisRange = "{0, 539}";
+		};
+	};
+	0365F8350E1D70770074AA88 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D5B49B7048680CD000E48DA /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/d/Desktop/ALife Plugin/Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	0365F83A0E1D70770074AA88 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0365F8220E1C2B000074AA88 /* LifeView.h */;
+		name = "LifeView.h: 17";
+		rLen = 47;
+		rLoc = 244;
+		rType = 0;
+		vrLen = 297;
+		vrLoc = 0;
+	};
+	0365F8400E1D70770074AA88 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 0365F8140E1C29890074AA88 /* Statistics.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/d/Desktop/ALife Plugin/Statistics.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	0365F8410E1D70770074AA88 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D5B49B7048680CD000E48DA /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/d/Desktop/ALife Plugin/Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	0365F8420E1D70770074AA88 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0365F8170E1C29D10074AA88 /* LifeController.h */;
+		name = "LifeController.h: 13";
+		rLen = 0;
+		rLoc = 421;
+		rType = 0;
+		vrLen = 228;
+		vrLoc = 0;
+	};
+	0365F8430E1D70770074AA88 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0365F8180E1C29D10074AA88 /* LifeController.m */;
+		name = "LifeController.m: 19";
+		rLen = 0;
+		rLoc = 406;
+		rType = 0;
+		vrLen = 622;
+		vrLoc = 44;
+	};
+	0365F8460E1D70770074AA88 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0365F81A0E1C2AB50074AA88 /* StatisticsCollector.h */;
+		name = "StatisticsCollector.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 232;
+		vrLoc = 0;
+	};
+	0365F84B0E1D70770074AA88 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0365F81D0E1C2AF30074AA88 /* LifeModel.h */;
+		name = "LifeModel.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 212;
+		vrLoc = 0;
+	};
+	0365F84C0E1D70770074AA88 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0365F81B0E1C2AB50074AA88 /* StatisticsCollector.m */;
+		name = "StatisticsCollector.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 229;
+		vrLoc = 0;
+	};
+	0365F84D0E1D70770074AA88 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0365F81E0E1C2AF30074AA88 /* LifeModel.m */;
+		name = "LifeModel.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 199;
+		vrLoc = 0;
+	};
+	0365F84E0E1D70770074AA88 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0365F8220E1C2B000074AA88 /* LifeView.h */;
+		name = "LifeView.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 210;
+		vrLoc = 0;
+	};
+	03C5DAB90E315B0600A2904C /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 0339CFFE0E24100C009C5D0D /* ALifePlugin.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/d/Desktop/SoC/ALife Plugin/ALifePlugin.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	03C5DABA0E315B0600A2904C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0365F81B0E1C2AB50074AA88 /* StatisticsCollector.m */;
+		name = "StatisticsCollector.m: 31";
+		rLen = 0;
+		rLoc = 614;
+		rType = 0;
+		vrLen = 753;
+		vrLoc = 153;
+	};
+	03C5DABB0E315B0600A2904C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0365F8230E1C2B000074AA88 /* LifeView.m */;
+		name = "LifeView.m: 34";
+		rLen = 94;
+		rLoc = 506;
+		rType = 0;
+		vrLen = 539;
+		vrLoc = 0;
+	};
+	03C5DAC20E315B0600A2904C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0365F8180E1C29D10074AA88 /* LifeController.m */;
+		name = "LifeController.m: 63";
+		rLen = 0;
+		rLoc = 1548;
+		rType = 0;
+		vrLen = 877;
+		vrLoc = 924;
+	};
+	03C5DAD00E315B9D00A2904C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0365F8180E1C29D10074AA88 /* LifeController.m */;
+		name = "LifeController.m: 63";
+		rLen = 0;
+		rLoc = 1548;
+		rType = 0;
+		vrLen = 867;
+		vrLoc = 934;
+	};
+	089C1669FE841209C02AAC07 /* Project object */ = {
+		activeBuildConfigurationName = Release;
+		activeTarget = 8D5B49AC048680CD000E48DA /* ALife Plugin */;
+		addToTargets = (
+			8D5B49AC048680CD000E48DA /* ALife Plugin */,
+		);
+		codeSenseManager = 0365F8110E1C29390074AA88 /* Code sense */;
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					422,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					382,
+					60,
+					20,
+					48.16259765625,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 238120044;
+			PBXWorkspaceStateSaveDate = 238120044;
+		};
+		perUserProjectItems = {
+			0339D00D0E241596009C5D0D = 0339D00D0E241596009C5D0D /* PBXTextBookmark */;
+			0339D00E0E241596009C5D0D = 0339D00E0E241596009C5D0D /* PlistBookmark */;
+			0339D0100E241596009C5D0D = 0339D0100E241596009C5D0D /* PBXTextBookmark */;
+			0339D0110E241596009C5D0D = 0339D0110E241596009C5D0D /* PBXTextBookmark */;
+			0339D0120E241596009C5D0D = 0339D0120E241596009C5D0D /* PBXTextBookmark */;
+			0339D0150E241596009C5D0D = 0339D0150E241596009C5D0D /* PBXTextBookmark */;
+			0339D01E0E241596009C5D0D = 0339D01E0E241596009C5D0D /* PBXTextBookmark */;
+			0339D01F0E241596009C5D0D = 0339D01F0E241596009C5D0D /* PlistBookmark */;
+			0339D06C0E241FDF009C5D0D = 0339D06C0E241FDF009C5D0D /* PBXTextBookmark */;
+			0339D1620E25B919009C5D0D = 0339D1620E25B919009C5D0D /* PBXTextBookmark */;
+			0365F8350E1D70770074AA88 = 0365F8350E1D70770074AA88 /* PlistBookmark */;
+			0365F83A0E1D70770074AA88 = 0365F83A0E1D70770074AA88 /* PBXTextBookmark */;
+			0365F8400E1D70770074AA88 = 0365F8400E1D70770074AA88 /* PlistBookmark */;
+			0365F8410E1D70770074AA88 = 0365F8410E1D70770074AA88 /* PlistBookmark */;
+			0365F8420E1D70770074AA88 = 0365F8420E1D70770074AA88 /* PBXTextBookmark */;
+			0365F8430E1D70770074AA88 = 0365F8430E1D70770074AA88 /* PBXTextBookmark */;
+			0365F8460E1D70770074AA88 = 0365F8460E1D70770074AA88 /* PBXTextBookmark */;
+			0365F84B0E1D70770074AA88 = 0365F84B0E1D70770074AA88 /* PBXTextBookmark */;
+			0365F84C0E1D70770074AA88 = 0365F84C0E1D70770074AA88 /* PBXTextBookmark */;
+			0365F84D0E1D70770074AA88 = 0365F84D0E1D70770074AA88 /* PBXTextBookmark */;
+			0365F84E0E1D70770074AA88 = 0365F84E0E1D70770074AA88 /* PBXTextBookmark */;
+			03C5DAB90E315B0600A2904C = 03C5DAB90E315B0600A2904C /* PlistBookmark */;
+			03C5DABA0E315B0600A2904C = 03C5DABA0E315B0600A2904C /* PBXTextBookmark */;
+			03C5DABB0E315B0600A2904C = 03C5DABB0E315B0600A2904C /* PBXTextBookmark */;
+			03C5DAC20E315B0600A2904C = 03C5DAC20E315B0600A2904C /* PBXTextBookmark */;
+			03C5DAD00E315B9D00A2904C = 03C5DAD00E315B9D00A2904C /* PBXTextBookmark */;
+		};
+		sourceControlManager = 0365F8100E1C29390074AA88 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	8D5B49AC048680CD000E48DA /* ALife Plugin */ = {
+		activeExec = 0;
+	};
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>configuration</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>favoriteNumber</string>
+			<key>title</key>
+			<string>Favorite Number</string>
+			<key>type</key>
+			<string>Integer</string>
+			<key>minValue</key>
+			<integer>1</integer>
+			<key>maxValue</key>
+			<integer>10</integer>
+			<key>default</key>
+			<integer>5</integer>
+		</dict>
+	</array>
+	<key>statistics</key>
+	<dict>
+		<key>generation</key>
+		<dict>
+			<key>keyPath</key>
+			<string>generation</string>
+			<key>title</key>
+			<string>Generation</string>
+			<key>singular</key>
+			<true/>
+		</dict>
+		<key>currentNumber</key>
+		<dict>
+			<key>keyPath</key>
+			<string>currentNumber</string>
+			<key>title</key>
+			<string>Current % Favorite</string>
+			<key>singular</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
