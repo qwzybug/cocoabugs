@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>configuration</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>populationDensity</string>
+			<key>title</key>
+			<string>Initial Population Density</string>
+			<key>type</key>
+			<string>Float</string>
+			<key>minValue</key>
+			<real>0.01</real>
+			<key>maxValue</key>
+			<real>0.99</real>
+			<key>default</key>
+			<real>0.2</real>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>width</string>
+			<key>title</key>
+			<string>World Width</string>
+			<key>type</key>
+			<string>Integer</string>
+			<key>minValue</key>
+			<integer>40</integer>
+			<key>maxValue</key>
+			<integer>150</integer>
+			<key>default</key>
+			<integer>100</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>height</string>
+			<key>title</key>
+			<string>World Height</string>
+			<key>type</key>
+			<string>Integer</string>
+			<key>minValue</key>
+			<integer>40</integer>
+			<key>maxValue</key>
+			<integer>150</integer>
+			<key>default</key>
+			<integer>100</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>mutationRate</string>
+			<key>title</key>
+			<string>Bug Mutation Rate</string>
+			<key>type</key>
+			<string>Float</string>
+			<key>minValue</key>
+			<real>0</real>
+			<key>maxValue</key>
+			<real>1</real>
+			<key>default</key>
+			<real>0.5</real>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>reproductionFood</string>
+			<key>title</key>
+			<string>Food Required to Reproduce</string>
+			<key>type</key>
+			<string>Integer</string>
+			<key>minValue</key>
+			<integer>2</integer>
+			<key>maxValue</key>
+			<integer>40</integer>
+			<key>default</key>
+			<integer>20</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>movementCost</string>
+			<key>title</key>
+			<string>Movement Cost</string>
+			<key>type</key>
+			<string>Integer</string>
+			<key>minValue</key>
+			<integer>0</integer>
+			<key>maxValue</key>
+			<integer>5</integer>
+			<key>default</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>eatAmount</string>
+			<key>title</key>
+			<string>Energy Gained from Food</string>
+			<key>type</key>
+			<string>Integer</string>
+			<key>minValue</key>
+			<integer>0</integer>
+			<key>maxValue</key>
+			<integer>5</integer>
+			<key>default</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+	<key>statistics</key>
+	<dict>
+		<key>population</key>
+		<dict>
+			<key>keyPath</key>
+			<string>population</string>
+			<key>title</key>
+			<string>Population</string>
+			<key>singular</key>
+			<true/>
+		</dict>
+		<key>deaths</key>
+		<dict>
+			<key>keyPath</key>
+			<string>deaths</string>
+			<key>title</key>
+			<string>Deaths</string>
+			<key>singular</key>
+			<true/>
+		</dict>
+		<key>births</key>
+		<dict>
+			<key>keyPath</key>
+			<string>births</string>
+			<key>title</key>
+			<string>Births</string>
+			<key>singular</key>
+			<true/>
+		</dict>
+		<key>mortalityAge</key>
+		<dict>
+			<key>keyPath</key>
+			<string>mortalityAge</string>
+			<key>title</key>
+			<string>Average Age at Death</string>
+			<key>singular</key>
+			<true/>
+		</dict>
+		<key>averageAge</key>
+		<dict>
+			<key>keyPath</key>
+			<string>averageAge</string>
+			<key>title</key>
+			<string>Average Age</string>
+			<key>singular</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
