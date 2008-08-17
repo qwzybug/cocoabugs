@@ -1,0 +1,15 @@
+Welcome to CocoaBugs!
+
+CocoaBugs is an Artificial Life experimentation framework for Mac OS X, written in Objective-C. It works on a plugin model.
+
+INSTALLATION/USAGE
+
+1. Open CocoaBugs/CocoaBugs.xcodeproj and build.
+2. Choose a plugin from plugins. Open its XCode project and build. Copy the created .plugin out of the build directory for that plugin, and copy to:
+ ~/Library/Application Support/CocoaBugs/PlugIns/
+3. Launch CocoaBugs.
+4. Pick File > New.
+5. Choose a plugin, edit its configuration, run or export the simulation, etc.
+
+For more documentation, see the wiki at
+http://bugs.doormouse.org/wiki
