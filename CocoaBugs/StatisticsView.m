@@ -13,19 +13,8 @@
 
 @synthesize title, stats;
 
-- (id)initWithFrame:(NSRect)frame {
-    self = [super initWithFrame:frame];
-	NSLog(@"Init'ing stats view");
-    if (self) {
-		title = @"Foobar";
-    }
-    return self;
-}
-
 - (void)dealloc;
 {
-	NSLog(@"Deallocing stats view");
-	NSLog(@"stats data: %d", [self.stats retainCount]);
 	self.stats = nil;
 	
 	[super dealloc];

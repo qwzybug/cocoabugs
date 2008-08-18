@@ -19,7 +19,6 @@
 	
 	size = capacity;
 	
-	NSLog(@"Initing statistics data with capacity %d", capacity);
 	data = [[NSMutableArray arrayWithCapacity:size] retain];
 	maxes = [[NSMutableArray arrayWithCapacity:size] retain];
 	
@@ -34,7 +33,6 @@
 
 - (void)dealloc;
 {
-	NSLog(@"Deallocing stats data");
 	[data release]; data = nil;
 	[maxes release]; maxes = nil;
 	

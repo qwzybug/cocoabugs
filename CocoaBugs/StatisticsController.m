@@ -29,11 +29,9 @@
 
 - (void)dealloc;
 {
-	NSLog(@"Deallocing stats controller");
 	for (NSString *key in stats) {
 		[source removeObserver:self forKeyPath:key];
 	}
-	NSLog(@"Stats collector [controller]: %d", [source retainCount]);
 	[stats release];
 	self.source = nil;
 	
