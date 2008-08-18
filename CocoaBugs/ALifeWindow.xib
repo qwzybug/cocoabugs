@@ -40,7 +40,7 @@
 					<nil key="NSToolbarDelegate"/>
 					<bool key="NSToolbarPrefersToBeShown">YES</bool>
 					<bool key="NSToolbarShowsBaselineSeparator">YES</bool>
-					<bool key="NSToolbarAllowsUserCustomization">YES</bool>
+					<bool key="NSToolbarAllowsUserCustomization">NO</bool>
 					<bool key="NSToolbarAutosavesConfiguration">NO</bool>
 					<int key="NSToolbarDisplayMode">1</int>
 					<int key="NSToolbarSizeMode">1</int>
@@ -141,7 +141,7 @@
 								<bool key="NSToolbarIsUserRemovable">YES</bool>
 								<int key="NSToolbarItemVisibilityPriority">0</int>
 							</object>
-							<object class="NSToolbarItem" id="977556909">
+							<object class="NSToolbarItem" id="4439273">
 								<object class="NSMutableString" key="NSToolbarItemIdentifier">
 									<characters key="NS.bytes">D2A6BE3F-C3C2-4436-9DE3-9833E8551CC8</characters>
 								</object>
@@ -203,14 +203,14 @@
 						<reference ref="555220856"/>
 						<reference ref="719331101"/>
 						<reference ref="993495022"/>
-						<reference ref="977556909"/>
+						<reference ref="4439273"/>
 					</object>
 					<object class="NSMutableArray" key="NSToolbarIBDefaultItems">
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<reference ref="555220856"/>
 						<reference ref="719331101"/>
 						<reference ref="993495022"/>
-						<reference ref="977556909"/>
+						<reference ref="4439273"/>
 					</object>
 					<object class="NSMutableArray" key="NSToolbarIBSelectableItems">
 						<bool key="EncodedWithXMLCoder">YES</bool>
@@ -321,7 +321,7 @@
 					<object class="IBActionConnection" key="connection">
 						<string key="label">makeKeyAndOrderFront:</string>
 						<reference key="source" ref="329328974"/>
-						<reference key="destination" ref="977556909"/>
+						<reference key="destination" ref="4439273"/>
 					</object>
 					<int key="connectionID">47</int>
 				</object>
@@ -374,7 +374,7 @@
 							<reference ref="993495022"/>
 							<reference ref="719331101"/>
 							<reference ref="555220856"/>
-							<reference ref="977556909"/>
+							<reference ref="4439273"/>
 						</object>
 						<reference key="parent" ref="923943861"/>
 					</object>
@@ -464,7 +464,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">46</int>
-						<reference key="object" ref="977556909"/>
+						<reference key="object" ref="4439273"/>
 						<reference key="parent" ref="508263219"/>
 					</object>
 				</object>
