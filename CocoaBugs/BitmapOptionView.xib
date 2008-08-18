@@ -98,7 +98,7 @@
 					<object class="NSTextField" id="1029062758">
 						<reference key="NSNextResponder" ref="542450012"/>
 						<int key="NSvFlags">265</int>
-						<string key="NSFrame">{{167, 6}, {120, 17}}</string>
+						<string key="NSFrame">{{167, 16}, {120, 17}}</string>
 						<reference key="NSSuperview" ref="542450012"/>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="469581120">
@@ -121,7 +121,7 @@
 					<object class="NSPopUpButton" id="469796885">
 						<reference key="NSNextResponder" ref="542450012"/>
 						<int key="NSvFlags">282</int>
-						<string key="NSFrame">{{0, 1}, {164, 25}}</string>
+						<string key="NSFrame">{{0, 11}, {164, 25}}</string>
 						<reference key="NSSuperview" ref="542450012"/>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSPopUpButtonCell" key="NSCell" id="1058880786">
@@ -188,7 +188,6 @@
 									</object>
 								</object>
 							</object>
-							<int key="NSSelectedIndex">2</int>
 							<bool key="NSPullDown">YES</bool>
 							<int key="NSPreferredEdge">1</int>
 							<bool key="NSUsesItemFromMenu">YES</bool>
