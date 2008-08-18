@@ -53,28 +53,42 @@ float rotationForPoint(int x, int y) {
 }
 
 - (void)drawRect:(NSRect)rect {
+	if (!world)
+		return;
+	
 	// draw background
 	[[NSColor colorWithDeviceWhite:0.3 alpha:1.0] set];
 	NSRectFill([self bounds]);
+	
 	// rect arrays and counts
 	NSRect food[world.foodAmount];
 	NSRect bugs[world.population];
 	int bugs_count = 0;
 	int food_count = 0;
+	
+	float rectWidth = [self frame].size.width / [world.grid count];
+	float rectHeight = [self frame].size.height / [[world.grid objectAtIndex:0] count];
+	
 	// color arrays
 	NSColor *bugsColor[world.population];
+	
 	// gene to color by
 //	int colorGene = controller.observedGene;
+	
 	// loop it, dj
 	int i = 0, j = 0;
 	Bug *bug;
 //	Bug *selectedBug = controller.selectedBug;
 //	BugMovement gene;
-	for (NSMutableArray *row in world.grid) {
-		j = 0;
-		for(Cell *cell in row) {
+	NSMutableArray *row;
+	Cell *cell;
+	for (i = 0; i < [world.grid count]; i++) {
+//	for (NSMutableArray *row in world.grid) {
+		row = [world.grid objectAtIndex:i];
+		for (j = 0; j < [row count]; j++) {
+			cell = [row objectAtIndex:j];
 			if(cell.food) {
-				food[food_count] = NSMakeRect(5.0*j, 5.0*i, 5.0, 5.0);
+				food[food_count] = NSMakeRect(rectWidth*j, rectHeight*i, rectWidth, rectHeight);
 				food_count++;
 			}
 			if(bug = cell.bug) {
@@ -87,13 +101,11 @@ float rotationForPoint(int x, int y) {
 //				if (bug == selectedBug) {
 //					bugs[bugs_count] = NSMakeRect(5.0*j - 1.0, 5.0*i - 1.0, 7.0, 7.0);
 //				} else {
-					bugs[bugs_count] = NSMakeRect(5.0*j + 1.0, 5.0*i + 1.0, 3.0, 3.0);
+					bugs[bugs_count] = NSMakeRect(rectWidth*j + 1.0, rectHeight*i + 1.0, rectWidth - 2.0, rectHeight - 2.0);
 //				}
 				bugs_count++;
 			}
-			j++;
 		}
-		i++;
 	}
 	[[NSColor blackColor] set];
 	NSRectFillList(food, food_count);

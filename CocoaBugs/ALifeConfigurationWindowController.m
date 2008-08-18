@@ -101,7 +101,7 @@
 {
 	// get configuration options
 	NSDictionary *configuration = [configurationViewController configuration];
-	NSLog([configuration description]);
+//	NSLog([configuration description]);
 	// instantiate a simulation window controller with options
 	ALifeWindowController *simulationWindow = [ALifeWindowController windowControllerForModel:[self selectedClass] withConfiguration:configuration];
 	// close our window

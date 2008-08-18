@@ -64,7 +64,7 @@
 @property(assign, readwrite) int foodBlockNumber;
 @property(readonly) int foodAmount;
 
-- (id)initWithWidth:(int)myWidth andHeight:(int)myHeight;
+- (id)initWithFoodImage:(NSImage *)foodImage;
 - (void)setFoodConfiguration:(bool *)newFood;
 - (void)update;
 - (void)exterminate;

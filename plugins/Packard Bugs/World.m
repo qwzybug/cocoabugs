@@ -20,13 +20,20 @@
 // food configuration synthesized methods
 @synthesize foodBlockWidth, foodBlockHeight, foodBlockNumber, foodAmount;
 
-- (id)initWithWidth:(int)myWidth andHeight:(int)myHeight;
+- (id)initWithFoodImage:(NSImage *)foodImage;
+//- (id)initWithWidth:(int)myWidth andHeight:(int)myHeight;
 {
 	if (!(self = [super init]))
 		return nil;
 	
-	width = myWidth;
-	height = myHeight;
+	int i, j;
+	if (foodImage) {
+		width = [foodImage size].width;
+		height = [foodImage size].height;
+	} else {
+		width = height = 100;
+	}
+	
 	population = 0;
 	ticks = 0;
 	
@@ -34,6 +41,7 @@
 	reproductionFood = 20;
 	movementCost = 1;
 	eatAmount = 1;
+	foodAmount = 0;
 	
 	grid = [[NSMutableArray arrayWithCapacity:height] retain];
 	
@@ -43,19 +51,19 @@
 	
 	NSMutableArray *row;
 	Cell *cell;
-	int i, j;
+	NSBitmapImageRep *bitmap = [NSBitmapImageRep imageRepWithData:[foodImage TIFFRepresentation]];
+	BOOL sample;
 	for (i = 0; i < height; i++) {
 		row = [NSMutableArray arrayWithCapacity:width];
 		for (j = 0; j < width; j++) {
-			cell = [[[Cell alloc] initWithFood:NO atRow:i column:j] autorelease];
+			sample = [[bitmap colorAtX:j y:(height - i - 1)] brightnessComponent] < 0.5;
+			if (sample)
+				foodAmount += 1;
+			cell = [[[Cell alloc] initWithFood:sample atRow:i column:j] autorelease];
 			[row addObject:cell];
 		}
 		[grid addObject:row];
 	}
-	
-	foodBlockWidth = foodBlockHeight = 30;
-	foodBlockNumber = 1;
-	[self regenerateFood];
 	
 	return self;
 }

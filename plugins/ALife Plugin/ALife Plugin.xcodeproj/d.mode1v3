@@ -209,13 +209,14 @@
 			<key>ChosenToolbarItems</key>
 			<array>
 				<string>active-combo-popup</string>
-				<string>action</string>
+				<string>NSToolbarFlexibleSpaceItem</string>
+				<string>takeSnapshot</string>
+				<string>servicesModuleSnapshots</string>
 				<string>NSToolbarFlexibleSpaceItem</string>
 				<string>buildOrClean</string>
 				<string>build-and-goOrGo</string>
 				<string>com.apple.ide.PBXToolbarStopButton</string>
 				<string>get-info</string>
-				<string>toggle-editor</string>
 				<string>NSToolbarFlexibleSpaceItem</string>
 				<string>com.apple.pbx.toolbar.searchfield</string>
 			</array>
@@ -230,6 +231,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -276,7 +279,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>3</integer>
+									<integer>9</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -301,7 +304,7 @@
 							<real>186</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>6 312 869 563 0 0 1440 878 </string>
+						<string>528 315 869 563 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -312,14 +315,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>LifeController.m</string>
+								<string>StatisticsCollector.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -327,11 +328,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>LifeController.m</string>
+										<string>StatisticsCollector.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>03C5DAD00E315B9D00A2904C</string>
+										<string>03D46D310E58F622000DE764</string>
 										<key>history</key>
 										<array>
 											<string>0365F8350E1D70770074AA88</string>
@@ -344,9 +345,9 @@
 											<string>0339D0150E241596009C5D0D</string>
 											<string>0339D06C0E241FDF009C5D0D</string>
 											<string>03C5DAB90E315B0600A2904C</string>
-											<string>03C5DABA0E315B0600A2904C</string>
 											<string>03C5DABB0E315B0600A2904C</string>
-											<string>03C5DAC20E315B0600A2904C</string>
+											<string>03D46D2E0E58F622000DE764</string>
+											<string>03D46D2F0E58F622000DE764</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -362,6 +363,7 @@
 											<string>0339D01E0E241596009C5D0D</string>
 											<string>0339D01F0E241596009C5D0D</string>
 											<string>0339D1620E25B919009C5D0D</string>
+											<string>03D46D300E58F622000DE764</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -375,7 +377,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {661, 517}}</string>
 								<key>RubberWindowFrame</key>
-								<string>6 312 869 563 0 0 1440 878 </string>
+								<string>528 315 869 563 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -395,7 +397,7 @@
 								<key>Frame</key>
 								<string>{{0, 522}, {661, 0}}</string>
 								<key>RubberWindowFrame</key>
-								<string>6 312 869 563 0 0 1440 878 </string>
+								<string>528 315 869 563 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -419,9 +421,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>03C5DACB0E315B1000A2904C</string>
+				<string>03D46D320E58F622000DE764</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>03C5DACC0E315B1000A2904C</string>
+				<string>03D46D330E58F622000DE764</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -542,7 +544,7 @@
 	<key>TimeStamp</key>
 	<real>0.0</real>
 	<key>ToolbarDisplayMode</key>
-	<integer>1</integer>
+	<integer>2</integer>
 	<key>ToolbarIsVisible</key>
 	<true/>
 	<key>ToolbarSizeMode</key>
@@ -555,11 +557,10 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>0365F8680E1D70770074AA88</string>
-		<string>/Users/d/Desktop/SoC/ALife Plugin/ALife Plugin.xcodeproj</string>
+		<string>/Users/d/cocoabugs/plugins/ALife Plugin/ALife Plugin.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>6 312 869 563 0 0 1440 878 </string>
+	<string>528 315 869 563 0 0 1440 878 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>

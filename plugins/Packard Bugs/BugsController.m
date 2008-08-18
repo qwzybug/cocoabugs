@@ -37,16 +37,17 @@
 	
 	NSLog([configuration description]);
 	
-	int width = 100;
-	int height = 100;
 	float populationDensity = 0.5;
+	NSImage *foodImage = nil;
 	if (configuration) {
-		width = [[configuration objectForKey:@"width"] intValue];
-		height = [[configuration objectForKey:@"height"] intValue];
 		populationDensity = [[configuration objectForKey:@"populationDensity"] floatValue];
+		
+		NSData *foodData = [configuration objectForKey:@"world"];
+		if (foodData)
+			foodImage = [[[NSImage alloc] initWithData:foodData] autorelease];
 	}
 	
-	world = [[World alloc] initWithWidth:width andHeight:height];
+	world = [[World alloc] initWithFoodImage:foodImage];
 	[world seedBugsWithDensity:populationDensity];
 	
 	if (configuration) {

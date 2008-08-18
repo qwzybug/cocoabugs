@@ -8,6 +8,7 @@
 
 #import "ControllerOfLife.h"
 #import "GameOfLife.h"
+#import "CellOfLife.h"
 #import "BoardOfLife.h"
 #import "StatisticsOfLife.h"
 
@@ -32,15 +33,33 @@
 	if (!(self = [super init]))
 		return nil;
 	
-	int width, height;
+	int width = 100, height = 100;
+	NSImage *worldImage = nil;
 	if (configuration) {
-		width = [[configuration objectForKey:@"width"] intValue];
-		height = [[configuration objectForKey:@"height"] intValue];
-	} else {
-		width = height = 150;
+		NSData *data = [configuration objectForKey:@"world"];
+		if (data) {
+			NSLog(@"Huh?");
+			worldImage = [[[NSImage alloc] initWithData:data] autorelease];
+			width = [worldImage size].width;
+			height = [worldImage size].height;
+		}
 	}
 	
 	game = [[GameOfLife alloc] initWithWidth:width height:height];
+	
+	if (worldImage) {
+		NSBitmapImageRep *bitmap = [NSBitmapImageRep imageRepWithData:[worldImage TIFFRepresentation]];
+		int i, j;
+		BOOL sample;
+		for (i = 0; i < height; i++) {
+			for (j = 0; j < width; j++) {
+				sample = [[bitmap colorAtX:j y:(height - i - 1)] brightnessComponent] < 0.5;
+				if (sample)
+					[game cellAtRow:i column:j].alive = YES;
+			}
+		}
+		[game initGameOperations];
+	}
 	
 	NSString *thePath = [[NSBundle bundleForClass:[self class]] pathForResource:@"GameOfLife" ofType:@"plist"];
 	properties = [[NSDictionary dictionaryWithContentsOfFile:thePath] retain];

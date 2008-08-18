@@ -6,31 +6,11 @@
 	<array>
 		<dict>
 			<key>name</key>
-			<string>width</string>
+			<string>world</string>
 			<key>title</key>
-			<string>Width</string>
+			<string>Initial State</string>
 			<key>type</key>
-			<string>Integer</string>
-			<key>minValue</key>
-			<integer>10</integer>
-			<key>maxValue</key>
-			<integer>500</integer>
-			<key>default</key>
-			<integer>150</integer>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>height</string>
-			<key>title</key>
-			<string>Height</string>
-			<key>type</key>
-			<string>Integer</string>
-			<key>minValue</key>
-			<integer>10</integer>
-			<key>maxValue</key>
-			<integer>500</integer>
-			<key>default</key>
-			<integer>150</integer>
+			<string>Bitmap</string>
 		</dict>
 	</array>
 	<key>statistics</key>

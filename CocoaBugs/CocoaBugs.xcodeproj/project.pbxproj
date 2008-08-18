@@ -34,6 +34,9 @@
 		03C26EB90D8F517100D44F7D /* StatisticsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C26EB80D8F517100D44F7D /* StatisticsView.m */; };
 		03D46BCF0E58DC30000DE764 /* ALifeSimulationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D46BCE0E58DC30000DE764 /* ALifeSimulationController.m */; };
 		03D46C8A0E58DE15000DE764 /* ALifeSimulationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D46BCE0E58DC30000DE764 /* ALifeSimulationController.m */; };
+		03D46D6D0E592E1A000DE764 /* BitmapOptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D46D6C0E592E1A000DE764 /* BitmapOptionViewController.m */; };
+		03D46D6F0E592E90000DE764 /* BitmapOptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03D46D6E0E592E90000DE764 /* BitmapOptionView.xib */; };
+		03D46D740E5932B2000DE764 /* BitmapOptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D46D6C0E592E1A000DE764 /* BitmapOptionViewController.m */; };
 		03EDB3360E4E26F90008990A /* ALifeShuffler.m in Sources */ = {isa = PBXBuildFile; fileRef = 03EDB3350E4E26F90008990A /* ALifeShuffler.m */; };
 		8D11072A0486CEB800E47090 /* MainMenu.old.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.old.nib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
@@ -79,6 +82,9 @@
 		03C26EB80D8F517100D44F7D /* StatisticsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticsView.m; sourceTree = "<group>"; };
 		03D46BCD0E58DC30000DE764 /* ALifeSimulationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALifeSimulationController.h; sourceTree = "<group>"; };
 		03D46BCE0E58DC30000DE764 /* ALifeSimulationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALifeSimulationController.m; sourceTree = "<group>"; };
+		03D46D6B0E592E1A000DE764 /* BitmapOptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitmapOptionViewController.h; sourceTree = "<group>"; };
+		03D46D6C0E592E1A000DE764 /* BitmapOptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BitmapOptionViewController.m; sourceTree = "<group>"; };
+		03D46D6E0E592E90000DE764 /* BitmapOptionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BitmapOptionView.xib; sourceTree = "<group>"; };
 		03EDB3340E4E26F90008990A /* ALifeShuffler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALifeShuffler.h; sourceTree = "<group>"; };
 		03EDB3350E4E26F90008990A /* ALifeShuffler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALifeShuffler.m; sourceTree = "<group>"; };
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -121,6 +127,8 @@
 				03B539900E230938007FCED7 /* IntegerOptionViewController.m */,
 				031C41650E306A7D00E8B508 /* FloatOptionViewController.h */,
 				031C41660E306A7D00E8B508 /* FloatOptionViewController.m */,
+				03D46D6B0E592E1A000DE764 /* BitmapOptionViewController.h */,
+				03D46D6C0E592E1A000DE764 /* BitmapOptionViewController.m */,
 			);
 			name = Configuration;
 			sourceTree = "<group>";
@@ -251,6 +259,7 @@
 				03B539A20E230B4A007FCED7 /* IntegerOptionView.xib */,
 				0339CDD70E2324D7009C5D0D /* ConfigurationView.xib */,
 				031C41690E306B0A00E8B508 /* FloatOptionView.xib */,
+				03D46D6E0E592E90000DE764 /* BitmapOptionView.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -334,6 +343,7 @@
 				03B539A30E230B4A007FCED7 /* IntegerOptionView.xib in Resources */,
 				0339CDD80E2324D7009C5D0D /* ConfigurationView.xib in Resources */,
 				031C416A0E306B0A00E8B508 /* FloatOptionView.xib in Resources */,
+				03D46D6F0E592E90000DE764 /* BitmapOptionView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +362,7 @@
 				03BEDD650E54A92500694CD2 /* StatisticsData.m in Sources */,
 				03BEDD7C0E54AAC800694CD2 /* ALifeRunExporter.m in Sources */,
 				03D46BCF0E58DC30000DE764 /* ALifeSimulationController.m in Sources */,
+				03D46D6D0E592E1A000DE764 /* BitmapOptionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,6 +380,7 @@
 				0365F7B80E1BCEC30074AA88 /* ALifeWindowController.m in Sources */,
 				03B539880E230663007FCED7 /* ALifeConfigurationWindowController.m in Sources */,
 				03B539910E230938007FCED7 /* IntegerOptionViewController.m in Sources */,
+				03D46D740E5932B2000DE764 /* BitmapOptionViewController.m in Sources */,
 				0339CD9D0E231E7A009C5D0D /* ALifeConfigurationViewController.m in Sources */,
 				031C41670E306A7D00E8B508 /* FloatOptionViewController.m in Sources */,
 				03A39B880E4E362D00490AE3 /* ALifeShuffler.m in Sources */,

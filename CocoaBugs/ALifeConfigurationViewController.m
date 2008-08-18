@@ -10,6 +10,7 @@
 
 #import "IntegerOptionViewController.h"
 #import "FloatOptionViewController.h"
+#import "BitmapOptionViewController.h"
 
 @implementation ALifeConfigurationViewController
 
@@ -42,6 +43,8 @@
 			[optionControllers addObject:[IntegerOptionViewController controllerWithOptions:options]];
 		} else if ([[options objectForKey:@"type"] isEqual:@"Float"]) {
 			[optionControllers addObject:[FloatOptionViewController controllerWithOptions:options]];
+		} else if ([[options objectForKey:@"type"] isEqual:@"Bitmap"]) {
+			[optionControllers addObject:[BitmapOptionViewController controllerWithOptions:options]];
 		}
 	}
 	contentHeight = [optionControllers count] * 64.0;
@@ -71,8 +74,10 @@
 {
 	NSMutableDictionary *configurationDict = [NSMutableDictionary dictionary];
 	for (IntegerOptionViewController *viewController in optionControllers) {
-		[configurationDict setObject:[viewController value] forKey:[viewController name]];
+		if ([viewController value])
+			[configurationDict setObject:[viewController value] forKey:[viewController name]];
 	}
+	NSLog([configurationDict description]);
 	return configurationDict;
 }
 

@@ -31,11 +31,11 @@
 	[self setCellRelations];
 	
 	// init to r-pentomino
-	[self cellAtRow:(height / 2 + 1) column:(width / 2 - 1)].alive = 1;
-	[self cellAtRow:(height / 2 + 1) column:(width / 2)].alive = 1;
-	[self cellAtRow:(height / 2) column:(width / 2)].alive = 1;
-	[self cellAtRow:(height / 2) column:(width / 2 + 1)].alive = 1;
-	[self cellAtRow:(height / 2 - 1) column:(width / 2)].alive = 1;
+//	[self cellAtRow:(height / 2 + 1) column:(width / 2 - 1)].alive = 1;
+//	[self cellAtRow:(height / 2 + 1) column:(width / 2)].alive = 1;
+//	[self cellAtRow:(height / 2) column:(width / 2)].alive = 1;
+//	[self cellAtRow:(height / 2) column:(width / 2 + 1)].alive = 1;
+//	[self cellAtRow:(height / 2 - 1) column:(width / 2)].alive = 1;
 	
 	// set up operations
 	workQueue = [[NSMutableArray alloc] init];
@@ -46,7 +46,7 @@
 	queueLock = [[NSLock alloc] init];
 	nextLock = [[NSLock alloc] init];
 	
-	[self initGameOperations];
+//	[self initGameOperations];
 	
 	return self;
 }
@@ -67,8 +67,6 @@
 
 - (void)update;
 {
-	if ([nextQueue count] > 0) NSLog(@"OH SHIT");
-	
 	// spawn some worker threads
 	for (int i = 0; i < 2; i++) {
 		threads++;
@@ -86,8 +84,6 @@
 	[self swapQueues];
 	
 	self.generation++;
-//	NSLog(@"Generation %d done", generation);
-//	NSLog(@"Work queue contains: %d, next queue contains %d", [workQueue count], [nextQueue count]);
 }
 
 - (void)workThread;

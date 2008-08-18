@@ -63,9 +63,11 @@
 								<string key="NSToolbarItemPaletteLabel">Run</string>
 								<nil key="NSToolbarItemToolTip"/>
 								<object class="NSButton" key="NSToolbarItemView" id="290405164">
-									<nil key="NSNextResponder"/>
+									<reference key="NSNextResponder"/>
 									<int key="NSvFlags">268</int>
 									<string key="NSFrame">{{0, 14}, {49, 25}}</string>
+									<reference key="NSSuperview"/>
+									<reference key="NSWindow"/>
 									<bool key="NSEnabled">YES</bool>
 									<object class="NSButtonCell" key="NSCell" id="487984375">
 										<int key="NSCellFlags">67239424</int>
@@ -104,9 +106,11 @@
 								<string key="NSToolbarItemPaletteLabel">Tick</string>
 								<nil key="NSToolbarItemToolTip"/>
 								<object class="NSButton" key="NSToolbarItemView" id="716158746">
-									<nil key="NSNextResponder"/>
+									<reference key="NSNextResponder"/>
 									<int key="NSvFlags">268</int>
 									<string key="NSFrame">{{6, 14}, {19, 19}}</string>
+									<reference key="NSSuperview"/>
+									<reference key="NSWindow"/>
 									<bool key="NSEnabled">YES</bool>
 									<object class="NSButtonCell" key="NSCell" id="907117630">
 										<int key="NSCellFlags">67239424</int>
@@ -118,7 +122,7 @@
 											<int key="NSfFlags">16</int>
 										</object>
 										<reference key="NSControlView" ref="716158746"/>
-										<int key="NSButtonFlags">-1232977665</int>
+										<int key="NSButtonFlags">-2038284033</int>
 										<int key="NSButtonFlags2">173</int>
 										<string key="NSAlternateContents"/>
 										<string key="NSKeyEquivalent"/>
@@ -137,7 +141,7 @@
 								<bool key="NSToolbarIsUserRemovable">YES</bool>
 								<int key="NSToolbarItemVisibilityPriority">0</int>
 							</object>
-							<object class="NSToolbarItem" id="993822408">
+							<object class="NSToolbarItem" id="977556909">
 								<object class="NSMutableString" key="NSToolbarItemIdentifier">
 									<characters key="NS.bytes">D2A6BE3F-C3C2-4436-9DE3-9833E8551CC8</characters>
 								</object>
@@ -199,14 +203,14 @@
 						<reference ref="555220856"/>
 						<reference ref="719331101"/>
 						<reference ref="993495022"/>
-						<reference ref="993822408"/>
+						<reference ref="977556909"/>
 					</object>
 					<object class="NSMutableArray" key="NSToolbarIBDefaultItems">
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<reference ref="555220856"/>
 						<reference ref="719331101"/>
 						<reference ref="993495022"/>
-						<reference ref="993822408"/>
+						<reference ref="977556909"/>
 					</object>
 					<object class="NSMutableArray" key="NSToolbarIBSelectableItems">
 						<bool key="EncodedWithXMLCoder">YES</bool>
@@ -317,7 +321,7 @@
 					<object class="IBActionConnection" key="connection">
 						<string key="label">makeKeyAndOrderFront:</string>
 						<reference key="source" ref="329328974"/>
-						<reference key="destination" ref="993822408"/>
+						<reference key="destination" ref="977556909"/>
 					</object>
 					<int key="connectionID">47</int>
 				</object>
@@ -370,7 +374,7 @@
 							<reference ref="993495022"/>
 							<reference ref="719331101"/>
 							<reference ref="555220856"/>
-							<reference ref="993822408"/>
+							<reference ref="977556909"/>
 						</object>
 						<reference key="parent" ref="923943861"/>
 					</object>
@@ -460,7 +464,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">46</int>
-						<reference key="object" ref="993822408"/>
+						<reference key="object" ref="977556909"/>
 						<reference key="parent" ref="508263219"/>
 					</object>
 				</object>
