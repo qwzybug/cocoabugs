@@ -12,6 +12,7 @@
 #import "ALifePluginLoader.h"
 #import "StatisticsController.h"
 #import "ALifeRunExporter.h"
+#import "ALifeSimulationController.h"
 
 StatisticsController *statisticsController;
 
@@ -25,8 +26,10 @@ int main(int argc, char *argv[])
 	NSString *outputDirectory = [args stringForKey:@"o"];
 	int numberOfSteps = [args integerForKey:@"s"];
 	
-	if (!(configurationFile && outputDirectory && numberOfSteps))
+	if (!(configurationFile && outputDirectory && numberOfSteps)) {
 		printf("Usage: HeadlessBugs -f <config filename> -o <output directory path> -s <number of steps>\n");
+		return 1;
+	}
 	
 	NSDictionary *data = [NSDictionary dictionaryWithContentsOfFile:configurationFile];
 	
@@ -41,23 +44,25 @@ int main(int argc, char *argv[])
 		}
 	}
 	
-	if (!selectedPlugin)
+	if (!selectedPlugin) {
 		printf("Plugin class not found. Make sure it's installed.");
-
-	id <ALifeController> simulationController = [[selectedPlugin alloc] initWithConfiguration:configuration];
+		return 1;
+	}
+	
+	ALifeSimulationController *simulationController = [[ALifeSimulationController alloc] initWithSimulationClass:selectedPlugin configuration:configuration];
 	
 	statisticsController = [[StatisticsController alloc] init];
 	statisticsController.statisticsSize = numberOfSteps;
-	[statisticsController setSource:[simulationController statisticsCollector]
-					  forStatistics:[[simulationController properties] objectForKey:@"statistics"]];
+	[statisticsController setSource:[simulationController.lifeController statisticsCollector]
+					  forStatistics:[[simulationController.lifeController properties] objectForKey:@"statistics"]];
 	
 	int step;
 	for (step = 0; step < numberOfSteps; step++) {
 		printf("Step %d\n", step);
-		[simulationController update];
+		[simulationController.lifeController update];
 	}
 	
-	[ALifeRunExporter exportSimulation:simulationController withStatistics:statisticsController toFilePath:[NSString stringWithFormat:@"%@/statistics.pdf", outputDirectory]];
+	[ALifeRunExporter exportSimulation:simulationController withStatistics:statisticsController toDirectory:outputDirectory];
 	
 	printf("Done.\n");
 	

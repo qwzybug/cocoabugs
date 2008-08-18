@@ -32,6 +32,8 @@
 		03BEDD650E54A92500694CD2 /* StatisticsData.m in Sources */ = {isa = PBXBuildFile; fileRef = 03729EDF0D8F1E77009FDBE8 /* StatisticsData.m */; };
 		03BEDD7C0E54AAC800694CD2 /* ALifeRunExporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BEDD7B0E54AAC800694CD2 /* ALifeRunExporter.m */; };
 		03C26EB90D8F517100D44F7D /* StatisticsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C26EB80D8F517100D44F7D /* StatisticsView.m */; };
+		03D46BCF0E58DC30000DE764 /* ALifeSimulationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D46BCE0E58DC30000DE764 /* ALifeSimulationController.m */; };
+		03D46C8A0E58DE15000DE764 /* ALifeSimulationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D46BCE0E58DC30000DE764 /* ALifeSimulationController.m */; };
 		03EDB3360E4E26F90008990A /* ALifeShuffler.m in Sources */ = {isa = PBXBuildFile; fileRef = 03EDB3350E4E26F90008990A /* ALifeShuffler.m */; };
 		8D11072A0486CEB800E47090 /* MainMenu.old.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.old.nib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
@@ -75,6 +77,8 @@
 		03BEDD7B0E54AAC800694CD2 /* ALifeRunExporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALifeRunExporter.m; sourceTree = "<group>"; };
 		03C26EB70D8F517100D44F7D /* StatisticsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsView.h; sourceTree = "<group>"; };
 		03C26EB80D8F517100D44F7D /* StatisticsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticsView.m; sourceTree = "<group>"; };
+		03D46BCD0E58DC30000DE764 /* ALifeSimulationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALifeSimulationController.h; sourceTree = "<group>"; };
+		03D46BCE0E58DC30000DE764 /* ALifeSimulationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALifeSimulationController.m; sourceTree = "<group>"; };
 		03EDB3340E4E26F90008990A /* ALifeShuffler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALifeShuffler.h; sourceTree = "<group>"; };
 		03EDB3350E4E26F90008990A /* ALifeShuffler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALifeShuffler.m; sourceTree = "<group>"; };
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -160,6 +164,8 @@
 				030AE4AE0D87576C00BB9D39 /* StatisticsController.m */,
 				034DCD930E09CFDB0045943A /* AppController.h */,
 				034DCD940E09CFDB0045943A /* AppController.m */,
+				03D46BCD0E58DC30000DE764 /* ALifeSimulationController.h */,
+				03D46BCE0E58DC30000DE764 /* ALifeSimulationController.m */,
 				0365F7B60E1BCEC30074AA88 /* ALifeWindowController.h */,
 				0365F7B70E1BCEC30074AA88 /* ALifeWindowController.m */,
 				03B539860E230663007FCED7 /* ALifeConfigurationWindowController.h */,
@@ -345,6 +351,7 @@
 				03BEDD310E54A8B600694CD2 /* StatisticsController.m in Sources */,
 				03BEDD650E54A92500694CD2 /* StatisticsData.m in Sources */,
 				03BEDD7C0E54AAC800694CD2 /* ALifeRunExporter.m in Sources */,
+				03D46BCF0E58DC30000DE764 /* ALifeSimulationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +365,7 @@
 				03729EE00D8F1E77009FDBE8 /* StatisticsData.m in Sources */,
 				03C26EB90D8F517100D44F7D /* StatisticsView.m in Sources */,
 				034DCD950E09CFDB0045943A /* AppController.m in Sources */,
+				03D46C8A0E58DE15000DE764 /* ALifeSimulationController.m in Sources */,
 				0365F7B80E1BCEC30074AA88 /* ALifeWindowController.m in Sources */,
 				03B539880E230663007FCED7 /* ALifeConfigurationWindowController.m in Sources */,
 				03B539910E230938007FCED7 /* IntegerOptionViewController.m in Sources */,

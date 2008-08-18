@@ -10,17 +10,17 @@
 
 #import "ALifeController.h"
 
-@class StatisticsController;
+@class StatisticsController, ALifeSimulationController;
 
 @interface ALifeWindowController : NSWindowController {
-	id <ALifeController> simulationController;
 	IBOutlet StatisticsController *statisticsController;
+	ALifeSimulationController *simulationController;
 	
 	BOOL running;
 }
 
-@property(readwrite, retain) id <ALifeController> simulationController;
 @property(readwrite, assign) BOOL running;
+@property(readwrite, retain) ALifeSimulationController *simulationController;
 
 + (id)windowControllerForModel:(Class <ALifeController>)lifeController withConfiguration:(NSDictionary *)configuration;
 - (id)initWithSimulationClass:(Class <ALifeController>)modelClass configuration:(NSDictionary *)configuration;

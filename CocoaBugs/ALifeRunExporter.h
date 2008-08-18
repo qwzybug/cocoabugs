@@ -8,14 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 
-#import "ALifeController.h"
-
-@class StatisticsController;
+@class ALifeSimulationController, StatisticsController;
 
 @interface ALifeRunExporter : NSObject {
 
 }
 
-+ (void)exportSimulation:(id <ALifeController>)simulation withStatistics:(StatisticsController *)statisticsController toFilePath:(NSString *)path;
++ (void)exportSimulation:(ALifeSimulationController *)simulationController withStatistics:(StatisticsController *)statisticsController toDirectory:(NSString *)path;
 
 @end

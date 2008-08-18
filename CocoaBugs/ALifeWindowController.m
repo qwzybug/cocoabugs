@@ -9,7 +9,7 @@
 #import "ALifeWindowController.h"
 
 #import "StatisticsController.h"
-#import "ALifeShuffler.h"
+#import "ALifeSimulationController.h"
 
 @implementation ALifeWindowController
 
@@ -34,24 +34,10 @@
 	if (!(self = [super initWithWindowNibName:@"ALifeWindow"]))
 		return nil;
 	
-	NSArray *opts = [modelClass configurationOptions];
-	
-	NSLog(@"Initializing...");
-	
-	// check for shuffled parameters
-	for (NSDictionary *configurationOptions in opts) {
-		NSString *type = [configurationOptions objectForKey:@"type"];
-		NSString *name = [configurationOptions objectForKey:@"name"];
-		id entry = [configuration objectForKey:name];
-		if ([entry respondsToSelector:@selector(objectForKey:)]
-			&& [entry objectForKey:@"shuffle"]) {
-			[configuration setValue:[ALifeShuffler shuffleType:type withOptions:entry] forKey:name];
-		}
-	}
-	simulationController = [[modelClass alloc] initWithConfiguration:configuration];
+	simulationController = [[ALifeSimulationController alloc] initWithSimulationClass:modelClass configuration:configuration];
 	
 	NSView *contentView = [[self window] contentView];
-	NSView *lifeView = [simulationController view];
+	NSView *lifeView = [simulationController.lifeController view];
 	NSRect contentFrame = contentView.frame;
 	
 	float deltaX = lifeView.frame.size.width - contentFrame.size.width;
@@ -68,8 +54,8 @@
 	
 	[[self window] setContentView:lifeView];
 	
-	[statisticsController setSource:[simulationController statisticsCollector]
-					  forStatistics:[[simulationController properties] objectForKey:@"statistics"]];
+	[statisticsController setSource:[simulationController.lifeController statisticsCollector]
+					  forStatistics:[[simulationController.lifeController properties] objectForKey:@"statistics"]];	
 	
 	return self;
 }
@@ -81,7 +67,7 @@
 
 - (void)stepSimulation;
 {
-	[simulationController update];
+	[simulationController.lifeController update];
 	if (running) {
 		[self performSelector:@selector(stepSimulation)	withObject:nil afterDelay:0.02];
 	}
@@ -89,7 +75,7 @@
 
 - (NSString *)windowTitleForDocumentDisplayName:(NSString *)displayName
 {
-	return [[simulationController class] name];
+	return [[simulationController.lifeController class] name];
 }
 
 - (void)windowWillClose:(NSNotification *)notification;
