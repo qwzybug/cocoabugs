@@ -21,11 +21,16 @@
 	IBOutlet NSTextField *widthHeightField;
 	
 	BOOL shuffling;
+	
+	NSArray *builtInImages;
+	int selectedImageIndex;
 }
 
 @property(readwrite, retain) NSString *name;
 @property(readwrite, retain) NSString *title;
 @property(readwrite, assign) BOOL shuffling;
+@property(readonly, assign) NSArray *builtInImages;
+@property(readwrite, assign) int selectedImageIndex;
 
 - (NSData *)value;
 

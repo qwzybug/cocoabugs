@@ -11,7 +11,7 @@
 
 @implementation BitmapOptionViewController
 
-@synthesize name, shuffling, title;
+@synthesize name, shuffling, title, builtInImages, selectedImageIndex;
 
 + (BitmapOptionViewController *)controllerWithOptions:(NSDictionary *)options;
 {
@@ -25,6 +25,11 @@
 	
 	// no bitmap shuffling, yet
 	shuffling = NO;
+	
+	NSString *thePath = [[NSBundle bundleForClass:[self class]] pathForResource:@"BuiltInImages" ofType:@"plist"];
+	builtInImages = [[NSMutableArray arrayWithObject:@"Pick an image..."] retain];
+	builtInImages = [[builtInImages arrayByAddingObjectsFromArray:[NSArray arrayWithContentsOfFile:thePath]] retain];
+	NSLog([builtInImages description]);
 	
 	self.name = [options objectForKey:@"name"];
 	self.title = [options objectForKey:@"title"];
@@ -44,6 +49,14 @@
 - (void)awakeFromNib;
 {
 	[titleField setStringValue:self.title];
+}
+
+- (void)setSelectedImageIndex:(int)imageIndex;
+{
+	if (imageIndex) {
+		NSString *selectedImageName = [builtInImages objectAtIndex:imageIndex];
+		[imageView setImage:[NSImage imageNamed:selectedImageName]];
+	}
 }
 
 - (NSData *)value;

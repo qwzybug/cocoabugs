@@ -37,6 +37,12 @@
 		03D46D6D0E592E1A000DE764 /* BitmapOptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D46D6C0E592E1A000DE764 /* BitmapOptionViewController.m */; };
 		03D46D6F0E592E90000DE764 /* BitmapOptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03D46D6E0E592E90000DE764 /* BitmapOptionView.xib */; };
 		03D46D740E5932B2000DE764 /* BitmapOptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D46D6C0E592E1A000DE764 /* BitmapOptionViewController.m */; };
+		03D46EDB0E595AB0000DE764 /* Big box.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D46ED60E595AB0000DE764 /* Big box.png */; };
+		03D46EDC0E595AB0000DE764 /* 3x3 boxes.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D46ED70E595AB0000DE764 /* 3x3 boxes.png */; };
+		03D46EDD0E595AB0000DE764 /* Empty boxes.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D46ED80E595AB0000DE764 /* Empty boxes.png */; };
+		03D46EDE0E595AB0000DE764 /* Stripes.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D46ED90E595AB0000DE764 /* Stripes.png */; };
+		03D46EDF0E595AB0000DE764 /* R-pentomino.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D46EDA0E595AB0000DE764 /* R-pentomino.png */; };
+		03D46EE20E595C77000DE764 /* BuiltInImages.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03D46EE10E595C77000DE764 /* BuiltInImages.plist */; };
 		03EDB3360E4E26F90008990A /* ALifeShuffler.m in Sources */ = {isa = PBXBuildFile; fileRef = 03EDB3350E4E26F90008990A /* ALifeShuffler.m */; };
 		8D11072A0486CEB800E47090 /* MainMenu.old.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.old.nib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
@@ -85,6 +91,12 @@
 		03D46D6B0E592E1A000DE764 /* BitmapOptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitmapOptionViewController.h; sourceTree = "<group>"; };
 		03D46D6C0E592E1A000DE764 /* BitmapOptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BitmapOptionViewController.m; sourceTree = "<group>"; };
 		03D46D6E0E592E90000DE764 /* BitmapOptionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BitmapOptionView.xib; sourceTree = "<group>"; };
+		03D46ED60E595AB0000DE764 /* Big box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Big box.png"; sourceTree = "<group>"; };
+		03D46ED70E595AB0000DE764 /* 3x3 boxes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3x3 boxes.png"; sourceTree = "<group>"; };
+		03D46ED80E595AB0000DE764 /* Empty boxes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Empty boxes.png"; sourceTree = "<group>"; };
+		03D46ED90E595AB0000DE764 /* Stripes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Stripes.png; sourceTree = "<group>"; };
+		03D46EDA0E595AB0000DE764 /* R-pentomino.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "R-pentomino.png"; sourceTree = "<group>"; };
+		03D46EE10E595C77000DE764 /* BuiltInImages.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BuiltInImages.plist; sourceTree = "<group>"; };
 		03EDB3340E4E26F90008990A /* ALifeShuffler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALifeShuffler.h; sourceTree = "<group>"; };
 		03EDB3350E4E26F90008990A /* ALifeShuffler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALifeShuffler.m; sourceTree = "<group>"; };
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -192,6 +204,18 @@
 			name = Exporting;
 			sourceTree = "<group>";
 		};
+		03D46ECA0E595A9A000DE764 /* bitmaps */ = {
+			isa = PBXGroup;
+			children = (
+				03D46ED60E595AB0000DE764 /* Big box.png */,
+				03D46ED70E595AB0000DE764 /* 3x3 boxes.png */,
+				03D46ED80E595AB0000DE764 /* Empty boxes.png */,
+				03D46ED90E595AB0000DE764 /* Stripes.png */,
+				03D46EDA0E595AB0000DE764 /* R-pentomino.png */,
+			);
+			name = bitmaps;
+			sourceTree = "<group>";
+		};
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,6 +272,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				03D46ECA0E595A9A000DE764 /* bitmaps */,
 				03AE61E10E4C902000C0E469 /* Shuffle.tif */,
 				03262E5A0D6A9B71002A1127 /* icon.icns */,
 				8D1107310486CEB800E47090 /* Info.plist */,
@@ -260,6 +285,7 @@
 				0339CDD70E2324D7009C5D0D /* ConfigurationView.xib */,
 				031C41690E306B0A00E8B508 /* FloatOptionView.xib */,
 				03D46D6E0E592E90000DE764 /* BitmapOptionView.xib */,
+				03D46EE10E595C77000DE764 /* BuiltInImages.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -344,6 +370,12 @@
 				0339CDD80E2324D7009C5D0D /* ConfigurationView.xib in Resources */,
 				031C416A0E306B0A00E8B508 /* FloatOptionView.xib in Resources */,
 				03D46D6F0E592E90000DE764 /* BitmapOptionView.xib in Resources */,
+				03D46EDB0E595AB0000DE764 /* Big box.png in Resources */,
+				03D46EDC0E595AB0000DE764 /* 3x3 boxes.png in Resources */,
+				03D46EDD0E595AB0000DE764 /* Empty boxes.png in Resources */,
+				03D46EDE0E595AB0000DE764 /* Stripes.png in Resources */,
+				03D46EDF0E595AB0000DE764 /* R-pentomino.png in Resources */,
+				03D46EE20E595C77000DE764 /* BuiltInImages.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
