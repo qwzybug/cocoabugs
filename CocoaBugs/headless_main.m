@@ -58,7 +58,8 @@ int main(int argc, char *argv[])
 	
 	int step;
 	for (step = 0; step < numberOfSteps; step++) {
-		printf("Step %d\n", step);
+		if (step % 100 == 0)
+			printf("Step %d\n", step);
 		[simulationController.lifeController update];
 	}
 	
