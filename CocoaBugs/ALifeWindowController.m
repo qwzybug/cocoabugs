@@ -80,6 +80,7 @@
 
 - (void)windowWillClose:(NSNotification *)notification;
 {
+	self.running = NO;
 	[self autorelease];
 }
 
