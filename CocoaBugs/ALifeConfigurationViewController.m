@@ -77,7 +77,6 @@
 		if ([viewController value])
 			[configurationDict setObject:[viewController value] forKey:[viewController name]];
 	}
-	NSLog([configurationDict description]);
 	return configurationDict;
 }
 

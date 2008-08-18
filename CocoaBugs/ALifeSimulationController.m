@@ -21,8 +21,6 @@
 	
 	NSArray *opts = [modelClass configurationOptions];
 	
-	NSLog(@"Initializing...");
-	
 	// check for shuffled parameters
 	for (NSDictionary *configurationOptions in opts) {
 		NSString *type = [configurationOptions objectForKey:@"type"];

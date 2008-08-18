@@ -276,6 +276,7 @@
 				03AE61E10E4C902000C0E469 /* Shuffle.tif */,
 				03262E5A0D6A9B71002A1127 /* icon.icns */,
 				8D1107310486CEB800E47090 /* Info.plist */,
+				03D46EE10E595C77000DE764 /* BuiltInImages.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				29B97318FDCFA39411CA2CEA /* MainMenu.old.nib */,
 				034DCD9B0E09D1950045943A /* MainMenu.xib */,
@@ -285,7 +286,6 @@
 				0339CDD70E2324D7009C5D0D /* ConfigurationView.xib */,
 				031C41690E306B0A00E8B508 /* FloatOptionView.xib */,
 				03D46D6E0E592E90000DE764 /* BitmapOptionView.xib */,
-				03D46EE10E595C77000DE764 /* BuiltInImages.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
