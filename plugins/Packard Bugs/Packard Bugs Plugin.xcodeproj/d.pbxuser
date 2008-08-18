@@ -19,7 +19,7 @@
 		comments = "error: 'data' undeclared (first use in this function)";
 		fRef = 03E2CD750E272F910077196A /* BugsController.m */;
 		rLen = 1;
-		rLoc = 46;
+		rLoc = 44;
 		rType = 1;
 	};
 	03D46E290E594B29000DE764 /* PBXTextBookmark */ = {
@@ -27,7 +27,7 @@
 		fRef = 03E2CD750E272F910077196A /* BugsController.m */;
 		name = "BugsController.m: 47";
 		rLen = 0;
-		rLoc = 977;
+		rLoc = 938;
 		rType = 0;
 		vrLen = 699;
 		vrLoc = 919;
@@ -85,7 +85,7 @@
 		fRef = 03E2CD750E272F910077196A /* BugsController.m */;
 		name = "BugsController.m: 58";
 		rLen = 0;
-		rLoc = 1582;
+		rLoc = 1543;
 		rType = 0;
 		vrLen = 1164;
 		vrLoc = 661;
@@ -105,7 +105,7 @@
 		fRef = 03E2CD750E272F910077196A /* BugsController.m */;
 		name = "BugsController.m: 63";
 		rLen = 0;
-		rLoc = 1580;
+		rLoc = 1541;
 		rType = 0;
 		vrLen = 1062;
 		vrLoc = 876;
@@ -125,7 +125,7 @@
 		fRef = 03E2CD750E272F910077196A /* BugsController.m */;
 		name = "BugsController.m: 61";
 		rLen = 0;
-		rLoc = 1578;
+		rLoc = 1539;
 		rType = 0;
 		vrLen = 1121;
 		vrLoc = 844;
@@ -175,7 +175,7 @@
 		fRef = 03E2CD750E272F910077196A /* BugsController.m */;
 		name = "BugsController.m: 49";
 		rLen = 0;
-		rLoc = 1107;
+		rLoc = 1068;
 		rType = 0;
 		vrLen = 999;
 		vrLoc = 1005;
@@ -185,7 +185,7 @@
 		fRef = 03E2CD750E272F910077196A /* BugsController.m */;
 		name = "BugsController.m: 54";
 		rLen = 0;
-		rLoc = 1182;
+		rLoc = 1143;
 		rType = 0;
 		vrLen = 1080;
 		vrLoc = 897;
@@ -195,7 +195,7 @@
 		fRef = 03E2CD750E272F910077196A /* BugsController.m */;
 		name = "BugsController.m: 43";
 		rLen = 0;
-		rLoc = 864;
+		rLoc = 825;
 		rType = 0;
 		vrLen = 1099;
 		vrLoc = 752;
@@ -225,7 +225,7 @@
 		fRef = 03E2CD750E272F910077196A /* BugsController.m */;
 		name = "BugsController.m: 43";
 		rLen = 0;
-		rLoc = 864;
+		rLoc = 825;
 		rType = 0;
 		vrLen = 925;
 		vrLoc = 353;
@@ -235,7 +235,7 @@
 		fRef = 03E2CD750E272F910077196A /* BugsController.m */;
 		name = "BugsController.m: 43";
 		rLen = 0;
-		rLoc = 864;
+		rLoc = 825;
 		rType = 0;
 		vrLen = 925;
 		vrLoc = 353;
@@ -265,7 +265,7 @@
 		fRef = 03E2CD750E272F910077196A /* BugsController.m */;
 		name = "BugsController.m: 40";
 		rLen = 0;
-		rLoc = 807;
+		rLoc = 768;
 		rType = 0;
 		vrLen = 1073;
 		vrLoc = 839;
@@ -275,7 +275,7 @@
 		fRef = 03E2CD750E272F910077196A /* BugsController.m */;
 		name = "BugsController.m: 45";
 		rLen = 0;
-		rLoc = 977;
+		rLoc = 938;
 		rType = 0;
 		vrLen = 529;
 		vrLoc = 807;
@@ -293,7 +293,7 @@
 		fRef = 03E2CD750E272F910077196A /* BugsController.m */;
 		name = "BugsController.m: 45";
 		rLen = 0;
-		rLoc = 977;
+		rLoc = 938;
 		rType = 0;
 		vrLen = 529;
 		vrLoc = 807;
@@ -313,7 +313,7 @@
 		fRef = 03E2CD750E272F910077196A /* BugsController.m */;
 		name = "BugsController.m: 40";
 		rLen = 0;
-		rLoc = 807;
+		rLoc = 768;
 		rType = 0;
 		vrLen = 1101;
 		vrLoc = 766;
@@ -343,7 +343,7 @@
 		fRef = 03E2CD750E272F910077196A /* BugsController.m */;
 		name = "BugsController.m: 40";
 		rLen = 0;
-		rLoc = 807;
+		rLoc = 768;
 		rType = 0;
 		vrLen = 1101;
 		vrLoc = 766;
@@ -393,7 +393,7 @@
 		fRef = 03E2CD750E272F910077196A /* BugsController.m */;
 		name = "BugsController.m: 40";
 		rLen = 0;
-		rLoc = 807;
+		rLoc = 768;
 		rType = 0;
 		vrLen = 1084;
 		vrLoc = 766;
@@ -433,7 +433,7 @@
 		fRef = 03E2CD750E272F910077196A /* BugsController.m */;
 		name = "BugsController.m: 40";
 		rLen = 0;
-		rLoc = 807;
+		rLoc = 768;
 		rType = 0;
 		vrLen = 1084;
 		vrLoc = 766;
@@ -491,7 +491,7 @@
 		fRef = 03E2CD750E272F910077196A /* BugsController.m */;
 		name = "BugsController.m: 53";
 		rLen = 0;
-		rLoc = 1253;
+		rLoc = 1214;
 		rType = 0;
 		vrLen = 1266;
 		vrLoc = 646;
@@ -521,7 +521,7 @@
 		fRef = 03E2CD750E272F910077196A /* BugsController.m */;
 		name = "BugsController.m: 53";
 		rLen = 0;
-		rLoc = 1253;
+		rLoc = 1214;
 		rType = 0;
 		vrLen = 1266;
 		vrLoc = 646;
@@ -694,6 +694,43 @@
 		vrLen = 1392;
 		vrLoc = 651;
 	};
+	03D46F550E596A7C000DE764 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 03E2CCC20E2729460077196A /* World.h */;
+		name = "World.h: 68";
+		rLen = 0;
+		rLoc = 1633;
+		rType = 0;
+		vrLen = 1392;
+		vrLoc = 651;
+	};
+	03D46F560E596A7C000DE764 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 03E2CD750E272F910077196A /* BugsController.m */;
+		rLen = 0;
+		rLoc = 766;
+		rType = 0;
+	};
+	03D46F570E596A7C000DE764 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 03E2CCC20E2729460077196A /* World.h */;
+		name = "World.h: 68";
+		rLen = 0;
+		rLoc = 1633;
+		rType = 0;
+		vrLen = 1392;
+		vrLoc = 651;
+	};
+	03D46F580E596A7C000DE764 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 03E2CD750E272F910077196A /* BugsController.m */;
+		name = "BugsController.m: 37";
+		rLen = 0;
+		rLoc = 766;
+		rType = 0;
+		vrLen = 935;
+		vrLoc = 0;
+	};
 	03E2CCB60E2729140077196A /* Source Control */ = {
 		isa = PBXSourceControlManager;
 		fallbackIsa = XCSourceControlManager;
@@ -749,9 +786,9 @@
 	};
 	03E2CCC30E2729460077196A /* World.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {738, 3766}}";
-			sepNavSelRange = "{1510, 0}";
-			sepNavVisRange = "{795, 923}";
+			sepNavIntBoundsRect = "{{0, 0}, {540, 3696}}";
+			sepNavSelRange = "{5675, 35}";
+			sepNavVisRange = "{5145, 334}";
 		};
 	};
 	03E2CCC80E27294D0077196A /* ALifeController.h */ = {
@@ -967,9 +1004,9 @@
 	};
 	03E2CD750E272F910077196A /* BugsController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {738, 1274}}";
-			sepNavSelRange = "{1253, 0}";
-			sepNavVisRange = "{646, 1266}";
+			sepNavIntBoundsRect = "{{0, 0}, {738, 1372}}";
+			sepNavSelRange = "{766, 0}";
+			sepNavVisRange = "{0, 935}";
 		};
 	};
 	03E2CD7D0E272FBE0077196A /* PlistBookmark */ = {
@@ -1113,7 +1150,7 @@
 		fRef = 03E2CD750E272F910077196A /* BugsController.m */;
 		name = "BugsController.m: 79";
 		rLen = 5;
-		rLoc = 1501;
+		rLoc = 1462;
 		rType = 0;
 		vrLen = 142;
 		vrLoc = 1356;
@@ -1133,7 +1170,7 @@
 		fRef = 03E2CD750E272F910077196A /* BugsController.m */;
 		name = "BugsController.m: 79";
 		rLen = 5;
-		rLoc = 1501;
+		rLoc = 1462;
 		rType = 0;
 		vrLen = 142;
 		vrLoc = 1356;
@@ -1327,6 +1364,10 @@
 			03D46EC60E595656000DE764 /* PBXTextBookmark */ = 03D46EC60E595656000DE764 /* PBXTextBookmark */;
 			03D46EC70E595656000DE764 /* PBXTextBookmark */ = 03D46EC70E595656000DE764 /* PBXTextBookmark */;
 			03D46EC80E595656000DE764 /* PBXTextBookmark */ = 03D46EC80E595656000DE764 /* PBXTextBookmark */;
+			03D46F550E596A7C000DE764 /* PBXTextBookmark */ = 03D46F550E596A7C000DE764 /* PBXTextBookmark */;
+			03D46F560E596A7C000DE764 /* PBXTextBookmark */ = 03D46F560E596A7C000DE764 /* PBXTextBookmark */;
+			03D46F570E596A7C000DE764 /* PBXTextBookmark */ = 03D46F570E596A7C000DE764 /* PBXTextBookmark */;
+			03D46F580E596A7C000DE764 /* PBXTextBookmark */ = 03D46F580E596A7C000DE764 /* PBXTextBookmark */;
 			03E2CCD50E2729920077196A = 03E2CCD50E2729920077196A /* PBXTextBookmark */;
 			03E2CCD60E2729920077196A = 03E2CCD60E2729920077196A /* PlistBookmark */;
 			03E2CD250E272B250077196A = 03E2CD250E272B250077196A /* PBXTextBookmark */;

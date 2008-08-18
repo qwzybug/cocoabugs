@@ -35,8 +35,6 @@
 	if (!(self = [super init]))
 		return nil;
 	
-	NSLog([configuration description]);
-	
 	float populationDensity = 0.5;
 	NSImage *foodImage = nil;
 	if (configuration) {
