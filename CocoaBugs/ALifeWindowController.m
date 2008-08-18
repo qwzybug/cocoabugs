@@ -22,8 +22,6 @@
 
 - (void)dealloc;
 {
-	NSLog(@"Deallocing window controller");
-	NSLog(@"%d", [simulationController retainCount]);
 	self.simulationController = nil;
 	
 	[super dealloc];
