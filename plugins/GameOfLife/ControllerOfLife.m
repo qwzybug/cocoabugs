@@ -20,7 +20,7 @@
 	return @"Conway's Game of Life";
 }
 
-+ (NSDictionary *)configurationOptions;
++ (NSArray *)configurationOptions;
 {
 	NSString *thePath = [[NSBundle bundleForClass:[self class]] pathForResource:@"GameOfLife" ofType:@"plist"];
 	NSDictionary *propDict = [NSDictionary dictionaryWithContentsOfFile:thePath];
@@ -52,11 +52,13 @@
 
 - (void)dealloc;
 {
+	NSLog(@"Deallocing Game of Life controller");
 	NSLog(@"Properties: %d", [properties retainCount]);
 	NSLog(@"Board: %d", [board retainCount]);
 	NSLog(@"Game: %d", [game retainCount]);
 
 	[properties release];
+	[statisticsCollector release];
 	[board release];
 	[game release];
 	
