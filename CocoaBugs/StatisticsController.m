@@ -60,7 +60,7 @@
 
 - (void)registerForPath:(NSString *)path name:(NSString *)name;
 {
-#define STATS_WIDTH 250
+#define STATS_WIDTH 350
 #define STATS_HEIGHT 80
 	// calculate statistics frame
 	NSRect frame = NSMakeRect(0, 80 * [stats count], STATS_WIDTH, STATS_HEIGHT);

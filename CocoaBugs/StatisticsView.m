@@ -113,7 +113,8 @@
 		NSRectFill(NSMakeRect(0.0, i * vscale + 2.0, width, 1.0));
 	}
 	
-	for (i = 0; i < stats.size; i++) {
+	int step = stats.size / width;
+	for (i = 0; i < stats.size; i += step) {
 //		int datum = [stats getDataPoint:i];
 		data = [stats getDataSet:i];
 		if (!data) continue;
