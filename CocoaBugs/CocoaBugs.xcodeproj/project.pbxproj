@@ -18,6 +18,10 @@
 		0339CDD80E2324D7009C5D0D /* ConfigurationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0339CDD70E2324D7009C5D0D /* ConfigurationView.xib */; };
 		034DCD950E09CFDB0045943A /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 034DCD940E09CFDB0045943A /* AppController.m */; };
 		034DCD9C0E09D1950045943A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 034DCD9B0E09D1950045943A /* MainMenu.xib */; };
+		0351906E0E7DD5CC00205E7B /* record.png in Resources */ = {isa = PBXBuildFile; fileRef = 0351906D0E7DD5CC00205E7B /* record.png */; };
+		035190700E7DD65700205E7B /* record_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 0351906F0E7DD65700205E7B /* record_small.png */; };
+		0351908D0E7DD8D300205E7B /* DMQuicktimeExporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0351908C0E7DD8D300205E7B /* DMQuicktimeExporter.m */; };
+		035190920E7DD9D600205E7B /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 035190910E7DD9D600205E7B /* QTKit.framework */; };
 		0365F7B80E1BCEC30074AA88 /* ALifeWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0365F7B70E1BCEC30074AA88 /* ALifeWindowController.m */; };
 		0365F7BC0E1BCFB20074AA88 /* ALifeWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0365F7BB0E1BCFB20074AA88 /* ALifeWindow.xib */; };
 		03729EE00D8F1E77009FDBE8 /* StatisticsData.m in Sources */ = {isa = PBXBuildFile; fileRef = 03729EDF0D8F1E77009FDBE8 /* StatisticsData.m */; };
@@ -68,6 +72,11 @@
 		034DCD940E09CFDB0045943A /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
 		034DCD9B0E09D1950045943A /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		034DCE370E09EA830045943A /* ALifeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALifeController.h; sourceTree = "<group>"; };
+		0351906D0E7DD5CC00205E7B /* record.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = record.png; sourceTree = "<group>"; };
+		0351906F0E7DD65700205E7B /* record_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = record_small.png; sourceTree = "<group>"; };
+		0351908B0E7DD8D300205E7B /* DMQuicktimeExporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMQuicktimeExporter.h; sourceTree = "<group>"; };
+		0351908C0E7DD8D300205E7B /* DMQuicktimeExporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMQuicktimeExporter.m; sourceTree = "<group>"; };
+		035190910E7DD9D600205E7B /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		0365F7B60E1BCEC30074AA88 /* ALifeWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALifeWindowController.h; sourceTree = "<group>"; };
 		0365F7B70E1BCEC30074AA88 /* ALifeWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALifeWindowController.m; sourceTree = "<group>"; };
 		0365F7BB0E1BCFB20074AA88 /* ALifeWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ALifeWindow.xib; sourceTree = "<group>"; };
@@ -124,6 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				035190920E7DD9D600205E7B /* QTKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +172,8 @@
 				03039F180E3FCFC90043E65A /* ALifePluginLoader.m */,
 				03EDB3340E4E26F90008990A /* ALifeShuffler.h */,
 				03EDB3350E4E26F90008990A /* ALifeShuffler.m */,
+				0351908B0E7DD8D300205E7B /* DMQuicktimeExporter.h */,
+				0351908C0E7DD8D300205E7B /* DMQuicktimeExporter.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -219,6 +231,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				035190910E7DD9D600205E7B /* QTKit.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 			);
 			name = "Linked Frameworks";
@@ -274,6 +287,8 @@
 			children = (
 				03D46ECA0E595A9A000DE764 /* bitmaps */,
 				03AE61E10E4C902000C0E469 /* Shuffle.tif */,
+				0351906D0E7DD5CC00205E7B /* record.png */,
+				0351906F0E7DD65700205E7B /* record_small.png */,
 				03262E5A0D6A9B71002A1127 /* icon.icns */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				03D46EE10E595C77000DE764 /* BuiltInImages.plist */,
@@ -376,6 +391,8 @@
 				03D46EDE0E595AB0000DE764 /* Stripes.png in Resources */,
 				03D46EDF0E595AB0000DE764 /* R-pentomino.png in Resources */,
 				03D46EE20E595C77000DE764 /* BuiltInImages.plist in Resources */,
+				0351906E0E7DD5CC00205E7B /* record.png in Resources */,
+				035190700E7DD65700205E7B /* record_small.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +433,7 @@
 				0339CD9D0E231E7A009C5D0D /* ALifeConfigurationViewController.m in Sources */,
 				031C41670E306A7D00E8B508 /* FloatOptionViewController.m in Sources */,
 				03A39B880E4E362D00490AE3 /* ALifeShuffler.m in Sources */,
+				0351908D0E7DD8D300205E7B /* DMQuicktimeExporter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

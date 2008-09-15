@@ -10,22 +10,27 @@
 
 #import "ALifeController.h"
 
-@class StatisticsController, ALifeSimulationController;
+@class StatisticsController, ALifeSimulationController, DMQuicktimeExporter;
 
 @interface ALifeWindowController : NSWindowController {
 	IBOutlet StatisticsController *statisticsController;
 	ALifeSimulationController *simulationController;
+	DMQuicktimeExporter *movieExporter;
 	
 	BOOL running;
+	BOOL recording;
 }
 
 @property(readwrite, assign) BOOL running;
+@property(readwrite, assign) BOOL recording;
 @property(readwrite, retain) ALifeSimulationController *simulationController;
+@property(readwrite, retain) DMQuicktimeExporter *movieExporter;
 
 + (id)windowControllerForModel:(Class <ALifeController>)lifeController withConfiguration:(NSDictionary *)configuration;
 - (id)initWithSimulationClass:(Class <ALifeController>)modelClass configuration:(NSDictionary *)configuration;
 
 - (IBAction)tick:(id)sender;
 - (void)stepSimulation;
+- (IBAction)exportMovie:(id)sender;
 
 @end

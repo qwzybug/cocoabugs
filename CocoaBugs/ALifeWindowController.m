@@ -10,10 +10,11 @@
 
 #import "StatisticsController.h"
 #import "ALifeSimulationController.h"
+#import "DMQuicktimeExporter.h"
 
 @implementation ALifeWindowController
 
-@synthesize simulationController, running;
+@synthesize simulationController, running, recording, movieExporter;
 
 + (id)windowControllerForModel:(Class <ALifeController>)lifeController withConfiguration:(NSDictionary *)configuration;
 {
@@ -66,6 +67,9 @@
 - (void)stepSimulation;
 {
 	[simulationController.lifeController update];
+	if (recording) {
+		[self.movieExporter addFrameFromView:[self.window contentView]];
+	}
 	if (running) {
 		[self performSelector:@selector(stepSimulation)	withObject:nil afterDelay:0.02];
 	}
@@ -81,5 +85,36 @@
 	self.running = NO;
 	[self autorelease];
 }
+
+- (void)setRecording:(BOOL)isRecording;
+{
+	if (isRecording) {
+		self.movieExporter = [DMQuicktimeExporter movieExporter];
+		recording = YES;
+		if (!running) {
+			self.running = YES;
+			[self tick:self];
+		}
+	} else {
+		self.running = NO;
+		[self exportMovie:self];
+	}
+}
+
+- (IBAction)exportMovie:(id)sender;
+{
+	NSSavePanel *panel = [NSSavePanel savePanel];
+	[panel setAllowedFileTypes:[NSArray arrayWithObject:@"mov"]];
+	[panel beginSheetForDirectory:nil file:nil modalForWindow:self.window modalDelegate:self didEndSelector:@selector(savePanelDidEnd:returnCode:contextInfo:) contextInfo:nil];
+}
+
+- (void)savePanelDidEnd:(NSSavePanel *)sheet returnCode:(int)returnCode  contextInfo:(void  *)contextInfo;
+{
+	if (returnCode == NSOKButton)
+		[self.movieExporter exportMovie:[sheet filename]];
+	
+	self.movieExporter = nil;
+}
+
 
 @end
