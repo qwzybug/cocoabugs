@@ -68,7 +68,7 @@
 {
 	[simulationController.lifeController update];
 	if (recording) {
-		[self.movieExporter addFrameFromView:[self.window contentView]];
+		[self.movieExporter addFrame];
 	}
 	if (running) {
 		[self performSelector:@selector(stepSimulation)	withObject:nil afterDelay:0.02];
@@ -89,7 +89,7 @@
 - (void)setRecording:(BOOL)isRecording;
 {
 	if (isRecording) {
-		self.movieExporter = [DMQuicktimeExporter movieExporter];
+		self.movieExporter = [DMQuicktimeExporter movieExporterForView:[self.window contentView]];
 		recording = YES;
 		if (!running) {
 			self.running = YES;

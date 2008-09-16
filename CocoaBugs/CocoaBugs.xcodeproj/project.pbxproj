@@ -22,6 +22,7 @@
 		035190700E7DD65700205E7B /* record_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 0351906F0E7DD65700205E7B /* record_small.png */; };
 		0351908D0E7DD8D300205E7B /* DMQuicktimeExporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0351908C0E7DD8D300205E7B /* DMQuicktimeExporter.m */; };
 		035190920E7DD9D600205E7B /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 035190910E7DD9D600205E7B /* QTKit.framework */; };
+		0359DC9B0E7F1AA300EEAC01 /* DMQuicktimeExporter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0359DC9A0E7F1AA300EEAC01 /* DMQuicktimeExporter.xib */; };
 		0365F7B80E1BCEC30074AA88 /* ALifeWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0365F7B70E1BCEC30074AA88 /* ALifeWindowController.m */; };
 		0365F7BC0E1BCFB20074AA88 /* ALifeWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0365F7BB0E1BCFB20074AA88 /* ALifeWindow.xib */; };
 		03729EE00D8F1E77009FDBE8 /* StatisticsData.m in Sources */ = {isa = PBXBuildFile; fileRef = 03729EDF0D8F1E77009FDBE8 /* StatisticsData.m */; };
@@ -31,6 +32,7 @@
 		03B5398A0E2306EA007FCED7 /* ConfigurationWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03B539890E2306EA007FCED7 /* ConfigurationWindow.xib */; };
 		03B539910E230938007FCED7 /* IntegerOptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B539900E230938007FCED7 /* IntegerOptionViewController.m */; };
 		03B539A30E230B4A007FCED7 /* IntegerOptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03B539A20E230B4A007FCED7 /* IntegerOptionView.xib */; };
+		03BE21B80E7F0388005E5D76 /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03BE21B70E7F0388005E5D76 /* QuickTime.framework */; };
 		03BEDD300E54A8B600694CD2 /* StatisticsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C26EB80D8F517100D44F7D /* StatisticsView.m */; };
 		03BEDD310E54A8B600694CD2 /* StatisticsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 030AE4AE0D87576C00BB9D39 /* StatisticsController.m */; };
 		03BEDD650E54A92500694CD2 /* StatisticsData.m in Sources */ = {isa = PBXBuildFile; fileRef = 03729EDF0D8F1E77009FDBE8 /* StatisticsData.m */; };
@@ -77,6 +79,7 @@
 		0351908B0E7DD8D300205E7B /* DMQuicktimeExporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMQuicktimeExporter.h; sourceTree = "<group>"; };
 		0351908C0E7DD8D300205E7B /* DMQuicktimeExporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMQuicktimeExporter.m; sourceTree = "<group>"; };
 		035190910E7DD9D600205E7B /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
+		0359DC9A0E7F1AA300EEAC01 /* DMQuicktimeExporter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DMQuicktimeExporter.xib; sourceTree = "<group>"; };
 		0365F7B60E1BCEC30074AA88 /* ALifeWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALifeWindowController.h; sourceTree = "<group>"; };
 		0365F7B70E1BCEC30074AA88 /* ALifeWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALifeWindowController.m; sourceTree = "<group>"; };
 		0365F7BB0E1BCFB20074AA88 /* ALifeWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ALifeWindow.xib; sourceTree = "<group>"; };
@@ -89,6 +92,7 @@
 		03B5398F0E230938007FCED7 /* IntegerOptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntegerOptionViewController.h; sourceTree = "<group>"; };
 		03B539900E230938007FCED7 /* IntegerOptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntegerOptionViewController.m; sourceTree = "<group>"; };
 		03B539A20E230B4A007FCED7 /* IntegerOptionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IntegerOptionView.xib; sourceTree = "<group>"; };
+		03BE21B70E7F0388005E5D76 /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = /System/Library/Frameworks/QuickTime.framework; sourceTree = "<absolute>"; };
 		03BEDBD00E549AAF00694CD2 /* StatisticsTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsTableView.h; sourceTree = "<group>"; };
 		03BEDBD10E549AAF00694CD2 /* StatisticsTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticsTableView.m; sourceTree = "<group>"; };
 		03BEDD7A0E54AAC800694CD2 /* ALifeRunExporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALifeRunExporter.h; sourceTree = "<group>"; };
@@ -134,6 +138,7 @@
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				035190920E7DD9D600205E7B /* QTKit.framework in Frameworks */,
+				03BE21B80E7F0388005E5D76 /* QuickTime.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,8 +177,6 @@
 				03039F180E3FCFC90043E65A /* ALifePluginLoader.m */,
 				03EDB3340E4E26F90008990A /* ALifeShuffler.h */,
 				03EDB3350E4E26F90008990A /* ALifeShuffler.m */,
-				0351908B0E7DD8D300205E7B /* DMQuicktimeExporter.h */,
-				0351908C0E7DD8D300205E7B /* DMQuicktimeExporter.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -212,6 +215,8 @@
 			children = (
 				03BEDD7A0E54AAC800694CD2 /* ALifeRunExporter.h */,
 				03BEDD7B0E54AAC800694CD2 /* ALifeRunExporter.m */,
+				0351908B0E7DD8D300205E7B /* DMQuicktimeExporter.h */,
+				0351908C0E7DD8D300205E7B /* DMQuicktimeExporter.m */,
 			);
 			name = Exporting;
 			sourceTree = "<group>";
@@ -231,6 +236,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				03BE21B70E7F0388005E5D76 /* QuickTime.framework */,
 				035190910E7DD9D600205E7B /* QTKit.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 			);
@@ -301,6 +307,7 @@
 				0339CDD70E2324D7009C5D0D /* ConfigurationView.xib */,
 				031C41690E306B0A00E8B508 /* FloatOptionView.xib */,
 				03D46D6E0E592E90000DE764 /* BitmapOptionView.xib */,
+				0359DC9A0E7F1AA300EEAC01 /* DMQuicktimeExporter.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -393,6 +400,7 @@
 				03D46EE20E595C77000DE764 /* BuiltInImages.plist in Resources */,
 				0351906E0E7DD5CC00205E7B /* record.png in Resources */,
 				035190700E7DD65700205E7B /* record_small.png in Resources */,
+				0359DC9B0E7F1AA300EEAC01 /* DMQuicktimeExporter.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

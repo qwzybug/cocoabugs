@@ -8,15 +8,33 @@
 
 #import <Cocoa/Cocoa.h>
 #import <QTKit/QTKit.h>
+#import <QuickTime/QuickTime.h>
 
 @interface DMQuicktimeExporter : NSObject {
 	QTMovie                                *mMovie;
 	QTCaptureSession                       *mCaptureSession;
-	QTCaptureDecompressedVideoOutput       *mCaptureDecompressedVideoOutput;	
+	QTCaptureDecompressedVideoOutput       *mCaptureDecompressedVideoOutput;
+	
+	int selectedComponentIndex;
+	NSView *view;
+	NSModalSession session;
+	
+	IBOutlet NSWindow *progressWindow;
+	IBOutlet NSProgressIndicator *progressBar;
+	BOOL shouldCancel;
 }
 
-+ (id)movieExporter;
-- (void)addFrameFromView:(NSView *)view;
+@property (readwrite, retain) NSView *view;
+
++ (id)movieExporterForView:(NSView *)theView;
+- (id)initWithView:(NSView *)theView;
+- (void)addFrame;
 - (void)exportMovie:(NSString *)filePath;
+- (BOOL)writeMovie:(QTMovie *)movie toFile:(NSString *)file withComponent:(NSDictionary *)component withExportSettings:(NSData *)exportSettings;
+
+- (NSArray *)availableComponents;
+- (NSData *)getExportSettings;
+
+- (IBAction)cancelButton:(id)sender;
 
 @end
