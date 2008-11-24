@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'SchellingSimulation' target in the 'SchellingSimulation' project.
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
