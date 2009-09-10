@@ -42,14 +42,14 @@
 		[printView addSubview:view];
 	}
 	
-	NSData *printData = [printView dataWithPDFInsideRect:printingBounds];
-	[printData writeToFile:[NSString stringWithFormat:@"%@/statistics.pdf", path] atomically:NO];
-	[printView release];
-	
 	// export configuration to .cocoabugs file
 	// TODO: DRY this up (repeated in ALifeConfigurationWindowController)
 	NSDictionary *data = [NSDictionary dictionaryWithObjectsAndKeys:[[simulationController.lifeController class] name], @"identifier", simulationController.configuration, @"configuration", nil];
 	[data writeToFile:[NSString stringWithFormat:@"%@/simulation.cocoabugs", path] atomically:NO];
+	
+	NSData *printData = [printView dataWithPDFInsideRect:printingBounds];
+	[printData writeToFile:[NSString stringWithFormat:@"%@/statistics.pdf", path] atomically:NO];
+	[printView release];
 }
 
 @end

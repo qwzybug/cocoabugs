@@ -52,7 +52,7 @@
 		 
 - (int)maxValue;
 {
-	int max = 50, cur;
+	int max = 1, cur;
 	for (NSNumber *num in maxes) {
 		cur = [num intValue];
 		max = max > cur ? max : cur;

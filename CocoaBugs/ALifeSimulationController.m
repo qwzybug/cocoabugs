@@ -21,6 +21,8 @@
 	
 	NSArray *opts = [modelClass configurationOptions];
 	
+	srandom([[NSDate date] timeIntervalSinceReferenceDate]);
+	
 	// check for shuffled parameters
 	for (NSDictionary *configurationOptions in opts) {
 		NSString *type = [configurationOptions objectForKey:@"type"];
@@ -31,6 +33,17 @@
 			[theConfiguration setValue:[ALifeShuffler shuffleType:type withOptions:entry] forKey:name];
 		}
 	}
+	
+	// check for random seed in conf file
+	int seed = 0;
+	if ([theConfiguration objectForKey:@"seed"]) {
+		seed = [[theConfiguration objectForKey:@"seed"] intValue];
+	} else {
+		seed = [[NSDate date] timeIntervalSinceReferenceDate];
+		[theConfiguration setValue:[NSNumber numberWithInt:seed] forKey:@"seed"];
+	}
+	srandom(seed);
+	
 	lifeController = [[modelClass alloc] initWithConfiguration:theConfiguration];
 	self.configuration = [NSDictionary dictionaryWithDictionary:theConfiguration];
 	

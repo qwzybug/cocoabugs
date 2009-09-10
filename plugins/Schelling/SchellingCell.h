@@ -39,11 +39,11 @@
 @property(readwrite) int seven;
 @property(readwrite) int eight;
 @property(readonly) NSMutableSet *neighbors;
-//@property(readwrite) NSMutableSet *nearEmpty;
 
 - (id)initWithRow:(int)r column:(int)c;
 - (int)liveNeighbors;
 - (int)sameNeighbors;
 - (id)closeCells;
-//- (id)nearEmpty;
+- (BOOL)moved;
+
 @end

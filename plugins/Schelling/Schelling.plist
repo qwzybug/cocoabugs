@@ -175,10 +175,19 @@
 	</array>
 	<key>statistics</key>
 	<dict>
-		<key>population</key>
+		<key>diversity</key>
 		<dict>
 			<key>keyPath</key>
-			<string>population</string>
+			<string>diversity</string>
+			<key>title</key>
+			<string>Diversity</string>
+			<key>singular</key>
+			<true/>
+		</dict>
+		<key>segregation</key>
+		<dict>
+			<key>keyPath</key>
+			<string>segregation</string>
 			<key>title</key>
 			<string>Segregation</string>
 			<key>singular</key>

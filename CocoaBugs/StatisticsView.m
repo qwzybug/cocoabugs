@@ -93,7 +93,7 @@
 //	}
 		
 	// assemble data points
-	int datumValue;
+	float datumValue;
 	float vscale = (float)height / max;
 	
 	// draw grid lines
@@ -108,7 +108,7 @@
 		data = [stats getDataSet:i];
 		if (!data) continue;
 		for (NSNumber *datum in data) {
-			datumValue = [datum intValue];
+			datumValue = [datum floatValue];
 			if (!datumValue) continue;
 			rects[rectCount] = NSMakeRect(i * width / stats.size, datumValue * vscale + 2.0, 1.0, 1.0);
 			rectCount++;

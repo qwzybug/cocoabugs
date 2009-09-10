@@ -55,8 +55,8 @@ static NSDictionary *gShuffleTable = NULL;
 	float p = [[options valueForKey:@"principalValue"] floatValue];
 	float d = [[options valueForKey:@"delta"] floatValue];
 	
-	long rmax = 1 << 31 - 1;
-	float v = p + 2 * ((float)random() / (float)(rmax)) - d;
+	int max = INT_MAX;
+	float v = p + 2 * ((float)random() / (float)(max)) - d;
 	
 	return [NSNumber numberWithFloat:v];
 }

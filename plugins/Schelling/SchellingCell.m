@@ -64,6 +64,7 @@
 			return cell;
 		}
 	}
+	return nil;
 }
 
 //- (BOOL)moved;
@@ -73,28 +74,28 @@
 //	int c = [self sameNeighbors];
 //	if (d==0){
 //		//if (self.zero == 1){
-////			return TRUE;
+////			return YES;
 ////		}else{
-////			return FALSE;
+////			return NO;
 ////		}
-//		return TRUE;
+//		return YES;
 //	}else if (( d == 1 ) || ( d == 2 )){
 //		if (c < 1){
-//			return TRUE;
+//			return YES;
 //		}else{
-//			return TRUE;
+//			return YES;
 //		}
 //	}else if (( d == 3 ) || ( d == 4 ) || (d == 5)){
 //		if (c < 2){
-//			return TRUE;
+//			return YES;
 //		}else{
-//			return FALSE;
+//			return NO;
 //		}
 //	}else if (d > 5){
 //		if (c < 3){
-//			return TRUE;
+//			return YES;
 //		}else{
-//			return FALSE;
+//			return NO;
 //		}
 //	}
 //}
@@ -107,67 +108,68 @@
 	if (d== 0){
 		//no neighbors
 		if (zero == 1){
-			return TRUE;
+			return YES;
 		}else{
-			return FALSE;
+			return NO;
 		}
 	}else if (d == 1){
 		if (c < one){
-			return TRUE;
+			return YES;
 		}else{
-			return FALSE;
+			return NO;
 		}
 	}else if (d == 2){
 		if (c < two){
-			return TRUE;
+			return YES;
 		}else{
-			return FALSE;
+			return NO;
 		}
 		
 	}else if (d == 3){
 		if (c < three){
-			return TRUE;
+			return YES;
 		}else{
-			return FALSE;
+			return NO;
 		}
 		
 	}else if (d == 4){
 			if (c < four){
-				return TRUE;
+				return YES;
 			}else{
-				return FALSE;
+				return NO;
 			}
 		
 		
 	}else if (d == 5){
 		if (c < five){
-			return TRUE;
+			return YES;
 		}else{
-			return FALSE;
+			return NO;
 		}
 	
 
 	}else if (d == 6){
 		if (c < six){
-			return TRUE;
+			return YES;
 		}else{
-			return FALSE;
+			return NO;
 		}
 
 	}else if (d == 7){
 		if (c < seven){
-			return TRUE;
+			return YES;
 		}else{
-			return FALSE;
+			return NO;
 		}
 
 	}else if (d == 8){
 		if (c < eight){
-			return TRUE;
+			return YES;
 		}else{
-			return FALSE;
+			return NO;
 		}
-	}	
+	}
+	return NO;
 }
 
 @end

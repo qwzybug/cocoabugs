@@ -11,11 +11,11 @@
 #import "ALifeController.h"
 
 @interface ALifeSimulationController : NSObject {
-	id <ALifeController> lifeController;
+	id<ALifeController> lifeController;
 	NSDictionary *configuration;
 }
 
-@property(readwrite, retain) id <ALifeController> lifeController;
+@property(readwrite, retain) id<ALifeController> lifeController;
 @property(readwrite, retain) NSDictionary *configuration;
 
 - (id)initWithSimulationClass:(Class <ALifeController>)modelClass configuration:(NSDictionary *)configuration;

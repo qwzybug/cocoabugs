@@ -136,7 +136,7 @@
 	
 	
 	
-	NSString *thePath = [[NSBundle bundleForClass:[self class]] pathForResource:@"SchellingSimulation" ofType:@"plist"];
+	NSString *thePath = [[NSBundle bundleForClass:[self class]] pathForResource:@"Schelling" ofType:@"plist"];
 	properties = [[NSDictionary dictionaryWithContentsOfFile:thePath] retain];
 	
 	statisticsCollector = [[SchellingStatistics alloc] initWithGame:game];

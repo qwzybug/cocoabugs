@@ -13,7 +13,8 @@
 
 @implementation SchellingStatistics
 
-@synthesize population, game;
+@synthesize game;
+@synthesize segregation, diversity;
 
 - (id)initWithGame:(id)theGame;
 {
@@ -34,7 +35,8 @@
 	
 	[game removeObserver:self forKeyPath:@"generation"];
 	self.game = nil;
-	self.population = nil;
+	self.segregation = nil;
+	self.diversity = nil;
 	
 	[super dealloc];
 }
@@ -51,17 +53,24 @@
 
 - (void)updateStatistics;
 {
-//	NSLog(@"Collating statistics...");
-	
-	// population
+	// segregation and diversity
+	int diff = 0;
+	int same = 0;
 	int pop = 0;
 	for(NSMutableArray *row in game.grid) {
 		for (SchellingCell *cell in row) {
-			int samies = [cell sameNeighbors];
-				pop = pop + samies;
+			int neighbors = [cell liveNeighbors];
+			int sameNeighbors = [cell sameNeighbors];
+			pop++;
+			same = same + sameNeighbors;
+			diff = diff + (neighbors - sameNeighbors);
 		}
 	}
-	self.population = [NSSet setWithObject:[NSNumber numberWithInt:pop]];
+	float segregationRate = (float)same / pop;
+	float diversityRate = (float)diff / pop;
+	
+	self.segregation = [NSSet setWithObject:[NSNumber numberWithFloat:segregationRate]];
+	self.diversity = [NSSet setWithObject:[NSNumber numberWithFloat:diversityRate]];
 }
 
 @end
