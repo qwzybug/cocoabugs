@@ -14,8 +14,6 @@
 #import "ALifeRunExporter.h"
 #import "ALifeSimulationController.h"
 
-StatisticsController *statisticsController;
-
 int main(int argc, char *argv[])
 {
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
@@ -25,9 +23,11 @@ int main(int argc, char *argv[])
 	NSString *configurationFile = [args stringForKey:@"f"];
 	NSString *outputDirectory = [args stringForKey:@"o"];
 	int numberOfSteps = [args integerForKey:@"s"];
+	int numberOfRuns  = [args integerForKey:@"n"];
+	numberOfRuns = numberOfRuns ? numberOfRuns : 1;
 	
 	if (!(configurationFile && outputDirectory && numberOfSteps)) {
-		printf("Usage: HeadlessBugs -f <config filename> -o <output directory path> -s <number of steps>\n");
+		printf("Usage: HeadlessBugs -f <config filename> -o <output directory path> -s <number of steps> [-n <number of runs>]\n");
 		return 1;
 	}
 	
@@ -49,21 +49,37 @@ int main(int argc, char *argv[])
 		return 1;
 	}
 	
-	ALifeSimulationController *simulationController = [[ALifeSimulationController alloc] initWithSimulationClass:selectedPlugin configuration:configuration];
-	
-	statisticsController = [[StatisticsController alloc] init];
-	statisticsController.statisticsSize = numberOfSteps;
-	[statisticsController setSource:[simulationController.lifeController statisticsCollector]
-					  forStatistics:[[simulationController.lifeController properties] objectForKey:@"statistics"]];
-	
 	int step;
-	for (step = 0; step < numberOfSteps; step++) {
-		if (step % 100 == 0)
-			printf("Step %d\n", step);
-		[simulationController.lifeController update];
-	}
+	int run;
+	int runFrac = (int)(numberOfSteps / 10.0);
+	ALifeSimulationController *simulationController;
+	StatisticsController *statisticsController;
 	
-	[ALifeRunExporter exportSimulation:simulationController withStatistics:statisticsController toDirectory:outputDirectory];
+	for (run = 0; run < numberOfRuns; run++) {
+		simulationController = [[ALifeSimulationController alloc] initWithSimulationClass:selectedPlugin configuration:configuration];
+		
+		statisticsController = [[StatisticsController alloc] init];
+		statisticsController.statisticsSize = numberOfSteps;
+		[statisticsController setSource:[simulationController.lifeController statisticsCollector]
+						  forStatistics:[[simulationController.lifeController properties] objectForKey:@"statistics"]];
+		
+		printf("Run %d", run + 1);
+		fflush(stdout);
+		for (step = 0; step < numberOfSteps; step++) {
+			if (step % runFrac == 0) {
+				printf(".");
+				fflush(stdout);
+			}
+			[simulationController.lifeController update];
+		}
+		NSString *dir = [NSString stringWithFormat:@"%@/%d", outputDirectory, run + 1];
+		[ALifeRunExporter exportSimulation:simulationController withStatistics:statisticsController toDirectory:dir];
+		
+		[statisticsController release];
+		[simulationController release];
+		
+		printf("\n");
+	}
 	
 	printf("Done.\n");
 	
