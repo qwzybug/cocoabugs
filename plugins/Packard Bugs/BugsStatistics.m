@@ -28,6 +28,7 @@
 
 - (void)dealloc;
 {
+	[world removeObserver:self forKeyPath:@"ticks"];
 	[world release];
 	
 	[super dealloc];
