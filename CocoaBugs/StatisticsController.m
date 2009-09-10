@@ -14,15 +14,15 @@
 
 @implementation StatisticsController
 
-@synthesize source, statisticsViews, statisticsSize;
+@synthesize source, statisticsViews, statisticsSize, stats;
 
 - (id)init;
 {
 	if (!(self = [super init]))
 		return nil;
 	
-	stats = [[NSMutableDictionary dictionaryWithCapacity:5] retain];
-	statisticsViews = [[NSMutableArray arrayWithCapacity:5] retain];
+	self.stats = [NSMutableDictionary dictionaryWithCapacity:5];
+	self.statisticsViews = [NSMutableArray arrayWithCapacity:5];
 	
 	return self;
 }
@@ -33,7 +33,7 @@
 		[source removeObserver:self forKeyPath:key];
 	}
 	[stats release];
-	self.source = nil;
+	[source release];
 	
 	[statisticsViews release];
 	
@@ -60,31 +60,8 @@
 {
 #define STATS_WIDTH 350
 #define STATS_HEIGHT 80
-	// calculate statistics frame
-	NSRect frame = NSMakeRect(0, 80 * [stats count], STATS_WIDTH, STATS_HEIGHT);
-	// create stats view
-	StatisticsView *view = [[[StatisticsView alloc] initWithFrame:frame] autorelease];
-	[view setAutoresizingMask:(NSViewWidthSizable)];
-	// add stats view to window
-//	[[statisticsPanel contentView] addSubview:view];
-	// resize window to fit
-//	frame = [statisticsPanel frame];
-//	[statisticsPanel setFrame:NSMakeRect(frame.origin.x, frame.origin.y - 80.0, frame.size.width, frame.size.height + 80.0) display:YES];
-//	[statisticsTableView.statisticsViews addObject:view];
-//	[statisticsCells addObject:view];
-	if (statisticsPanel) {
-		NSRect frame = statisticsPanel.frame;
-		[statisticsPanel setFrame:NSMakeRect(frame.origin.x, frame.origin.y - 80.0, frame.size.width, frame.size.height + 80.0) display:YES];
-		[self addStatisticsView:view toView:[statisticsPanel contentView]];
-	}
-	[self.statisticsViews addObject:view];
-	
 	// create stats object
 	StatisticsData *data = [[[StatisticsData alloc] initWithCapacity:statisticsSize] autorelease];
-	
-	// put 'em together
-	view.stats = data;
-	view.title = name;
 	[stats setObject:data forKey:path];
 	
 	// observe requested key path
@@ -92,6 +69,25 @@
 			 forKeyPath:path
 				options:NSKeyValueObservingOptionNew
 				context:NULL];
+	
+	// add stats view to window if we have a panel
+	if (statisticsPanel) {
+		// calculate statistics frame
+		NSRect frame = NSMakeRect(0, 80 * [stats count], STATS_WIDTH, STATS_HEIGHT);
+		// create stats view
+		StatisticsView *view = [[[StatisticsView alloc] initWithFrame:frame] autorelease];
+		[view setAutoresizingMask:(NSViewWidthSizable)];
+		
+		NSRect statsFrame = statisticsPanel.frame;
+		[statisticsPanel setFrame:NSMakeRect(statsFrame.origin.x, statsFrame.origin.y - STATS_HEIGHT, statsFrame.size.width, statsFrame.size.height + STATS_HEIGHT) display:YES];
+		[self addStatisticsView:view toView:[statisticsPanel contentView]];
+		
+		[self.statisticsViews addObject:view];
+		
+		// put 'em together
+		view.stats = data;
+		view.title = name;
+	}
 }
 
 - (void)addStatisticsView:(StatisticsView *)statsView toView:(NSView *)parentView;

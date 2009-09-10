@@ -17,9 +17,10 @@
 	bool multiway;
 }
 
-@property(readonly) int size;
-@property(readwrite) int cursor;
-@property(readwrite) bool multiway;
+@property (readonly) int size;
+@property (readwrite) int cursor;
+@property (readwrite) bool multiway;
+@property (nonatomic, readonly) NSString *csv;
 
 - (id)initWithCapacity:(int)capacity;
 - (void)addDataPoint:(int)datum;

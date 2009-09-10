@@ -11,6 +11,7 @@
 @implementation StatisticsData
 
 @synthesize size, cursor, multiway;
+@dynamic csv;
 
 - (id)initWithCapacity:(int)capacity;
 {
@@ -82,6 +83,17 @@
 - (NSSet *)getDataSet:(int)num;
 {
 	return [data objectAtIndex:(cursor + num) % size];
+}
+
+- (NSString *)csv;
+{
+	NSMutableArray *components = [NSMutableArray arrayWithCapacity:size];
+	NSString *val;
+	for (int i = 0; i < size; i++) {
+		val = [NSString stringWithFormat:@"%@", [[data objectAtIndex:i] anyObject]];
+		[components addObject:val];
+	}
+	return [components componentsJoinedByString:@","];
 }
 
 @end

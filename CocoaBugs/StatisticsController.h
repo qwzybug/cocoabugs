@@ -18,9 +18,10 @@
 	int statisticsSize;
 }
 
-@property(readwrite, retain) id source;
+@property (readwrite, retain) id source;
 @property (readwrite, retain) NSMutableArray *statisticsViews;
 @property (readwrite, assign) int statisticsSize;
+@property (readwrite, retain) NSMutableDictionary *stats;
 
 - (void)setSource:(id)statisticsCollector forStatistics:(NSDictionary *)descriptions;
 - (void)registerForPath:(NSString *)path name:(NSString *)name;
