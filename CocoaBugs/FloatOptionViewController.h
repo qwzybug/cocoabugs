@@ -32,6 +32,7 @@
 	float defaultValue;
 }
 
+@property (nonatomic, retain) IBOutlet NSSlider *slider;
 @property(readwrite, retain) NSString *name;
 @property(readwrite, retain) NSString *title;
 @property(readwrite, assign) BOOL shuffling;

@@ -10,10 +10,11 @@
 
 #import "ALifeController.h"
 
-@class StatisticsController, ALifeSimulationController, DMQuicktimeExporter;
+@class StatisticsController, ALifeSimulationController, DMQuicktimeExporter, ALifeTinkerPanelController;
 
 @interface ALifeWindowController : NSWindowController {
 	IBOutlet StatisticsController *statisticsController;
+	ALifeTinkerPanelController *tinkerPanelController;
 	ALifeSimulationController *simulationController;
 	DMQuicktimeExporter *movieExporter;
 	
@@ -32,5 +33,7 @@
 - (IBAction)tick:(id)sender;
 - (void)stepSimulation;
 - (IBAction)exportMovie:(id)sender;
+
+- (IBAction)showConfigurationWindow:(id)sender;
 
 @end

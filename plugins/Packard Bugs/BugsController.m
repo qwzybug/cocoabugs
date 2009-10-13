@@ -15,6 +15,7 @@
 @implementation BugsController
 
 @synthesize properties;
+@synthesize world;
 
 + (NSString *)name;
 {

@@ -39,6 +39,8 @@
 			<real>1</real>
 			<key>default</key>
 			<real>0.5</real>
+			<key>keyPath</key>
+			<string>world.mutationRate</string>
 		</dict>
 		<dict>
 			<key>name</key>
@@ -53,6 +55,8 @@
 			<integer>40</integer>
 			<key>default</key>
 			<integer>20</integer>
+			<key>keyPath</key>
+			<string>world.reproductionFood</string>
 		</dict>
 		<dict>
 			<key>name</key>
@@ -67,6 +71,8 @@
 			<integer>5</integer>
 			<key>default</key>
 			<integer>1</integer>
+			<key>keyPath</key>
+			<string>world.movementCost</string>
 		</dict>
 		<dict>
 			<key>name</key>
@@ -81,6 +87,8 @@
 			<integer>5</integer>
 			<key>default</key>
 			<integer>2</integer>
+			<key>keyPath</key>
+			<string>world.eatAmount</string>
 		</dict>
 	</array>
 	<key>statistics</key>

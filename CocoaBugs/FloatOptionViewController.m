@@ -11,7 +11,7 @@
 
 @implementation FloatOptionViewController
 
-@synthesize name, title, shuffling, delta;
+@synthesize name, title, shuffling, delta, slider;
 
 + (FloatOptionViewController *)controllerWithOptions:(NSDictionary *)options;
 {

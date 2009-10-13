@@ -26,6 +26,8 @@
 		0365F7B80E1BCEC30074AA88 /* ALifeWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0365F7B70E1BCEC30074AA88 /* ALifeWindowController.m */; };
 		0365F7BC0E1BCFB20074AA88 /* ALifeWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0365F7BB0E1BCFB20074AA88 /* ALifeWindow.xib */; };
 		03729EE00D8F1E77009FDBE8 /* StatisticsData.m in Sources */ = {isa = PBXBuildFile; fileRef = 03729EDF0D8F1E77009FDBE8 /* StatisticsData.m */; };
+		037880A6106ED41A0023E6EA /* ALifeTinkerPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 037880A5106ED41A0023E6EA /* ALifeTinkerPanelController.m */; };
+		037880E6106EDA860023E6EA /* TinkerPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 037880E5106EDA860023E6EA /* TinkerPanel.xib */; };
 		03A39B880E4E362D00490AE3 /* ALifeShuffler.m in Sources */ = {isa = PBXBuildFile; fileRef = 03EDB3350E4E26F90008990A /* ALifeShuffler.m */; };
 		03AE61FB0E4C909600C0E469 /* Shuffle.tif in Resources */ = {isa = PBXBuildFile; fileRef = 03AE61E10E4C902000C0E469 /* Shuffle.tif */; };
 		03B539880E230663007FCED7 /* ALifeConfigurationWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B539870E230663007FCED7 /* ALifeConfigurationWindowController.m */; };
@@ -85,6 +87,9 @@
 		0365F7BB0E1BCFB20074AA88 /* ALifeWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ALifeWindow.xib; sourceTree = "<group>"; };
 		03729EDE0D8F1E77009FDBE8 /* StatisticsData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsData.h; sourceTree = "<group>"; };
 		03729EDF0D8F1E77009FDBE8 /* StatisticsData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticsData.m; sourceTree = "<group>"; };
+		037880A4106ED41A0023E6EA /* ALifeTinkerPanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALifeTinkerPanelController.h; sourceTree = "<group>"; };
+		037880A5106ED41A0023E6EA /* ALifeTinkerPanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALifeTinkerPanelController.m; sourceTree = "<group>"; };
+		037880E5106EDA860023E6EA /* TinkerPanel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TinkerPanel.xib; sourceTree = "<group>"; };
 		03AE61E10E4C902000C0E469 /* Shuffle.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Shuffle.tif; sourceTree = "<group>"; };
 		03B539860E230663007FCED7 /* ALifeConfigurationWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALifeConfigurationWindowController.h; sourceTree = "<group>"; };
 		03B539870E230663007FCED7 /* ALifeConfigurationWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALifeConfigurationWindowController.m; sourceTree = "<group>"; };
@@ -206,6 +211,8 @@
 				03B539860E230663007FCED7 /* ALifeConfigurationWindowController.h */,
 				03B539870E230663007FCED7 /* ALifeConfigurationWindowController.m */,
 				0339CFF30E240E05009C5D0D /* Configuration */,
+				037880A4106ED41A0023E6EA /* ALifeTinkerPanelController.h */,
+				037880A5106ED41A0023E6EA /* ALifeTinkerPanelController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -308,6 +315,7 @@
 				031C41690E306B0A00E8B508 /* FloatOptionView.xib */,
 				03D46D6E0E592E90000DE764 /* BitmapOptionView.xib */,
 				0359DC9A0E7F1AA300EEAC01 /* DMQuicktimeExporter.xib */,
+				037880E5106EDA860023E6EA /* TinkerPanel.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -401,6 +409,7 @@
 				0351906E0E7DD5CC00205E7B /* record.png in Resources */,
 				035190700E7DD65700205E7B /* record_small.png in Resources */,
 				0359DC9B0E7F1AA300EEAC01 /* DMQuicktimeExporter.xib in Resources */,
+				037880E6106EDA860023E6EA /* TinkerPanel.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +451,7 @@
 				031C41670E306A7D00E8B508 /* FloatOptionViewController.m in Sources */,
 				03A39B880E4E362D00490AE3 /* ALifeShuffler.m in Sources */,
 				0351908D0E7DD8D300205E7B /* DMQuicktimeExporter.m in Sources */,
+				037880A6106ED41A0023E6EA /* ALifeTinkerPanelController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

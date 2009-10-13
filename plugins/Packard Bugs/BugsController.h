@@ -17,6 +17,7 @@
 }
 
 @property (readonly) NSDictionary *properties;
+@property (readwrite) World *world;
 
 // add method declarations here
 + (NSString *)name;

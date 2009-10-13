@@ -11,7 +11,7 @@
 
 @implementation IntegerOptionViewController
 
-@synthesize name, title, shuffling, delta;
+@synthesize name, title, shuffling, delta, slider;
 
 + (IntegerOptionViewController *)controllerWithOptions:(NSDictionary *)options;
 {

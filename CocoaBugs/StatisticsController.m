@@ -45,7 +45,8 @@
 	self.source = statisticsCollector;
 	if (!statisticsSize) statisticsSize = 1000;
 	
-	for (NSDictionary *description in [descriptions allValues]) {
+	NSSortDescriptor *sort = [[[NSSortDescriptor alloc] initWithKey:@"title" ascending:NO] autorelease];
+	for (NSDictionary *description in [[descriptions allValues] sortedArrayUsingDescriptors:[NSArray arrayWithObject:sort]]) {
 		[self registerForPath:[description objectForKey:@"keyPath"]
 						 name:[description objectForKey:@"title"]];
 	}
@@ -73,14 +74,17 @@
 	// add stats view to window if we have a panel
 	if (statisticsPanel) {
 		// calculate statistics frame
-		NSRect frame = NSMakeRect(0, 80 * [stats count], STATS_WIDTH, STATS_HEIGHT);
+		NSRect frame = NSMakeRect(0, 80 * ([stats count] - 1), STATS_WIDTH, STATS_HEIGHT);
 		// create stats view
 		StatisticsView *view = [[[StatisticsView alloc] initWithFrame:frame] autorelease];
-		[view setAutoresizingMask:(NSViewWidthSizable)];
+		[view setAutoresizingMask:(NSViewWidthSizable | NSViewMaxYMargin)];
 		
 		NSRect statsFrame = statisticsPanel.frame;
+		[[statisticsPanel contentView] addSubview:view];
 		[statisticsPanel setFrame:NSMakeRect(statsFrame.origin.x, statsFrame.origin.y - STATS_HEIGHT, statsFrame.size.width, statsFrame.size.height + STATS_HEIGHT) display:YES];
-		[self addStatisticsView:view toView:[statisticsPanel contentView]];
+		
+		[statisticsPanel setContentMaxSize:NSMakeSize(1000, [[statisticsPanel contentView] frame].size.height)];
+		[statisticsPanel setContentMinSize:NSMakeSize(100, [[statisticsPanel contentView] frame].size.height)];
 		
 		[self.statisticsViews addObject:view];
 		
@@ -88,15 +92,6 @@
 		view.stats = data;
 		view.title = name;
 	}
-}
-
-- (void)addStatisticsView:(StatisticsView *)statsView toView:(NSView *)parentView;
-{
-	// add stats view to window
-	[parentView addSubview:statsView];
-	// resize window to fit
-	NSRect frame = [parentView frame];
-	[parentView setFrame:NSMakeRect(frame.origin.x, frame.origin.y, frame.size.width, frame.size.height + 80.0)];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath

@@ -10,6 +10,7 @@
 
 #import "StatisticsController.h"
 #import "ALifeSimulationController.h"
+#import "ALifeTinkerPanelController.h"
 #import "DMQuicktimeExporter.h"
 
 @implementation ALifeWindowController
@@ -35,6 +36,8 @@
 	
 	simulationController = [[ALifeSimulationController alloc] initWithSimulationClass:modelClass configuration:configuration];
 	
+	tinkerPanelController = [[ALifeTinkerPanelController tinkerPanelForSimulation:simulationController.lifeController] retain];
+	
 	NSView *contentView = [[self window] contentView];
 	NSView *lifeView = [simulationController.lifeController view];
 	NSRect contentFrame = contentView.frame;
@@ -57,6 +60,11 @@
 					  forStatistics:[[simulationController.lifeController properties] objectForKey:@"statistics"]];	
 	
 	return self;
+}
+
+- (IBAction)showConfigurationWindow:(id)sender;
+{
+	[[tinkerPanelController window] makeKeyAndOrderFront:self];
 }
 
 - (IBAction)tick:(id)sender;

@@ -25,6 +25,5 @@
 
 - (void)setSource:(id)statisticsCollector forStatistics:(NSDictionary *)descriptions;
 - (void)registerForPath:(NSString *)path name:(NSString *)name;
-- (void)addStatisticsView:(StatisticsView *)statsView toView:(NSView *)parentView;
 
 @end

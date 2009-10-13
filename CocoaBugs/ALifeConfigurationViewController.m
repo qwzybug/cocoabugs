@@ -14,7 +14,7 @@
 
 @implementation ALifeConfigurationViewController
 
-@synthesize simulationClass, contentHeight;
+@synthesize simulationClass, contentHeight, mode, optionControllers, simulation;
 
 + (ALifeConfigurationViewController *)configurationController;
 {
@@ -39,10 +39,32 @@
 	// create the option controllers
 	NSArray *configuration = [simulationClass configurationOptions];
 	for (NSDictionary *options in configuration) {
+		// if we're in tinker mode, we only want to add options with a key path
+		if (self.mode == kConfigurationControllerModeTinker && ![options objectForKey:@"keyPath"]) {
+			continue;
+		}	
 		if ([[options objectForKey:@"type"] isEqual:@"Integer"]) {
-			[optionControllers addObject:[IntegerOptionViewController controllerWithOptions:options]];
+			IntegerOptionViewController *controller = [IntegerOptionViewController controllerWithOptions:options];
+			[optionControllers addObject:controller];
+			[controller loadView];
+			if (self.mode == kConfigurationControllerModeTinker && self.simulation) {
+				NSString *keyPath = [options objectForKey:@"keyPath"];
+				[controller.slider bind:@"value"
+							   toObject:self.simulation
+							withKeyPath:keyPath
+								options:nil];
+			}
 		} else if ([[options objectForKey:@"type"] isEqual:@"Float"]) {
-			[optionControllers addObject:[FloatOptionViewController controllerWithOptions:options]];
+			FloatOptionViewController *controller = [FloatOptionViewController controllerWithOptions:options];
+			[optionControllers addObject:controller];
+			[controller loadView];
+			if (self.mode == kConfigurationControllerModeTinker && self.simulation) {
+				NSString *keyPath = [options objectForKey:@"keyPath"];
+				[controller.slider bind:@"value"
+							   toObject:self.simulation
+							withKeyPath:keyPath
+								options:nil];
+			}
 		} else if ([[options objectForKey:@"type"] isEqual:@"Bitmap"]) {
 			[optionControllers addObject:[BitmapOptionViewController controllerWithOptions:options]];
 		}

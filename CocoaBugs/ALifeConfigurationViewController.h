@@ -10,14 +10,24 @@
 
 #import "ALifeController.h"
 
+typedef enum _ALifeConfigurationControllerMode {
+	kConfigurationControllerModeConfigure,
+	kConfigurationControllerModeTinker
+} ALifeConfigurationControllerMode;
+
 @interface ALifeConfigurationViewController : NSViewController {
 	NSMutableArray *optionControllers;
 	Class <ALifeController> simulationClass;
+	id <ALifeController> simulation;
 	int contentHeight;
+	ALifeConfigurationControllerMode mode;
 }
 
 @property(readwrite) Class <ALifeController> simulationClass;
 @property(readonly) int contentHeight;
+@property (nonatomic, assign) ALifeConfigurationControllerMode mode;
+@property (nonatomic, retain) NSMutableArray *optionControllers;
+@property (nonatomic, retain) id<ALifeController> simulation;
 
 + (ALifeConfigurationViewController *)configurationController;
 
