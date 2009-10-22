@@ -30,6 +30,5 @@
 - (void)showConfiguration;
 
 - (IBAction)actionStartSimulation:(id)sender;
-- (IBAction)actionExportConfiguration:(id)sender;
 
 @end

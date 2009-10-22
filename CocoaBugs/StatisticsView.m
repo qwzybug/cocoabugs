@@ -53,7 +53,7 @@
 //- (void)drawWithFrame:(NSRect)cellFrame inView:(NSView *)controlView;
 - (void)drawRect:(NSRect)rect;
 {
-	if (!stats)
+	if (!stats || stats.size < 1)
 		return;
 	
 	NSColor *dataColor, *labelColor, *gridColor, *dividerColor;

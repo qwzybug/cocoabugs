@@ -34,12 +34,6 @@
 
 - (void)awakeFromNib;
 {
-//	[configurationView addSubview:configurationViewController.view];
-	NSSize contentSize = scrollView.contentSize;
-//	NSRect configFrame = configurationViewController.view.frame;
-//	configFrame.size.width = 
-//	configurationViewController.view.frame = scrollView.frame;
-//	[scrollView setDocumentView:configurationViewController.view];
 	[configurationViewController setView:scrollView.documentView];
 }
 
@@ -91,19 +85,15 @@
 	[[scrollView documentView] scrollPoint:newScrollOrigin];
 }
 
-//- (void)windowDidResize:(NSNotification *)notification
-//{
-//	NSRect cFrame = configurationViewController.view.frame;
-//	configurationViewController.view.frame = cFrame;
-//}
-
 - (IBAction)actionStartSimulation:(id)sender;
 {
 	// get configuration options
 	NSDictionary *configuration = [configurationViewController configuration];
-//	NSLog([configuration description]);
+	
 	// instantiate a simulation window controller with options
 	ALifeWindowController *simulationWindow = [ALifeWindowController windowControllerForModel:[self selectedClass] withConfiguration:configuration];
+	[simulationWindow.window makeKeyWindow];
+	
 	// close our window
 	[[self window] close];
 }

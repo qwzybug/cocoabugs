@@ -12,7 +12,8 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="4"/>
+			<integer value="14"/>
+			<integer value="3"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -41,8 +42,8 @@
 			<object class="NSWindowTemplate" id="923943861">
 				<int key="NSWindowStyleMask">15</int>
 				<int key="NSWindowBacking">2</int>
-				<string key="NSWindowRect">{{140, 757}, {347, 303}}</string>
-				<int key="NSWTFlags">611844096</int>
+				<string key="NSWindowRect">{{132, 461}, {347, 303}}</string>
+				<int key="NSWTFlags">606601216</int>
 				<string key="NSWindowTitle">CocoaBugs</string>
 				<string key="NSWindowClass">NSWindow</string>
 				<object class="NSToolbar" key="NSViewClass" id="508263219">
@@ -82,6 +83,7 @@
 									<int key="NSvFlags">268</int>
 									<string key="NSFrame">{{10, 14}, {25, 25}}</string>
 									<reference key="NSSuperview"/>
+									<reference key="NSWindow"/>
 									<bool key="NSEnabled">YES</bool>
 									<object class="NSButtonCell" key="NSCell" id="506645712">
 										<int key="NSCellFlags">67239424</int>
@@ -128,6 +130,7 @@
 									<int key="NSvFlags">268</int>
 									<string key="NSFrame">{{0, 14}, {49, 25}}</string>
 									<reference key="NSSuperview"/>
+									<reference key="NSWindow"/>
 									<bool key="NSEnabled">YES</bool>
 									<object class="NSButtonCell" key="NSCell" id="487984375">
 										<int key="NSCellFlags">67239424</int>
@@ -166,6 +169,7 @@
 									<int key="NSvFlags">268</int>
 									<string key="NSFrame">{{6, 14}, {19, 19}}</string>
 									<reference key="NSSuperview"/>
+									<reference key="NSWindow"/>
 									<bool key="NSEnabled">YES</bool>
 									<object class="NSButtonCell" key="NSCell" id="907117630">
 										<int key="NSCellFlags">67239424</int>
@@ -328,31 +332,32 @@
 					<string key="NSFrameSize">{347, 303}</string>
 					<reference key="NSSuperview"/>
 				</object>
-				<string key="NSScreenRect">{{0, 0}, {1920, 1178}}</string>
+				<string key="NSScreenRect">{{0, 0}, {1440, 878}}</string>
 				<string key="NSMaxSize">{1.79769e+308, 1.79769e+308}</string>
 			</object>
 			<object class="NSCustomObject" id="352632620">
 				<string key="NSClassName">StatisticsController</string>
 			</object>
+			<object class="NSUserDefaultsController" id="565017756">
+				<bool key="NSSharedInstance">YES</bool>
+			</object>
 			<object class="NSWindowTemplate" id="329328974">
 				<int key="NSWindowStyleMask">8351</int>
 				<int key="NSWindowBacking">2</int>
-				<string key="NSWindowRect">{{451, 698}, {350, 0}}</string>
+				<string key="NSWindowRect">{{451, 698}, {350, 1}}</string>
 				<int key="NSWTFlags">-469762048</int>
 				<string key="NSWindowTitle">Statistics</string>
 				<string key="NSWindowClass">NSPanel</string>
 				<nil key="NSViewClass"/>
 				<string key="NSWindowContentMaxSize">{1.79769e+308, 1.79769e+308}</string>
 				<object class="NSView" key="NSWindowView" id="220437242">
-					<nil key="NSNextResponder"/>
+					<reference key="NSNextResponder"/>
 					<int key="NSvFlags">256</int>
-					<string key="NSFrameSize">{350, 0}</string>
+					<string key="NSFrameSize">{350, 1}</string>
+					<reference key="NSSuperview"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1440, 878}}</string>
 				<string key="NSMaxSize">{1.79769e+308, 1.79769e+308}</string>
-			</object>
-			<object class="NSUserDefaultsController" id="565017756">
-				<bool key="NSSharedInstance">YES</bool>
 			</object>
 		</object>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
@@ -555,24 +560,6 @@
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">14</int>
-						<reference key="object" ref="329328974"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="220437242"/>
-						</object>
-						<reference key="parent" ref="0"/>
-						<string key="objectName">Statistics panel</string>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">15</int>
-						<reference key="object" ref="220437242"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-						</object>
-						<reference key="parent" ref="329328974"/>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">24</int>
 						<reference key="object" ref="555220856"/>
 						<object class="NSMutableArray" key="children">
@@ -638,6 +625,21 @@
 						<reference key="object" ref="140532076"/>
 						<reference key="parent" ref="508263219"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">14</int>
+						<reference key="object" ref="329328974"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="220437242"/>
+						</object>
+						<reference key="parent" ref="0"/>
+						<string key="objectName">Statistics panel</string>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">15</int>
+						<reference key="object" ref="220437242"/>
+						<reference key="parent" ref="329328974"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -677,9 +679,9 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{437, 491}, {350, 0}}</string>
+					<string>{{437, 490}, {350, 1}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{437, 491}, {350, 0}}</string>
+					<string>{{437, 490}, {350, 1}}</string>
 					<integer value="0"/>
 					<string>{3.40282e+38, 3.40282e+38}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -687,12 +689,12 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{140, 757}, {347, 303}}</string>
+					<string>{{140, 497}, {347, 303}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{140, 757}, {347, 303}}</string>
+					<string>{{140, 497}, {347, 303}}</string>
 					<integer value="1"/>
 					<string>{3.40282e+38, 3.40282e+38}</string>
-					<string>{{5, 891}, {617, 169}}</string>
+					<string>{{5, 800}, {617, 0}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
