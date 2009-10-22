@@ -13,11 +13,13 @@
 @interface SchellingStatistics : NSObject {
 	NSSet *segregation;
 	NSSet *diversity;
+	NSSet *segregationRate;
 	SchellingSimulation *game;
 }
 
 @property(readwrite, retain) NSSet *segregation;
 @property(readwrite, retain) NSSet *diversity;
+@property(readwrite, retain) NSSet *segregationRate;
 @property(readwrite, retain) SchellingSimulation *game;
 
 - (id)initWithGame:(id)theGame;

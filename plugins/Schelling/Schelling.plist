@@ -193,6 +193,15 @@
 			<key>singular</key>
 			<true/>
 		</dict>
+		<key>segregationRate</key>
+		<dict>
+			<key>keyPath</key>
+			<string>segregationRate</string>
+			<key>title</key>
+			<string>Segregation Rate</string>
+			<key>singular</key>
+			<true/>
+		</dict>
 	</dict>
 </dict>
 </plist>

@@ -14,7 +14,7 @@
 @implementation SchellingStatistics
 
 @synthesize game;
-@synthesize segregation, diversity;
+@synthesize segregation, diversity, segregationRate;
 
 - (id)initWithGame:(id)theGame;
 {
@@ -56,21 +56,26 @@
 	// segregation and diversity
 	int diff = 0;
 	int same = 0;
+	float sameNeighborRateSum = 0;
 	int pop = 0;
 	for(NSMutableArray *row in game.grid) {
 		for (SchellingCell *cell in row) {
 			int neighbors = [cell liveNeighbors];
 			int sameNeighbors = [cell sameNeighbors];
+			float sameNeighborRate = (float)sameNeighbors / (float)neighbors;
 			pop++;
 			same = same + sameNeighbors;
 			diff = diff + (neighbors - sameNeighbors);
+			sameNeighborRateSum += sameNeighborRate;
 		}
 	}
-	float segregationRate = (float)same / pop;
+	float segregationAvg = (float)same / pop;
 	float diversityRate = (float)diff / pop;
 	
-	self.segregation = [NSSet setWithObject:[NSNumber numberWithFloat:segregationRate]];
+	self.segregation = [NSSet setWithObject:[NSNumber numberWithFloat:segregationAvg]];
 	self.diversity = [NSSet setWithObject:[NSNumber numberWithFloat:diversityRate]];
+	self.segregationRate = [NSSet setWithObject:[NSNumber numberWithFloat:(sameNeighborRateSum / pop)]];
+	
 }
 
 @end
