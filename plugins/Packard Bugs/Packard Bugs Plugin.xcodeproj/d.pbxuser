@@ -687,13 +687,13 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {795, 3328}}";
 			sepNavSelRange = "{5407, 0}";
-			sepNavVisRange = "{5221, 539}";
+			sepNavVisRange = "{5181, 573}";
 			sepNavWindowFrame = "{{15, 33}, {772, 837}}";
 		};
 	};
 	03E2CCC90E2729800077196A /* PackardBugs.plist */ = {
 		uiCtxt = {
-			sepNavWindowFrame = "{{955, 128}, {644, 568}}";
+			sepNavWindowFrame = "{{620, 41}, {772, 837}}";
 		};
 	};
 	03E2CD740E272F910077196A /* BugsController.h */ = {

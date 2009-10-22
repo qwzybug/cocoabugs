@@ -73,13 +73,13 @@ float rotationForPoint(int x, int y) {
 	NSColor *bugsColor[world.population];
 	
 	// gene to color by
-//	int colorGene = controller.observedGene;
+	int colorGene = 31;
 	
 	// loop it, dj
 	int i = 0, j = 0;
 	Bug *bug;
 //	Bug *selectedBug = controller.selectedBug;
-//	BugMovement gene;
+	BugMovement gene;
 	NSMutableArray *row;
 	Cell *cell;
 	for (i = 0; i < [world.grid count]; i++) {
@@ -92,12 +92,12 @@ float rotationForPoint(int x, int y) {
 				food_count++;
 			}
 			if(bug = cell.bug) {
-				bugsColor[bugs_count] = [NSColor redColor];
-//				gene = [bug getMovementForGene:colorGene];
-//				bugsColor[bugs_count] = [NSColor colorWithDeviceHue:rotationForPoint(gene.x, gene.y)
-//														 saturation:1.0
-//														 brightness:1.0
-//															  alpha:1.0];
+//				bugsColor[bugs_count] = [NSColor redColor];
+				gene = [bug getMovementForGene:colorGene];
+				bugsColor[bugs_count] = [NSColor colorWithDeviceHue:rotationForPoint(gene.x, gene.y)
+														 saturation:1.0
+														 brightness:1.0
+															  alpha:1.0];
 //				if (bug == selectedBug) {
 //					bugs[bugs_count] = NSMakeRect(5.0*j - 1.0, 5.0*i - 1.0, 7.0, 7.0);
 //				} else {
