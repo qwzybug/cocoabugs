@@ -63,8 +63,7 @@
 	}
 	[self setNeedsDisplay:YES];
 	
-//	((BugsController *)controller).observedGene = neighborhoodCode;
-//	[controller redrawDisplay];
+	[controller setGene:neighborhoodCode];
 }
 
 //- (id)initWithCoder:(NSCoder *)decoder;

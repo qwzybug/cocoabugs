@@ -4,14 +4,17 @@
  */
 
 #import <Cocoa/Cocoa.h>
-#import "BugsController.h"
+
+#import "BugsColoringWindowController.h"
 
 @interface BugNeighborhoodView : NSControl {
 	int neighborhoodCode;
 	NSRect rects[5];
-	IBOutlet id controller;
+	IBOutlet BugsColoringWindowController *controller;
 	bool enabled;
 }
+
 @property(assign, readwrite) bool enabled;
 @property(assign, readwrite) int neighborhoodCode;
+
 @end

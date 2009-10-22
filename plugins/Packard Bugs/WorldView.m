@@ -15,6 +15,7 @@
 @implementation WorldView
 
 @synthesize world;
+@synthesize colorGene;
 
 - (void)dealloc;
 {
@@ -72,9 +73,6 @@ float rotationForPoint(int x, int y) {
 	// color arrays
 	NSColor *bugsColor[world.population];
 	
-	// gene to color by
-	int colorGene = 31;
-	
 	// loop it, dj
 	int i = 0, j = 0;
 	Bug *bug;
@@ -92,7 +90,6 @@ float rotationForPoint(int x, int y) {
 				food_count++;
 			}
 			if(bug = cell.bug) {
-//				bugsColor[bugs_count] = [NSColor redColor];
 				gene = [bug getMovementForGene:colorGene];
 				bugsColor[bugs_count] = [NSColor colorWithDeviceHue:rotationForPoint(gene.x, gene.y)
 														 saturation:1.0

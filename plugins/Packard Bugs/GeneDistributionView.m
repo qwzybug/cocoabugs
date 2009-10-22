@@ -8,8 +8,12 @@
 
 #import "GeneDistributionView.h"
 
+#import "Bug.h"
 
 @implementation GeneDistributionView
+
+@synthesize bugs;
+@synthesize gene;
 
 - (id)initWithFrame:(NSRect)frame;
 {
@@ -33,61 +37,32 @@
 	}
 }
 
-//- (void)awakeFromNib;
-//{
-//	[controller addObserver:self
-//				 forKeyPath:@"world.ticks"
-//					options:NSKeyValueObservingOptionNew
-//					context:NULL];
-//	
-////	[controller addObserver:self
-////				 forKeyPath:@"observedGene"
-////					options:NSKeyValueObservingOptionNew
-////					context:NULL];
-//}
-
-- (void)observeValueForKeyPath:(NSString *)keyPath
-					  ofObject:(id)object
-                        change:(NSDictionary *)change
-                       context:(void *)context
-{
-//    if ([keyPath isEqual:@"observedGene"]) {
-//		[[change objectForKey:NSKeyValueChangeNewKey] getValue:&gene];
-//		[self setNeedsDisplay:YES];
-//	} else {
-		needsRedisplay = true;
-//	}
-}
-
 - (void)drawRect:(NSRect)rect;
 {
-//	int i, j;
-//	float rectWidth = [self frame].size.width / 31.0;
-//	float rectHeight = [self frame].size.height / 31.0;
-//	Bug *bug;
-//	BugMovement movement;
-//	for (NSMutableArray *row in controller.world.grid) {
-//		for (Cell *cell in row) {
-//			if (bug = cell.bug) {
-//				movement = [bug getMovementForGene:gene];
-//				geneCounts[movement.x + 15][movement.y + 15] += 1;
-//			}
-//		}
-//	}
+	int i, j;
+	float rectWidth = [self frame].size.width / 31.0;
+	float rectHeight = [self frame].size.height / 31.0;
+	
+	for (Bug *bug in self.bugs) {
+		BugMovement movement = [bug getMovementForGene:gene];
+		geneCounts[movement.x + 15][movement.y + 15] += 1;
+	}
+	
 	// draw gene count distribution
 	int rectCount = 0;
-//	int population = controller.world.population;
+	int population = [self.bugs count];
+	NSLog(@"%d bugs", population);
 	NSRect geneRects[120];
-//	for (i = 0; i < 31; i++) {
-//		for (j = 0; j < 31; j++) {
-//			if (geneCounts[i][j] > 0) {
-//				float rectSize = log2(geneCounts[i][j] * 120.0 / population + 1) + 1;
-//				geneRects[rectCount] = NSMakeRect(rectWidth * i - (rectSize - rectWidth)/2, rectHeight * j - (rectSize - rectWidth)/2, rectSize, rectSize);
-//				rectCount++;
-//			}
-//			geneCounts[i][j] = 0; // reset count to 0 for next count
-//		}
-//	}
+	for (i = 0; i < 31; i++) {
+		for (j = 0; j < 31; j++) {
+			if (geneCounts[i][j] > 0) {
+				float rectSize = log2(geneCounts[i][j] * 120.0 / population + 1) + 1;
+				geneRects[rectCount] = NSMakeRect(rectWidth * i - (rectSize - rectWidth)/2, rectHeight * j - (rectSize - rectWidth)/2, rectSize, rectSize);
+				rectCount++;
+			}
+			geneCounts[i][j] = 0; // reset count to 0 for next count
+		}
+	}
 	[[NSColor colorWithDeviceWhite:0.0 alpha:0.5] set];
 	NSRectFillList(geneRects, rectCount);
 	needsRedisplay = false;

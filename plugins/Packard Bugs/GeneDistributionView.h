@@ -19,8 +19,13 @@
 	int gene;
 	bool needsRedisplay;
 	int geneCounts[31][31];
+	
+	NSSet *bugs;
 }
 
 - (void)timerTick:(NSTimer *)theTimer;
+
+@property (nonatomic, retain) NSSet *bugs;
+@property (nonatomic, assign) int gene;
 
 @end

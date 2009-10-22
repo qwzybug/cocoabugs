@@ -15,13 +15,44 @@
 @implementation BugsColoringWindowController
 
 @synthesize controller;
+@synthesize lastDistributionDisplay;
 
-- (IBAction)setGene:(id)sender;
+- (void)dealloc;
 {
-	NSLog(@"Coloring by %d", neighborhoodView.neighborhoodCode);
-	((BugsController *)controller).observedGene = neighborhoodView.neighborhoodCode;
-	[controller redrawDisplay];
+	[lastDistributionDisplay release], lastDistributionDisplay = nil;
+	[controller release], controller = nil;
+	
+	[super dealloc];
+}
+
+- (void)setGene:(int)newGene;
+{
+	controller.observedGene = newGene;
+	distributionView.gene = newGene;
+	[self updateDistributionView];
+}
+
+- (void)awakeFromNib;
+{
+	self.lastDistributionDisplay = [NSDate date];
+	[controller.world addObserver:self forKeyPath:@"ticks" options:NSKeyValueObservingOptionNew context:nil];
+}
+
+- (void)updateDistributionView;
+{
+	distributionView.bugs = controller.world.bugs;
 	[distributionView setNeedsDisplay:YES];
+	self.lastDistributionDisplay = [NSDate date];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath
+					  ofObject:(id)object
+                        change:(NSDictionary *)change
+                       context:(void *)context
+{
+	if ([keyPath isEqual:@"ticks"] && [[NSDate date] timeIntervalSinceDate:self.lastDistributionDisplay] > 0.5) {
+		[self updateDistributionView];
+	}
 }
 
 @end

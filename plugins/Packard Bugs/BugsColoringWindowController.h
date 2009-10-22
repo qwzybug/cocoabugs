@@ -17,10 +17,14 @@
 	
 	IBOutlet GeneDistributionView *distributionView;
 	IBOutlet BugNeighborhoodView *neighborhoodView;
+	
+	NSDate *lastDistributionDisplay;
 }
 
 @property (nonatomic, retain) BugsController *controller;
+@property (nonatomic, retain) NSDate *lastDistributionDisplay;
 
-- (IBAction)setGene:(id)sender;
+- (void)setGene:(int)newGene;
+- (void)updateDistributionView;
 
 @end

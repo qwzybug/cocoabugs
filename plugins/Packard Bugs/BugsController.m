@@ -72,6 +72,7 @@
 {
 	[world release];
 	[statistics release];
+	[view release];
 	
 	[super dealloc];
 }
@@ -109,12 +110,20 @@
 	return statistics;
 }
 
+- (void)setObservedGene:(int)newObservedGene;
+{
+	observedGene = newObservedGene;
+	self.view.colorGene = observedGene;
+	[self.view setNeedsDisplay:YES];
+}
+
 #pragma mark -
 
 - (void)showColorWindow;
 {
 	if (!coloringWindowController) {
 		coloringWindowController = [[BugsColoringWindowController alloc] initWithWindowNibName:@"BugsColoringWindowController"];
+		coloringWindowController.controller = self;
 	}
 	[coloringWindowController.window makeKeyAndOrderFront:self];
 }

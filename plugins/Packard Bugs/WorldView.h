@@ -14,8 +14,10 @@
 
 @interface WorldView : NSView {
 	World *world;
+	int colorGene;
 }
 
-@property(readwrite, retain) World *world;
+@property (readwrite, retain) World *world;
+@property (nonatomic, assign) int colorGene;
 
 @end
