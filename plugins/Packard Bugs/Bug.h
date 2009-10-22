@@ -20,6 +20,7 @@ typedef struct _BugMovement {
 	int age;
 	int x;
 	int y;
+	int lastUsedGeneNum;
 }
 
 @property(readwrite) int food;
@@ -27,12 +28,17 @@ typedef struct _BugMovement {
 @property(readwrite) int x;
 @property(readwrite) int y;
 
+@property(readonly) int lastUsedGeneHash;
+
 - (Bug *)initWithFood:(int)myFood andGenes:(BugMovement[])myGenes mutationRate:(float)mutationRate;
 - (Bug *)doReproduceWithMutationRate:(float)mutationRate;
 - (BugMovement)getMovementForGene:(int)num;
 - (void)doEat:(int)amount;
 - (void)doDigest:(int)amount;
 - (int)hashForGene:(int)num;
+
+@property (nonatomic, readonly) NSArray *geneHashes;
+
 // private?
 - (BugMovement)randomGene;
 @end

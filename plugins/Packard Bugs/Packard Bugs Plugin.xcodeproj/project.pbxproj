@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0381D59E108671C600072A80 /* UpdateGenePresenceOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0381D5951086700D00072A80 /* UpdateGenePresenceOperation.m */; };
+		0381D6621086814600072A80 /* BugNeighborhoodView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0381D6611086814600072A80 /* BugNeighborhoodView.m */; };
+		0381D6651086816700072A80 /* GeneDistributionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0381D6641086816700072A80 /* GeneDistributionView.m */; };
+		0381D6681086817600072A80 /* HSVColorSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = 0381D6671086817600072A80 /* HSVColorSquare.m */; };
+		0381D66F1086827D00072A80 /* BugsColoringWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0381D66E1086827D00072A80 /* BugsColoringWindowController.m */; };
+		0381D6711086828A00072A80 /* BugsColoringWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0381D6701086828A00072A80 /* BugsColoringWindowController.xib */; };
 		03E2CCBA0E2729340077196A /* WorldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E2CCB90E2729340077196A /* WorldView.m */; };
 		03E2CCC40E2729460077196A /* BugsStatistics.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E2CCBD0E2729460077196A /* BugsStatistics.m */; };
 		03E2CCC50E2729460077196A /* Bug.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E2CCBF0E2729460077196A /* Bug.m */; };
@@ -19,6 +25,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		035AF11110901E9600725226 /* ALifeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALifeController.h; path = ../../CocoaBugs/ALifeController.h; sourceTree = SOURCE_ROOT; };
+		0381D5941086700D00072A80 /* UpdateGenePresenceOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateGenePresenceOperation.h; sourceTree = "<group>"; };
+		0381D5951086700D00072A80 /* UpdateGenePresenceOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateGenePresenceOperation.m; sourceTree = "<group>"; };
+		0381D6601086814600072A80 /* BugNeighborhoodView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BugNeighborhoodView.h; sourceTree = "<group>"; };
+		0381D6611086814600072A80 /* BugNeighborhoodView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BugNeighborhoodView.m; sourceTree = "<group>"; };
+		0381D6631086816700072A80 /* GeneDistributionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneDistributionView.h; sourceTree = "<group>"; };
+		0381D6641086816700072A80 /* GeneDistributionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneDistributionView.m; sourceTree = "<group>"; };
+		0381D6661086817600072A80 /* HSVColorSquare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSVColorSquare.h; sourceTree = "<group>"; };
+		0381D6671086817600072A80 /* HSVColorSquare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSVColorSquare.m; sourceTree = "<group>"; };
+		0381D66D1086827D00072A80 /* BugsColoringWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BugsColoringWindowController.h; sourceTree = "<group>"; };
+		0381D66E1086827D00072A80 /* BugsColoringWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BugsColoringWindowController.m; sourceTree = "<group>"; };
+		0381D6701086828A00072A80 /* BugsColoringWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BugsColoringWindowController.xib; sourceTree = "<group>"; };
 		03E2CCB80E2729340077196A /* WorldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorldView.h; sourceTree = "<group>"; };
 		03E2CCB90E2729340077196A /* WorldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorldView.m; sourceTree = "<group>"; };
 		03E2CCBC0E2729460077196A /* BugsStatistics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BugsStatistics.h; sourceTree = "<group>"; };
@@ -29,7 +47,6 @@
 		03E2CCC10E2729460077196A /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell.m; sourceTree = "<group>"; };
 		03E2CCC20E2729460077196A /* World.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = World.h; sourceTree = "<group>"; };
 		03E2CCC30E2729460077196A /* World.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = World.m; sourceTree = "<group>"; };
-		03E2CCC80E27294D0077196A /* ALifeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALifeController.h; sourceTree = "<group>"; };
 		03E2CCC90E2729800077196A /* PackardBugs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PackardBugs.plist; sourceTree = "<group>"; };
 		03E2CD740E272F910077196A /* BugsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BugsController.h; sourceTree = "<group>"; };
 		03E2CD750E272F910077196A /* BugsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BugsController.m; sourceTree = "<group>"; };
@@ -55,6 +72,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0381D6561086813900072A80 /* Coloring */ = {
+			isa = PBXGroup;
+			children = (
+				0381D6601086814600072A80 /* BugNeighborhoodView.h */,
+				0381D6611086814600072A80 /* BugNeighborhoodView.m */,
+				0381D6631086816700072A80 /* GeneDistributionView.h */,
+				0381D6641086816700072A80 /* GeneDistributionView.m */,
+				0381D6661086817600072A80 /* HSVColorSquare.h */,
+				0381D6671086817600072A80 /* HSVColorSquare.m */,
+				0381D66D1086827D00072A80 /* BugsColoringWindowController.h */,
+				0381D66E1086827D00072A80 /* BugsColoringWindowController.m */,
+				0381D6701086828A00072A80 /* BugsColoringWindowController.xib */,
+			);
+			name = Coloring;
+			sourceTree = "<group>";
+		};
 		03E2CCB30E2729140077196A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +108,8 @@
 				03E2CCC10E2729460077196A /* Cell.m */,
 				03E2CCC20E2729460077196A /* World.h */,
 				03E2CCC30E2729460077196A /* World.m */,
+				0381D5941086700D00072A80 /* UpdateGenePresenceOperation.h */,
+				0381D5951086700D00072A80 /* UpdateGenePresenceOperation.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -122,6 +157,7 @@
 		08FB77AFFE84173DC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				0381D6561086813900072A80 /* Coloring */,
 				03E2CCB30E2729140077196A /* Controllers */,
 				03E2CD4F0E272CD10077196A /* Models */,
 				03E2CD500E272CE00077196A /* Views */,
@@ -158,7 +194,7 @@
 		32C88E010371C26100C91783 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				03E2CCC80E27294D0077196A /* ALifeController.h */,
+				035AF11110901E9600725226 /* ALifeController.h */,
 				32DBCF630370AF2F00C91783 /* Packard Bugs Plugin_Prefix.pch */,
 			);
 			name = "Other Sources";
@@ -209,6 +245,7 @@
 			files = (
 				8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */,
 				03E2CCCA0E2729800077196A /* PackardBugs.plist in Resources */,
+				0381D6711086828A00072A80 /* BugsColoringWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +262,11 @@
 				03E2CCC60E2729460077196A /* Cell.m in Sources */,
 				03E2CCC70E2729460077196A /* World.m in Sources */,
 				03E2CD760E272F910077196A /* BugsController.m in Sources */,
+				0381D59E108671C600072A80 /* UpdateGenePresenceOperation.m in Sources */,
+				0381D6621086814600072A80 /* BugNeighborhoodView.m in Sources */,
+				0381D6651086816700072A80 /* GeneDistributionView.m in Sources */,
+				0381D6681086817600072A80 /* HSVColorSquare.m in Sources */,
+				0381D66F1086827D00072A80 /* BugsColoringWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +322,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_ENABLE_OBJC_GC = unsupported;
+				GCC_ENABLE_OBJC_GC = supported;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;

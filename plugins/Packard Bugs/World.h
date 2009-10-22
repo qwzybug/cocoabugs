@@ -30,9 +30,7 @@
 	int movementCost;
 	int eatAmount;
 	// environment
-	int foodBlockWidth;
-	int foodBlockHeight;
-	int foodBlockNumber;
+	NSImage *foodImage;
 	int foodAmount;
 	
 	NSMutableArray *grid;
@@ -41,34 +39,33 @@
 	NSMutableSet *bugs;			// all living bugs
 	NSMutableSet *morgue;		// bugs that died each generation
 	NSMutableSet *maternity;	// bugs born each generation
+	NSCountedSet *activeGeneCounts; // counts of genes used each generation
 }
 
-@property(readwrite, copy) NSMutableSet *bugs;
-@property(readwrite, copy) NSMutableSet *morgue;
-@property(readwrite, copy) NSMutableSet *maternity;
+@property (readwrite, retain) NSMutableSet *bugs;
+@property (readwrite, retain) NSMutableSet *morgue;
+@property (readwrite, retain) NSMutableSet *maternity;
+@property (readwrite, retain) NSCountedSet *activeGeneCounts;
 
-@property(readwrite) int height;
-@property(readwrite) int width;
-@property(readwrite) int population;
-@property(readwrite) int births;
-@property(readwrite) int deaths;
-@property(readwrite) int lifespan;
-@property(readwrite) int ticks;
-@property(readwrite) float mutationRate;
-@property(readwrite) int reproductionFood;
-@property(readwrite) int movementCost;
-@property(readwrite) int eatAmount;
-@property(copy, readwrite) NSMutableArray *grid;
-@property(assign, readwrite) int foodBlockWidth;
-@property(assign, readwrite) int foodBlockHeight;
-@property(assign, readwrite) int foodBlockNumber;
-@property(readonly) int foodAmount;
+@property (readwrite) int height;
+@property (readwrite) int width;
+@property (readwrite) int population;
+@property (readwrite) int births;
+@property (readwrite) int deaths;
+@property (readwrite) int lifespan;
+@property (readwrite) int ticks;
+@property (readwrite) float mutationRate;
+@property (readwrite) int reproductionFood;
+@property (readwrite) int movementCost;
+@property (readwrite) int eatAmount;
+@property (copy, readwrite) NSMutableArray *grid;
+@property (nonatomic, retain) NSImage *foodImage;
+@property (readonly) int foodAmount;
 
 - (id)initWithFoodImage:(NSImage *)foodImage;
-- (void)setFoodConfiguration:(bool *)newFood;
+- (void)setFoodImage:(NSImage *)image;
 - (void)update;
 - (void)exterminate;
-- (void)regenerateFood;
 - (void)seedBugsWithDensity:(float)density;
 
 // make these private?

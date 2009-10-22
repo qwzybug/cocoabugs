@@ -18,6 +18,14 @@
 	NSSet *births;
 	NSSet *mortalityAge;
 	NSSet *averageAge;
+	
+	NSSet *totalGenePresence;
+	NSSet *totalGeneActivity;
+	
+	NSCountedSet *accumulatedGenePresence;
+	NSCountedSet *accumulatedGeneActivity;
+	
+	NSOperationQueue *queue;
 }
 
 - (id)initWithWorld:(World *)theWorld;
@@ -28,5 +36,10 @@
 @property(readwrite, retain) NSSet *births;
 @property(readwrite, retain) NSSet *mortalityAge;
 @property(readwrite, retain) NSSet *averageAge;
+
+@property(nonatomic, retain) NSSet *totalGenePresence;
+@property(nonatomic, retain) NSCountedSet *accumulatedGenePresence;
+
+- (void)updateTotalGenePresenceWithHashArrays:(NSArray *)geneHashes;
 
 @end

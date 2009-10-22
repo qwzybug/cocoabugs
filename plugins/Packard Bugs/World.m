@@ -11,25 +11,24 @@
 @implementation World
 
 // world properties & statistics
-@synthesize width, height, population, births, deaths, lifespan, ticks;
+@synthesize width, height, population, births, deaths, lifespan, ticks, activeGeneCounts;
 @synthesize grid, bugs, morgue, maternity;
 
 // bug properties
 @synthesize mutationRate, reproductionFood, movementCost, eatAmount;
 
 // food configuration synthesized methods
-@synthesize foodBlockWidth, foodBlockHeight, foodBlockNumber, foodAmount;
+@synthesize foodImage, foodAmount;
 
-- (id)initWithFoodImage:(NSImage *)foodImage;
-//- (id)initWithWidth:(int)myWidth andHeight:(int)myHeight;
+- (id)initWithFoodImage:(NSImage *)image;
 {
 	if (!(self = [super init]))
 		return nil;
 	
 	int i, j;
-	if (foodImage) {
-		width = [foodImage size].width;
-		height = [foodImage size].height;
+	if (image) {
+		width = [image size].width;
+		height = [image size].height;
 	} else {
 		width = height = 100;
 	}
@@ -51,21 +50,49 @@
 	
 	NSMutableArray *row;
 	Cell *cell;
-	NSBitmapImageRep *bitmap = [NSBitmapImageRep imageRepWithData:[foodImage TIFFRepresentation]];
-	BOOL sample;
 	for (i = 0; i < height; i++) {
 		row = [NSMutableArray arrayWithCapacity:width];
 		for (j = 0; j < width; j++) {
-			sample = [[bitmap colorAtX:j y:(height - i - 1)] brightnessComponent] < 0.5;
-			if (sample)
-				foodAmount += 1;
-			cell = [[[Cell alloc] initWithFood:sample atRow:i column:j] autorelease];
+			cell = [[[Cell alloc] initWithFood:NO atRow:i column:j] autorelease];
 			[row addObject:cell];
 		}
 		[grid addObject:row];
 	}
 	
+	self.foodImage = image;
+	
 	return self;
+}
+
+- (void)setMovementCost:(int)newMovementCost;
+{
+	movementCost = newMovementCost;
+}
+
+- (void)setFoodImage:(NSImage *)image;
+{
+	if (foodImage == image)
+		return;
+	
+	[foodImage release];
+	foodImage = [image retain];
+	
+	NSBitmapImageRep *bitmap = [NSBitmapImageRep imageRepWithData:[image TIFFRepresentation]];
+	BOOL sample;
+	int i = 0, j = 0;
+	float xScale = (float)[image size].width / width;
+	float yScale = (float)[image size].height / height;
+	foodAmount = 0;
+	for (NSArray *row in grid) {
+		j = 0;
+		for (Cell *cell in row) {
+			sample = [[bitmap colorAtX:(j * xScale) y:((height - i - 1) * yScale)] brightnessComponent] < 0.5;
+			cell.food = sample;
+			if (sample) foodAmount += 1;
+			j++;
+		}
+		i++;
+	}
 }
 
 - (void)dealloc;
@@ -74,6 +101,7 @@
 	self.bugs = nil;
 	self.morgue = nil;
 	self.maternity = nil;
+	[foodImage release], foodImage = nil;
 	
 	[super dealloc];
 }
@@ -208,38 +236,6 @@
 		bug.x = cell.col;
 		bug.y = cell.row;
 	}
-}
-
-- (void)setFoodConfiguration:(bool *)newFood;
-{
-	int i, j;
-	for (i = 0; i < height; i++) {
-		for (j = 0; j < width; j++) {
-			[self cellAtRow:i andColumn:j].food = newFood[i*width + j];
-		}
-	}
-}
-
-- (void)regenerateFood;
-{
-	int row, col, i, j;
-	int foodBlocks = 0;
-	bool food[height][width];
-	for (i = 0; i < height; i++){for(j=0;j<width;j++){food[i][j]=NO;}}
-	while(foodBlocks < foodBlockNumber) {
-		// pick a food block corner
-		row = random() % (height - foodBlockHeight);
-		col = random() % (width - foodBlockWidth);
-		// seed food array depending on block widdth/height
-		for (i = 0; i < foodBlockHeight; i++) {
-			for (j = 0; j < foodBlockWidth; j++) {
-				food[row+i][col+j] = YES;
-			}
-		}
-		foodBlocks++;
-	}
-	[self setFoodConfiguration:food];
-	foodAmount = foodBlockNumber * foodBlockHeight * foodBlockWidth;
 }
 
 - (void)seedBugsWithDensity:(float)density;

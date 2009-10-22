@@ -9,10 +9,12 @@
 #import "BugsStatistics.h"
 
 #import "World.h"
+#import "UpdateGenePresenceOperation.h"
 
 @implementation BugsStatistics
 
 @synthesize population, births, deaths, mortalityAge, averageAge;
+@synthesize totalGenePresence, accumulatedGenePresence;
 
 - (id)initWithWorld:(World *)theWorld;
 {
@@ -23,6 +25,11 @@
 	
 	[world addObserver:self forKeyPath:@"ticks" options:NSKeyValueObservingOptionNew context:NULL];
 	
+	accumulatedGenePresence = [[NSCountedSet setWithCapacity:2000] retain];
+	
+	queue = [[NSOperationQueue alloc] init];
+	[queue setMaxConcurrentOperationCount:1];
+	
 	return self;
 }
 
@@ -30,6 +37,8 @@
 {
 	[world removeObserver:self forKeyPath:@"ticks"];
 	[world release];
+	
+	[accumulatedGenePresence release], accumulatedGenePresence = nil;
 	
 	[super dealloc];
 }
@@ -46,6 +55,9 @@
 
 - (void)updateStatistics;
 {
+	if (world.ticks % 10 != 0)
+		return;
+	
 	// population
 	self.population = [NSSet setWithObject:[NSNumber numberWithInt:[world.bugs count]]];
 	
@@ -69,8 +81,44 @@
 	if ([world.morgue count] > 0)
 		self.mortalityAge = [NSSet setWithObject:[NSNumber numberWithInt:(ages / [world.morgue count])]];
 	else
-		self.mortalityAge = [NSSet setWithObject:[NSNumber numberWithInt:0]];	
+		self.mortalityAge = [NSSet setWithObject:[NSNumber numberWithInt:0]];
+	
+	// gene presence
+//	NSArray *allHashes = [world.bugs valueForKey:@"geneHashes"];
+//	[self performSelectorInBackground:@selector(updateTotalGenePresenceWithHashArrays:) withObject:allHashes];
+	UpdateGenePresenceOperation *operation = [[UpdateGenePresenceOperation alloc] initWithBugs:world.bugs statistics:self accumulatedGenePresence:accumulatedGenePresence];
+	[queue addOperation:[operation autorelease]];
+//	for (Bug *bug in world.bugs) {
+//		for (int i = 0; i < 32; i++) {
+//			[accumulatedGenePresence addObject:[NSNumber numberWithInt:[bug hashForGene:i]]];
+//		}
+//	}
+//	NSMutableSet *allCounts = [NSMutableSet setWithCapacity:[accumulatedGenePresence count]];
+//	for (id gene in accumulatedGenePresence) {
+//		[allCounts addObject:[NSNumber numberWithInt:[accumulatedGenePresence countForObject:gene]]];
+//	}
+//	self.totalGenePresence = accumulatedGenePresence;
 }
 
+- (void)updateTotalGenePresenceWithHashArrays:(NSArray *)allHashes;
+{
+	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+	
+	// count gene presence
+	for (NSArray *geneHashes in allHashes) {
+		for (NSNumber *hash in geneHashes) {
+			[accumulatedGenePresence addObject:hash];
+		}
+	}
+	NSMutableSet *allCounts = [NSMutableSet setWithCapacity:[accumulatedGenePresence count]];
+	for (id gene in accumulatedGenePresence) {
+		[allCounts addObject:[NSNumber numberWithInt:[accumulatedGenePresence countForObject:gene]]];
+	}
+	
+	[self performSelectorOnMainThread:@selector(setTotalGenePresence:) withObject:allCounts waitUntilDone:YES];
+	self.totalGenePresence = allCounts;
+	
+	[pool release];
+}
 
 @end

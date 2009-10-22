@@ -11,6 +11,8 @@
 			<string>Food Configuration</string>
 			<key>type</key>
 			<string>Bitmap</string>
+			<key>keyPath</key>
+			<string>world.foodImage</string>
 		</dict>
 		<dict>
 			<key>name</key>

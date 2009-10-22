@@ -11,7 +11,9 @@
 #define INITIAL_FOOD 10
 
 @implementation Bug
+
 @synthesize food, age, x, y;
+@dynamic geneHashes, lastUsedGeneHash;
 
 - (id) init;
 {
@@ -72,6 +74,7 @@
 
 - (BugMovement)getMovementForGene:(int) num;
 {
+	lastUsedGeneNum = num;
 	return genes[num];
 }
 
@@ -79,6 +82,16 @@
 {
 	BugMovement gene = genes[num];
 	return ((gene.x + 15) << 10) | ((gene.y + 15) << 5) | num;
+}
+
+- (NSArray *)geneHashes;
+{
+	NSMutableArray *array = [NSMutableArray arrayWithCapacity:32];
+	int i;
+	for (i = 0; i < 32; i++) {
+		[array addObject:[NSNumber numberWithInt:[self hashForGene:i]]];
+	}
+	return array;
 }
 
 - (BugMovement)randomGene;

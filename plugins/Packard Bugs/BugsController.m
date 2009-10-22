@@ -12,17 +12,20 @@
 #import "WorldView.h"
 #import "BugsStatistics.h"
 
+#import "BugsColoringWindowController.h"
+
 @implementation BugsController
 
 @synthesize properties;
 @synthesize world;
+@synthesize observedGene;
 
 + (NSString *)name;
 {
 	return @"Packard's Bugs";
 }
 
-+ (NSDictionary *)configurationOptions;
++ (NSArray *)configurationOptions;
 {
 	NSString *thePath = [[NSBundle bundleForClass:[self class]] pathForResource:@"PackardBugs" ofType:@"plist"];
 	NSDictionary *propDict = [[NSDictionary dictionaryWithContentsOfFile:thePath] retain];
@@ -89,10 +92,24 @@
 	[view setNeedsDisplay:YES];
 }
 
+- (void)redrawDisplay;
+{
+	[view setNeedsDisplay:YES];
+}
+
 - (id)statisticsCollector;
 {
 	return statistics;
 }
 
+#pragma mark -
+
+- (void)showColorWindow;
+{
+	if (!coloringWindowController) {
+		coloringWindowController = [[BugsColoringWindowController alloc] initWithWindowNibName:@"BugsColoringWindowController"];
+	}
+	[coloringWindowController.window makeKeyAndOrderFront:self];
+}
 
 @end
