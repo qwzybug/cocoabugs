@@ -12,6 +12,7 @@
 #import "ALifeSimulationController.h"
 #import "ALifeTinkerPanelController.h"
 #import "DMQuicktimeExporter.h"
+#import "NSDictionary_Merging.h"
 
 @implementation ALifeWindowController
 
@@ -143,9 +144,12 @@
 - (void)exportConfigurationPanelDidEnd:(NSSavePanel *)sheet returnCode:(int)returnCode  contextInfo:(void  *)contextInfo;
 {
 	if (returnCode == NSOKButton) {
+		NSDictionary *initialConfiguration = simulationController.configuration;
+		NSDictionary *currentConfiguration = [tinkerPanelController.configurationViewController configuration];
+		NSDictionary *configuration = [initialConfiguration dictionaryByMergingWithDictionary:currentConfiguration];
 		NSDictionary *data = [NSDictionary dictionaryWithObjectsAndKeys:
 							  [[simulationController.lifeController class] name], @"identifier",
-							  [simulationController configuration], @"configuration",
+							  configuration, @"configuration",
 							  nil];
 		[data writeToFile:[sheet filename] atomically:YES];
 	}

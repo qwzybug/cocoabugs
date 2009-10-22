@@ -40,7 +40,7 @@
 			</object>
 			<object class="NSCustomView" id="542450012">
 				<reference key="NSNextResponder"/>
-				<int key="NSvFlags">268</int>
+				<int key="NSvFlags">266</int>
 				<object class="NSMutableArray" key="NSSubviews">
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<object class="NSImageView" id="578554519">

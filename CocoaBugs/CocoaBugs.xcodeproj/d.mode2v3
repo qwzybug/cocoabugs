@@ -197,7 +197,54 @@
 	<key>Notifications</key>
 	<array/>
 	<key>OpenEditors</key>
-	<array/>
+	<array>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>PBXProjectModuleGUID</key>
+				<string>035AF27310903EC600725226</string>
+				<key>PBXProjectModuleLabel</key>
+				<string>NSDictionary_Merging.m</string>
+				<key>PBXSplitModuleInNavigatorKey</key>
+				<dict>
+					<key>Split0</key>
+					<dict>
+						<key>PBXProjectModuleGUID</key>
+						<string>035AF27C10903EED00725226</string>
+						<key>PBXProjectModuleLabel</key>
+						<string>NSDictionary_Merging.m</string>
+						<key>_historyCapacity</key>
+						<integer>0</integer>
+						<key>bookmark</key>
+						<string>035AF2961090401400725226</string>
+						<key>history</key>
+						<array>
+							<string>035AF27D10903EED00725226</string>
+							<string>035AF27E10903EED00725226</string>
+							<string>035AF2901090401400725226</string>
+							<string>035AF2911090401400725226</string>
+							<string>035AF2931090401400725226</string>
+							<string>035AF2941090401400725226</string>
+							<string>035AF2951090401400725226</string>
+						</array>
+					</dict>
+					<key>SplitCount</key>
+					<string>1</string>
+				</dict>
+				<key>StatusBarVisibility</key>
+				<true/>
+			</dict>
+			<key>Geometry</key>
+			<dict>
+				<key>Frame</key>
+				<string>{{0, 20}, {949, 712}}</string>
+				<key>PBXModuleWindowStatusBarHidden2</key>
+				<false/>
+				<key>RubberWindowFrame</key>
+				<string>105 99 949 753 0 0 1440 878 </string>
+			</dict>
+		</dict>
+	</array>
 	<key>PerspectiveWidths</key>
 	<array>
 		<integer>-1</integer>
@@ -279,13 +326,13 @@
 									<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 									<array>
 										<array>
-											<integer>3</integer>
-											<integer>2</integer>
+											<integer>33</integer>
+											<integer>28</integer>
 											<integer>0</integer>
 										</array>
 									</array>
 									<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-									<string>{{0, 0}, {370, 569}}</string>
+									<string>{{0, 305}, {370, 569}}</string>
 								</dict>
 								<key>PBXTopSmartGroupGIDs</key>
 								<array/>
@@ -469,7 +516,7 @@
 	<key>PerspectivesBarVisible</key>
 	<false/>
 	<key>PinnedNavigatorIdentifier</key>
-	<string>035AF24910903C8800725226</string>
+	<string>035AF27310903EC600725226</string>
 	<key>ShelfIsVisible</key>
 	<false/>
 	<key>SourceDescription</key>
@@ -492,12 +539,14 @@
 	<integer>0</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>035AF2971090401400725226</string>
 		<string>035AF0DF10901C5300725226</string>
 		<string>035AF0E010901C5300725226</string>
 		<string>1C530D54069F1CE1000CFCEE</string>
 		<string>1C530D52069F1CE1000CFCEE</string>
 		<string>1C530D5B069F1CE1000CFCEE</string>
 		<string>/Users/d/cocoabugs/CocoaBugs/CocoaBugs.xcodeproj</string>
+		<string>035AF27310903EC600725226</string>
 	</array>
 	<key>WindowString</key>
 	<string>1021 223 387 655 0 0 1440 878 </string>

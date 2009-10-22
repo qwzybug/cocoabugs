@@ -27,6 +27,7 @@
 		035AF0F110901CA700725226 /* Schelling.plugin in Copy plugins */ = {isa = PBXBuildFile; fileRef = 035AF0F010901C9D00725226 /* Schelling.plugin */; };
 		035AF2101090377F00725226 /* Schelling.plugin in Copy plugins */ = {isa = PBXBuildFile; fileRef = 035AF0F010901C9D00725226 /* Schelling.plugin */; };
 		035AF2111090377F00725226 /* Packard Bugs Plugin.plugin in Copy plugins */ = {isa = PBXBuildFile; fileRef = 035AF0BF10901B9F00725226 /* Packard Bugs Plugin.plugin */; };
+		035AF28410903F6100725226 /* NSDictionary_Merging.m in Sources */ = {isa = PBXBuildFile; fileRef = 035AF28310903F6100725226 /* NSDictionary_Merging.m */; };
 		0365F7B80E1BCEC30074AA88 /* ALifeWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0365F7B70E1BCEC30074AA88 /* ALifeWindowController.m */; };
 		0365F7BC0E1BCFB20074AA88 /* ALifeWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0365F7BB0E1BCFB20074AA88 /* ALifeWindow.xib */; };
 		03729EE00D8F1E77009FDBE8 /* StatisticsData.m in Sources */ = {isa = PBXBuildFile; fileRef = 03729EDF0D8F1E77009FDBE8 /* StatisticsData.m */; };
@@ -161,6 +162,8 @@
 		035AF0BA10901B9F00725226 /* Packard Bugs Plugin.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Packard Bugs Plugin.xcodeproj"; path = "../plugins/Packard Bugs/Packard Bugs Plugin.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		035AF0D410901BF400725226 /* Packard's Bugs-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Packard's Bugs-Info.plist"; sourceTree = "<group>"; };
 		035AF0EB10901C9D00725226 /* Schelling.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Schelling.xcodeproj; path = ../plugins/Schelling/Schelling.xcodeproj; sourceTree = SOURCE_ROOT; };
+		035AF28210903F6100725226 /* NSDictionary_Merging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionary_Merging.h; sourceTree = "<group>"; };
+		035AF28310903F6100725226 /* NSDictionary_Merging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_Merging.m; sourceTree = "<group>"; };
 		0365F7B60E1BCEC30074AA88 /* ALifeWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALifeWindowController.h; sourceTree = "<group>"; };
 		0365F7B70E1BCEC30074AA88 /* ALifeWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALifeWindowController.m; sourceTree = "<group>"; };
 		0365F7BB0E1BCFB20074AA88 /* ALifeWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ALifeWindow.xib; sourceTree = "<group>"; };
@@ -397,6 +400,8 @@
 				32CA4F630368D1EE00C91783 /* CocoaBugs_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 				03039EBE0E3FC61B0043E65A /* headless_main.m */,
+				035AF28210903F6100725226 /* NSDictionary_Merging.h */,
+				035AF28310903F6100725226 /* NSDictionary_Merging.m */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -591,6 +596,7 @@
 				03A39B880E4E362D00490AE3 /* ALifeShuffler.m in Sources */,
 				0351908D0E7DD8D300205E7B /* DMQuicktimeExporter.m in Sources */,
 				037880A6106ED41A0023E6EA /* ALifeTinkerPanelController.m in Sources */,
+				035AF28410903F6100725226 /* NSDictionary_Merging.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
