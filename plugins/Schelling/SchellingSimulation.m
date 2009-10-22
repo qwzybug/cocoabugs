@@ -218,7 +218,7 @@
 				//((neighbors > 1) && (neighbors < 6) && (samies < 3))
 					NSMutableArray *closestCells = [NSMutableArray arrayWithCapacity:10];
 					int i, j;
-					SchellingCell *closestCell, *bell;
+					SchellingCell *bell;
 					int closestDistance = 9999;
 					for (i = 0; i < height; i++) {
 						for (j = 0; j < width; j++) {
@@ -226,7 +226,6 @@
 							if (bell.race == 0) {
 								if (abs(cell.row-i) + abs(cell.column-j) < closestDistance) {
 									[closestCells removeAllObjects];
-									closestCell = bell;
 									closestDistance = abs(cell.row-i) + abs(cell.column-j);
 									[closestCells addObject:bell];
 								} else if (abs(cell.row-i) + abs(cell.column-j) <= closestDistance+2) {
