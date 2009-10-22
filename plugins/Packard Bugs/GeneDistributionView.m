@@ -61,11 +61,11 @@
 
 - (void)drawRect:(NSRect)rect;
 {
-	int i, j;
-	float rectWidth = [self frame].size.width / 31.0;
-	float rectHeight = [self frame].size.height / 31.0;
-	Bug *bug;
-	BugMovement movement;
+//	int i, j;
+//	float rectWidth = [self frame].size.width / 31.0;
+//	float rectHeight = [self frame].size.height / 31.0;
+//	Bug *bug;
+//	BugMovement movement;
 //	for (NSMutableArray *row in controller.world.grid) {
 //		for (Cell *cell in row) {
 //			if (bug = cell.bug) {

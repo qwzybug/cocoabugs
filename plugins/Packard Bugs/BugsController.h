@@ -17,12 +17,15 @@
 	
 	BugsColoringWindowController *coloringWindowController;
 	int observedGene;
+	
+	float populationDensity;
 }
 
 @property (readonly) NSDictionary *properties;
 @property (readwrite, retain) World *world;
 
 @property (nonatomic, assign) int observedGene;
+@property (nonatomic, assign) float populationDensity;
 
 // add method declarations here
 + (NSString *)name;

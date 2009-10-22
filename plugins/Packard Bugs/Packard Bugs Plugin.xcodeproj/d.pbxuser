@@ -35,7 +35,7 @@
 		fRef = 03E2CD750E272F910077196A /* BugsController.m */;
 		name = "BugsController.m: 52";
 		rLen = 17;
-		rLoc = 1195;
+		rLoc = 1211;
 		rType = 0;
 		vrLen = 1657;
 		vrLoc = 318;
@@ -393,7 +393,7 @@
 		fRef = 03E2CD750E272F910077196A /* BugsController.m */;
 		name = "BugsController.m: 95";
 		rLen = 23;
-		rLoc = 2206;
+		rLoc = 2317;
 		rType = 0;
 		vrLen = 1800;
 		vrLoc = 410;
@@ -403,7 +403,7 @@
 		fRef = 03E2CD740E272F910077196A /* BugsController.h */;
 		name = "BugsController.h: 23";
 		rLen = 0;
-		rLoc = 504;
+		rLoc = 532;
 		rType = 0;
 		vrLen = 677;
 		vrLoc = 0;
@@ -413,7 +413,7 @@
 		fRef = 03E2CD740E272F910077196A /* BugsController.h */;
 		name = "BugsController.h: 19";
 		rLen = 0;
-		rLoc = 425;
+		rLoc = 453;
 		rType = 0;
 		vrLen = 646;
 		vrLoc = 0;
@@ -422,7 +422,7 @@
 		isa = PBXTextBookmark;
 		fRef = 03E2CD750E272F910077196A /* BugsController.m */;
 		rLen = 0;
-		rLoc = 2588;
+		rLoc = 2699;
 		rType = 0;
 	};
 	0381D6DA108688A400072A80 /* PBXTextBookmark */ = {
@@ -494,7 +494,7 @@
 		fRef = 03E2CD740E272F910077196A /* BugsController.h */;
 		name = "BugsController.h: 22";
 		rLen = 0;
-		rLoc = 448;
+		rLoc = 476;
 		rType = 0;
 		vrLen = 677;
 		vrLoc = 0;
@@ -514,7 +514,7 @@
 		fRef = 03E2CD750E272F910077196A /* BugsController.m */;
 		name = "BugsController.m: 21";
 		rLen = 0;
-		rLoc = 386;
+		rLoc = 417;
 		rType = 0;
 		vrLen = 1552;
 		vrLoc = 0;
@@ -679,15 +679,15 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {713, 1014}}";
 			sepNavSelRange = "{848, 0}";
-			sepNavVisRange = "{343, 1683}";
+			sepNavVisRange = "{74, 1526}";
 			sepNavWindowFrame = "{{725, 333}, {772, 837}}";
 		};
 	};
 	03E2CCC30E2729460077196A /* World.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {795, 3328}}";
-			sepNavSelRange = "{5407, 0}";
-			sepNavVisRange = "{5181, 573}";
+			sepNavIntBoundsRect = "{{0, 0}, {713, 3406}}";
+			sepNavSelRange = "{5408, 42}";
+			sepNavVisRange = "{4423, 1337}";
 			sepNavWindowFrame = "{{15, 33}, {772, 837}}";
 		};
 	};

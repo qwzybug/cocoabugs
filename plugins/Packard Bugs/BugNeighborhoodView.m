@@ -1,7 +1,9 @@
 #import "BugNeighborhoodView.h"
 
 @implementation BugNeighborhoodView
+
 @synthesize neighborhoodCode, enabled;
+
 - (id)initWithFrame:(NSRect)frame;
 {
 	if (!(self = [super initWithFrame:frame]))

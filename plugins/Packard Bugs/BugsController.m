@@ -19,6 +19,7 @@
 @synthesize properties;
 @synthesize world;
 @synthesize observedGene;
+@synthesize populationDensity;
 
 + (NSString *)name;
 {
@@ -28,7 +29,7 @@
 + (NSArray *)configurationOptions;
 {
 	NSString *thePath = [[NSBundle bundleForClass:[self class]] pathForResource:@"PackardBugs" ofType:@"plist"];
-	NSDictionary *propDict = [[NSDictionary dictionaryWithContentsOfFile:thePath] retain];
+	NSDictionary *propDict = [NSDictionary dictionaryWithContentsOfFile:thePath];
 	return [propDict objectForKey:@"configuration"];
 }
 
@@ -39,7 +40,7 @@
 	if (!(self = [super init]))
 		return nil;
 	
-	float populationDensity = 0.5;
+	populationDensity = 0.5;
 	NSImage *foodImage = nil;
 	if (configuration) {
 		populationDensity = [[configuration objectForKey:@"populationDensity"] floatValue];
@@ -84,6 +85,12 @@
 		view.world = world;
 	}
 	return view;
+}
+
+- (void)reset;
+{
+	[world exterminate];
+	[world seedBugsWithDensity:self.populationDensity];
 }
 
 - (void)update;

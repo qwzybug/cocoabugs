@@ -6,7 +6,7 @@
 #import <Cocoa/Cocoa.h>
 #import "BugsController.h"
 
-@interface BugNeighborhoodView : NSControl <NSCoding> {
+@interface BugNeighborhoodView : NSControl {
 	int neighborhoodCode;
 	NSRect rects[5];
 	IBOutlet id controller;
