@@ -24,6 +24,8 @@
 	
 	NSArray *builtInImages;
 	int selectedImageIndex;
+	
+	NSImage *image;
 }
 
 @property(readwrite, retain) NSString *name;
@@ -31,6 +33,9 @@
 @property(readwrite, assign) BOOL shuffling;
 @property(readonly, assign) NSArray *builtInImages;
 @property(readwrite, assign) int selectedImageIndex;
+
+@property (nonatomic, retain) NSImageView *imageView;
+@property (nonatomic, retain) NSImage *image;
 
 - (NSData *)value;
 

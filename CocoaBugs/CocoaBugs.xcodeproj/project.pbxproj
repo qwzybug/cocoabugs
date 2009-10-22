@@ -23,6 +23,8 @@
 		0351908D0E7DD8D300205E7B /* DMQuicktimeExporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0351908C0E7DD8D300205E7B /* DMQuicktimeExporter.m */; };
 		035190920E7DD9D600205E7B /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 035190910E7DD9D600205E7B /* QTKit.framework */; };
 		0359DC9B0E7F1AA300EEAC01 /* DMQuicktimeExporter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0359DC9A0E7F1AA300EEAC01 /* DMQuicktimeExporter.xib */; };
+		035AF0C210901BC400725226 /* Packard Bugs Plugin.plugin in Copy PlugIns */ = {isa = PBXBuildFile; fileRef = 035AF0BF10901B9F00725226 /* Packard Bugs Plugin.plugin */; };
+		035AF0F110901CA700725226 /* Schelling.plugin in Copy PlugIns */ = {isa = PBXBuildFile; fileRef = 035AF0F010901C9D00725226 /* Schelling.plugin */; };
 		0365F7B80E1BCEC30074AA88 /* ALifeWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0365F7B70E1BCEC30074AA88 /* ALifeWindowController.m */; };
 		0365F7BC0E1BCFB20074AA88 /* ALifeWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0365F7BB0E1BCFB20074AA88 /* ALifeWindow.xib */; };
 		03729EE00D8F1E77009FDBE8 /* StatisticsData.m in Sources */ = {isa = PBXBuildFile; fileRef = 03729EDF0D8F1E77009FDBE8 /* StatisticsData.m */; };
@@ -58,6 +60,52 @@
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		035AF0BE10901B9F00725226 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 035AF0BA10901B9F00725226 /* Packard Bugs Plugin.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D5B49B6048680CD000E48DA /* Packard Bugs Plugin.plugin */;
+			remoteInfo = "Packard Bugs Plugin";
+		};
+		035AF0D810901C4300725226 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 035AF0BA10901B9F00725226 /* Packard Bugs Plugin.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D5B49AC048680CD000E48DA /* Packard Bugs Plugin */;
+			remoteInfo = "Packard Bugs Plugin";
+		};
+		035AF0EF10901C9D00725226 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 035AF0EB10901C9D00725226 /* Schelling.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D5B49B6048680CD000E48DA /* Schelling.plugin */;
+			remoteInfo = Schelling;
+		};
+		035AF0F210901CAE00725226 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 035AF0EB10901C9D00725226 /* Schelling.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D5B49AC048680CD000E48DA /* Schelling */;
+			remoteInfo = Schelling;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		035AF0CE10901BE200725226 /* Copy PlugIns */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				035AF0F110901CA700725226 /* Schelling.plugin in Copy PlugIns */,
+				035AF0C210901BC400725226 /* Packard Bugs Plugin.plugin in Copy PlugIns */,
+			);
+			name = "Copy PlugIns";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		03039EBE0E3FC61B0043E65A /* headless_main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = headless_main.m; sourceTree = "<group>"; };
 		03039EFC0E3FCDEC0043E65A /* HeadlessBugs */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HeadlessBugs; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +130,9 @@
 		0351908C0E7DD8D300205E7B /* DMQuicktimeExporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMQuicktimeExporter.m; sourceTree = "<group>"; };
 		035190910E7DD9D600205E7B /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		0359DC9A0E7F1AA300EEAC01 /* DMQuicktimeExporter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DMQuicktimeExporter.xib; sourceTree = "<group>"; };
+		035AF0BA10901B9F00725226 /* Packard Bugs Plugin.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Packard Bugs Plugin.xcodeproj"; path = "../plugins/Packard Bugs/Packard Bugs Plugin.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		035AF0D410901BF400725226 /* Packard's Bugs-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Packard's Bugs-Info.plist"; sourceTree = "<group>"; };
+		035AF0EB10901C9D00725226 /* Schelling.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Schelling.xcodeproj; path = ../plugins/Schelling/Schelling.xcodeproj; sourceTree = SOURCE_ROOT; };
 		0365F7B60E1BCEC30074AA88 /* ALifeWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALifeWindowController.h; sourceTree = "<group>"; };
 		0365F7B70E1BCEC30074AA88 /* ALifeWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALifeWindowController.m; sourceTree = "<group>"; };
 		0365F7BB0E1BCFB20074AA88 /* ALifeWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ALifeWindow.xib; sourceTree = "<group>"; };
@@ -171,6 +222,31 @@
 				034DCE370E09EA830045943A /* ALifeController.h */,
 			);
 			name = Protocols;
+			sourceTree = "<group>";
+		};
+		035AF0B910901B8E00725226 /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				035AF0EB10901C9D00725226 /* Schelling.xcodeproj */,
+				035AF0BA10901B9F00725226 /* Packard Bugs Plugin.xcodeproj */,
+			);
+			name = Plugins;
+			sourceTree = "<group>";
+		};
+		035AF0BB10901B9F00725226 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				035AF0BF10901B9F00725226 /* Packard Bugs Plugin.plugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		035AF0EC10901C9D00725226 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				035AF0F010901C9D00725226 /* Schelling.plugin */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		038E9C590D70FFFA00325776 /* Models */ = {
@@ -280,7 +356,9 @@
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				035AF0B910901B8E00725226 /* Plugins */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				035AF0D410901BF400725226 /* Packard's Bugs-Info.plist */,
 			);
 			name = CocoaBugs;
 			sourceTree = "<group>";
@@ -355,10 +433,13 @@
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
+				035AF0CE10901BE200725226 /* Copy PlugIns */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				035AF0D910901C4300725226 /* PBXTargetDependency */,
+				035AF0F310901CAE00725226 /* PBXTargetDependency */,
 			);
 			name = CocoaBugs;
 			productInstallPath = "$(HOME)/Applications";
@@ -376,6 +457,16 @@
 			hasScannedForEncodings = 1;
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CocoaBugs */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 035AF0BB10901B9F00725226 /* Products */;
+					ProjectRef = 035AF0BA10901B9F00725226 /* Packard Bugs Plugin.xcodeproj */;
+				},
+				{
+					ProductGroup = 035AF0EC10901C9D00725226 /* Products */;
+					ProjectRef = 035AF0EB10901C9D00725226 /* Schelling.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* CocoaBugs */,
@@ -383,6 +474,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		035AF0BF10901B9F00725226 /* Packard Bugs Plugin.plugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Packard Bugs Plugin.plugin";
+			remoteRef = 035AF0BE10901B9F00725226 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		035AF0F010901C9D00725226 /* Schelling.plugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = Schelling.plugin;
+			remoteRef = 035AF0EF10901C9D00725226 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8D1107290486CEB800E47090 /* Resources */ = {
@@ -456,6 +564,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		035AF0D910901C4300725226 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Packard Bugs Plugin";
+			targetProxy = 035AF0D810901C4300725226 /* PBXContainerItemProxy */;
+		};
+		035AF0F310901CAE00725226 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Schelling;
+			targetProxy = 035AF0F210901CAE00725226 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
@@ -559,7 +680,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEPLOYMENT_LOCATION = NO;
-				GCC_ENABLE_OBJC_GC = unsupported;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_ENABLE_OBJC_GC = supported;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INSTALL_PATH = "";

@@ -12,6 +12,7 @@
 @implementation BitmapOptionViewController
 
 @synthesize name, shuffling, title, builtInImages, selectedImageIndex;
+@synthesize image, imageView;
 
 + (BitmapOptionViewController *)controllerWithOptions:(NSDictionary *)options;
 {
@@ -42,6 +43,9 @@
 	self.title = nil;
 	[self.view removeFromSuperview];
 	
+	[imageView release], imageView = nil;
+	[image release], image = nil;
+	
 	[super dealloc];
 }
 
@@ -54,13 +58,13 @@
 {
 	if (imageIndex) {
 		NSString *selectedImageName = [builtInImages objectAtIndex:imageIndex];
-		[imageView setImage:[NSImage imageNamed:selectedImageName]];
+		self.image = [NSImage imageNamed:selectedImageName];
 	}
 }
 
 - (NSData *)value;
 {
-	return [[imageView image] TIFFRepresentationUsingCompression:NSTIFFCompressionLZW factor:0];
+	return [self.image TIFFRepresentationUsingCompression:NSTIFFCompressionLZW factor:0];
 }
 
 @end

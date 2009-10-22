@@ -67,6 +67,11 @@
 	[[tinkerPanelController window] makeKeyAndOrderFront:self];
 }
 
+- (IBAction)showColoringWindow:(id)sender;
+{
+	[simulationController.lifeController showColorWindow];
+}
+
 - (IBAction)tick:(id)sender;
 {
 	[self stepSimulation];

@@ -14,14 +14,6 @@
 
 @implementation AppController
 
-- (id)init;
-{
-	if (!(self = [super init]))
-		return nil;
-	
-	return self;
-}
-
 - (IBAction)showConfigurationWindow:(id)sender;
 {
 	ALifeConfigurationWindowController *windowController = [ALifeConfigurationWindowController configurationWindowController];
@@ -44,9 +36,14 @@
 		}
 	}
 	
-	ALifeWindowController *simulationWindow = [ALifeWindowController windowControllerForModel:selectedPlugin withConfiguration:configuration];
+//	ALifeWindowController *simulationWindow = [ALifeWindowController windowControllerForModel:selectedPlugin withConfiguration:configuration];
 
 	return YES;
+}
+
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification;
+{
+	[self showConfigurationWindow:self];
 }
 
 @end

@@ -39,6 +39,7 @@
 	if ([theConfiguration objectForKey:@"seed"]) {
 		seed = [[theConfiguration objectForKey:@"seed"] intValue];
 	} else {
+		//TODO why not?
 		seed = [[NSDate date] timeIntervalSinceReferenceDate];
 		[theConfiguration setValue:[NSNumber numberWithInt:seed] forKey:@"seed"];
 	}

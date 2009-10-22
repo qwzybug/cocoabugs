@@ -43,7 +43,7 @@
 - (void)setSource:(id)statisticsCollector forStatistics:(NSDictionary *)descriptions;
 {
 	self.source = statisticsCollector;
-	if (!statisticsSize) statisticsSize = 1000;
+	if (!statisticsSize) statisticsSize = 500;
 	
 	NSSortDescriptor *sort = [[[NSSortDescriptor alloc] initWithKey:@"title" ascending:NO] autorelease];
 	for (NSDictionary *description in [[descriptions allValues] sortedArrayUsingDescriptors:[NSArray arrayWithObject:sort]]) {
@@ -83,7 +83,7 @@
 		[[statisticsPanel contentView] addSubview:view];
 		[statisticsPanel setFrame:NSMakeRect(statsFrame.origin.x, statsFrame.origin.y - STATS_HEIGHT, statsFrame.size.width, statsFrame.size.height + STATS_HEIGHT) display:YES];
 		
-		[statisticsPanel setContentMaxSize:NSMakeSize(1000, [[statisticsPanel contentView] frame].size.height)];
+		[statisticsPanel setContentMaxSize:NSMakeSize(500, [[statisticsPanel contentView] frame].size.height)];
 		[statisticsPanel setContentMinSize:NSMakeSize(100, [[statisticsPanel contentView] frame].size.height)];
 		
 		[self.statisticsViews addObject:view];

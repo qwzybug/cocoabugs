@@ -32,9 +32,8 @@
 {
 	simulationClass = newSimulationClass;
 	
-	// this should release the option controllers and remove their views...?
-	[optionControllers release];
-	optionControllers = [[NSMutableArray arrayWithCapacity:5] retain];
+	[self removeConfigurationControls];
+	self.optionControllers = [[NSMutableArray arrayWithCapacity:5] retain];
 	
 	// create the option controllers
 	NSArray *configuration = [simulationClass configurationOptions];
@@ -66,7 +65,16 @@
 								options:nil];
 			}
 		} else if ([[options objectForKey:@"type"] isEqual:@"Bitmap"]) {
-			[optionControllers addObject:[BitmapOptionViewController controllerWithOptions:options]];
+			BitmapOptionViewController *controller = [BitmapOptionViewController controllerWithOptions:options];
+			[optionControllers addObject:controller];
+			[controller loadView];
+			if (self.mode == kConfigurationControllerModeTinker && self.simulation) {
+				NSString *keyPath = [options objectForKey:@"keyPath"];
+				[controller bind:@"image"
+						toObject:simulation
+					 withKeyPath:keyPath
+						 options:nil];
+			}
 		}
 	}
 	contentHeight = [optionControllers count] * 64.0;
@@ -75,6 +83,13 @@
 	NSRect currentFrame = self.view.frame;
 	currentFrame.size.height = contentHeight;
 	[self.view setFrame:currentFrame];
+}
+
+- (void)removeConfigurationControls;
+{
+	for (NSViewController *viewController in optionControllers) {
+		[viewController.view removeFromSuperview];
+	}
 }
 
 - (void)addConfigurationControls;

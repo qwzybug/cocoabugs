@@ -45,7 +45,7 @@
     if ([keyPath isEqual:@"cursor"]) {
 		int cursor;
 		[[change objectForKey:NSKeyValueChangeNewKey] getValue:&cursor];
-		if ((cursor % 10) == 0 && [self superview])
+		if ((cursor % 10) == 0 && [[self window] isVisible])
 			[self setNeedsDisplay:YES];
 	}
 }

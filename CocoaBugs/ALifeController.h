@@ -10,11 +10,14 @@
 
 @protocol ALifeController <NSObject>
 
+// plugin information
 + (NSString *)name;
-
 + (NSArray *)configurationOptions;
+
 // initialize with a configuration dictionary
 - (id)initWithConfiguration:(NSDictionary *)configuration;
+// reset the simulation
+- (void)reset;
 // update the simulation
 - (void)update;
 // get a view for the simulation
@@ -30,5 +33,8 @@
 // configuration options
 // setting configuration
 // maybe generating a plist for the current configuration?
+
+// EXPERIMENTAL
+- (void)showColorWindow;
 
 @end

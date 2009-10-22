@@ -32,6 +32,7 @@ typedef enum _ALifeConfigurationControllerMode {
 + (ALifeConfigurationViewController *)configurationController;
 
 - (NSDictionary *)configuration;
+- (void)removeConfigurationControls;
 - (void)addConfigurationControls;
 
 @end

@@ -35,5 +35,6 @@
 - (IBAction)exportMovie:(id)sender;
 
 - (IBAction)showConfigurationWindow:(id)sender;
+- (IBAction)showColoringWindow:(id)sender;
 
 @end
