@@ -23,8 +23,10 @@
 		0351908D0E7DD8D300205E7B /* DMQuicktimeExporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0351908C0E7DD8D300205E7B /* DMQuicktimeExporter.m */; };
 		035190920E7DD9D600205E7B /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 035190910E7DD9D600205E7B /* QTKit.framework */; };
 		0359DC9B0E7F1AA300EEAC01 /* DMQuicktimeExporter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0359DC9A0E7F1AA300EEAC01 /* DMQuicktimeExporter.xib */; };
-		035AF0C210901BC400725226 /* Packard Bugs Plugin.plugin in Copy PlugIns */ = {isa = PBXBuildFile; fileRef = 035AF0BF10901B9F00725226 /* Packard Bugs Plugin.plugin */; };
-		035AF0F110901CA700725226 /* Schelling.plugin in Copy PlugIns */ = {isa = PBXBuildFile; fileRef = 035AF0F010901C9D00725226 /* Schelling.plugin */; };
+		035AF0C210901BC400725226 /* Packard Bugs Plugin.plugin in Copy plugins */ = {isa = PBXBuildFile; fileRef = 035AF0BF10901B9F00725226 /* Packard Bugs Plugin.plugin */; };
+		035AF0F110901CA700725226 /* Schelling.plugin in Copy plugins */ = {isa = PBXBuildFile; fileRef = 035AF0F010901C9D00725226 /* Schelling.plugin */; };
+		035AF2101090377F00725226 /* Schelling.plugin in Copy plugins */ = {isa = PBXBuildFile; fileRef = 035AF0F010901C9D00725226 /* Schelling.plugin */; };
+		035AF2111090377F00725226 /* Packard Bugs Plugin.plugin in Copy plugins */ = {isa = PBXBuildFile; fileRef = 035AF0BF10901B9F00725226 /* Packard Bugs Plugin.plugin */; };
 		0365F7B80E1BCEC30074AA88 /* ALifeWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0365F7B70E1BCEC30074AA88 /* ALifeWindowController.m */; };
 		0365F7BC0E1BCFB20074AA88 /* ALifeWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0365F7BB0E1BCFB20074AA88 /* ALifeWindow.xib */; };
 		03729EE00D8F1E77009FDBE8 /* StatisticsData.m in Sources */ = {isa = PBXBuildFile; fileRef = 03729EDF0D8F1E77009FDBE8 /* StatisticsData.m */; };
@@ -89,19 +91,45 @@
 			remoteGlobalIDString = 8D5B49AC048680CD000E48DA /* Schelling */;
 			remoteInfo = Schelling;
 		};
+		035AF2141090379C00725226 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 035AF0EB10901C9D00725226 /* Schelling.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D5B49AC048680CD000E48DA /* Schelling */;
+			remoteInfo = Schelling;
+		};
+		035AF2161090379E00725226 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 035AF0BA10901B9F00725226 /* Packard Bugs Plugin.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D5B49AC048680CD000E48DA /* Packard Bugs Plugin */;
+			remoteInfo = "Packard Bugs Plugin";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		035AF0CE10901BE200725226 /* Copy PlugIns */ = {
+		035AF0CE10901BE200725226 /* Copy plugins */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				035AF0F110901CA700725226 /* Schelling.plugin in Copy PlugIns */,
-				035AF0C210901BC400725226 /* Packard Bugs Plugin.plugin in Copy PlugIns */,
+				035AF0F110901CA700725226 /* Schelling.plugin in Copy plugins */,
+				035AF0C210901BC400725226 /* Packard Bugs Plugin.plugin in Copy plugins */,
 			);
-			name = "Copy PlugIns";
+			name = "Copy plugins";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		035AF21C109037A100725226 /* Copy plugins */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = PlugIns;
+			dstSubfolderSpec = 16;
+			files = (
+				035AF2101090377F00725226 /* Schelling.plugin in Copy plugins */,
+				035AF2111090377F00725226 /* Packard Bugs Plugin.plugin in Copy plugins */,
+			);
+			name = "Copy plugins";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -416,10 +444,13 @@
 			buildPhases = (
 				03039EF90E3FCDEC0043E65A /* Sources */,
 				03039EFA0E3FCDEC0043E65A /* Frameworks */,
+				035AF21C109037A100725226 /* Copy plugins */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				035AF2151090379C00725226 /* PBXTargetDependency */,
+				035AF2171090379E00725226 /* PBXTargetDependency */,
 			);
 			name = HeadlessBugs;
 			productName = HeadlessBugs;
@@ -433,7 +464,7 @@
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
-				035AF0CE10901BE200725226 /* Copy PlugIns */,
+				035AF0CE10901BE200725226 /* Copy plugins */,
 			);
 			buildRules = (
 			);
@@ -575,6 +606,16 @@
 			isa = PBXTargetDependency;
 			name = Schelling;
 			targetProxy = 035AF0F210901CAE00725226 /* PBXContainerItemProxy */;
+		};
+		035AF2151090379C00725226 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Schelling;
+			targetProxy = 035AF2141090379C00725226 /* PBXContainerItemProxy */;
+		};
+		035AF2171090379E00725226 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Packard Bugs Plugin";
+			targetProxy = 035AF2161090379E00725226 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

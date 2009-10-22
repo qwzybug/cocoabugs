@@ -19,7 +19,6 @@
 	NSMutableArray *plugIns = [NSMutableArray array];
 	for (NSString *plugInPath in [self allPlugInPaths]) {
 		currBundle = [NSBundle bundleWithPath:plugInPath];
-		NSLog(@"Checking %@", [currBundle bundleIdentifier]);
         if (currBundle) {
             currPrincipalClass = [currBundle principalClass];
             if(currPrincipalClass && [self plugInClassIsValid:currPrincipalClass])  // Validation
@@ -32,7 +31,6 @@
 	NSSortDescriptor *nameSort = [[[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES] autorelease];
 	[plugIns sortUsingDescriptors:[NSArray arrayWithObjects:nameSort, nil]];
 	
-	NSLog(@"%d plugins loaded", [plugIns count]);
 	return plugIns;
 }
 

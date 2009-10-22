@@ -36,7 +36,8 @@
 		}
 	}
 	
-//	ALifeWindowController *simulationWindow = [ALifeWindowController windowControllerForModel:selectedPlugin withConfiguration:configuration];
+	ALifeWindowController *simulationWindow = [ALifeWindowController windowControllerForModel:selectedPlugin withConfiguration:configuration];
+	[simulationWindow.window makeKeyWindow];
 
 	return YES;
 }

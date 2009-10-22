@@ -35,13 +35,15 @@
 {
 	self.configurationViewController.mode = kConfigurationControllerModeTinker;
 	
+	NSRect beforeFrame = configurationViewController.view.frame;
+	
 	self.configurationViewController.simulation = simulation;
 	self.configurationViewController.simulationClass = [simulation class];
 	[self.configurationViewController addConfigurationControls];
 	
-	NSRect cFrame = configurationViewController.view.frame;
+	NSRect afterFrame = configurationViewController.view.frame;
 	NSRect wFrame = [[self window] frame];
-	float delta = cFrame.size.height - [[[self window] contentView] frame].size.height;
+	float delta = afterFrame.size.height - beforeFrame.size.height;
 	wFrame.size.height += delta;
 	wFrame.origin.y -= delta;
 	[[self window] setFrame:wFrame display:YES];

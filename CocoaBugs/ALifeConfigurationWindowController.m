@@ -108,20 +108,4 @@
 	[[self window] close];
 }
 
-- (IBAction)actionExportConfiguration:(id)sender;
-{
-	NSSavePanel *savePanel = [NSSavePanel savePanel];
-	[savePanel setRequiredFileType:@"cocoabugs"];
-	[savePanel beginSheetForDirectory:nil file:nil modalForWindow:[self window] modalDelegate:self didEndSelector:@selector(savePanelDidEnd:returnCode:contextInfo:) contextInfo:nil];
-}
-
-- (void)savePanelDidEnd:(NSSavePanel *)sheet returnCode:(int)returnCode  contextInfo:(void  *)contextInfo;
-{
-	if (returnCode == NSOKButton) {
-		NSDictionary *configuration = [configurationViewController configuration];
-		NSDictionary *data = [NSDictionary dictionaryWithObjectsAndKeys:[[self selectedClass] name], @"identifier", configuration, @"configuration", nil];
-		[data writeToFile:[sheet filename] atomically:YES];
-	}
-}
-
 @end

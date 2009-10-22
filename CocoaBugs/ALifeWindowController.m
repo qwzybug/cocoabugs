@@ -114,14 +114,16 @@
 	}
 }
 
+#pragma mark Export movie
+
 - (IBAction)exportMovie:(id)sender;
 {
 	NSSavePanel *panel = [NSSavePanel savePanel];
 	[panel setAllowedFileTypes:[NSArray arrayWithObject:@"mov"]];
-	[panel beginSheetForDirectory:nil file:nil modalForWindow:self.window modalDelegate:self didEndSelector:@selector(savePanelDidEnd:returnCode:contextInfo:) contextInfo:nil];
+	[panel beginSheetForDirectory:nil file:nil modalForWindow:self.window modalDelegate:self didEndSelector:@selector(exportMoviePanelDidEnd:returnCode:contextInfo:) contextInfo:nil];
 }
 
-- (void)savePanelDidEnd:(NSSavePanel *)sheet returnCode:(int)returnCode  contextInfo:(void  *)contextInfo;
+- (void)exportMoviePanelDidEnd:(NSSavePanel *)sheet returnCode:(int)returnCode contextInfo:(void  *)contextInfo;
 {
 	if (returnCode == NSOKButton)
 		[self.movieExporter exportMovie:[sheet filename]];
@@ -129,5 +131,24 @@
 	self.movieExporter = nil;
 }
 
+#pragma mark Export configuration
+
+- (IBAction)actionExportConfiguration:(id)sender;
+{
+	NSSavePanel *savePanel = [NSSavePanel savePanel];
+	[savePanel setRequiredFileType:@"cocoabugs"];
+	[savePanel beginSheetForDirectory:nil file:nil modalForWindow:[self window] modalDelegate:self didEndSelector:@selector(exportConfigurationPanelDidEnd:returnCode:contextInfo:) contextInfo:nil];
+}
+
+- (void)exportConfigurationPanelDidEnd:(NSSavePanel *)sheet returnCode:(int)returnCode  contextInfo:(void  *)contextInfo;
+{
+	if (returnCode == NSOKButton) {
+		NSDictionary *data = [NSDictionary dictionaryWithObjectsAndKeys:
+							  [[simulationController.lifeController class] name], @"identifier",
+							  [simulationController configuration], @"configuration",
+							  nil];
+		[data writeToFile:[sheet filename] atomically:YES];
+	}
+}
 
 @end
