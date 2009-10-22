@@ -52,6 +52,7 @@
 - (void)awakeFromNib;
 {
 	[titleField setStringValue:self.title];
+	self.selectedImageIndex = 1;
 }
 
 - (void)setSelectedImageIndex:(int)imageIndex;
