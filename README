@@ -5,17 +5,20 @@ written in Objective-C. It works on a plugin model.
 
 INSTALLATION/USAGE
 
-1. Open CocoaBugs/CocoaBugs.xcodeproj and build.
+1. Open CocoaBugs/CocoaBugs.xcodeproj. Build-and-run.
 
-2. Choose a plugin from plugins. Open its XCode project and build. Copy the
-created .plugin out of the build directory for that plugin, and copy to:
+2. Choose a plugin, edit its configuration, and start the simulation.
 
- ~/Library/Application Support/CocoaBugs/PlugIns/
+3. Use the toolbar buttons to step or run the simulation.
 
-3. Launch CocoaBugs.
+4. Use the "Options" panel to change simulation parameters, or export a
+configuration file.
 
-4. Pick File > New.
+5. Build the "HeadlessBugs" target to do batch simulation of an exported
+.cocoabugs file from the command-line.
 
-5. Choose a plugin, edit its configuration, run or export the simulation, etc.
+Example:
+HeadlessBugs run openboxes.cocoabugs --output run --steps 1000 --runs 10 \
+--sample mutationRate --min 0.2 --max 0.7
 
-For more documentation, see the wiki at http://bugs.doormouse.org/wiki
+There is no wiki yet.
