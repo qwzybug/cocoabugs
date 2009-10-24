@@ -204,7 +204,7 @@
 				<key>PBXProjectModuleGUID</key>
 				<string>03459F1F1092D30600116C5A</string>
 				<key>PBXProjectModuleLabel</key>
-				<string>headless_main.m</string>
+				<string>ALifeSimulationController.m</string>
 				<key>PBXSplitModuleInNavigatorKey</key>
 				<dict>
 					<key>Split0</key>
@@ -212,19 +212,19 @@
 						<key>PBXProjectModuleGUID</key>
 						<string>03459F311092D8B700116C5A</string>
 						<key>PBXProjectModuleLabel</key>
-						<string>headless_main.m</string>
+						<string>ALifeSimulationController.m</string>
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>03459FC91092E2A500116C5A</string>
+						<string>03459FD31092E46400116C5A</string>
 						<key>history</key>
 						<array>
 							<string>03459F321092D8B700116C5A</string>
 							<string>03459F331092D8B700116C5A</string>
-							<string>03459F341092D8B700116C5A</string>
 							<string>03459F351092D8B700116C5A</string>
+							<string>03459FCC1092E2FF00116C5A</string>
+							<string>03459FD21092E46400116C5A</string>
 							<string>03459FC21092E1A700116C5A</string>
-							<string>03459FBE1092E0C200116C5A</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>

@@ -19,6 +19,9 @@
 	if (!(self = [super init]))
 		return nil;
 	
+	int seed = [[theConfiguration objectForKey:@"seed"] intValue];
+	srandom(seed);
+	
 	lifeController = [[modelClass alloc] initWithConfiguration:theConfiguration];
 	self.configuration = [NSDictionary dictionaryWithDictionary:theConfiguration];
 	
@@ -53,6 +56,9 @@
 		NSNumber *shuffledValue = [ALifeShuffler shuffleType:[opts objectForKey:@"type"] min:minValue max:maxValue];
 		[theConfiguration setObject:shuffledValue forKey:sampleKey];
 	}
+	
+	// lock down random seed
+	[theConfiguration setObject:[NSNumber numberWithInt:[[NSDate date] timeIntervalSinceReferenceDate]] forKey:@"seed"];
 	
 	ALifeSimulationController *controller = [[self alloc] initWithSimulationClass:modelClass configuration:theConfiguration];
 	return [controller autorelease];

@@ -60,7 +60,7 @@ static NSDictionary *gShuffleTable = NULL;
 	int minValue = [min intValue];
 	int maxValue = [max intValue];
 	
-	int v = (random() % (maxValue - minValue)) + minValue;
+	int v = (random() % (maxValue - minValue + 1)) + minValue;
 	
 	return [NSNumber numberWithInt:v];
 }
