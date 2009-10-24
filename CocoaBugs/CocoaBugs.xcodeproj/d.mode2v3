@@ -216,15 +216,15 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>03459FD31092E46400116C5A</string>
+						<string>03459FEE1092E89B00116C5A</string>
 						<key>history</key>
 						<array>
-							<string>03459F321092D8B700116C5A</string>
 							<string>03459F331092D8B700116C5A</string>
-							<string>03459F351092D8B700116C5A</string>
-							<string>03459FCC1092E2FF00116C5A</string>
 							<string>03459FD21092E46400116C5A</string>
-							<string>03459FC21092E1A700116C5A</string>
+							<string>03459FD91092E65600116C5A</string>
+							<string>03459FDA1092E65600116C5A</string>
+							<string>03459FED1092E89B00116C5A</string>
+							<string>03459FE81092E88500116C5A</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -240,7 +240,7 @@
 				<key>PBXModuleWindowStatusBarHidden2</key>
 				<false/>
 				<key>RubberWindowFrame</key>
-				<string>378 58 998 820 0 0 1440 878 </string>
+				<string>42 45 998 820 0 0 1440 878 </string>
 			</dict>
 		</dict>
 	</array>
@@ -326,13 +326,13 @@
 									<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 									<array>
 										<array>
-											<integer>46</integer>
-											<integer>34</integer>
+											<integer>12</integer>
+											<integer>6</integer>
 											<integer>0</integer>
 										</array>
 									</array>
 									<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-									<string>{{0, 587}, {370, 569}}</string>
+									<string>{{0, 0}, {370, 569}}</string>
 								</dict>
 								<key>PBXTopSmartGroupGIDs</key>
 								<array/>
@@ -539,9 +539,9 @@
 		<string>03459F411092D8B700116C5A</string>
 		<string>03459F421092D8B700116C5A</string>
 		<string>1C530D52069F1CE1000CFCEE</string>
-		<string>/Users/d/cocoabugs/CocoaBugs/CocoaBugs.xcodeproj</string>
 		<string>1C530D54069F1CE1000CFCEE</string>
 		<string>1C530D5B069F1CE1000CFCEE</string>
+		<string>/Users/d/cocoabugs/CocoaBugs/CocoaBugs.xcodeproj</string>
 		<string>03459F1F1092D30600116C5A</string>
 	</array>
 	<key>WindowString</key>

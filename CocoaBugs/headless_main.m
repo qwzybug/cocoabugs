@@ -127,6 +127,9 @@ void runSimulations(NSString *configurationFile,
 		simulationController = [ALifeSimulationController controllerWithSimulationClass:selectedPlugin
 																		  configuration:configuration
 																			   sampling:samplingOptions];
+		if (!simulationController) {
+			exit(1);
+		}
 		
 		statisticsController = [[StatisticsController alloc] init];
 		statisticsController.statisticsSize = numberOfSteps;

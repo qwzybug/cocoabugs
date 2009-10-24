@@ -40,9 +40,9 @@
 		// check for invalid option
 		NSDictionary *opts = nil;
 		if (!(opts = [configurationOptions valueForKey:sampleKey])) {
-			NSLog(@"Error! Invalid shuffle key %@ (expected one of %@)",
+			NSLog(@"Error! Invalid shuffle key '%@' (expected one of %@)",
 				  sampleKey,
-				  [[configurationOptions valueForKey:@"name"] componentsJoinedByString:@","]);
+				  [[configurationOptions allKeys] componentsJoinedByString:@", "]);
 			return nil;
 		}
 		
