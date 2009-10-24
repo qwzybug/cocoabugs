@@ -100,7 +100,6 @@ void runSimulations(NSString *configurationFile,
 	
 	Class <ALifeController> selectedPlugin;
 	for (Class <ALifeController> plugin in plugins) {
-		NSLog(@"%@", plugin);
 		if ([[plugin name] isEqual:identifier]) {
 			selectedPlugin = plugin;
 			break;
