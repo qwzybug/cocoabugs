@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <Foundation/NSObjCRuntime.h>
 
 #import "ALifeController.h"
 #import "ALifePluginLoader.h"
@@ -41,7 +42,7 @@ void printUsageAndDie(BugsCommand command) {
 			printf("                        --output <output directory path>\n");
 			printf("                        --steps <number of steps>\n");
 			printf("                        [--runs <number of runs>]\n");
-			printf("                        [--shuffle <shuffle key>\n");
+			printf("                        [--sample <shuffle key>\n");
 			printf("                           [--min <minimum value]\n");
 			printf("                           [--max <maximum value] ]\n");
 			break;
@@ -99,14 +100,15 @@ void runSimulations(NSString *configurationFile,
 	
 	Class <ALifeController> selectedPlugin;
 	for (Class <ALifeController> plugin in plugins) {
+		NSLog(@"%@", plugin);
 		if ([[plugin name] isEqual:identifier]) {
 			selectedPlugin = plugin;
 			break;
 		}
 	}
 	
-	if (!selectedPlugin) {
-		printf("Plugin class '%s' not found. Make sure it's installed.", [identifier cStringUsingEncoding:NSASCIIStringEncoding]);
+	if (!selectedPlugin || ![selectedPlugin conformsToProtocol:@protocol(ALifeController)]) {
+		printf("Plugin class '%s' not found. Make sure it's installed.\n", [identifier cStringUsingEncoding:NSASCIIStringEncoding]);
 		exit(1);
 	}
 	
@@ -115,10 +117,17 @@ void runSimulations(NSString *configurationFile,
 	int runFrac = (int)(numberOfSteps / 10.0);
 	ALifeSimulationController *simulationController;
 	StatisticsController *statisticsController;
+	NSDictionary *samplingOptions;
 	
 	for (run = 0; run < numberOfRuns; run++) {
-		simulationController = [[ALifeSimulationController alloc] initWithSimulationClass:selectedPlugin
-																			configuration:configuration];
+		samplingOptions = [NSDictionary dictionaryWithObjectsAndKeys:
+						   shuffleKey, @"key",
+						   shuffleMin, @"minValue",
+						   shuffleMax, @"maxValue",
+						   nil];
+		simulationController = [ALifeSimulationController controllerWithSimulationClass:selectedPlugin
+																		  configuration:configuration
+																			   sampling:samplingOptions];
 		
 		statisticsController = [[StatisticsController alloc] init];
 		statisticsController.statisticsSize = numberOfSteps;
@@ -138,7 +147,6 @@ void runSimulations(NSString *configurationFile,
 		[ALifeRunExporter exportSimulation:simulationController withStatistics:statisticsController toDirectory:dir];
 		
 		[statisticsController release];
-		[simulationController release];
 		
 		printf("\n");
 	}
@@ -173,10 +181,18 @@ int main(int argc, char *argv[])
 			printUsageAndDie(kBugsCommandRun);
 		}
 		
-		runSimulations(configurationFile, outputDirectory, numberOfSteps, numberOfRuns, nil, nil, nil);
+		NSString *sampleKey = [args stringForKey:@"-sample"];
+		
+		NSNumber *minValue = [NSNumber numberWithFloat:[args floatForKey:@"-min"]];
+		NSNumber *maxValue = [NSNumber numberWithFloat:[args floatForKey:@"-max"]];
+		
+		runSimulations(configurationFile, outputDirectory, numberOfSteps, numberOfRuns, sampleKey, minValue, maxValue);
 	}
 	else if ([command isEqual:@"plugins"]) {
 		printPluginsAndDie();
+	}
+	else {
+		printHelpAndDie();
 	}
 	
 	[pool release];

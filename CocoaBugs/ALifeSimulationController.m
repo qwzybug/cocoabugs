@@ -19,36 +19,43 @@
 	if (!(self = [super init]))
 		return nil;
 	
-	NSArray *opts = [modelClass configurationOptions];
-	
-	srandom([[NSDate date] timeIntervalSinceReferenceDate]);
-	
-	// check for shuffled parameters
-	for (NSDictionary *configurationOptions in opts) {
-		NSString *type = [configurationOptions objectForKey:@"type"];
-		NSString *name = [configurationOptions objectForKey:@"name"];
-		id entry = [theConfiguration objectForKey:name];
-		if ([entry respondsToSelector:@selector(objectForKey:)]
-			&& [entry objectForKey:@"shuffle"]) {
-			[theConfiguration setValue:[ALifeShuffler shuffleType:type withOptions:entry] forKey:name];
-		}
-	}
-	
-	// check for random seed in conf file
-	int seed = 0;
-	if ([theConfiguration objectForKey:@"seed"]) {
-		seed = [[theConfiguration objectForKey:@"seed"] intValue];
-	} else {
-		//TODO why not?
-		seed = [[NSDate date] timeIntervalSinceReferenceDate];
-		[theConfiguration setValue:[NSNumber numberWithInt:seed] forKey:@"seed"];
-	}
-	srandom(seed);
-	
 	lifeController = [[modelClass alloc] initWithConfiguration:theConfiguration];
 	self.configuration = [NSDictionary dictionaryWithDictionary:theConfiguration];
 	
 	return self;
+}
+
++ (id)controllerWithSimulationClass:(Class <ALifeController>)modelClass configuration:(NSDictionary *)configuration sampling:(NSDictionary *)sampling;
+{
+	NSArray *modelConfiguration = [modelClass configurationOptions];
+	NSDictionary *configurationOptions = [NSDictionary dictionaryWithObjects:modelConfiguration forKeys:[modelConfiguration valueForKey:@"name"]];
+	NSMutableDictionary *theConfiguration = [NSMutableDictionary dictionaryWithDictionary:configuration];
+	
+	// check for sampled parameter
+	NSString *sampleKey;
+	if (sampling && (sampleKey = [sampling objectForKey:@"key"])) {
+		// check for invalid option
+		NSDictionary *opts = nil;
+		if (!(opts = [configurationOptions valueForKey:sampleKey])) {
+			NSLog(@"Error! Invalid shuffle key %@ (expected one of %@)",
+				  sampleKey,
+				  [[configurationOptions valueForKey:@"name"] componentsJoinedByString:@","]);
+			return nil;
+		}
+		
+		NSNumber *minValue = [sampling valueForKey:@"minValue"];
+		if (!minValue) minValue = [opts valueForKey:@"minValue"];
+		
+		NSNumber *maxValue = [sampling valueForKey:@"maxValue"];
+		if (!maxValue) maxValue = [opts valueForKey:@"maxValue"];
+
+		srandom([[NSDate date] timeIntervalSinceReferenceDate]);
+		NSNumber *shuffledValue = [ALifeShuffler shuffleType:[opts objectForKey:@"type"] min:minValue max:maxValue];
+		[theConfiguration setObject:shuffledValue forKey:sampleKey];
+	}
+	
+	ALifeSimulationController *controller = [[self alloc] initWithSimulationClass:modelClass configuration:theConfiguration];
+	return [controller autorelease];
 }
 
 - (void)dealloc;

@@ -18,6 +18,7 @@
 @property(readwrite, retain) id<ALifeController> lifeController;
 @property(readwrite, retain) NSDictionary *configuration;
 
++ (id)controllerWithSimulationClass:(Class <ALifeController>)modelClass configuration:(NSDictionary *)configuration sampling:(NSDictionary *)sampling;
 - (id)initWithSimulationClass:(Class <ALifeController>)modelClass configuration:(NSDictionary *)configuration;
 
 @end

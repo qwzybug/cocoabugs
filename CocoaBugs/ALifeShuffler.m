@@ -27,11 +27,19 @@ static NSDictionary *gShuffleTable = NULL;
 	return gShuffleTable;
 }
 
-+ shuffleType:(NSString *)type withOptions:(NSDictionary *)options;
++ (id)shuffleType:(NSString *)type withOptions:(NSDictionary *)options;
 {
 	id <ALifeValueShuffler> shuffler = [[self shuffleTable] objectForKey:type];
 	if (shuffler)
 		return [shuffler shuffle:options];
+	return [NSNull null];
+}
+
++ (id)shuffleType:(NSString *)type min:(NSNumber *)min max:(NSNumber *)max;
+{
+	id <ALifeValueShuffler> shuffler = [[self shuffleTable] objectForKey:type];
+	if (shuffler)
+		return [shuffler shuffleWithMin:min max:max];
 	return [NSNull null];
 }
 
@@ -47,6 +55,15 @@ static NSDictionary *gShuffleTable = NULL;
 	
 	return [NSNumber numberWithInt:v];
 }
+- (id)shuffleWithMin:(NSNumber *)min max:(NSNumber *)max;
+{
+	int minValue = [min intValue];
+	int maxValue = [max intValue];
+	
+	int v = (random() % (maxValue - minValue)) + minValue;
+	
+	return [NSNumber numberWithInt:v];
+}
 @end
 
 @implementation FloatShuffler
@@ -57,6 +74,15 @@ static NSDictionary *gShuffleTable = NULL;
 	
 	int max = INT_MAX;
 	float v = p + 2 * ((float)random() / (float)(max)) - d;
+	
+	return [NSNumber numberWithFloat:v];
+}
+- (id)shuffleWithMin:(NSNumber *)min max:(NSNumber *)max;
+{
+	float minValue = [min floatValue];
+	float maxValue = [max floatValue];
+	
+	float v = ((float)random() / INT_MAX) * (maxValue - minValue) + minValue;
 	
 	return [NSNumber numberWithFloat:v];
 }

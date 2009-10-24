@@ -13,10 +13,12 @@
 
 }
 
-+ shuffleType:(NSString *)type withOptions:(NSDictionary *)options;
++ (id)shuffleType:(NSString *)type withOptions:(NSDictionary *)options;
++ (id)shuffleType:(NSString *)type min:(NSNumber *)min max:(NSNumber *)max;
 
 @end
 
 @protocol ALifeValueShuffler <NSObject>
 - (id)shuffle:(NSDictionary *)options;
+- (id)shuffleWithMin:(NSNumber *)min max:(NSNumber *)max;
 @end
