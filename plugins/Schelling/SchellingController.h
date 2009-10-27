@@ -7,7 +7,6 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "ALifeController.h"
 
 @class SchellingSimulation, SchellingBoard, SchellingStatistics;
 

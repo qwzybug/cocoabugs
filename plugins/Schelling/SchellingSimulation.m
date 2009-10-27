@@ -12,9 +12,11 @@
 @implementation SchellingSimulation;
 
 @synthesize width, height, generation, grid;
+@synthesize zero, one, two, three, four, five, six, seven, eight;
+@synthesize raceCount;
+@synthesize initialPopulationDensity;
 
-
-- (id)initWithWidth:(int)gameWidth height:(int)gameHeight; //configuration:(NSDictionary *)configuration;
+- (id)initWithWidth:(int)gameWidth height:(int)gameHeight;
 {
 	if (!(self = [super init]))
 		return nil;
@@ -23,31 +25,11 @@
 	height = gameHeight;
 	generation = 0;
 	
-	
 	grid = [[self blankGrid] retain];
 	[self setCellRelations];
 	
-	// init to r-pentomino
-//	[self cellAtRow:(height / 2 + 1) column:(width / 2 - 1)].alive = 1;
-//	[self cellAtRow:(height / 2 + 1) column:(width / 2)].alive = 1;
-//	[self cellAtRow:(height / 2) column:(width / 2)].alive = 1;
-//	[self cellAtRow:(height / 2) column:(width / 2 + 1)].alive = 1;
-//	[self cellAtRow:(height / 2 - 1) column:(width / 2)].alive = 1;
-	
-	// set up operation	
-	//int raceCount = 2;
-	//raceCount = [[configuration objectForKey:@"races"]intValue];
-//	[self initGameOperations];
-	for (NSMutableArray *row in grid) {
-		for (SchellingCell *cell in row) {
-			cell.race = cell.race;//(random() % raceCount);
-		}
-		
-}
 	return self;
 }
-
-
 
 - (SchellingCell *)cellAtRow:(int)row column:(int)column;
 {
@@ -56,10 +38,18 @@
 	return [[grid objectAtIndex:row] objectAtIndex:column];
 }
 
-//- (OperationOfLife *)operationForCell:(CellOfLife *)cell type:(int)type;
-//{
-//	return [[[OperationOfLife alloc] initWithGame:self cell:cell type:type] autorelease];
-//}
+- (void)seed;
+{
+	for (NSArray *row in grid) {
+		for (SchellingCell *cell in row) {
+			if (initialPopulationDensity > (float)random() / INT_MAX) {
+				cell.race = (1 + (random() % raceCount));
+			} else {
+				cell.race = 0;
+			}
+		}
+	}
+}
 
 // make a blank cell grid
 - (NSMutableArray *)blankGrid;
@@ -99,123 +89,18 @@
 	}
 }
 
-
-//- (void)nearestUnoccupiedCellToRow:(int)row column:(int)col torace:(int)torace;
-//{
-//	int i, j;
-//	CellOfLife *closestCell, *cell;
-//	int closestDistance = 9999;
-//	for (i = 0; i < height; i++) {
-//		for (j = 0; j < width; j++) {
-//			cell = [self cellAtRow:i column:j];
-//			if (cell.race == 0) {
-//				if (abs(row-i) + abs(col-j) < closestDistance) {
-//					closestCell = cell;
-//					closestDistance = abs(row-i) + abs(col-j);
-//				}
-//			}
-//		}
-//	}
-//	closestCell.race = torace;
-//}
-
-//-(void)update;
-//{
-//	//Get a list of live cells
-//	NSMutableArray *livers = [NSMutableArray arrayWithCapacity:([grid count]*[grid count])];
-//	for (NSMutableArray *row in grid) {
-//		for (CellOfLife *cell in row){
-//			//CellOfLife *cell = [row objectAtIndex:(random() % [row count])];
-//			if (cell.race != 0){
-//			//cell.race = (cell.race+1) % 3;
-//				[livers addObject:cell];
-//			}
-//		}
-//	}
-//
-//	//Shuffle the list
-//	srandom([[NSDate date] timeIntervalSince1970]);
-//	int count = [livers count];
-//	for (int i = 0; i < count; ++i) {
-//		// Select a random element between i and end of array to swap with.
-//		int nElements = count - i;
-//		int n = (random() % nElements) + i;
-//		//int n = (random() % count);
-//		[livers exchangeObjectAtIndex:i withObjectAtIndex:n];
-//	}
-//	
-//	for (CellOfLife *cell in livers){
-//		BOOL moving = [cell moved];
-//	if (moving){
-//		//if (samies/neighbors < 0.75) {
-//		//((neighbors > 1) && (neighbors < 6) && (samies < 3))
-//		NSMutableArray *closestCells = [NSMutableArray arrayWithCapacity:5];
-//		int i, j;
-//		CellOfLife *closestCell, *bell;
-//		int closestDistance = 9999;
-//		for (i = 0; i < height; i++) {
-//			for (j = 0; j < width; j++) {
-//				bell = [self cellAtRow:i column:j];
-//				if (bell.race == 0) {
-//					if (abs(cell.row-i) + abs(cell.column-j) < closestDistance) {
-//						[closestCells removeAllObjects];
-//						closestCell = bell;
-//						closestDistance = abs(cell.row-i) + abs(cell.column-j);
-//						[closestCells addObject:bell];
-//					} else if (abs(cell.row-i) + abs(cell.column-j) <= closestDistance+2) {
-//						[closestCells addObject:bell];
-//					}
-//				}
-//			}
-//		}
-//		CellOfLife *tome = [closestCells objectAtIndex:(random() % [closestCells count])];
-//		tome.race = cell.race;
-//		cell.race = 0;
-//		}
-//	}
-//}
-
-
-
-
-
-
-
 - (void)update;
 {
 	srandom([[NSDate date] timeIntervalSince1970]);
-	int count = [grid count];
-	for (int i = 0; i < count; ++i) {
-		// Select a random element between i and end of array to swap with.
-		//int nElements = count - i;
-		//int n = (random() % nElements) + i;
-		int n = (random() % count);
-		[grid exchangeObjectAtIndex:i withObjectAtIndex:n];
-	}
 	
-	for (NSMutableArray *row in grid) {
-		
-		count = [row count];
-		for (int i = 0; i < count; ++i) {
-			// Select a random element between i and end of array to swap with.
-			//int nElements = count - i;
-			//int n = (random() % nElements) + i;
-			int n = (random() % count);
-			[row exchangeObjectAtIndex:i withObjectAtIndex:n];
-		}
-		
-		//NSMutableArray *row = [grid objectAtIndex:(random() % [grid count])];
-		for (SchellingCell *cell in row) {
-			//NSMutableArray *row = [grid objectAtIndex:(random() % [grid count])];
-			SchellingCell *cell = [row objectAtIndex:(random() % [row count])];
-			//int neighbors = [cell liveNeighbors];
-			//float samies = [cell sameNeighbors];
+	NSArray *shuffledGrid = [self.grid shuffledArray];
+	NSArray *shuffledRow = nil;
+	
+	for (NSMutableArray *row in shuffledGrid) {
+		shuffledRow = [row shuffledArray];
+		for (SchellingCell *cell in shuffledRow) {
 			if (cell.race > 0){
-				//if ((neighbors < 3) && (samies < 1)) || ((neighbors > 1) && (neighbors < 6) && (samies < 3)) || {
-				BOOL moving = [cell moved];
-				if (moving){
-				//if (samies/neighbors < 0.75) {
-				//((neighbors > 1) && (neighbors < 6) && (samies < 3))
+				if ([self cellShouldMove:cell]) {
 					NSMutableArray *closestCells = [NSMutableArray arrayWithCapacity:10];
 					int i, j;
 					SchellingCell *bell;
@@ -230,22 +115,89 @@
 									[closestCells addObject:bell];
 								} else if (abs(cell.row-i) + abs(cell.column-j) <= closestDistance+2) {
 									[closestCells addObject:bell];
-								}}}}
-								SchellingCell *tome = [closestCells objectAtIndex:(random() % [closestCells count])];
+								}
+							}
+						}
+					}
+					SchellingCell *tome = [closestCells objectAtIndex:(random() % [closestCells count])];
 					tome.race = cell.race;
 					cell.race = 0;
+				}
 			}
 		}
 	}
-	}}
-// used to initialize worker threads when the game is created
-//- (void)initGameOperations;
-//{
-//	for (NSMutableArray *row in grid) {
-//		for (CellOfLife *cell in row) {
-//			cell.race = (random() % 3);
-//		}
-//
-//}
-//}
+}
+
+- (BOOL)cellShouldMove:(SchellingCell *)cell;
+{
+	
+	int d = [cell liveNeighbors];
+	int c = [cell sameNeighbors];
+	if (d== 0){
+		//no neighbors
+		if (zero == 1){
+			return YES;
+		}else{
+			return NO;
+		}
+	}else if (d == 1){
+		if (c < one){
+			return YES;
+		}else{
+			return NO;
+		}
+	}else if (d == 2){
+		if (c < two){
+			return YES;
+		}else{
+			return NO;
+		}
+		
+	}else if (d == 3){
+		if (c < three){
+			return YES;
+		}else{
+			return NO;
+		}
+		
+	}else if (d == 4){
+		if (c < four){
+			return YES;
+		}else{
+			return NO;
+		}
+		
+		
+	}else if (d == 5){
+		if (c < five){
+			return YES;
+		}else{
+			return NO;
+		}
+		
+		
+	}else if (d == 6){
+		if (c < six){
+			return YES;
+		}else{
+			return NO;
+		}
+		
+	}else if (d == 7){
+		if (c < seven){
+			return YES;
+		}else{
+			return NO;
+		}
+		
+	}else if (d == 8){
+		if (c < eight){
+			return YES;
+		}else{
+			return NO;
+		}
+	}
+	return NO;
+}
+
 @end

@@ -38,13 +38,15 @@
 			<key>title</key>
 			<string>Population Density</string>
 			<key>type</key>
-			<string>Integer</string>
+			<string>Float</string>
 			<key>minValue</key>
 			<integer>0</integer>
 			<key>maxValue</key>
-			<integer>100</integer>
+			<integer>1</integer>
 			<key>default</key>
-			<integer>75</integer>
+			<real>0.75</real>
+			<key>keyPath</key>
+			<string>game.initialPopulationDensity</string>
 		</dict>
 		<dict>
 			<key>name</key>
@@ -59,6 +61,8 @@
 			<integer>1</integer>
 			<key>default</key>
 			<integer>1</integer>
+			<key>keyPath</key>
+			<string>game.zero</string>
 		</dict>
 		<dict>
 			<key>name</key>
@@ -73,6 +77,8 @@
 			<integer>1</integer>
 			<key>default</key>
 			<integer>1</integer>
+			<key>keyPath</key>
+			<string>game.one</string>
 		</dict>
 		<dict>
 			<key>name</key>
@@ -87,6 +93,8 @@
 			<integer>2</integer>
 			<key>default</key>
 			<integer>1</integer>
+			<key>keyPath</key>
+			<string>game.two</string>
 		</dict>
 		<dict>
 			<key>name</key>
@@ -101,6 +109,8 @@
 			<integer>3</integer>
 			<key>default</key>
 			<integer>2</integer>
+			<key>keyPath</key>
+			<string>game.three</string>
 		</dict>
 		<dict>
 			<key>name</key>
@@ -115,6 +125,8 @@
 			<integer>4</integer>
 			<key>default</key>
 			<integer>2</integer>
+			<key>keyPath</key>
+			<string>game.four</string>
 		</dict>
 		<dict>
 			<key>name</key>
@@ -129,6 +141,8 @@
 			<integer>5</integer>
 			<key>default</key>
 			<integer>2</integer>
+			<key>keyPath</key>
+			<string>game.five</string>
 		</dict>
 		<dict>
 			<key>name</key>
@@ -143,6 +157,8 @@
 			<integer>6</integer>
 			<key>default</key>
 			<integer>3</integer>
+			<key>keyPath</key>
+			<string>game.six</string>
 		</dict>
 		<dict>
 			<key>name</key>
@@ -157,6 +173,8 @@
 			<integer>7</integer>
 			<key>default</key>
 			<integer>3</integer>
+			<key>keyPath</key>
+			<string>game.seven</string>
 		</dict>
 		<dict>
 			<key>name</key>
@@ -171,6 +189,8 @@
 			<integer>8</integer>
 			<key>default</key>
 			<integer>3</integer>
+			<key>keyPath</key>
+			<string>game.eight</string>
 		</dict>
 	</array>
 	<key>statistics</key>

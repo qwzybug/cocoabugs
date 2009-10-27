@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03223F9E1096C02900A60416 /* Bugs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03223F9D1096C02700A60416 /* Bugs.framework */; };
 		0365F6230E19A3B40074AA88 /* SchellingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0365F6170E19A3B40074AA88 /* SchellingController.m */; };
 		0365F6240E19A3B40074AA88 /* SchellingSimulation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0365F6190E19A3B40074AA88 /* SchellingSimulation.m */; };
 		0365F6250E19A3B40074AA88 /* SchellingBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 0365F61B0E19A3B40074AA88 /* SchellingBoard.m */; };
@@ -17,6 +18,23 @@
 		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		03223F9C1096C02700A60416 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03223F981096C02700A60416 /* BugsFramework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = Bugs;
+		};
+		03223FB51096C1FC00A60416 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03223F981096C02700A60416 /* BugsFramework.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
+			remoteInfo = Bugs;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		03C5D9FC0E3153A500A2904C /* CopyFiles */ = {
@@ -32,7 +50,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0339CFB70E24092F009C5D0D /* ALifeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALifeController.h; sourceTree = "<group>"; };
+		03223F981096C02700A60416 /* BugsFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BugsFramework.xcodeproj; path = ../../BugsFramework/BugsFramework.xcodeproj; sourceTree = SOURCE_ROOT; };
 		0365F6160E19A3B40074AA88 /* SchellingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchellingController.h; sourceTree = "<group>"; };
 		0365F6170E19A3B40074AA88 /* SchellingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchellingController.m; sourceTree = "<group>"; };
 		0365F6180E19A3B40074AA88 /* SchellingSimulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchellingSimulation.h; sourceTree = "<group>"; };
@@ -60,12 +78,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */,
+				03223F9E1096C02900A60416 /* Bugs.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03223F991096C02700A60416 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				03223F9D1096C02700A60416 /* Bugs.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		089C166AFE841209C02AAC07 /* GameOfLife */ = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +110,7 @@
 			children = (
 				1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */,
 				1058C7AEFEA557BF11CA2CBB /* Other Frameworks */,
+				03223F981096C02700A60416 /* BugsFramework.xcodeproj */,
 			);
 			name = "Frameworks and Libraries";
 			sourceTree = "<group>";
@@ -143,7 +171,6 @@
 		32C88E010371C26100C91783 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				0339CFB70E24092F009C5D0D /* ALifeController.h */,
 				32DBCF630370AF2F00C91783 /* Schelling_Prefix.pch */,
 			);
 			name = "Other Sources";
@@ -164,6 +191,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				03223FB61096C1FC00A60416 /* PBXTargetDependency */,
 			);
 			name = Schelling;
 			productInstallPath = "$(HOME)/Library/Bundles";
@@ -181,12 +209,28 @@
 			hasScannedForEncodings = 1;
 			mainGroup = 089C166AFE841209C02AAC07 /* GameOfLife */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 03223F991096C02700A60416 /* Products */;
+					ProjectRef = 03223F981096C02700A60416 /* BugsFramework.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				8D5B49AC048680CD000E48DA /* Schelling */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		03223F9D1096C02700A60416 /* Bugs.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Bugs.framework;
+			remoteRef = 03223F9C1096C02700A60416 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8D5B49AF048680CD000E48DA /* Resources */ = {
@@ -214,6 +258,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		03223FB61096C1FC00A60416 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Bugs;
+			targetProxy = 03223FB51096C1FC00A60416 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		089C167DFE841241C02AAC07 /* InfoPlist.strings */ = {
@@ -267,8 +319,9 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				DEPLOYMENT_LOCATION = NO;
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../../BugsFramework/build/Release\"";
 				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_ENABLE_OBJC_GC = required;
+				GCC_ENABLE_OBJC_GC = supported;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -284,15 +337,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				DEPLOYMENT_LOCATION = NO;
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../../BugsFramework/build/Release\"";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_ENABLE_OBJC_GC = supported;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INSTALL_PATH = "";
 				PREBINDING = NO;
 				SDKROOT = macosx10.5;
-				WRAPPER_EXTENSION = "";
 			};
 			name = Release;
 		};

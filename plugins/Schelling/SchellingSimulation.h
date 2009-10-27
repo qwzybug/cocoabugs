@@ -18,16 +18,42 @@
 	int generation;
 	int liveCells;
 	
+	int zero;
+	int one;
+	int two;
+	int three;
+	int four;
+	int five;
+	int six;
+	int seven;
+	int eight;
+	
+	int raceCount;
+	float initialPopulationDensity;
 }
 
+@property(readwrite) int zero;
+@property(readwrite) int one;
+@property(readwrite) int two;
+@property(readwrite) int three;
+@property(readwrite) int four;
+@property(readwrite) int five;
+@property(readwrite) int six;
+@property(readwrite) int seven;
+@property(readwrite) int eight;
+
+@property (nonatomic, assign) int raceCount;
+@property (nonatomic, assign) float initialPopulationDensity;
+
 - (id)initWithWidth:(int)gameWidth height:(int)gameHeight;
-//- (id)initWithWidth:(int)gameWidth height:(int)gameHeight configuration:(NSDictionary *)configuration;
+- (void)seed;
 - (void)update;
 - (SchellingCell *)cellAtRow:(int)row column:(int)column;
-//- (void)nearestUnoccupiedCellToRow:(int)row column:(int)col torace:(int)torace;
 
 - (NSMutableArray *)blankGrid;
 - (void)setCellRelations;
+
+- (BOOL)cellShouldMove:(SchellingCell *)cell;
 
 //- (void)initGameOperations;
 //- (OperationOfLife *)operationForCell:(CellOfLife *)cell type:(int)type;
