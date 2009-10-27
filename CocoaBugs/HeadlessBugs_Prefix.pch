@@ -1,0 +1,8 @@
+//
+// Prefix header for all source files of the 'HeadlessBugs' target in the 'CocoaBugs' project
+//
+
+#ifdef __OBJC__
+#import <Cocoa/Cocoa.h>
+#import <Bugs/Bugs.h>
+#endif
