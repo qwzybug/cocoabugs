@@ -11,6 +11,8 @@
 		03496CBF1096B6A6009BD558 /* NSArray+Shuffling.h in Headers */ = {isa = PBXBuildFile; fileRef = 03496CBD1096B6A6009BD558 /* NSArray+Shuffling.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03496CC01096B6A6009BD558 /* NSArray+Shuffling.m in Sources */ = {isa = PBXBuildFile; fileRef = 03496CBE1096B6A6009BD558 /* NSArray+Shuffling.m */; };
 		03496CD51096B874009BD558 /* Bugs.h in Headers */ = {isa = PBXBuildFile; fileRef = 03496CD41096B874009BD558 /* Bugs.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		03DAE1EA1096DBDA009D10E7 /* NSString+KeyPathComponents.h in Headers */ = {isa = PBXBuildFile; fileRef = 03DAE1E81096DBDA009D10E7 /* NSString+KeyPathComponents.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		03DAE1EB1096DBDA009D10E7 /* NSString+KeyPathComponents.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DAE1E91096DBDA009D10E7 /* NSString+KeyPathComponents.m */; };
 		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
@@ -20,6 +22,8 @@
 		03496CBD1096B6A6009BD558 /* NSArray+Shuffling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Shuffling.h"; sourceTree = "<group>"; };
 		03496CBE1096B6A6009BD558 /* NSArray+Shuffling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Shuffling.m"; sourceTree = "<group>"; };
 		03496CD41096B874009BD558 /* Bugs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bugs.h; sourceTree = "<group>"; };
+		03DAE1E81096DBDA009D10E7 /* NSString+KeyPathComponents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+KeyPathComponents.h"; sourceTree = "<group>"; };
+		03DAE1E91096DBDA009D10E7 /* NSString+KeyPathComponents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+KeyPathComponents.m"; sourceTree = "<group>"; };
 		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -62,6 +66,8 @@
 			children = (
 				03496CBD1096B6A6009BD558 /* NSArray+Shuffling.h */,
 				03496CBE1096B6A6009BD558 /* NSArray+Shuffling.m */,
+				03DAE1E81096DBDA009D10E7 /* NSString+KeyPathComponents.h */,
+				03DAE1E91096DBDA009D10E7 /* NSString+KeyPathComponents.m */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -151,6 +157,7 @@
 				03496CBC1096B697009BD558 /* ALifeController.h in Headers */,
 				03496CBF1096B6A6009BD558 /* NSArray+Shuffling.h in Headers */,
 				03496CD51096B874009BD558 /* Bugs.h in Headers */,
+				03DAE1EA1096DBDA009D10E7 /* NSString+KeyPathComponents.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03496CC01096B6A6009BD558 /* NSArray+Shuffling.m in Sources */,
+				03DAE1EB1096DBDA009D10E7 /* NSString+KeyPathComponents.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
