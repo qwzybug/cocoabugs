@@ -20,8 +20,6 @@
 	IBOutlet NSImageView *imageView;
 	IBOutlet NSTextField *widthHeightField;
 	
-	BOOL shuffling;
-	
 	NSArray *builtInImages;
 	int selectedImageIndex;
 	

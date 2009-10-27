@@ -11,7 +11,9 @@
 
 @implementation IntegerOptionViewController
 
-@synthesize name, title, shuffling, delta, slider;
+@synthesize name, title, slider;
+@synthesize minValue, maxValue;
+@synthesize value;
 
 + (IntegerOptionViewController *)controllerWithOptions:(NSDictionary *)options;
 {
@@ -25,8 +27,8 @@
 
 	minValue = [[options objectForKey:@"minValue"] intValue];
 	maxValue = [[options objectForKey:@"maxValue"] intValue];
-	defaultValue = [[options objectForKey:@"default"] intValue];
 	
+	self.value = [options objectForKey:@"default"];
 	self.name = [options objectForKey:@"name"];
 	self.title = [options objectForKey:@"title"];
 	
@@ -37,6 +39,7 @@
 {
 	self.name = nil;
 	self.title = nil;
+	self.value = nil;
 	[self.view removeFromSuperview];
 	
 	[super dealloc];
@@ -44,49 +47,8 @@
 
 - (void)awakeFromNib;
 {
-	[slider setMinValue:minValue];
-	[slider setMaxValue:maxValue];
-	[slider setIntValue:defaultValue];
-	
-	[shuffleDial setMinValue:0];
-	[shuffleDial setMaxValue:(maxValue - minValue)/2];
-	[shuffleDial setIntValue:0];
-	
 	int numAllowedValues = maxValue - minValue + 1;
-	if (numAllowedValues < 80) {
-		[slider setNumberOfTickMarks:numAllowedValues];
-		[slider setAllowsTickMarkValuesOnly:YES];
-	}
-	
-	[titleField setStringValue:self.title];
-	
-	[minValueField setStringValue:[NSString stringWithFormat:@"%d", minValue]];
-	[maxValueField setStringValue:[NSString stringWithFormat:@"%d", maxValue]];
-	
-	[currentValueField setStringValue:[NSString stringWithFormat:@"%d", defaultValue]];
-}
-				  
-- (NSNumber *)value;
-{
-	if (shuffling)
-		return [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:[slider intValue]], @"principalValue",
-														  [NSNumber numberWithInt:delta], @"delta",
-														  [NSNumber numberWithBool:YES], @"shuffle", nil];
-	else
-		return [NSNumber numberWithInt:[slider intValue]];
-}
-
-- (IBAction)sliderValueChanged:(id)sender;
-{
-	[currentValueField setStringValue:[NSString stringWithFormat:@"%d", [slider intValue]]];
-}
-
-- (void)setShuffling:(BOOL)isShuffling;
-{
-	shuffling = isShuffling;
-	[shuffleDial setHidden:!shuffling];
-	[shuffleLabel setHidden:!shuffling];
-	[plusMinusLabel setHidden:!shuffling];
+	[slider setNumberOfTickMarks:numAllowedValues];	
 }
 
 @end

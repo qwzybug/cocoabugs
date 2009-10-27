@@ -23,7 +23,8 @@
 
 - (void)dealloc;
 {
-	[optionControllers release]; optionControllers = nil;
+	[optionControllers release], optionControllers = nil;
+	[simulation release], simulation = nil;
 	
 	[super dealloc];
 }
@@ -38,43 +39,38 @@
 	// create the option controllers
 	NSArray *configuration = [simulationClass configurationOptions];
 	for (NSDictionary *options in configuration) {
+		NSString *keyPath = [options objectForKey:@"keyPath"];
+		NSString *controllerKey = nil;
+		NSViewController *controller = nil;
+		id currentValue = [(NSObject *)simulation valueForKeyPath:keyPath];
+		
 		// if we're in tinker mode, we only want to add options with a key path
-		if (self.mode == kConfigurationControllerModeTinker && ![options objectForKey:@"keyPath"]) {
+		if (self.mode == kConfigurationControllerModeTinker && !keyPath) {
 			continue;
-		}	
+		}
+		
 		if ([[options objectForKey:@"type"] isEqual:@"Integer"]) {
-			IntegerOptionViewController *controller = [IntegerOptionViewController controllerWithOptions:options];
-			[optionControllers addObject:controller];
-			[controller loadView];
-			if (self.mode == kConfigurationControllerModeTinker && self.simulation) {
-				NSString *keyPath = [options objectForKey:@"keyPath"];
-				[controller.slider bind:@"value"
-							   toObject:self.simulation
-							withKeyPath:keyPath
-								options:nil];
-			}
+			controller = [IntegerOptionViewController controllerWithOptions:options];
+			controllerKey = @"value";
 		} else if ([[options objectForKey:@"type"] isEqual:@"Float"]) {
-			FloatOptionViewController *controller = [FloatOptionViewController controllerWithOptions:options];
-			[optionControllers addObject:controller];
-			[controller loadView];
-			if (self.mode == kConfigurationControllerModeTinker && self.simulation) {
-				NSString *keyPath = [options objectForKey:@"keyPath"];
-				[controller.slider bind:@"value"
-							   toObject:self.simulation
-							withKeyPath:keyPath
-								options:nil];
-			}
+			controller = [FloatOptionViewController controllerWithOptions:options];
+			controllerKey = @"value";
 		} else if ([[options objectForKey:@"type"] isEqual:@"Bitmap"]) {
-			BitmapOptionViewController *controller = [BitmapOptionViewController controllerWithOptions:options];
+			controller = [BitmapOptionViewController controllerWithOptions:options];
+			controllerKey = @"image";
+		}
+		
+		if (controller) {
 			[optionControllers addObject:controller];
 			[controller loadView];
-			if (self.mode == kConfigurationControllerModeTinker && self.simulation) {
-				NSString *keyPath = [options objectForKey:@"keyPath"];
-				[controller bind:@"image"
-						toObject:simulation
-					 withKeyPath:keyPath
-						 options:nil];
-			}
+			if (self.mode == kConfigurationControllerModeTinker && self.simulation && controllerKey) {
+				[controller setValue:currentValue forKey:controllerKey];
+				id boundObject = [(NSObject *)simulation valueForKeyPath:[keyPath majorKeyPath]];
+				[boundObject bind:[keyPath lastKeyPathComponent]
+						 toObject:controller
+					  withKeyPath:controllerKey
+						  options:nil];
+			}		
 		}
 	}
 	contentHeight = [optionControllers count] * 64.0;

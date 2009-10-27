@@ -303,19 +303,19 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: self.image</string>
+						<string key="label">value: image</string>
 						<reference key="source" ref="578554519"/>
 						<reference key="destination" ref="1001"/>
 						<object class="NSNibBindingConnector" key="connector">
 							<reference key="NSSource" ref="578554519"/>
 							<reference key="NSDestination" ref="1001"/>
-							<string key="NSLabel">value: self.image</string>
+							<string key="NSLabel">value: image</string>
 							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">self.image</string>
+							<string key="NSKeyPath">image</string>
 							<int key="NSNibBindingConnectorVersion">2</int>
 						</object>
 					</object>
-					<int key="connectionID">33</int>
+					<int key="connectionID">36</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -516,7 +516,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">33</int>
+			<int key="maxID">36</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">

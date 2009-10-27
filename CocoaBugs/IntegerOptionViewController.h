@@ -10,39 +10,29 @@
 
 
 @interface IntegerOptionViewController : NSViewController {
-	IBOutlet NSTextField *titleField;
 	IBOutlet NSSlider *slider;
-	
-	IBOutlet NSTextField *currentValueField;
-	IBOutlet NSTextField *minValueField;
-	IBOutlet NSTextField *maxValueField;
-	
-	IBOutlet NSButton *shuffleButton;
-	BOOL shuffling;
-	IBOutlet NSTextField *plusMinusLabel;
-	IBOutlet NSTextField *shuffleLabel;
-	IBOutlet NSSlider *shuffleDial;
-	int delta;
 	
 	NSString *name;
 	NSString *title;
 	
 	int minValue;
 	int maxValue;
+	int ticks;
 	int defaultValue;
+	
+	NSNumber *value;
 }
 
 @property (nonatomic, retain) IBOutlet NSSlider *slider;
 @property(readwrite, retain) NSString *name;
 @property(readwrite, retain) NSString *title;
-@property(readwrite, assign) BOOL shuffling;
-@property(readwrite, assign) int delta;
+
+@property (nonatomic, assign) int minValue;
+@property (nonatomic, assign) int maxValue;
+
+@property (nonatomic, retain) NSNumber *value;
 
 + (IntegerOptionViewController *)controllerWithOptions:(NSDictionary *)options;
 - (id)initWithOptionDictionary:(NSDictionary *)options;
-
-- (NSNumber *)value;
-
-- (IBAction)sliderValueChanged:(id)sender;
 
 @end

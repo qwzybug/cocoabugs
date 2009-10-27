@@ -10,19 +10,7 @@
 
 
 @interface FloatOptionViewController : NSViewController {
-	IBOutlet NSTextField *titleField;
 	IBOutlet NSSlider *slider;
-	
-	IBOutlet NSTextField *currentValueField;
-	IBOutlet NSTextField *minValueField;
-	IBOutlet NSTextField *maxValueField;
-	
-	IBOutlet NSButton *shuffleButton;
-	BOOL shuffling;
-	IBOutlet NSTextField *plusMinusLabel;
-	IBOutlet NSTextField *shuffleLabel;
-	IBOutlet NSSlider *shuffleDial;
-	float delta;
 	
 	NSString *name;
 	NSString *title;
@@ -30,19 +18,19 @@
 	float minValue;
 	float maxValue;
 	float defaultValue;
+	
+	NSNumber *value;
 }
 
 @property (nonatomic, retain) IBOutlet NSSlider *slider;
-@property(readwrite, retain) NSString *name;
-@property(readwrite, retain) NSString *title;
-@property(readwrite, assign) BOOL shuffling;
-@property(readwrite, assign) float delta;
+@property (nonatomic, retain) NSString *name;
+@property (nonatomic, retain) NSString *title;
+
+@property (nonatomic, assign) float minValue;
+@property (nonatomic, assign) float maxValue;
+@property (nonatomic, retain) NSNumber *value;
 
 + (FloatOptionViewController *)controllerWithOptions:(NSDictionary *)options;
 - (id)initWithOptionDictionary:(NSDictionary *)options;
-
-- (NSNumber *)value;
-
-- (IBAction)sliderValueChanged:(id)sender;
 
 @end

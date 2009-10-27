@@ -11,7 +11,9 @@
 
 @implementation FloatOptionViewController
 
-@synthesize name, title, shuffling, delta, slider;
+@synthesize name, title, slider;
+@synthesize minValue, maxValue;
+@synthesize value;
 
 + (FloatOptionViewController *)controllerWithOptions:(NSDictionary *)options;
 {
@@ -20,13 +22,13 @@
 
 - (id)initWithOptionDictionary:(NSDictionary *)options;
 {
-	if (!(self = [super initWithNibName:@"FloatOptionView" bundle:[NSBundle mainBundle]]))
+	if (!(self = [super initWithNibName:@"FloatOptionView" bundle:nil]))
 		return nil;
 	
 	minValue = [[options objectForKey:@"minValue"] floatValue];
 	maxValue = [[options objectForKey:@"maxValue"] floatValue];
-	defaultValue = [[options objectForKey:@"default"] floatValue];
 	
+	self.value = [options objectForKey:@"default"];
 	self.name = [options objectForKey:@"name"];
 	self.title = [options objectForKey:@"title"];
 	
@@ -37,50 +39,10 @@
 {
 	self.name = nil;
 	self.title = nil;
+	self.value = nil;
 	[self.view removeFromSuperview];
 	
 	[super dealloc];
-}
-
-- (void)awakeFromNib;
-{
-	[slider setMinValue:minValue];
-	[slider setMaxValue:maxValue];
-	[slider setFloatValue:defaultValue];
-	
-	[titleField setStringValue:self.title];
-	
-	[shuffleDial setMinValue:0];
-	[shuffleDial setMaxValue:(maxValue - minValue)/2];
-	[shuffleDial setIntValue:0];
-	
-	[minValueField setStringValue:[NSString stringWithFormat:@"%f", minValue]];
-	[maxValueField setStringValue:[NSString stringWithFormat:@"%f", maxValue]];
-	
-	[currentValueField setStringValue:[NSString stringWithFormat:@"%f", defaultValue]];
-}
-
-- (NSNumber *)value;
-{
-	if (shuffling)
-		return [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithFloat:[slider floatValue]], @"principalValue",
-														  [NSNumber numberWithFloat:delta], @"delta",
-														  [NSNumber numberWithBool:YES], @"shuffle", nil];
-	else
-		return [NSNumber numberWithFloat:[slider floatValue]];
-}
-
-- (IBAction)sliderValueChanged:(id)sender;
-{
-	[currentValueField setStringValue:[NSString stringWithFormat:@"%f", [slider floatValue]]];
-}
-
-- (void)setShuffling:(BOOL)isShuffling;
-{
-	shuffling = isShuffling;
-	[shuffleDial setHidden:!shuffling];
-	[shuffleLabel setHidden:!shuffling];
-	[plusMinusLabel setHidden:!shuffling];
 }
 
 @end
