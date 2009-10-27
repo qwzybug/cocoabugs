@@ -151,18 +151,18 @@
 	};
 	03E2CD740E272F910077196A /* BugsController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {703, 569}}";
-			sepNavSelRange = "{448, 0}";
-			sepNavVisRange = "{0, 760}";
+			sepNavIntBoundsRect = "{{0, 0}, {795, 455}}";
+			sepNavSelRange = "{69, 1}";
+			sepNavVisRange = "{0, 569}";
 			sepNavWindowFrame = "{{68, 70}, {832, 872}}";
 		};
 	};
 	03E2CD750E272F910077196A /* BugsController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {908, 1690}}";
-			sepNavSelRange = "{2843, 0}";
-			sepNavVisRange = "{2155, 762}";
-			sepNavWindowFrame = "{{65, 125}, {772, 837}}";
+			sepNavIntBoundsRect = "{{0, 0}, {929, 1768}}";
+			sepNavSelRange = "{2547, 0}";
+			sepNavVisRange = "{0, 1640}";
+			sepNavWindowFrame = "{{14, 300}, {988, 878}}";
 		};
 	};
 	089C1669FE841209C02AAC07 /* Project object */ = {
@@ -231,8 +231,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 278309538;
-			PBXWorkspaceStateSaveDate = 278309538;
+			PBXPerProjectTemplateStateSaveDate = 278318311;
+			PBXWorkspaceStateSaveDate = 278318311;
 		};
 		sourceControlManager = 03E2CCB60E2729140077196A /* Source Control */;
 		userBuildSettings = {
@@ -247,9 +247,10 @@
 	};
 	32DBCF630370AF2F00C91783 /* Packard Bugs Plugin_Prefix.pch */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {678, 289}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 170}";
+			sepNavIntBoundsRect = "{{0, 0}, {1010, 746}}";
+			sepNavSelRange = "{178, 0}";
+			sepNavVisRange = "{0, 193}";
+			sepNavWindowFrame = "{{15, 335}, {1069, 838}}";
 		};
 	};
 	8D5B49AC048680CD000E48DA /* Packard Bugs Plugin */ = {

@@ -4,7 +4,6 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "ALifeController.h"
 
 @class World, WorldView, BugsStatistics, BugsColoringWindowController;
 

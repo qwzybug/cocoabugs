@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03223F311096BEA000A60416 /* Bugs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03496D811096BE37009BD558 /* Bugs.framework */; };
 		0381D59E108671C600072A80 /* UpdateGenePresenceOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0381D5951086700D00072A80 /* UpdateGenePresenceOperation.m */; };
 		0381D6621086814600072A80 /* BugNeighborhoodView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0381D6611086814600072A80 /* BugNeighborhoodView.m */; };
 		0381D6651086816700072A80 /* GeneDistributionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0381D6641086816700072A80 /* GeneDistributionView.m */; };
@@ -24,8 +25,25 @@
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		03223FBF1096C26900A60416 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03496D7C1096BE36009BD558 /* BugsFramework.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
+			remoteInfo = Bugs;
+		};
+		03496D801096BE37009BD558 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03496D7C1096BE36009BD558 /* BugsFramework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = BugsFramework;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		035AF11110901E9600725226 /* ALifeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALifeController.h; path = ../../CocoaBugs/ALifeController.h; sourceTree = SOURCE_ROOT; };
+		03496D7C1096BE36009BD558 /* BugsFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BugsFramework.xcodeproj; path = ../../BugsFramework/BugsFramework.xcodeproj; sourceTree = SOURCE_ROOT; };
 		0381D5941086700D00072A80 /* UpdateGenePresenceOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateGenePresenceOperation.h; sourceTree = "<group>"; };
 		0381D5951086700D00072A80 /* UpdateGenePresenceOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateGenePresenceOperation.m; sourceTree = "<group>"; };
 		0381D6601086814600072A80 /* BugNeighborhoodView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BugNeighborhoodView.h; sourceTree = "<group>"; };
@@ -66,12 +84,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */,
+				03223F311096BEA000A60416 /* Bugs.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03496D7D1096BE36009BD558 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				03496D811096BE37009BD558 /* Bugs.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		0381D6561086813900072A80 /* Coloring */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +167,7 @@
 			children = (
 				1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */,
 				1058C7AEFEA557BF11CA2CBB /* Other Frameworks */,
+				03496D7C1096BE36009BD558 /* BugsFramework.xcodeproj */,
 			);
 			name = "Frameworks and Libraries";
 			sourceTree = "<group>";
@@ -194,7 +222,6 @@
 		32C88E010371C26100C91783 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				035AF11110901E9600725226 /* ALifeController.h */,
 				32DBCF630370AF2F00C91783 /* Packard Bugs Plugin_Prefix.pch */,
 			);
 			name = "Other Sources";
@@ -214,6 +241,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				03223FC01096C26900A60416 /* PBXTargetDependency */,
 			);
 			name = "Packard Bugs Plugin";
 			productInstallPath = "$(HOME)/Library/Bundles";
@@ -231,12 +259,28 @@
 			hasScannedForEncodings = 1;
 			mainGroup = 089C166AFE841209C02AAC07 /* Packard Bugs Plugin */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 03496D7D1096BE36009BD558 /* Products */;
+					ProjectRef = 03496D7C1096BE36009BD558 /* BugsFramework.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				8D5B49AC048680CD000E48DA /* Packard Bugs Plugin */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		03496D811096BE37009BD558 /* Bugs.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Bugs.framework;
+			remoteRef = 03496D801096BE37009BD558 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8D5B49AF048680CD000E48DA /* Resources */ = {
@@ -272,6 +316,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		03223FC01096C26900A60416 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Bugs;
+			targetProxy = 03223FBF1096C26900A60416 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		089C167DFE841241C02AAC07 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
@@ -288,15 +340,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_MODEL_TUNING = G5;
-				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Packard Bugs Plugin_Prefix.pch";
 				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				PRODUCT_NAME = "Packard Bugs Plugin";
 				WRAPPER_EXTENSION = plugin;
 			};
@@ -321,6 +367,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../../BugsFramework/build/Release\"";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_ENABLE_OBJC_GC = supported;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -336,8 +383,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../../BugsFramework/build/Release\"";
 				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_ENABLE_OBJC_GC = unsupported;
+				GCC_ENABLE_OBJC_GC = supported;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
