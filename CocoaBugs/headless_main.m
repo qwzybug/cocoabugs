@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <Bugs/Bugs.h>
 #import <Foundation/NSObjCRuntime.h>
 
 #import "ALifePluginLoader.h"

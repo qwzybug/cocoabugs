@@ -13,6 +13,13 @@
 		03496CD51096B874009BD558 /* Bugs.h in Headers */ = {isa = PBXBuildFile; fileRef = 03496CD41096B874009BD558 /* Bugs.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03DAE1EA1096DBDA009D10E7 /* NSString+KeyPathComponents.h in Headers */ = {isa = PBXBuildFile; fileRef = 03DAE1E81096DBDA009D10E7 /* NSString+KeyPathComponents.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03DAE1EB1096DBDA009D10E7 /* NSString+KeyPathComponents.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DAE1E91096DBDA009D10E7 /* NSString+KeyPathComponents.m */; };
+		03DAE3341096F377009D10E7 /* NSString+KeyPathComponents.h in Headers */ = {isa = PBXBuildFile; fileRef = 03DAE1E81096DBDA009D10E7 /* NSString+KeyPathComponents.h */; };
+		03DAE3351096F378009D10E7 /* Bugs.h in Headers */ = {isa = PBXBuildFile; fileRef = 03496CD41096B874009BD558 /* Bugs.h */; };
+		03DAE3361096F379009D10E7 /* NSArray+Shuffling.h in Headers */ = {isa = PBXBuildFile; fileRef = 03496CBD1096B6A6009BD558 /* NSArray+Shuffling.h */; };
+		03DAE3381096F382009D10E7 /* ALifeController.h in Headers */ = {isa = PBXBuildFile; fileRef = 03496CBB1096B697009BD558 /* ALifeController.h */; };
+		03DAE33C1096F38A009D10E7 /* NSArray+Shuffling.m in Sources */ = {isa = PBXBuildFile; fileRef = 03496CBE1096B6A6009BD558 /* NSArray+Shuffling.m */; };
+		03DAE33D1096F38B009D10E7 /* NSString+KeyPathComponents.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DAE1E91096DBDA009D10E7 /* NSString+KeyPathComponents.m */; };
+		03DAE33E1096F38F009D10E7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
 		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
@@ -24,6 +31,7 @@
 		03496CD41096B874009BD558 /* Bugs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bugs.h; sourceTree = "<group>"; };
 		03DAE1E81096DBDA009D10E7 /* NSString+KeyPathComponents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+KeyPathComponents.h"; sourceTree = "<group>"; };
 		03DAE1E91096DBDA009D10E7 /* NSString+KeyPathComponents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+KeyPathComponents.m"; sourceTree = "<group>"; };
+		03DAE32B1096F368009D10E7 /* libbugs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libbugs.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -35,6 +43,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		03DAE3291096F368009D10E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03DAE33E1096F38F009D10E7 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DC2EF560486A6940098B216 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -50,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				8DC2EF5B0486A6940098B216 /* Bugs.framework */,
+				03DAE32B1096F368009D10E7 /* libbugs.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,6 +167,17 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		03DAE3271096F368009D10E7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03DAE3341096F377009D10E7 /* NSString+KeyPathComponents.h in Headers */,
+				03DAE3351096F378009D10E7 /* Bugs.h in Headers */,
+				03DAE3361096F379009D10E7 /* NSArray+Shuffling.h in Headers */,
+				03DAE3381096F382009D10E7 /* ALifeController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DC2EF500486A6940098B216 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -164,6 +192,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		03DAE32A1096F368009D10E7 /* bugs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03DAE34A1096F398009D10E7 /* Build configuration list for PBXNativeTarget "bugs" */;
+			buildPhases = (
+				03DAE3271096F368009D10E7 /* Headers */,
+				03DAE3281096F368009D10E7 /* Sources */,
+				03DAE3291096F368009D10E7 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = bugs;
+			productName = bugs;
+			productReference = 03DAE32B1096F368009D10E7 /* libbugs.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		8DC2EF4F0486A6940098B216 /* Bugs */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "Bugs" */;
@@ -197,6 +242,7 @@
 			projectRoot = "";
 			targets = (
 				8DC2EF4F0486A6940098B216 /* Bugs */,
+				03DAE32A1096F368009D10E7 /* bugs */,
 			);
 		};
 /* End PBXProject section */
@@ -213,6 +259,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		03DAE3281096F368009D10E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03DAE33C1096F38A009D10E7 /* NSArray+Shuffling.m in Sources */,
+				03DAE33D1096F38B009D10E7 /* NSString+KeyPathComponents.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DC2EF540486A6940098B216 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -236,6 +291,56 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		03DAE32C1096F369009D10E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INSTALL_PATH = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = bugs;
+				SDKROOT = macosx10.5;
+			};
+			name = Debug;
+		};
+		03DAE32D1096F369009D10E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INSTALL_PATH = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = bugs;
+				SDKROOT = macosx10.5;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 		1DEB91AE08733DA50010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -306,6 +411,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		03DAE34A1096F398009D10E7 /* Build configuration list for PBXNativeTarget "bugs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03DAE32C1096F369009D10E7 /* Debug */,
+				03DAE32D1096F369009D10E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "Bugs" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

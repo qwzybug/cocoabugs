@@ -59,6 +59,8 @@
 		03D46EDE0E595AB0000DE764 /* Stripes.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D46ED90E595AB0000DE764 /* Stripes.png */; };
 		03D46EDF0E595AB0000DE764 /* R-pentomino.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D46EDA0E595AB0000DE764 /* R-pentomino.png */; };
 		03D46EE20E595C77000DE764 /* BuiltInImages.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03D46EE10E595C77000DE764 /* BuiltInImages.plist */; };
+		03DAE34C1096F3C5009D10E7 /* libbugs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DAE34B1096F3C5009D10E7 /* libbugs.a */; };
+		03DAE34D1096F3C7009D10E7 /* libbugs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DAE34B1096F3C5009D10E7 /* libbugs.a */; };
 		03EDB3360E4E26F90008990A /* ALifeShuffler.m in Sources */ = {isa = PBXBuildFile; fileRef = 03EDB3350E4E26F90008990A /* ALifeShuffler.m */; };
 		8D11072A0486CEB800E47090 /* MainMenu.old.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.old.nib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
@@ -123,6 +125,20 @@
 			remoteGlobalIDString = 8D5B49AC048680CD000E48DA;
 			remoteInfo = "Packard Bugs Plugin";
 		};
+		03DAE2D71096F02B009D10E7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03496D2F1096BBC4009BD558 /* BugsFramework.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216 /* Bugs */;
+			remoteInfo = Bugs;
+		};
+		03DAE33A1096F387009D10E7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03496D2F1096BBC4009BD558 /* BugsFramework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 03DAE32B1096F368009D10E7 /* libbugs.a */;
+			remoteInfo = bugs;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -172,6 +188,16 @@
 			name = "Copy plugins";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		03DAE2DC1096F04C009D10E7 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Frameworks;
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -200,7 +226,6 @@
 		035190910E7DD9D600205E7B /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		0359DC9A0E7F1AA300EEAC01 /* DMQuicktimeExporter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DMQuicktimeExporter.xib; sourceTree = "<group>"; };
 		035AF0BA10901B9F00725226 /* Packard Bugs Plugin.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Packard Bugs Plugin.xcodeproj"; path = "../plugins/Packard Bugs/Packard Bugs Plugin.xcodeproj"; sourceTree = SOURCE_ROOT; };
-		035AF0D410901BF400725226 /* Packard's Bugs-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Packard's Bugs-Info.plist"; sourceTree = "<group>"; };
 		035AF0EB10901C9D00725226 /* Schelling.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Schelling.xcodeproj; path = ../plugins/Schelling/Schelling.xcodeproj; sourceTree = SOURCE_ROOT; };
 		035AF28210903F6100725226 /* NSDictionary_Merging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionary_Merging.h; sourceTree = "<group>"; };
 		035AF28310903F6100725226 /* NSDictionary_Merging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_Merging.m; sourceTree = "<group>"; };
@@ -237,6 +262,8 @@
 		03D46ED90E595AB0000DE764 /* Stripes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Stripes.png; sourceTree = "<group>"; };
 		03D46EDA0E595AB0000DE764 /* R-pentomino.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "R-pentomino.png"; sourceTree = "<group>"; };
 		03D46EE10E595C77000DE764 /* BuiltInImages.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BuiltInImages.plist; sourceTree = "<group>"; };
+		03DAE2E91096F162009D10E7 /* HeadlessBugs_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadlessBugs_Prefix.pch; sourceTree = "<group>"; };
+		03DAE34B1096F3C5009D10E7 /* libbugs.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbugs.a; path = ../BugsFramework/build/Release/libbugs.a; sourceTree = SOURCE_ROOT; };
 		03EDB3340E4E26F90008990A /* ALifeShuffler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALifeShuffler.h; sourceTree = "<group>"; };
 		03EDB3350E4E26F90008990A /* ALifeShuffler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALifeShuffler.m; sourceTree = "<group>"; };
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -256,6 +283,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03DAE34C1096F3C5009D10E7 /* libbugs.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +295,7 @@
 				035190920E7DD9D600205E7B /* QTKit.framework in Frameworks */,
 				03BE21B80E7F0388005E5D76 /* QuickTime.framework in Frameworks */,
 				03496D351096BBC8009BD558 /* Bugs.framework in Frameworks */,
+				03DAE34D1096F3C7009D10E7 /* libbugs.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +321,7 @@
 			isa = PBXGroup;
 			children = (
 				03496D341096BBC4009BD558 /* Bugs.framework */,
+				03DAE33B1096F387009D10E7 /* libbugs.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -429,7 +459,6 @@
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				035AF0B910901B8E00725226 /* Plugins */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				035AF0D410901BF400725226 /* Packard's Bugs-Info.plist */,
 			);
 			name = CocoaBugs;
 			sourceTree = "<group>";
@@ -442,6 +471,7 @@
 				03039EBE0E3FC61B0043E65A /* headless_main.m */,
 				035AF28210903F6100725226 /* NSDictionary_Merging.h */,
 				035AF28310903F6100725226 /* NSDictionary_Merging.m */,
+				03DAE2E91096F162009D10E7 /* HeadlessBugs_Prefix.pch */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -478,6 +508,7 @@
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 				03496D2F1096BBC4009BD558 /* BugsFramework.xcodeproj */,
+				03DAE34B1096F3C5009D10E7 /* libbugs.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -489,6 +520,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 03039F060E3FCE010043E65A /* Build configuration list for PBXNativeTarget "HeadlessBugs" */;
 			buildPhases = (
+				03DAE2DC1096F04C009D10E7 /* Copy Frameworks */,
 				03039EF90E3FCDEC0043E65A /* Sources */,
 				03039EFA0E3FCDEC0043E65A /* Frameworks */,
 				035AF21C109037A100725226 /* Copy plugins */,
@@ -498,6 +530,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				03DAE2D81096F02B009D10E7 /* PBXTargetDependency */,
 				035AF2151090379C00725226 /* PBXTargetDependency */,
 				035AF2171090379E00725226 /* PBXTargetDependency */,
 			);
@@ -581,6 +614,13 @@
 			fileType = wrapper.cfbundle;
 			path = Schelling.plugin;
 			remoteRef = 035AF0EF10901C9D00725226 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		03DAE33B1096F387009D10E7 /* libbugs.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libbugs.a;
+			remoteRef = 03DAE33A1096F387009D10E7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -701,6 +741,11 @@
 			name = "Packard Bugs Plugin";
 			targetProxy = 035AF2161090379E00725226 /* PBXContainerItemProxy */;
 		};
+		03DAE2D81096F02B009D10E7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Bugs;
+			targetProxy = 03DAE2D71096F02B009D10E7 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -730,15 +775,19 @@
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../BugsFramework/build/Debug\"",
+					"\"$(SRCROOT)/../BugsFramework/build/Release\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_PREFIX_HEADER = HeadlessBugs_Prefix.pch;
 				INSTALL_PATH = /usr/local/bin;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../BugsFramework/build/Release\"",
+				);
 				OTHER_LDFLAGS = (
 					"-framework",
 					Foundation,
@@ -758,13 +807,17 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../BugsFramework/build/Debug\"",
+					"\"$(SRCROOT)/../BugsFramework/build/Release\"",
 				);
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_PREFIX_HEADER = HeadlessBugs_Prefix.pch;
 				INSTALL_PATH = /usr/local/bin;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../BugsFramework/build/Release\"",
+				);
 				OTHER_LDFLAGS = (
 					"-framework",
 					Foundation,
@@ -793,6 +846,10 @@
 				GCC_PREFIX_HEADER = CocoaBugs_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../BugsFramework/build/Release\"",
+				);
 				PRODUCT_NAME = CocoaBugs;
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = YES;
@@ -812,6 +869,10 @@
 				GCC_PREFIX_HEADER = CocoaBugs_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../BugsFramework/build/Release\"",
+				);
 				PRODUCT_NAME = CocoaBugs;
 				WRAPPER_EXTENSION = app;
 			};
