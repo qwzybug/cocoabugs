@@ -9,7 +9,6 @@
 #import <Cocoa/Cocoa.h>
 #import <Foundation/NSObjCRuntime.h>
 
-#import "ALifeController.h"
 #import "ALifePluginLoader.h"
 #import "StatisticsController.h"
 #import "ALifeRunExporter.h"

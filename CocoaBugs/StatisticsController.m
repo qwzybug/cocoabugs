@@ -9,7 +9,6 @@
 #import "StatisticsController.h"
 #import "StatisticsData.h"
 #import "StatisticsView.h"
-#import "ALifeController.h"
 #import "StatisticsTableView.h"
 
 @implementation StatisticsController

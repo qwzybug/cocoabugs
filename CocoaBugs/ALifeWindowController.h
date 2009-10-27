@@ -8,7 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-#import "ALifeController.h"
 
 @class StatisticsController, ALifeSimulationController, DMQuicktimeExporter, ALifeTinkerPanelController;
 
@@ -36,6 +35,7 @@
 
 - (IBAction)showConfigurationWindow:(id)sender;
 - (IBAction)showColoringWindow:(id)sender;
+- (IBAction)actionExportConfiguration:(id)sender;
 - (IBAction)resetAction:(id)sender;
 
 @end

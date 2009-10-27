@@ -8,7 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-#import "ALifeController.h"
 
 @class ALifeConfigurationViewController;
 

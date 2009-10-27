@@ -8,7 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-#import "ALifeController.h"
 
 @interface ALifeSimulationController : NSObject {
 	id<ALifeController> lifeController;

@@ -17,6 +17,8 @@
 		0339CD9D0E231E7A009C5D0D /* ALifeConfigurationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0339CD9C0E231E7A009C5D0D /* ALifeConfigurationViewController.m */; };
 		0339CDD80E2324D7009C5D0D /* ConfigurationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0339CDD70E2324D7009C5D0D /* ConfigurationView.xib */; };
 		03459F751092DD2B00116C5A /* test.cocoabugs in Copy test configuration */ = {isa = PBXBuildFile; fileRef = 03459F721092DD1300116C5A /* test.cocoabugs */; };
+		03496D351096BBC8009BD558 /* Bugs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03496D341096BBC4009BD558 /* Bugs.framework */; };
+		03496D361096BBCF009BD558 /* Bugs.framework in Copy frameworks */ = {isa = PBXBuildFile; fileRef = 03496D341096BBC4009BD558 /* Bugs.framework */; };
 		034DCD950E09CFDB0045943A /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 034DCD940E09CFDB0045943A /* AppController.m */; };
 		034DCD9C0E09D1950045943A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 034DCD9B0E09D1950045943A /* MainMenu.xib */; };
 		0351906E0E7DD5CC00205E7B /* record.png in Resources */ = {isa = PBXBuildFile; fileRef = 0351906D0E7DD5CC00205E7B /* record.png */; };
@@ -65,6 +67,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		03223F671096BF3000A60416 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03496D2F1096BBC4009BD558 /* BugsFramework.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
+			remoteInfo = Bugs;
+		};
+		032240441096C95800A60416 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 035AF0EB10901C9D00725226 /* Schelling.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D5B49AC048680CD000E48DA;
+			remoteInfo = Schelling;
+		};
+		03496D331096BBC4009BD558 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03496D2F1096BBC4009BD558 /* BugsFramework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = BugsFramework;
+		};
 		035AF0BE10901B9F00725226 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 035AF0BA10901B9F00725226 /* Packard Bugs Plugin.xcodeproj */;
@@ -84,13 +107,6 @@
 			containerPortal = 035AF0EB10901C9D00725226 /* Schelling.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 8D5B49B6048680CD000E48DA;
-			remoteInfo = Schelling;
-		};
-		035AF0F210901CAE00725226 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 035AF0EB10901C9D00725226 /* Schelling.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8D5B49AC048680CD000E48DA;
 			remoteInfo = Schelling;
 		};
 		035AF2141090379C00725226 /* PBXContainerItemProxy */ = {
@@ -119,6 +135,17 @@
 				03459F751092DD2B00116C5A /* test.cocoabugs in Copy test configuration */,
 			);
 			name = "Copy test configuration";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03496D1B1096BB16009BD558 /* Copy frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				03496D361096BBCF009BD558 /* Bugs.framework in Copy frameworks */,
+			);
+			name = "Copy frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		035AF0CE10901BE200725226 /* Copy plugins */ = {
@@ -162,10 +189,10 @@
 		0339CD9C0E231E7A009C5D0D /* ALifeConfigurationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALifeConfigurationViewController.m; sourceTree = "<group>"; };
 		0339CDD70E2324D7009C5D0D /* ConfigurationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfigurationView.xib; sourceTree = "<group>"; };
 		03459F721092DD1300116C5A /* test.cocoabugs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = test.cocoabugs; path = ../../Desktop/test.cocoabugs; sourceTree = SOURCE_ROOT; };
+		03496D2F1096BBC4009BD558 /* BugsFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BugsFramework.xcodeproj; path = ../BugsFramework/BugsFramework.xcodeproj; sourceTree = SOURCE_ROOT; };
 		034DCD930E09CFDB0045943A /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		034DCD940E09CFDB0045943A /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
 		034DCD9B0E09D1950045943A /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
-		034DCE370E09EA830045943A /* ALifeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALifeController.h; sourceTree = "<group>"; };
 		0351906D0E7DD5CC00205E7B /* record.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = record.png; sourceTree = "<group>"; };
 		0351906F0E7DD65700205E7B /* record_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = record_small.png; sourceTree = "<group>"; };
 		0351908B0E7DD8D300205E7B /* DMQuicktimeExporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMQuicktimeExporter.h; sourceTree = "<group>"; };
@@ -239,6 +266,7 @@
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				035190920E7DD9D600205E7B /* QTKit.framework in Frameworks */,
 				03BE21B80E7F0388005E5D76 /* QuickTime.framework in Frameworks */,
+				03496D351096BBC8009BD558 /* Bugs.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,12 +288,12 @@
 			name = Configuration;
 			sourceTree = "<group>";
 		};
-		034DCE360E09E9AE0045943A /* Protocols */ = {
+		03496D301096BBC4009BD558 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				034DCE370E09EA830045943A /* ALifeController.h */,
+				03496D341096BBC4009BD558 /* Bugs.framework */,
 			);
-			name = Protocols;
+			name = Products;
 			sourceTree = "<group>";
 		};
 		035AF0B910901B8E00725226 /* Plugins */ = {
@@ -393,7 +421,6 @@
 			isa = PBXGroup;
 			children = (
 				03BEDD790E54AABD00694CD2 /* Exporting */,
-				034DCE360E09E9AE0045943A /* Protocols */,
 				038E9C590D70FFFA00325776 /* Models */,
 				038E9C5C0D71000200325776 /* Views */,
 				038E9C610D71000E00325776 /* Controllers */,
@@ -450,6 +477,7 @@
 			children = (
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+				03496D2F1096BBC4009BD558 /* BugsFramework.xcodeproj */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -482,6 +510,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "CocoaBugs" */;
 			buildPhases = (
+				03496D1B1096BB16009BD558 /* Copy frameworks */,
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
@@ -490,8 +519,9 @@
 			buildRules = (
 			);
 			dependencies = (
+				03223F681096BF3000A60416 /* PBXTargetDependency */,
 				035AF0D910901C4300725226 /* PBXTargetDependency */,
-				035AF0F310901CAE00725226 /* PBXTargetDependency */,
+				032240451096C95800A60416 /* PBXTargetDependency */,
 			);
 			name = CocoaBugs;
 			productInstallPath = "$(HOME)/Applications";
@@ -511,6 +541,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 03496D301096BBC4009BD558 /* Products */;
+					ProjectRef = 03496D2F1096BBC4009BD558 /* BugsFramework.xcodeproj */;
+				},
+				{
 					ProductGroup = 035AF0BB10901B9F00725226 /* Products */;
 					ProjectRef = 035AF0BA10901B9F00725226 /* Packard Bugs Plugin.xcodeproj */;
 				},
@@ -528,6 +562,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		03496D341096BBC4009BD558 /* Bugs.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Bugs.framework;
+			remoteRef = 03496D331096BBC4009BD558 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		035AF0BF10901B9F00725226 /* Packard Bugs Plugin.plugin */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
@@ -635,15 +676,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		03223F681096BF3000A60416 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Bugs;
+			targetProxy = 03223F671096BF3000A60416 /* PBXContainerItemProxy */;
+		};
+		032240451096C95800A60416 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Schelling;
+			targetProxy = 032240441096C95800A60416 /* PBXContainerItemProxy */;
+		};
 		035AF0D910901C4300725226 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Packard Bugs Plugin";
 			targetProxy = 035AF0D810901C4300725226 /* PBXContainerItemProxy */;
-		};
-		035AF0F310901CAE00725226 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Schelling;
-			targetProxy = 035AF0F210901CAE00725226 /* PBXContainerItemProxy */;
 		};
 		035AF2151090379C00725226 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -682,6 +728,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../BugsFramework/build/Debug\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -706,6 +756,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../BugsFramework/build/Debug\"",
+				);
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -727,6 +781,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../BugsFramework/build/Release\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -745,6 +803,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../BugsFramework/build/Release\"",
+				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = CocoaBugs_Prefix.pch;
@@ -758,6 +820,8 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
 				DEPLOYMENT_LOCATION = NO;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_ENABLE_OBJC_GC = supported;

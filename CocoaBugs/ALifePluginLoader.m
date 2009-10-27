@@ -7,7 +7,6 @@
 //
 
 #import "ALifePluginLoader.h"
-#import "ALifeController.h"
 
 @implementation ALifePluginLoader
 

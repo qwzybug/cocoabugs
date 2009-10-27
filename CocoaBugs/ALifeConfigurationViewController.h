@@ -8,7 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-#import "ALifeController.h"
 
 typedef enum _ALifeConfigurationControllerMode {
 	kConfigurationControllerModeConfigure,
