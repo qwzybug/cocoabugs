@@ -28,7 +28,6 @@
 
 @property(readwrite, retain) NSString *name;
 @property(readwrite, retain) NSString *title;
-@property(readwrite, assign) BOOL shuffling;
 @property(readonly, assign) NSArray *builtInImages;
 @property(readwrite, assign) int selectedImageIndex;
 
