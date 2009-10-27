@@ -115,6 +115,11 @@
 	}
 }
 
+- (IBAction)resetAction:(id)sender;
+{
+	[simulationController.lifeController reset];
+}
+
 #pragma mark Export movie
 
 - (IBAction)exportMovie:(id)sender;

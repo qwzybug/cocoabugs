@@ -36,5 +36,6 @@
 
 - (IBAction)showConfigurationWindow:(id)sender;
 - (IBAction)showColoringWindow:(id)sender;
+- (IBAction)resetAction:(id)sender;
 
 @end
