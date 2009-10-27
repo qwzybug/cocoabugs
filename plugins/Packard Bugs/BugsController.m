@@ -70,9 +70,12 @@
 
 - (void)dealloc;
 {
-	[world release];
-	[statistics release];
-	[view release];
+	[world release], world = nil;
+	[statistics release], statistics = nil;
+	[view release], view = nil;
+	[properties release], properties = nil;
+	
+	[coloringWindowController release], coloringWindowController = nil;
 	
 	[super dealloc];
 }
@@ -92,6 +95,7 @@
 {
 	[world exterminate];
 	[world seedBugsWithDensity:self.populationDensity];
+	[self.view setNeedsDisplay:YES];
 }
 
 - (void)update;

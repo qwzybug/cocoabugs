@@ -27,6 +27,8 @@
 			<real>0.99</real>
 			<key>default</key>
 			<real>0.2</real>
+			<key>keyPath</key>
+			<string>populationDensity</string>
 		</dict>
 		<dict>
 			<key>name</key>
