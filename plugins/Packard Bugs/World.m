@@ -139,39 +139,10 @@
 			population++;
 		}
 		population++;
+		
 		// perform buggy movement and eating
 		[self updateBug:bug atRow:bug.y column:bug.x];
 	}
-	
-//	// loop through cells
-//	for (i = 0; i < height; i++) {
-//		for (j = 0; j < width; j++) {
-//			// check for no bug
-//			if (!(bug = currentBugs[i][j]))
-//				continue;
-//			
-//			// check for bug death
-//			if (bug.food <= 0) {
-//				[self cellAtRow:i andColumn:j].bug = nil;
-//				[bugs removeObject:bug];
-//				[morgue addObject:bug];
-//				lifespan += bug.age;
-//				continue;
-//			}
-//			
-//			// check for reproduction
-//			if (bug.food > reproductionFood) {
-//				newBug = [bug doReproduceWithMutationRate:mutationRate];
-//				[self place:newBug atRow:i andCol:j+1];
-//				[bugs addObject:newBug];
-//				[maternity addObject:newBug];
-//				population++;
-//			}
-//			population++;
-//			// perform buggy movement and eating
-//			[self updateBug:bug atRow:i column:j];
-//		}
-//	}
 	self.population = population;
 	self.ticks++;
 }
