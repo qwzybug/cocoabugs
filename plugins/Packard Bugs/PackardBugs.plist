@@ -12,7 +12,7 @@
 			<key>type</key>
 			<string>Bitmap</string>
 			<key>keyPath</key>
-			<string>world.foodImage</string>
+			<string>self.foodImage</string>
 		</dict>
 		<dict>
 			<key>name</key>
@@ -28,7 +28,7 @@
 			<key>default</key>
 			<real>0.2</real>
 			<key>keyPath</key>
-			<string>populationDensity</string>
+			<string>self.populationDensity</string>
 		</dict>
 		<dict>
 			<key>name</key>

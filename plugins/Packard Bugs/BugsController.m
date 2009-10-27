@@ -20,6 +20,7 @@
 @synthesize world;
 @synthesize observedGene;
 @synthesize populationDensity;
+@synthesize foodImage;
 
 + (NSString *)name;
 {
@@ -41,13 +42,12 @@
 		return nil;
 	
 	populationDensity = 0.5;
-	NSImage *foodImage = nil;
 	if (configuration) {
 		populationDensity = [[configuration objectForKey:@"populationDensity"] floatValue];
 		
 		NSData *foodData = [configuration objectForKey:@"world"];
 		if (foodData)
-			foodImage = [[[NSImage alloc] initWithData:foodData] autorelease];
+			foodImage = [[NSImage alloc] initWithData:foodData];
 	}
 	
 	world = [[World alloc] initWithFoodImage:foodImage];
@@ -74,6 +74,7 @@
 	[statistics release], statistics = nil;
 	[view release], view = nil;
 	[properties release], properties = nil;
+	[foodImage release], foodImage = nil;
 	
 	[coloringWindowController release], coloringWindowController = nil;
 	
@@ -95,13 +96,13 @@
 {
 	[world exterminate];
 	[world seedBugsWithDensity:self.populationDensity];
-	[self.view setNeedsDisplay:YES];
+	[self redrawDisplay];
 }
 
 - (void)update;
 {
 	[world update];
-	[view setNeedsDisplay:YES];
+	[self redrawDisplay];
 }
 
 - (void)redrawDisplay;
@@ -118,7 +119,20 @@
 {
 	observedGene = newObservedGene;
 	self.view.colorGene = observedGene;
-	[self.view setNeedsDisplay:YES];
+	[self redrawDisplay];
+}
+
+- (void)setFoodImage:(NSImage *)newFoodImage;
+{
+	if (foodImage == newFoodImage)
+		return;
+	
+	[foodImage release];
+	foodImage = [newFoodImage retain];
+	
+	self.world.foodImage = self.foodImage;
+	
+	[self redrawDisplay];
 }
 
 #pragma mark -

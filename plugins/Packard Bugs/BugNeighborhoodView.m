@@ -9,8 +9,6 @@
 	if (!(self = [super initWithFrame:frame]))
 		return nil;
 	
-	NSLog(@"Init'ing with frame rect %f, %f size %f, %f", frame.origin.x, frame.origin.y, frame.size.width, frame.size.height);
-	
 	neighborhoodCode = 0;
 	enabled = true;
 	
@@ -37,7 +35,6 @@
 
 - (void)drawRect:(NSRect)rect;
 {
-	NSLog(@"Drawing...");
 	[[NSColor blackColor] set];
 	int i;
 	for (i = 0; i < 5; i++) {
