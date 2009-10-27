@@ -26,7 +26,7 @@ void printHelpAndDie()
 {
 	NSMutableArray *usageStrings = [NSMutableArray array];
 	
-	[usageStrings addObject:@"Usage: HeadlessBugs <command> <options>"];
+	[usageStrings addObject:@"Usage: cocoabugs <command> <options>"];
 	[usageStrings addObject:@"Commands: run, plugins"];
 	
 	NSString *usageString = [usageStrings componentsJoinedByString:@"\n"];
@@ -38,13 +38,13 @@ void printHelpAndDie()
 void printUsageAndDie(BugsCommand command) {
 	switch (command) {
 		case kBugsCommandRun:
-			printf("Usage: HeadlessBugs run <config filename>   \n");
-			printf("                        --output <output directory path>\n");
-			printf("                        --steps <number of steps>\n");
-			printf("                        [--runs <number of runs>]\n");
-			printf("                        [--sample <shuffle key>\n");
-			printf("                           [--min <minimum value]\n");
-			printf("                           [--max <maximum value] ]\n");
+			printf("Usage: cocoabugs run <config filename>\n");
+			printf("                     --output <output directory path>\n");
+			printf("                     --steps <number of steps>\n");
+			printf("                     [--runs <number of runs>]\n");
+			printf("                     [--sample <shuffle key>\n");
+			printf("                        [--min <minimum value]\n");
+			printf("                        [--max <maximum value] ]\n");
 			break;
 		default:
 			break;
@@ -156,7 +156,7 @@ void runSimulations(NSString *configurationFile,
 	printf("Done.\n");
 }
 
-int main(int argc, char *argv[])
+int headless_main(int argc, char *argv[])
 {
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 	NSUserDefaults *args = [NSUserDefaults standardUserDefaults];

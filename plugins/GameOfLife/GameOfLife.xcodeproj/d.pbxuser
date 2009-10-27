@@ -12,6 +12,9 @@
 		fallbackIsa = XCSourceControlManager;
 		isSCMEnabled = 0;
 		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
 		};
 	};
 	0365F6100E19A1BE0074AA88 /* Code sense */ = {
@@ -34,30 +37,32 @@
 	};
 	0365F6160E19A3B40074AA88 /* ControllerOfLife.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {470, 412}}";
+			sepNavIntBoundsRect = "{{0, 0}, {713, 745}}";
 			sepNavSelRange = "{334, 0}";
 			sepNavVisRange = "{0, 556}";
+			sepNavWindowFrame = "{{38, 15}, {772, 837}}";
 		};
 	};
 	0365F6170E19A3B40074AA88 /* ControllerOfLife.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {810, 1498}}";
+			sepNavIntBoundsRect = "{{0, 0}, {943, 1391}}";
 			sepNavSelRange = "{1190, 394}";
-			sepNavVisRange = "{1771, 908}";
+			sepNavVisRange = "{0, 1543}";
 		};
 	};
 	0365F6180E19A3B40074AA88 /* GameOfLife.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {683, 784}}";
+			sepNavIntBoundsRect = "{{0, 0}, {713, 745}}";
 			sepNavSelRange = "{1018, 0}";
-			sepNavVisRange = "{371, 746}";
+			sepNavVisRange = "{0, 1117}";
+			sepNavWindowFrame = "{{15, 36}, {772, 837}}";
 		};
 	};
 	0365F6190E19A3B40074AA88 /* GameOfLife.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {762, 3206}}";
+			sepNavIntBoundsRect = "{{0, 0}, {713, 3016}}";
 			sepNavSelRange = "{1855, 0}";
-			sepNavVisRange = "{4070, 1343}";
+			sepNavVisRange = "{3754, 1670}";
 		};
 	};
 	0365F61A0E19A3B40074AA88 /* BoardOfLife.h */ = {
@@ -121,40 +126,59 @@
 			sepNavWindowFrame = "{{61, 491}, {556, 340}}";
 		};
 	};
-	03A239390EDB965600BC59CE /* PBXTextBookmark */ = {
+	03788090106ED2BD0023E6EA /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 0365F6190E19A3B40074AA88 /* GameOfLife.m */;
 		name = "GameOfLife.m: 87";
 		rLen = 0;
 		rLoc = 1855;
 		rType = 0;
-		vrLen = 1343;
-		vrLoc = 4070;
+		vrLen = 1670;
+		vrLoc = 3754;
 	};
-	03A2393A0EDB965600BC59CE /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = 0365F6A70E1AF2670074AA88 /* GameOfLife.plist */;
-	};
-	03A2393B0EDB965600BC59CE /* PBXTextBookmark */ = {
+	03788091106ED2BD0023E6EA /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 0365F6190E19A3B40074AA88 /* GameOfLife.m */;
-		name = "GameOfLife.m: 87";
+		fRef = 0365F6180E19A3B40074AA88 /* GameOfLife.h */;
 		rLen = 0;
-		rLoc = 1855;
+		rLoc = 9223372036854775807;
 		rType = 0;
-		vrLen = 1343;
-		vrLoc = 4070;
 	};
-	03A2393C0EDB965600BC59CE /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = 0365F6A70E1AF2670074AA88 /* GameOfLife.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-		);
-		name = /Users/d/cocoabugs/plugins/GameOfLife/GameOfLife.plist;
+	03788092106ED2BD0023E6EA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0365F6180E19A3B40074AA88 /* GameOfLife.h */;
+		name = "GameOfLife.h: 51";
 		rLen = 0;
-		rLoc = 2147483647;
+		rLoc = 1018;
+		rType = 0;
+		vrLen = 1117;
+		vrLoc = 0;
+	};
+	03788095106ED2BD0023E6EA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0365F6170E19A3B40074AA88 /* ControllerOfLife.m */;
+		name = "ControllerOfLife.m: 50";
+		rLen = 394;
+		rLoc = 1190;
+		rType = 0;
+		vrLen = 1543;
+		vrLoc = 0;
+	};
+	03788096106ED2BD0023E6EA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0365F6160E19A3B40074AA88 /* ControllerOfLife.h */;
+		rLen = 0;
+		rLoc = 9223372036854775807;
+		rType = 0;
+	};
+	03788097106ED2BD0023E6EA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0365F6160E19A3B40074AA88 /* ControllerOfLife.h */;
+		name = "ControllerOfLife.h: 15";
+		rLen = 0;
+		rLoc = 334;
+		rType = 0;
+		vrLen = 556;
+		vrLoc = 0;
 	};
 	089C1669FE841209C02AAC07 /* Project object */ = {
 		activeBuildConfigurationName = Release;
@@ -236,14 +260,16 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 249271888;
-			PBXWorkspaceStateSaveDate = 249271888;
+			PBXPerProjectTemplateStateSaveDate = 275698128;
+			PBXWorkspaceStateSaveDate = 275698128;
 		};
 		perUserProjectItems = {
-			03A239390EDB965600BC59CE /* PBXTextBookmark */ = 03A239390EDB965600BC59CE /* PBXTextBookmark */;
-			03A2393A0EDB965600BC59CE /* PBXBookmark */ = 03A2393A0EDB965600BC59CE /* PBXBookmark */;
-			03A2393B0EDB965600BC59CE /* PBXTextBookmark */ = 03A2393B0EDB965600BC59CE /* PBXTextBookmark */;
-			03A2393C0EDB965600BC59CE /* PlistBookmark */ = 03A2393C0EDB965600BC59CE /* PlistBookmark */;
+			03788090106ED2BD0023E6EA /* PBXTextBookmark */ = 03788090106ED2BD0023E6EA /* PBXTextBookmark */;
+			03788091106ED2BD0023E6EA /* PBXTextBookmark */ = 03788091106ED2BD0023E6EA /* PBXTextBookmark */;
+			03788092106ED2BD0023E6EA /* PBXTextBookmark */ = 03788092106ED2BD0023E6EA /* PBXTextBookmark */;
+			03788095106ED2BD0023E6EA /* PBXTextBookmark */ = 03788095106ED2BD0023E6EA /* PBXTextBookmark */;
+			03788096106ED2BD0023E6EA /* PBXTextBookmark */ = 03788096106ED2BD0023E6EA /* PBXTextBookmark */;
+			03788097106ED2BD0023E6EA /* PBXTextBookmark */ = 03788097106ED2BD0023E6EA /* PBXTextBookmark */;
 		};
 		sourceControlManager = 0365F60F0E19A1BE0074AA88 /* Source Control */;
 		userBuildSettings = {

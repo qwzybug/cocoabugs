@@ -8,7 +8,13 @@
 
 #import <Cocoa/Cocoa.h>
 
+#include "headless_main.m"
+
 int main(int argc, char *argv[])
 {
-    return NSApplicationMain(argc,  (const char **) argv);
+	if (argc < 2) {
+		return NSApplicationMain(argc, (const char **) argv);
+	} else {
+		return headless_main(argc, argv);
+	}
 }

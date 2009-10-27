@@ -62,6 +62,7 @@
 		03DAE34C1096F3C5009D10E7 /* libbugs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DAE34B1096F3C5009D10E7 /* libbugs.a */; };
 		03DAE34D1096F3C7009D10E7 /* libbugs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DAE34B1096F3C5009D10E7 /* libbugs.a */; };
 		03EDB3360E4E26F90008990A /* ALifeShuffler.m in Sources */ = {isa = PBXBuildFile; fileRef = 03EDB3350E4E26F90008990A /* ALifeShuffler.m */; };
+		03EF0F2B1097AB8200A0ED41 /* ALifeRunExporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BEDD7B0E54AAC800694CD2 /* ALifeRunExporter.m */; };
 		8D11072A0486CEB800E47090 /* MainMenu.old.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.old.nib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
@@ -129,14 +130,14 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 03496D2F1096BBC4009BD558 /* BugsFramework.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216 /* Bugs */;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
 			remoteInfo = Bugs;
 		};
 		03DAE33A1096F387009D10E7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 03496D2F1096BBC4009BD558 /* BugsFramework.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 03DAE32B1096F368009D10E7 /* libbugs.a */;
+			remoteGlobalIDString = 03DAE32B1096F368009D10E7;
 			remoteInfo = bugs;
 		};
 /* End PBXContainerItemProxy section */
@@ -710,6 +711,7 @@
 				0351908D0E7DD8D300205E7B /* DMQuicktimeExporter.m in Sources */,
 				037880A6106ED41A0023E6EA /* ALifeTinkerPanelController.m in Sources */,
 				035AF28410903F6100725226 /* NSDictionary_Merging.m in Sources */,
+				03EF0F2B1097AB8200A0ED41 /* ALifeRunExporter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

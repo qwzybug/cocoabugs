@@ -34,6 +34,13 @@
 			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
 			remoteInfo = Bugs;
 		};
+		03DAE32F1096F369009D10E7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03223F981096C02700A60416 /* BugsFramework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 03DAE32B1096F368009D10E7 /* libbugs.a */;
+			remoteInfo = bugs;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -89,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				03223F9D1096C02700A60416 /* Bugs.framework */,
+				03DAE3301096F369009D10E7 /* libbugs.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -229,6 +237,14 @@
 			path = Bugs.framework;
 			remoteRef = 03223F9C1096C02700A60416 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		03DAE3301096F369009D10E7 /* libbugs.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			name = libbugs.a;
+			path = build/Release/libbugs.a;
+			remoteRef = 03DAE32F1096F369009D10E7 /* PBXContainerItemProxy */;
+			sourceTree = "<group>";
 		};
 /* End PBXReferenceProxy section */
 

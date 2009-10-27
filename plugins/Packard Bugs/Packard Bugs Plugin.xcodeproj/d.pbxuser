@@ -80,114 +80,6 @@
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
-	03DAE27A1096E660009D10E7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 03E2CCC30E2729460077196A /* World.m */;
-		name = "World.m: 118";
-		rLen = 0;
-		rLoc = 2449;
-		rType = 0;
-		vrLen = 1159;
-		vrLoc = 1290;
-	};
-	03DAE27B1096E660009D10E7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 03E2CCC20E2729460077196A /* World.h */;
-		name = "World.h: 45";
-		rLen = 0;
-		rLoc = 848;
-		rType = 0;
-		vrLen = 1386;
-		vrLoc = 0;
-	};
-	03DAE27C1096E660009D10E7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 03E2CD740E272F910077196A /* BugsController.h */;
-		name = "BugsController.h: 26";
-		rLen = 0;
-		rLoc = 590;
-		rType = 0;
-		vrLen = 803;
-		vrLoc = 0;
-	};
-	03DAE27D1096E660009D10E7 /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = 03E2CCC90E2729800077196A /* PackardBugs.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-			configuration,
-			0,
-			keyPath,
-		);
-		name = "/Users/d/cocoabugs/plugins/Packard Bugs/PackardBugs.plist";
-		rLen = 0;
-		rLoc = 9223372036854775807;
-	};
-	03DAE27E1096E660009D10E7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 03E2CD750E272F910077196A /* BugsController.m */;
-		name = "BugsController.m: 78";
-		rLen = 0;
-		rLoc = 2090;
-		rType = 0;
-		vrLen = 1059;
-		vrLoc = 2276;
-	};
-	03DAE27F1096E660009D10E7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 03E2CD750E272F910077196A /* BugsController.m */;
-		name = "BugsController.m: 78";
-		rLen = 0;
-		rLoc = 2090;
-		rType = 0;
-		vrLen = 1059;
-		vrLoc = 2276;
-	};
-	03DAE2831096E667009D10E7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 03E2CD750E272F910077196A /* BugsController.m */;
-		name = "BugsController.m: 78";
-		rLen = 0;
-		rLoc = 2090;
-		rType = 0;
-		vrLen = 1059;
-		vrLoc = 2276;
-	};
-	03DAE2881096E6AD009D10E7 /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = 03E2CCC90E2729800077196A /* PackardBugs.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-			configuration,
-			0,
-			keyPath,
-		);
-		name = "/Users/d/cocoabugs/plugins/Packard Bugs/PackardBugs.plist";
-		rLen = 0;
-		rLoc = 9223372036854775807;
-	};
-	03DAE2891096E6AD009D10E7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 03E2CD750E272F910077196A /* BugsController.m */;
-		name = "BugsController.m: 78";
-		rLen = 0;
-		rLoc = 2090;
-		rType = 0;
-		vrLen = 1059;
-		vrLoc = 2276;
-	};
-	03DAE28A1096E6AD009D10E7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 03E2CD750E272F910077196A /* BugsController.m */;
-		name = "BugsController.m: 50";
-		rLen = 0;
-		rLoc = 1162;
-		rType = 0;
-		vrLen = 1656;
-		vrLoc = 285;
-	};
 	03DAE28B1096E6F3009D10E7 /* BugsController.m:41 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
@@ -205,63 +97,6 @@
 		modificationTime = 278324987.843405;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
-	};
-	03DAE28F1096E6F9009D10E7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 03E2CD740E272F910077196A /* BugsController.h */;
-		name = "BugsController.h: 26";
-		rLen = 0;
-		rLoc = 590;
-		rType = 0;
-		vrLen = 803;
-		vrLoc = 0;
-	};
-	03DAE2901096E6F9009D10E7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 03E2CD750E272F910077196A /* BugsController.m */;
-		name = "BugsController.m: 132";
-		rLen = 0;
-		rLoc = 2931;
-		rType = 0;
-		vrLen = 1710;
-		vrLoc = 491;
-	};
-	03DAE2911096E6F9009D10E7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 03E2CD750E272F910077196A /* BugsController.m */;
-		name = "BugsController.m: 132";
-		rLen = 0;
-		rLoc = 2931;
-		rType = 0;
-		vrLen = 1710;
-		vrLoc = 491;
-	};
-	03DAE2A11096E79B009D10E7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 03E2CD750E272F910077196A /* BugsController.m */;
-		name = "BugsController.m: 132";
-		rLen = 0;
-		rLoc = 2931;
-		rType = 0;
-		vrLen = 1710;
-		vrLoc = 491;
-	};
-	03DAE2AC1096E7EF009D10E7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 03E2CCC30E2729460077196A /* World.m */;
-		rLen = 0;
-		rLoc = 6146;
-		rType = 0;
-	};
-	03DAE2BF1096E8EB009D10E7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 03E2CCC30E2729460077196A /* World.m */;
-		name = "World.m: 147";
-		rLen = 0;
-		rLoc = 2898;
-		rType = 0;
-		vrLen = 1431;
-		vrLoc = 2110;
 	};
 	03E2CCB60E2729140077196A /* Source Control */ = {
 		isa = PBXSourceControlManager;
@@ -339,9 +174,9 @@
 	};
 	03E2CCC30E2729460077196A /* World.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {782, 3731}}";
-			sepNavSelRange = "{3246, 0}";
-			sepNavVisRange = "{2110, 1431}";
+			sepNavIntBoundsRect = "{{0, 0}, {713, 3055}}";
+			sepNavSelRange = "{3196, 0}";
+			sepNavVisRange = "{4050, 1318}";
 			sepNavWindowFrame = "{{378, 5}, {772, 837}}";
 		};
 	};
@@ -367,7 +202,7 @@
 		};
 	};
 	089C1669FE841209C02AAC07 /* Project object */ = {
-		activeBuildConfigurationName = Debug;
+		activeBuildConfigurationName = Release;
 		activeTarget = 8D5B49AC048680CD000E48DA /* Packard Bugs Plugin */;
 		addToTargets = (
 			8D5B49AC048680CD000E48DA /* Packard Bugs Plugin */,
@@ -436,24 +271,6 @@
 			};
 			PBXPerProjectTemplateStateSaveDate = 278318311;
 			PBXWorkspaceStateSaveDate = 278318311;
-		};
-		perUserProjectItems = {
-			03DAE27A1096E660009D10E7 /* PBXTextBookmark */ = 03DAE27A1096E660009D10E7 /* PBXTextBookmark */;
-			03DAE27B1096E660009D10E7 /* PBXTextBookmark */ = 03DAE27B1096E660009D10E7 /* PBXTextBookmark */;
-			03DAE27C1096E660009D10E7 /* PBXTextBookmark */ = 03DAE27C1096E660009D10E7 /* PBXTextBookmark */;
-			03DAE27D1096E660009D10E7 /* PlistBookmark */ = 03DAE27D1096E660009D10E7 /* PlistBookmark */;
-			03DAE27E1096E660009D10E7 /* PBXTextBookmark */ = 03DAE27E1096E660009D10E7 /* PBXTextBookmark */;
-			03DAE27F1096E660009D10E7 /* PBXTextBookmark */ = 03DAE27F1096E660009D10E7 /* PBXTextBookmark */;
-			03DAE2831096E667009D10E7 /* PBXTextBookmark */ = 03DAE2831096E667009D10E7 /* PBXTextBookmark */;
-			03DAE2881096E6AD009D10E7 /* PlistBookmark */ = 03DAE2881096E6AD009D10E7 /* PlistBookmark */;
-			03DAE2891096E6AD009D10E7 /* PBXTextBookmark */ = 03DAE2891096E6AD009D10E7 /* PBXTextBookmark */;
-			03DAE28A1096E6AD009D10E7 /* PBXTextBookmark */ = 03DAE28A1096E6AD009D10E7 /* PBXTextBookmark */;
-			03DAE28F1096E6F9009D10E7 /* PBXTextBookmark */ = 03DAE28F1096E6F9009D10E7 /* PBXTextBookmark */;
-			03DAE2901096E6F9009D10E7 /* PBXTextBookmark */ = 03DAE2901096E6F9009D10E7 /* PBXTextBookmark */;
-			03DAE2911096E6F9009D10E7 /* PBXTextBookmark */ = 03DAE2911096E6F9009D10E7 /* PBXTextBookmark */;
-			03DAE2A11096E79B009D10E7 /* PBXTextBookmark */ = 03DAE2A11096E79B009D10E7 /* PBXTextBookmark */;
-			03DAE2AC1096E7EF009D10E7 /* PBXTextBookmark */ = 03DAE2AC1096E7EF009D10E7 /* PBXTextBookmark */;
-			03DAE2BF1096E8EB009D10E7 /* PBXTextBookmark */ = 03DAE2BF1096E8EB009D10E7 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 03E2CCB60E2729140077196A /* Source Control */;
 		userBuildSettings = {
