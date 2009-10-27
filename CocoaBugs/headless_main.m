@@ -111,6 +111,11 @@ void runSimulations(NSString *configurationFile,
 		exit(1);
 	}
 	
+	// check if directory exists
+	NSFileManager *fileManager = [NSFileManager defaultManager];
+	if (![fileManager fileExistsAtPath:outputDirectory])
+		[fileManager createDirectoryAtPath:outputDirectory attributes:NULL];	
+	
 	int step;
 	int run;
 	int runFrac = (int)(numberOfSteps / 10.0);
