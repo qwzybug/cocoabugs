@@ -62,6 +62,17 @@
 			[csv writeToFile:[NSString stringWithFormat:@"%@/%@.csv", path, key] atomically:NO encoding:NSASCIIStringEncoding error:NULL];
 		}
 	}
+	
+	// export csv-style configuration
+	NSMutableArray *configurationLines = [NSMutableArray arrayWithCapacity:simulationController.configuration.count];
+	for (NSString *key in simulationController.configuration) {
+		id value = [simulationController.configuration objectForKey:key];
+		if (![value isKindOfClass:[NSData class]]) {
+			[configurationLines addObject:[NSString stringWithFormat:@"%@,%@", key, value]];
+		}
+	}
+	NSString *csvConfiguration = [configurationLines componentsJoinedByString:@"\n"];
+	[csvConfiguration writeToFile:[NSString stringWithFormat:@"%@/configuration.csv", path] atomically:NO encoding:NSASCIIStringEncoding error:NULL];
 }
 
 @end
