@@ -38,7 +38,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 03223F981096C02700A60416 /* BugsFramework.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 03DAE32B1096F368009D10E7 /* libbugs.a */;
+			remoteGlobalIDString = 03DAE32B1096F368009D10E7;
 			remoteInfo = bugs;
 		};
 /* End PBXContainerItemProxy section */
@@ -241,10 +241,9 @@
 		03DAE3301096F369009D10E7 /* libbugs.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			name = libbugs.a;
-			path = build/Release/libbugs.a;
+			path = libbugs.a;
 			remoteRef = 03DAE32F1096F369009D10E7 /* PBXContainerItemProxy */;
-			sourceTree = "<group>";
+			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
 

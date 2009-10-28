@@ -63,6 +63,8 @@
 		03DAE34D1096F3C7009D10E7 /* libbugs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DAE34B1096F3C5009D10E7 /* libbugs.a */; };
 		03EDB3360E4E26F90008990A /* ALifeShuffler.m in Sources */ = {isa = PBXBuildFile; fileRef = 03EDB3350E4E26F90008990A /* ALifeShuffler.m */; };
 		03EF0F2B1097AB8200A0ED41 /* ALifeRunExporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BEDD7B0E54AAC800694CD2 /* ALifeRunExporter.m */; };
+		03FA837510981F7F003C6A0F /* Schelling.plugin in Copy headless plugins */ = {isa = PBXBuildFile; fileRef = 035AF0F010901C9D00725226 /* Schelling.plugin */; };
+		03FA837610981F7F003C6A0F /* Packard Bugs Plugin.plugin in Copy headless plugins */ = {isa = PBXBuildFile; fileRef = 035AF0BF10901B9F00725226 /* Packard Bugs Plugin.plugin */; };
 		8D11072A0486CEB800E47090 /* MainMenu.old.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.old.nib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
@@ -197,6 +199,18 @@
 			files = (
 			);
 			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03FA838E10981F85003C6A0F /* Copy headless plugins */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = PlugIns;
+			dstSubfolderSpec = 16;
+			files = (
+				03FA837510981F7F003C6A0F /* Schelling.plugin in Copy headless plugins */,
+				03FA837610981F7F003C6A0F /* Packard Bugs Plugin.plugin in Copy headless plugins */,
+			);
+			name = "Copy headless plugins";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -549,6 +563,7 @@
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
 				035AF0CE10901BE200725226 /* Copy plugins */,
+				03FA838E10981F85003C6A0F /* Copy headless plugins */,
 			);
 			buildRules = (
 			);

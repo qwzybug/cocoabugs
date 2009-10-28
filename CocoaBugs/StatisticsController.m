@@ -14,6 +14,7 @@
 @implementation StatisticsController
 
 @synthesize source, statisticsViews, statisticsSize, stats;
+@synthesize samplingFrequency;
 
 - (id)init;
 {
@@ -22,6 +23,9 @@
 	
 	self.stats = [NSMutableDictionary dictionaryWithCapacity:5];
 	self.statisticsViews = [NSMutableArray arrayWithCapacity:5];
+	
+	// BIG TODO: make this do something!
+	self.samplingFrequency = 10;
 	
 	return self;
 }
@@ -61,7 +65,7 @@
 #define STATS_WIDTH 350
 #define STATS_HEIGHT 80
 	// create stats object
-	StatisticsData *data = [[[StatisticsData alloc] initWithCapacity:statisticsSize] autorelease];
+	StatisticsData *data = [[[StatisticsData alloc] initWithCapacity:statisticsSize samplingFrequency:self.samplingFrequency] autorelease];
 	[stats setObject:data forKey:path];
 	
 	// observe requested key path

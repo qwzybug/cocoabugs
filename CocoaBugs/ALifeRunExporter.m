@@ -56,14 +56,11 @@
 	
 	// export statistics to CSV
 	if ([statisticsController.stats count] > 0) {
-		NSMutableArray *lines = [NSMutableArray arrayWithCapacity:[statisticsController.stats count]];
-		NSString *line;
 		for (NSString *key in [statisticsController.stats allKeys]) {
-			line = [[statisticsController.stats objectForKey:key] csv];
-			[lines addObject:[NSString stringWithFormat:@"%@,%@", key, line]];
+			StatisticsData *stats = [statisticsController.stats objectForKey:key];
+			NSString *csv = stats.csv;
+			[csv writeToFile:[NSString stringWithFormat:@"%@/%@.csv", path, key] atomically:NO encoding:NSASCIIStringEncoding error:NULL];
 		}
-		NSString *csv = [lines componentsJoinedByString:@"\n"];
-		[csv writeToFile:[NSString stringWithFormat:@"%@/statistics.csv", path] atomically:NO encoding:NSASCIIStringEncoding error:NULL];
 	}
 }
 

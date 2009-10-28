@@ -58,7 +58,7 @@ void printPluginsAndDie()
 	NSSortDescriptor *titleSort = [[NSSortDescriptor alloc] initWithKey:@"title" ascending:YES];
 	printf("\nInstalled plugins:\n");
 	NSArray *configuration;
-	NSArray *statistics;
+//	NSArray *statistics;
 	for (Class <ALifeController> plugin in plugins) {
 		printf("\n%s\n\n", [[plugin name] cStringUsingEncoding:NSASCIIStringEncoding]);
 		// print configuration options
@@ -137,7 +137,10 @@ void runSimulations(NSString *configurationFile,
 		}
 		
 		statisticsController = [[StatisticsController alloc] init];
-		statisticsController.statisticsSize = numberOfSteps;
+		int samplingFrequency = 10;
+		statisticsController.statisticsSize = numberOfSteps / samplingFrequency;
+		// TODO: kludge! ugly horrible kludge!
+		statisticsController.samplingFrequency = samplingFrequency;
 		[statisticsController setSource:[simulationController.lifeController statisticsCollector]
 						  forStatistics:[[simulationController.lifeController properties] objectForKey:@"statistics"]];
 		

@@ -10,15 +10,17 @@
 
 @implementation StatisticsData
 
-@synthesize size, cursor, multiway;
+@synthesize size, cursor, multiway, samplingFrequency;
 @dynamic csv;
 
-- (id)initWithCapacity:(int)capacity;
+- (id)initWithCapacity:(int)capacity samplingFrequency:(int)frequency;
 {
 	if (!(self = [super init]))
 		return nil;
 	
 	size = capacity;
+	samplingFrequency = frequency;
+	tick = -1;
 	
 	data = [[NSMutableArray arrayWithCapacity:size] retain];
 	maxes = [[NSMutableArray arrayWithCapacity:size] retain];
@@ -63,6 +65,10 @@
 
 - (void)addDataSet:(NSSet *)dataSet;
 {
+	tick++;
+	if (tick % samplingFrequency != 0)
+		return;
+	
 	[data replaceObjectAtIndex:cursor withObject:dataSet];
 	
 	int max = 0, cur;
@@ -87,13 +93,14 @@
 
 - (NSString *)csv;
 {
-	NSMutableArray *components = [NSMutableArray arrayWithCapacity:size];
-	NSString *val;
-	for (int i = 0; i < size; i++) {
-		val = [NSString stringWithFormat:@"%@", [[data objectAtIndex:i] anyObject]];
-		[components addObject:val];
+	NSMutableArray *lines = [NSMutableArray arrayWithCapacity:(data.count + 1)];
+	[lines addObject:@"step,value"];
+	int i = 0;
+	for (NSSet *dataPoints in data) {
+		[lines addObject:[NSString stringWithFormat:@"%d,%@", i * samplingFrequency, [[dataPoints allObjects] componentsJoinedByString:@","]]];
+		i++;
 	}
-	return [components componentsJoinedByString:@","];
+	return [lines componentsJoinedByString:@"\n"];
 }
 
 @end

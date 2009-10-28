@@ -55,8 +55,9 @@
 
 - (void)updateStatistics;
 {
-	if (world.ticks % 10 != 0)
-		return;
+	// TODO this was a premature optimization
+//	if (world.ticks % 10 != 0)
+//		return;
 	
 	// population
 	self.population = [NSSet setWithObject:[NSNumber numberWithInt:[world.bugs count]]];
@@ -86,8 +87,8 @@
 	// gene presence
 //	NSArray *allHashes = [world.bugs valueForKey:@"geneHashes"];
 //	[self performSelectorInBackground:@selector(updateTotalGenePresenceWithHashArrays:) withObject:allHashes];
-	UpdateGenePresenceOperation *operation = [[UpdateGenePresenceOperation alloc] initWithBugs:world.bugs statistics:self accumulatedGenePresence:accumulatedGenePresence];
-	[queue addOperation:[operation autorelease]];
+//	UpdateGenePresenceOperation *operation = [[UpdateGenePresenceOperation alloc] initWithBugs:world.bugs statistics:self accumulatedGenePresence:accumulatedGenePresence];
+//	[queue addOperation:[operation autorelease]];
 //	for (Bug *bug in world.bugs) {
 //		for (int i = 0; i < 32; i++) {
 //			[accumulatedGenePresence addObject:[NSNumber numberWithInt:[bug hashForGene:i]]];
