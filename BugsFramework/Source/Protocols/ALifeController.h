@@ -36,5 +36,6 @@
 
 // EXPERIMENTAL
 - (void)showColorWindow;
+- (BOOL)alive;
 
 @end

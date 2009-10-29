@@ -124,6 +124,11 @@ void runSimulations(NSString *configurationFile,
 	NSDictionary *samplingOptions;
 	
 	for (run = 0; run < numberOfRuns; run++) {
+		printf("Run %d", run + 1);
+	BAIL:
+		;
+		NSAutoreleasePool *runPool = [[NSAutoreleasePool alloc] init];
+		
 		samplingOptions = [NSDictionary dictionaryWithObjectsAndKeys:
 						   shuffleKey, @"key",
 						   shuffleMin, @"minValue",
@@ -136,7 +141,7 @@ void runSimulations(NSString *configurationFile,
 			exit(1);
 		}
 		
-		statisticsController = [[StatisticsController alloc] init];
+		statisticsController = [[[StatisticsController alloc] init] autorelease];
 		int samplingFrequency = 10;
 		statisticsController.statisticsSize = numberOfSteps / samplingFrequency;
 		// TODO: kludge! ugly horrible kludge!
@@ -144,10 +149,15 @@ void runSimulations(NSString *configurationFile,
 		[statisticsController setSource:[simulationController.lifeController statisticsCollector]
 						  forStatistics:[[simulationController.lifeController properties] objectForKey:@"statistics"]];
 		
-		printf("Run %d", run + 1);
 		fflush(stdout);
 		for (step = 0; step < numberOfSteps; step++) {
-			if (step % runFrac == 0) {
+			if (!simulationController.lifeController.alive) {
+				printf("x");
+				fflush(stdout);
+				[runPool release];
+				goto BAIL;
+			}
+			if (step % runFrac == 1) {
 				printf(".");
 				fflush(stdout);
 			}
@@ -156,8 +166,8 @@ void runSimulations(NSString *configurationFile,
 		NSString *dir = [NSString stringWithFormat:@"%@/%d", outputDirectory, run + 1];
 		[ALifeRunExporter exportSimulation:simulationController withStatistics:statisticsController toDirectory:dir];
 		
-		[statisticsController release];
-		
+		[runPool release];
+
 		printf("\n");
 	}
 	

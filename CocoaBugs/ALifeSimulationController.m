@@ -51,14 +51,18 @@
 		
 		NSNumber *maxValue = [sampling valueForKey:@"maxValue"];
 		if (!maxValue) maxValue = [opts valueForKey:@"maxValue"];
-
-		srandom([[NSDate date] timeIntervalSinceReferenceDate]);
+		
+		int seed = (int)(([[NSDate date] timeIntervalSinceReferenceDate] - (int)[[NSDate date] timeIntervalSinceReferenceDate]) * INT_MAX);
+		srandom(seed);
 		NSNumber *shuffledValue = [ALifeShuffler shuffleType:[opts objectForKey:@"type"] min:minValue max:maxValue];
 		[theConfiguration setObject:shuffledValue forKey:sampleKey];
 	}
 	
 	// lock down random seed
-	[theConfiguration setObject:[NSNumber numberWithInt:[[NSDate date] timeIntervalSinceReferenceDate]] forKey:@"seed"];
+	if (![configuration objectForKey:@"seed"]) {
+		int seed = (int)(([[NSDate date] timeIntervalSinceReferenceDate] - (int)[[NSDate date] timeIntervalSinceReferenceDate]) * INT_MAX);
+		[theConfiguration setObject:[NSNumber numberWithInt:seed] forKey:@"seed"];
+	}
 	
 	ALifeSimulationController *controller = [[self alloc] initWithSimulationClass:modelClass configuration:theConfiguration];
 	return [controller autorelease];

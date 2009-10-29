@@ -42,7 +42,7 @@
 	// copy genes, mutate if necessary
 	int i;
 	for (i = 0; i < 32; i++) {
-		if ((float)random() / 2147483647.0 < mutationRate) {
+		if ((float)random() / INT_MAX < mutationRate) {
 			genes[i] = [self randomGene];
 		} else {
 			genes[i] = myGenes[i];
@@ -84,6 +84,11 @@
 	return ((gene.x + 15) << 10) | ((gene.y + 15) << 5) | num;
 }
 
+- (NSUInteger)hash;
+{
+	return [self hashForGene:0];
+}
+
 - (NSArray *)geneHashes;
 {
 	NSMutableArray *array = [NSMutableArray arrayWithCapacity:32];
@@ -97,13 +102,14 @@
 - (BugMovement)randomGene;
 {
 	BugMovement move;
-	int magnitude, diag;
+	int magnitude, diag, quad;
 	// magnitude: from 1 to 15
 	magnitude = (random() % 15 + 1);
 	// diagonal: 0 for on an axis, 1 for on a diagonal
-	diag = (random() % 2);
+	diag = random() % 2;
 	// quadrants
-	switch(random() % 4) {
+	quad = random() % 4;
+	switch(quad) {
 	case 0: // first quadrant
 		move.x = magnitude;
 		move.y = magnitude * diag;
@@ -121,7 +127,6 @@
 		move.y = -magnitude;
 		break;
 	}
-	move.heritage = self.hash;
 	return move;
 }
 

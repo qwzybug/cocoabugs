@@ -146,4 +146,9 @@
 	[coloringWindowController.window makeKeyAndOrderFront:self];
 }
 
+- (BOOL)alive;
+{
+	return world.population > 0;
+}
+
 @end

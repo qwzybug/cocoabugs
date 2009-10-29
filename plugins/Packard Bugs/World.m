@@ -120,6 +120,11 @@
 	[morgue removeAllObjects];
 	[maternity removeAllObjects];
 	
+	// do we trust NSSet to have a stable order for -allObjects if we define a custom hash?
+	// I suppose we do, but if you don't you can uncomment this.
+	//	NSSortDescriptor *descriptor = [[[NSSortDescriptor alloc] initWithKey:@"hash" ascending:YES] autorelease];
+	//	NSArray *bugArray = [[self.bugs allObjects] sortedArrayUsingDescriptors:[NSArray arrayWithObject:descriptor]];
+	
 	for (Bug *bug in [[self.bugs allObjects] shuffledArray]) {
 		// check for bug death
 		if (bug.food <= 0) {
@@ -227,7 +232,7 @@
 	int i, j, pop = 0;
 	for (i = 0; i < height; i++) {
 		for(j = 0; j < width; j++) {
-			if ((float)random() / pow(2,31) < density) {
+			if ((float)random() / INT_MAX < density) {
 				bug = [[[Bug alloc] init] autorelease];
 				[self place:bug atRow:i andCol:j];
 				[bugs addObject:bug];

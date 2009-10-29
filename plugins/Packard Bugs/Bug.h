@@ -11,7 +11,6 @@
 typedef struct _BugMovement {
 	int x;
 	int y;
-	int heritage;
 } BugMovement;
 
 @interface Bug : NSObject {
@@ -36,6 +35,8 @@ typedef struct _BugMovement {
 - (void)doEat:(int)amount;
 - (void)doDigest:(int)amount;
 - (int)hashForGene:(int)num;
+
+- (NSUInteger)hash;
 
 @property (nonatomic, readonly) NSArray *geneHashes;
 

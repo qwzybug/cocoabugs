@@ -15,7 +15,7 @@
 {
 	NSMutableArray *shuffled = [NSMutableArray arrayWithArray:self];
 	int count = [shuffled count];
-	for (int i = 0; i < count; ++i) {
+	for (int i = 0; i < count; i++) {
 		[shuffled exchangeObjectAtIndex:i withObjectAtIndex:(random() % count)];
 	}
 	return [NSArray arrayWithArray:shuffled];
