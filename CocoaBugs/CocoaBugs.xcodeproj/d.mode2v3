@@ -197,48 +197,7 @@
 	<key>Notifications</key>
 	<array/>
 	<key>OpenEditors</key>
-	<array>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>PBXProjectModuleGUID</key>
-				<string>03190E111099604C0036CA98</string>
-				<key>PBXProjectModuleLabel</key>
-				<string>ALifeSimulationController.m</string>
-				<key>PBXSplitModuleInNavigatorKey</key>
-				<dict>
-					<key>Split0</key>
-					<dict>
-						<key>PBXProjectModuleGUID</key>
-						<string>03190E14109960550036CA98</string>
-						<key>PBXProjectModuleLabel</key>
-						<string>ALifeSimulationController.m</string>
-						<key>_historyCapacity</key>
-						<integer>0</integer>
-						<key>bookmark</key>
-						<string>03190E15109960550036CA98</string>
-						<key>history</key>
-						<array>
-							<string>03190E101099604C0036CA98</string>
-						</array>
-					</dict>
-					<key>SplitCount</key>
-					<string>1</string>
-				</dict>
-				<key>StatusBarVisibility</key>
-				<true/>
-			</dict>
-			<key>Geometry</key>
-			<dict>
-				<key>Frame</key>
-				<string>{{0, 20}, {1150, 592}}</string>
-				<key>PBXModuleWindowStatusBarHidden2</key>
-				<false/>
-				<key>RubberWindowFrame</key>
-				<string>2 39 1150 633 0 0 1440 878 </string>
-			</dict>
-		</dict>
-	</array>
+	<array/>
 	<key>PerspectiveWidths</key>
 	<array>
 		<integer>-1</integer>
@@ -490,8 +449,8 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>03190D9B109956370036CA98</string>
-				<string>03190D9C109956370036CA98</string>
+				<string>03F65A1D10996B9C006CADE8</string>
+				<string>03F65A1E10996B9C006CADE8</string>
 				<string>1C9437FD063B20B00039CFAC</string>
 				<string>1C9437FE063B20B00039CFAC</string>
 				<string>1C9437FF063B20B00039CFAC</string>
@@ -528,15 +487,8 @@
 	<integer>0</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1C335F2C07B51CD20023D4EE</string>
-		<string>03190D9D109956370036CA98</string>
-		<string>03190D9E109956370036CA98</string>
-		<string>1C530D54069F1CE1000CFCEE</string>
-		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>1C530D52069F1CE1000CFCEE</string>
-		<string>1C530D5B069F1CE1000CFCEE</string>
 		<string>/Users/d/cocoabugs/CocoaBugs/CocoaBugs.xcodeproj</string>
-		<string>03190E111099604C0036CA98</string>
 	</array>
 	<key>WindowString</key>
 	<string>1018 174 382 703 0 0 1440 878 </string>
@@ -754,7 +706,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D52069F1CE1000CFCEE</string>
-				<string>03190D74109953A30036CA98</string>
+				<string>03F65A1F10996B9C006CADE8</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
