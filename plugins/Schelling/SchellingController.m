@@ -83,11 +83,6 @@
 	[board setNeedsDisplay:YES];
 }
 
-- (void)showColorWindow;
-{
-	NSLog(@"No coloring window for Schelling yet.");
-}
-
 - (NSView *)view;
 {
 #define MAX_BOARD_DIMENSION 800
