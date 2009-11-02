@@ -37,5 +37,7 @@
 // EXPERIMENTAL
 - (void)showColorWindow;
 - (BOOL)alive;
+- (void)setCollectActivity:(BOOL)collectActivity;
+- (void)exportActivity:(NSString *)path;
 
 @end

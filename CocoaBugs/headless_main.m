@@ -149,6 +149,9 @@ void runSimulations(NSString *configurationFile,
 		[statisticsController setSource:[simulationController.lifeController statisticsCollector]
 						  forStatistics:[[simulationController.lifeController properties] objectForKey:@"statistics"]];
 		
+		// activity statistics
+		[simulationController.lifeController setCollectActivity:YES];
+		
 		fflush(stdout);
 		for (step = 0; step < numberOfSteps; step++) {
 			if (!simulationController.lifeController.alive) {

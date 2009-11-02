@@ -40,6 +40,13 @@
 	NSMutableSet *morgue;		// bugs that died each generation
 	NSMutableSet *maternity;	// bugs born each generation
 	NSCountedSet *activeGeneCounts; // counts of genes used each generation
+	
+	// activity statistics
+	BOOL collectActivity;
+	long *activity;
+	int activitySize;
+	int activityStep;
+	int activityDelta;
 }
 
 @property (readwrite, retain) NSMutableSet *bugs;
@@ -73,5 +80,10 @@
 - (int)calculateNeighborhoodForCellAtRow:(int)i andColumn:(int)j;
 - (void)place:(Bug *)bug atRow:(int)row andCol:(int)col;
 - (void)updateBug:(Bug *)bug atRow:(int)i column:(int)j;
+
+// activity statistics
+- (void)updateActivity;
+- (NSArray *)activityLines;
+@property (nonatomic, assign) BOOL collectActivity;
 
 @end

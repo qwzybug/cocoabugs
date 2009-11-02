@@ -151,4 +151,20 @@
 	return world.population > 0;
 }
 
+- (void)setCollectActivity:(BOOL)collectActivity;
+{
+	world.collectActivity = collectActivity;
+}
+
+- (void)exportActivity:(NSString *)path;
+{
+	[@"" writeToFile:path atomically:NO];
+	NSArray *activityLines = [world activityLines];
+	NSFileHandle *handle = [NSFileHandle fileHandleForWritingAtPath:path];
+	for (NSString *line in activityLines) {
+		[handle writeData:[[NSString stringWithFormat:@"%@\n", line] dataUsingEncoding:NSASCIIStringEncoding]];
+	}
+	[handle closeFile];
+}
+
 @end

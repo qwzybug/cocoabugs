@@ -63,6 +63,9 @@
 		}
 	}
 	
+	// export activity statistics
+	[simulationController.lifeController exportActivity:[NSString stringWithFormat:@"./%@/activity.csv", path]];
+	
 	// export csv-style configuration
 	NSMutableArray *configurationLines = [NSMutableArray arrayWithCapacity:simulationController.configuration.count];
 	for (NSString *key in simulationController.configuration) {

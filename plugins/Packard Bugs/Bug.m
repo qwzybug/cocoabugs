@@ -127,6 +127,10 @@
 		move.y = -magnitude;
 		break;
 	}
+	
+	move.mag = magnitude;
+	move.dir = (quad << 1) | diag;
+	
 	return move;
 }
 

@@ -108,4 +108,26 @@
 	[board setNeedsDisplay:YES];
 }
 
+#pragma mark -
+
+- (void)showColorWindow;
+{
+	NSLog(@"No coloring window for Schelling yet.");
+}
+
+- (BOOL)alive;
+{
+	return YES;
+}
+
+- (void)setCollectActivity:(BOOL)collectActivity;
+{
+	// noop
+}
+
+- (void)exportActivity:(NSString *)path;
+{
+	// noop
+}
+
 @end

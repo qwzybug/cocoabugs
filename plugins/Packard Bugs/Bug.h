@@ -11,6 +11,10 @@
 typedef struct _BugMovement {
 	int x;
 	int y;
+	// magnitude of the move: 1 to 15
+	int mag;
+	// direction of the move: 0 to 7
+	int dir;
 } BugMovement;
 
 @interface Bug : NSObject {

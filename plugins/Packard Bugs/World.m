@@ -8,11 +8,16 @@
 
 #import "World.h"
 
+#define GENOME_SIZE 32 * 128
+#define GENE_NUM(MAG, DIR) (((MAG)<<3)|DIR)
+#define GENE_INDEX(STEP, GENE, MAG, DIR) ((STEP) * (GENOME_SIZE) + (((GENE) << 7) | GENE_NUM((MAG), (DIR))))
+
 @implementation World
 
 // world properties & statistics
 @synthesize width, height, population, births, deaths, lifespan, ticks, activeGeneCounts;
 @synthesize grid, bugs, morgue, maternity;
+@synthesize collectActivity;
 
 // bug properties
 @synthesize mutationRate, reproductionFood, movementCost, eatAmount;
@@ -103,6 +108,9 @@
 	self.maternity = nil;
 	[foodImage release], foodImage = nil;
 	
+	if (activity)
+		free(activity);
+	
 	[super dealloc];
 }
 
@@ -115,6 +123,9 @@
 
 - (void)update;
 {
+	if (self.collectActivity)
+		[self updateActivity];
+	
 	// blank statistics for accumulation
 	population = 0;
 	[morgue removeAllObjects];
@@ -208,6 +219,10 @@
 	BugMovement move = [bug getMovementForGene:gene];
 	// place bug at new position
 	[self place:bug atRow:(row + move.y) andCol:(col + move.x)];
+	// update gene activity
+	if (self.collectActivity) {
+		activity[GENE_INDEX(activityStep, gene, move.mag, move.dir)] += 1;
+	}
 	// remove old bug pointer
 	cell.bug = nil;
 }
@@ -241,6 +256,71 @@
 		}
 	}
 	self.population = pop;
+}
+
+// activity statistics
+- (void)setCollectActivity:(BOOL)newCollectActivity;
+{
+	if (activity) {
+		free(activity);
+		activity = NULL;
+	}
+	
+	collectActivity = newCollectActivity;
+	
+	if (collectActivity) {
+		activityDelta = 10;
+		activitySize = 10;
+		activity = calloc(activitySize * GENOME_SIZE, sizeof(long));
+		memset(activity, 0x0, GENOME_SIZE);
+	}
+}
+
+- (void)updateActivity;
+{
+	int newStep = ticks / activityDelta;
+	if (newStep > activityStep) {
+		// reallocate if necessary
+		if (newStep >= activitySize) {
+			activitySize = activitySize * 2;
+			activity = realloc(activity, activitySize * GENOME_SIZE * sizeof(long));
+		}
+		memcpy(&activity[newStep * GENOME_SIZE], &activity[activityStep * GENOME_SIZE], sizeof(long) * GENOME_SIZE);
+	}
+	activityStep = newStep;
+}
+
+- (NSArray *)activityLines;
+{
+	NSMutableArray *lines = [NSMutableArray arrayWithCapacity:activityStep];
+	
+	// header
+	NSMutableString *headerString = [NSMutableString stringWithCapacity:(32 * GENOME_SIZE * 8)];
+	[headerString appendString:@"Step"];
+	for (int gene = 0; gene < 32; gene++) {
+		for (int dir = 0; dir < 8; dir++) {
+			for (int mag = 1; mag < 16; mag++) {
+				[headerString appendFormat:@",%d.%d.%d", gene, dir, mag];
+			}
+		}
+	}
+	[lines addObject:headerString];
+	
+	NSMutableString *lineString;
+	for (int step = 0; step < activityStep; step++) {
+		lineString = [NSMutableString stringWithCapacity:(GENOME_SIZE * 8)];
+		[lineString appendFormat:@"%d", step * activityDelta];
+		for (int gene = 0; gene < 32; gene++) {
+			for (int dir = 0; dir < 8; dir++) {
+				for (int mag = 1; mag < 16; mag++) {
+					[lineString appendFormat:@",%d", activity[GENE_INDEX(step, gene, mag, dir)]];
+				}
+			}
+		}
+		[lines addObject:lineString];
+	}
+	
+	return lines;
 }
 
 @end
