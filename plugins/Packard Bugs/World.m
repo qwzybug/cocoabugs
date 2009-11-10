@@ -43,7 +43,7 @@
 	
 	mutationRate = 0.5;
 	reproductionFood = 20;
-	movementCost = 1;
+	movementCost = -1;
 	eatAmount = 1;
 	foodAmount = 0;
 	
@@ -198,7 +198,8 @@
 		}
 	}
 	[bugs removeAllObjects];
-	population = 0;
+	self.population = 0;
+	self.ticks = 0;
 }
 
 - (void)updateBug:(Bug *)bug atRow:(int)row column:(int)col;
@@ -208,7 +209,7 @@
 	if (cell.food) {
 		[bug doEat:eatAmount];
 	} else {
-		[bug doDigest:movementCost];
+		[bug doDigest:-movementCost];
 	}
 	// bug has survived to bug another day
 	bug.age++;

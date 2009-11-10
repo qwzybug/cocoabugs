@@ -23,7 +23,7 @@
 	
 	width = gameWidth;
 	height = gameHeight;
-	generation = 0;
+	self.generation = 0;
 	
 	grid = [[self blankGrid] retain];
 	[self setCellRelations];
@@ -49,6 +49,7 @@
 			}
 		}
 	}
+	self.generation = 0;
 }
 
 // make a blank cell grid
@@ -126,6 +127,7 @@
 			}
 		}
 	}
+	self.generation++;
 }
 
 - (BOOL)cellShouldMove:(SchellingCell *)cell;

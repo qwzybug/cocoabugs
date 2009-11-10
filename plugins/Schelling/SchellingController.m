@@ -14,7 +14,7 @@
 
 @implementation SchellingController
 
-@synthesize statisticsCollector, properties;
+@synthesize statisticsCollector, properties, game;
 
 + (NSString *)name;
 {
@@ -64,11 +64,6 @@
 
 - (void)dealloc;
 {
-	NSLog(@"Deallocing Game of Life controller");
-	NSLog(@"Properties: %d", [properties retainCount]);
-	NSLog(@"Board: %d", [board retainCount]);
-	NSLog(@"Game: %d", [game retainCount]);
-
 	[properties release];
 	[statisticsCollector release];
 	[board release];
@@ -123,6 +118,11 @@
 - (void)exportActivity:(NSString *)path;
 {
 	// noop
+}
+
+- (NSString *)stepKeyPath;
+{
+	return @"game.generation";
 }
 
 @end

@@ -8,16 +8,17 @@
 
 #import <Cocoa/Cocoa.h>
 
-#include "headless_main.m"
+//#include "headless_main.m"
 
 int main(int argc, char *argv[])
 {
-	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-	NSString *exec = [[NSString stringWithFormat:@"%s", argv[0]] lastPathComponent];
-	if ([exec isEqual:@"CocoaBugs"]) {
+//	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+//	NSString *exec = [[NSString stringWithFormat:@"%s", argv[0]] lastPathComponent];
+//	NSLog(exec);
+//	if ([exec isEqual:@"CocoaBugs"]) {
 		return NSApplicationMain(argc, (const char **) argv);
-	} else {
-		return headless_main(argc, argv);
-	}
-	[pool release];
+//	} else {
+//		return headless_main(argc, argv);
+//	}
+//	[pool release];
 }

@@ -19,6 +19,7 @@
 
 @property(readonly) NSDictionary *properties;
 @property(readonly) SchellingStatistics *statisticsCollector;
+@property(readwrite, retain) SchellingSimulation *game;
 
 + (NSString *)name;
 

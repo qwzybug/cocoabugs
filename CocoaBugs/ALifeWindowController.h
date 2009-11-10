@@ -17,6 +17,8 @@
 	ALifeSimulationController *simulationController;
 	DMQuicktimeExporter *movieExporter;
 	
+	IBOutlet NSTextField *stepLabel;
+	
 	BOOL running;
 	BOOL recording;
 }

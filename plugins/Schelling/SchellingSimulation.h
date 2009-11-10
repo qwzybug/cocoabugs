@@ -42,6 +42,8 @@
 @property(readwrite) int seven;
 @property(readwrite) int eight;
 
+@property(nonatomic, assign) int generation;
+
 @property (nonatomic, assign) int raceCount;
 @property (nonatomic, assign) float initialPopulationDensity;
 
@@ -60,7 +62,6 @@
 
 @property(readwrite) int width;
 @property(readwrite) int height;
-@property(readwrite) int generation;
 @property(readonly) NSMutableArray *grid;
 
 @end

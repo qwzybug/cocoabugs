@@ -60,6 +60,14 @@
 	[statisticsController setSource:[simulationController.lifeController statisticsCollector]
 					  forStatistics:[[simulationController.lifeController properties] objectForKey:@"statistics"]];	
 	
+	// bind step label to simulation step count
+	if ([simulationController.lifeController stepKeyPath]) {
+		[stepLabel bind:@"value"
+			   toObject:simulationController.lifeController
+			withKeyPath:[simulationController.lifeController stepKeyPath]
+				options:nil];
+	}
+	
 	return self;
 }
 

@@ -10,13 +10,14 @@
 		03039F0A0E3FCECB0043E65A /* headless_main.m in Sources */ = {isa = PBXBuildFile; fileRef = 03039EBE0E3FC61B0043E65A /* headless_main.m */; };
 		03039F190E3FCFC90043E65A /* ALifePluginLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 03039F180E3FCFC90043E65A /* ALifePluginLoader.m */; };
 		03039F1D0E3FD0D90043E65A /* ALifePluginLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 03039F180E3FCFC90043E65A /* ALifePluginLoader.m */; };
+		03072B37109FB7A400F9DC20 /* Bugs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03496D341096BBC4009BD558 /* Bugs.framework */; };
+		03072B48109FB89B00F9DC20 /* HeadlessBugs in Copy headless executable */ = {isa = PBXBuildFile; fileRef = 03039EFC0E3FCDEC0043E65A /* HeadlessBugs */; };
 		030AE4AF0D87576C00BB9D39 /* StatisticsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 030AE4AE0D87576C00BB9D39 /* StatisticsController.m */; };
 		031C41670E306A7D00E8B508 /* FloatOptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 031C41660E306A7D00E8B508 /* FloatOptionViewController.m */; };
 		031C416A0E306B0A00E8B508 /* FloatOptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 031C41690E306B0A00E8B508 /* FloatOptionView.xib */; };
 		03262E5B0D6A9B71002A1127 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 03262E5A0D6A9B71002A1127 /* icon.icns */; };
 		0339CD9D0E231E7A009C5D0D /* ALifeConfigurationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0339CD9C0E231E7A009C5D0D /* ALifeConfigurationViewController.m */; };
 		0339CDD80E2324D7009C5D0D /* ConfigurationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0339CDD70E2324D7009C5D0D /* ConfigurationView.xib */; };
-		03459F751092DD2B00116C5A /* test.cocoabugs in Copy test configuration */ = {isa = PBXBuildFile; fileRef = 03459F721092DD1300116C5A /* test.cocoabugs */; };
 		03496D351096BBC8009BD558 /* Bugs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03496D341096BBC4009BD558 /* Bugs.framework */; };
 		03496D361096BBCF009BD558 /* Bugs.framework in Copy frameworks */ = {isa = PBXBuildFile; fileRef = 03496D341096BBC4009BD558 /* Bugs.framework */; };
 		034DCD950E09CFDB0045943A /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 034DCD940E09CFDB0045943A /* AppController.m */; };
@@ -26,8 +27,6 @@
 		0351908D0E7DD8D300205E7B /* DMQuicktimeExporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0351908C0E7DD8D300205E7B /* DMQuicktimeExporter.m */; };
 		035190920E7DD9D600205E7B /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 035190910E7DD9D600205E7B /* QTKit.framework */; };
 		0359DC9B0E7F1AA300EEAC01 /* DMQuicktimeExporter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0359DC9A0E7F1AA300EEAC01 /* DMQuicktimeExporter.xib */; };
-		035AF0C210901BC400725226 /* Packard Bugs Plugin.plugin in Copy plugins */ = {isa = PBXBuildFile; fileRef = 035AF0BF10901B9F00725226 /* Packard Bugs Plugin.plugin */; };
-		035AF0F110901CA700725226 /* Schelling.plugin in Copy plugins */ = {isa = PBXBuildFile; fileRef = 035AF0F010901C9D00725226 /* Schelling.plugin */; };
 		035AF2101090377F00725226 /* Schelling.plugin in Copy plugins */ = {isa = PBXBuildFile; fileRef = 035AF0F010901C9D00725226 /* Schelling.plugin */; };
 		035AF2111090377F00725226 /* Packard Bugs Plugin.plugin in Copy plugins */ = {isa = PBXBuildFile; fileRef = 035AF0BF10901B9F00725226 /* Packard Bugs Plugin.plugin */; };
 		035AF28410903F6100725226 /* NSDictionary_Merging.m in Sources */ = {isa = PBXBuildFile; fileRef = 035AF28310903F6100725226 /* NSDictionary_Merging.m */; };
@@ -47,6 +46,8 @@
 		03BEDD310E54A8B600694CD2 /* StatisticsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 030AE4AE0D87576C00BB9D39 /* StatisticsController.m */; };
 		03BEDD650E54A92500694CD2 /* StatisticsData.m in Sources */ = {isa = PBXBuildFile; fileRef = 03729EDF0D8F1E77009FDBE8 /* StatisticsData.m */; };
 		03BEDD7C0E54AAC800694CD2 /* ALifeRunExporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BEDD7B0E54AAC800694CD2 /* ALifeRunExporter.m */; };
+		03BEF43610AA0576008854C5 /* Schelling.plugin in Copy GUI plugins */ = {isa = PBXBuildFile; fileRef = 035AF0F010901C9D00725226 /* Schelling.plugin */; };
+		03BEF43710AA0576008854C5 /* Packard Bugs Plugin.plugin in Copy GUI plugins */ = {isa = PBXBuildFile; fileRef = 035AF0BF10901B9F00725226 /* Packard Bugs Plugin.plugin */; };
 		03C26EB90D8F517100D44F7D /* StatisticsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C26EB80D8F517100D44F7D /* StatisticsView.m */; };
 		03D46BCF0E58DC30000DE764 /* ALifeSimulationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D46BCE0E58DC30000DE764 /* ALifeSimulationController.m */; };
 		03D46C8A0E58DE15000DE764 /* ALifeSimulationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D46BCE0E58DC30000DE764 /* ALifeSimulationController.m */; };
@@ -59,8 +60,6 @@
 		03D46EDE0E595AB0000DE764 /* Stripes.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D46ED90E595AB0000DE764 /* Stripes.png */; };
 		03D46EDF0E595AB0000DE764 /* R-pentomino.png in Resources */ = {isa = PBXBuildFile; fileRef = 03D46EDA0E595AB0000DE764 /* R-pentomino.png */; };
 		03D46EE20E595C77000DE764 /* BuiltInImages.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03D46EE10E595C77000DE764 /* BuiltInImages.plist */; };
-		03DAE34C1096F3C5009D10E7 /* libbugs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DAE34B1096F3C5009D10E7 /* libbugs.a */; };
-		03DAE34D1096F3C7009D10E7 /* libbugs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DAE34B1096F3C5009D10E7 /* libbugs.a */; };
 		03EDB3360E4E26F90008990A /* ALifeShuffler.m in Sources */ = {isa = PBXBuildFile; fileRef = 03EDB3350E4E26F90008990A /* ALifeShuffler.m */; };
 		03EF0F2B1097AB8200A0ED41 /* ALifeRunExporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BEDD7B0E54AAC800694CD2 /* ALifeRunExporter.m */; };
 		03FA837510981F7F003C6A0F /* Schelling.plugin in Copy headless plugins */ = {isa = PBXBuildFile; fileRef = 035AF0F010901C9D00725226 /* Schelling.plugin */; };
@@ -72,6 +71,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		03072B44109FB87300F9DC20 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03039EFB0E3FCDEC0043E65A;
+			remoteInfo = HeadlessBugs;
+		};
 		03223F671096BF3000A60416 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 03496D2F1096BBC4009BD558 /* BugsFramework.xcodeproj */;
@@ -135,25 +141,18 @@
 			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
 			remoteInfo = Bugs;
 		};
-		03DAE33A1096F387009D10E7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 03496D2F1096BBC4009BD558 /* BugsFramework.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 03DAE32B1096F368009D10E7;
-			remoteInfo = bugs;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		03459F781092DD4A00116C5A /* Copy test configuration */ = {
+		03072B4E109FB8A000F9DC20 /* Copy headless executable */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 16;
+			dstPath = Contents/MacOS;
+			dstSubfolderSpec = 1;
 			files = (
-				03459F751092DD2B00116C5A /* test.cocoabugs in Copy test configuration */,
+				03072B48109FB89B00F9DC20 /* HeadlessBugs in Copy headless executable */,
 			);
-			name = "Copy test configuration";
+			name = "Copy headless executable";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		03496D1B1096BB16009BD558 /* Copy frameworks */ = {
@@ -167,18 +166,6 @@
 			name = "Copy frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		035AF0CE10901BE200725226 /* Copy plugins */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				035AF0F110901CA700725226 /* Schelling.plugin in Copy plugins */,
-				035AF0C210901BC400725226 /* Packard Bugs Plugin.plugin in Copy plugins */,
-			);
-			name = "Copy plugins";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		035AF21C109037A100725226 /* Copy plugins */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -189,6 +176,18 @@
 				035AF2111090377F00725226 /* Packard Bugs Plugin.plugin in Copy plugins */,
 			);
 			name = "Copy plugins";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03BEF44010AA057C008854C5 /* Copy GUI plugins */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				03BEF43610AA0576008854C5 /* Schelling.plugin in Copy GUI plugins */,
+				03BEF43710AA0576008854C5 /* Packard Bugs Plugin.plugin in Copy GUI plugins */,
+			);
+			name = "Copy GUI plugins";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		03DAE2DC1096F04C009D10E7 /* Copy Frameworks */ = {
@@ -278,7 +277,6 @@
 		03D46EDA0E595AB0000DE764 /* R-pentomino.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "R-pentomino.png"; sourceTree = "<group>"; };
 		03D46EE10E595C77000DE764 /* BuiltInImages.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BuiltInImages.plist; sourceTree = "<group>"; };
 		03DAE2E91096F162009D10E7 /* HeadlessBugs_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadlessBugs_Prefix.pch; sourceTree = "<group>"; };
-		03DAE34B1096F3C5009D10E7 /* libbugs.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbugs.a; path = ../BugsFramework/build/Release/libbugs.a; sourceTree = SOURCE_ROOT; };
 		03EDB3340E4E26F90008990A /* ALifeShuffler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALifeShuffler.h; sourceTree = "<group>"; };
 		03EDB3350E4E26F90008990A /* ALifeShuffler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALifeShuffler.m; sourceTree = "<group>"; };
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -298,7 +296,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03DAE34C1096F3C5009D10E7 /* libbugs.a in Frameworks */,
+				03072B37109FB7A400F9DC20 /* Bugs.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,7 +308,6 @@
 				035190920E7DD9D600205E7B /* QTKit.framework in Frameworks */,
 				03BE21B80E7F0388005E5D76 /* QuickTime.framework in Frameworks */,
 				03496D351096BBC8009BD558 /* Bugs.framework in Frameworks */,
-				03DAE34D1096F3C7009D10E7 /* libbugs.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,7 +333,6 @@
 			isa = PBXGroup;
 			children = (
 				03496D341096BBC4009BD558 /* Bugs.framework */,
-				03DAE33B1096F387009D10E7 /* libbugs.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -523,7 +519,6 @@
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 				03496D2F1096BBC4009BD558 /* BugsFramework.xcodeproj */,
-				03DAE34B1096F3C5009D10E7 /* libbugs.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -539,7 +534,6 @@
 				03039EF90E3FCDEC0043E65A /* Sources */,
 				03039EFA0E3FCDEC0043E65A /* Frameworks */,
 				035AF21C109037A100725226 /* Copy plugins */,
-				03459F781092DD4A00116C5A /* Copy test configuration */,
 				03459F801092DD9400116C5A /* ShellScript */,
 			);
 			buildRules = (
@@ -562,8 +556,10 @@
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
-				035AF0CE10901BE200725226 /* Copy plugins */,
 				03FA838E10981F85003C6A0F /* Copy headless plugins */,
+				03072B4E109FB8A000F9DC20 /* Copy headless executable */,
+				03072B50109FB8B900F9DC20 /* Symlink headless executable */,
+				03BEF44010AA057C008854C5 /* Copy GUI plugins */,
 			);
 			buildRules = (
 			);
@@ -571,6 +567,7 @@
 				03223F681096BF3000A60416 /* PBXTargetDependency */,
 				035AF0D910901C4300725226 /* PBXTargetDependency */,
 				032240451096C95800A60416 /* PBXTargetDependency */,
+				03072B45109FB87300F9DC20 /* PBXTargetDependency */,
 			);
 			name = CocoaBugs;
 			productInstallPath = "$(HOME)/Applications";
@@ -632,13 +629,6 @@
 			remoteRef = 035AF0EF10901C9D00725226 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		03DAE33B1096F387009D10E7 /* libbugs.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libbugs.a;
-			remoteRef = 03DAE33A1096F387009D10E7 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -673,6 +663,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		03072B50109FB8B900F9DC20 /* Symlink headless executable */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Symlink headless executable";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd $BUILT_PRODUCTS_DIR\nrm cocoabugs\nln -s CocoaBugs.app/Contents/MacOS/HeadlessBugs cocoabugs\n";
+		};
 		03459F801092DD9400116C5A /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -733,6 +737,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		03072B45109FB87300F9DC20 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 03039EFB0E3FCDEC0043E65A /* HeadlessBugs */;
+			targetProxy = 03072B44109FB87300F9DC20 /* PBXContainerItemProxy */;
+		};
 		03223F681096BF3000A60416 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Bugs;

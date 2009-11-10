@@ -177,7 +177,7 @@ void runSimulations(NSString *configurationFile,
 	printf("Done.\n");
 }
 
-int headless_main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 	NSUserDefaults *args = [NSUserDefaults standardUserDefaults];

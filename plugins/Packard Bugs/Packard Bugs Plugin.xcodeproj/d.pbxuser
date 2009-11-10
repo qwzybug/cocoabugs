@@ -62,6 +62,87 @@
 			sepNavWindowFrame = "{{26, 52}, {713, 672}}";
 		};
 	};
+	03BEF40210AA03DA008854C5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 03E2CCC20E2729460077196A /* World.h */;
+		name = "World.h: 86";
+		rLen = 28;
+		rLoc = 2193;
+		rType = 0;
+		vrLen = 1683;
+		vrLoc = 589;
+	};
+	03BEF40310AA03DA008854C5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 03E2CCC30E2729460077196A /* World.m */;
+		name = "World.m: 15";
+		rLen = 22;
+		rLoc = 339;
+		rType = 0;
+		vrLen = 1129;
+		vrLoc = 0;
+	};
+	03BEF40410AA03DA008854C5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 03E2CD740E272F910077196A /* BugsController.h */;
+		name = "BugsController.h: 11";
+		rLen = 5;
+		rLoc = 200;
+		rType = 0;
+		vrLen = 803;
+		vrLoc = 0;
+	};
+	03BEF40510AA03DA008854C5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 03E2CD750E272F910077196A /* BugsController.m */;
+		name = "BugsController.m: 172";
+		rLen = 0;
+		rLoc = 3868;
+		rType = 0;
+		vrLen = 1049;
+		vrLoc = 2828;
+	};
+	03BEF40610AA03DA008854C5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 03E2CD750E272F910077196A /* BugsController.m */;
+		name = "BugsController.m: 172";
+		rLen = 0;
+		rLoc = 3868;
+		rType = 0;
+		vrLen = 1071;
+		vrLoc = 2828;
+	};
+	03BEF45010AA061A008854C5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 03E2CD750E272F910077196A /* BugsController.m */;
+		name = "BugsController.m: 172";
+		rLen = 0;
+		rLoc = 3868;
+		rType = 0;
+		vrLen = 1071;
+		vrLoc = 2828;
+	};
+	03BEF45110AA061A008854C5 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 03E2CCC90E2729800077196A /* PackardBugs.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/d/cocoabugs/plugins/Packard Bugs/PackardBugs.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	03BEF45210AA061A008854C5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 03E2CCC30E2729460077196A /* World.m */;
+		name = "World.m: 211";
+		rLen = 0;
+		rLoc = 4956;
+		rType = 0;
+		vrLen = 1154;
+		vrLoc = 4513;
+	};
 	03DAE2771096E658009D10E7 /* BugsController.m:127 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
@@ -76,7 +157,7 @@
 		ignoreCount = 0;
 		lineNumber = 127;
 		location = "Packard Bugs Plugin";
-		modificationTime = 278839427.603052;
+		modificationTime = 279578674.25697;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -155,42 +236,42 @@
 	};
 	03E2CCC20E2729460077196A /* World.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {894, 1170}}";
+			sepNavIntBoundsRect = "{{0, 0}, {929, 1170}}";
 			sepNavSelRange = "{2193, 28}";
-			sepNavVisRange = "{492, 1781}";
+			sepNavVisRange = "{589, 1683}";
 			sepNavWindowFrame = "{{725, 333}, {772, 837}}";
 		};
 	};
 	03E2CCC30E2729460077196A /* World.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {894, 4303}}";
-			sepNavSelRange = "{7544, 0}";
-			sepNavVisRange = "{6304, 1596}";
+			sepNavIntBoundsRect = "{{0, 0}, {894, 4225}}";
+			sepNavSelRange = "{4718, 0}";
+			sepNavVisRange = "{4143, 1394}";
 			sepNavWindowFrame = "{{438, 21}, {953, 857}}";
 		};
 	};
 	03E2CCC90E2729800077196A /* PackardBugs.plist */ = {
 		uiCtxt = {
-			sepNavWindowFrame = "{{620, 41}, {772, 837}}";
+			sepNavWindowFrame = "{{1, 4}, {988, 742}}";
 		};
 	};
 	03E2CD740E272F910077196A /* BugsController.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {929, 650}}";
-			sepNavSelRange = "{447, 0}";
+			sepNavSelRange = "{200, 5}";
 			sepNavVisRange = "{0, 803}";
 			sepNavWindowFrame = "{{1, 4}, {988, 742}}";
 		};
 	};
 	03E2CD750E272F910077196A /* BugsController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {929, 2210}}";
-			sepNavSelRange = "{3461, 41}";
-			sepNavVisRange = "{2684, 1120}";
+			sepNavIntBoundsRect = "{{0, 0}, {908, 2379}}";
+			sepNavSelRange = "{2373, 11}";
+			sepNavVisRange = "{1982, 990}";
 			sepNavWindowFrame = "{{1, 4}, {988, 742}}";
 		};
 	};
-	03F65AD2109EBF71006CADE8 /* World.m:308 */ = {
+	03F65AD2109EBF71006CADE8 /* World.m:309 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -200,15 +281,15 @@
 		delayBeforeContinue = 0;
 		fileReference = 03E2CCC30E2729460077196A /* World.m */;
 		functionName = "-activityLines";
-		hitCount = 1;
+		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 308;
+		lineNumber = 309;
 		location = "Packard Bugs Plugin";
-		modificationTime = 278839429.3786601;
+		modificationTime = 279578674.257117;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
-	03F65AD4109EBF73006CADE8 /* World.m:323 */ = {
+	03F65AD4109EBF73006CADE8 /* World.m:324 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -218,11 +299,11 @@
 		delayBeforeContinue = 0;
 		fileReference = 03E2CCC30E2729460077196A /* World.m */;
 		functionName = "-activityLines";
-		hitCount = 1;
+		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 323;
+		lineNumber = 324;
 		location = "Packard Bugs Plugin";
-		modificationTime = 278839431.19907;
+		modificationTime = 279578674.257137;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -236,11 +317,11 @@
 		delayBeforeContinue = 0;
 		fileReference = 03E2CD750E272F910077196A /* BugsController.m */;
 		functionName = "-exportActivity:";
-		hitCount = 1;
+		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 164;
 		location = "Packard Bugs Plugin";
-		modificationTime = 278839432.393887;
+		modificationTime = 279578674.257153;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -253,8 +334,8 @@
 		);
 		breakpoints = (
 			03DAE2771096E658009D10E7 /* BugsController.m:127 */,
-			03F65AD2109EBF71006CADE8 /* World.m:308 */,
-			03F65AD4109EBF73006CADE8 /* World.m:323 */,
+			03F65AD2109EBF71006CADE8 /* World.m:309 */,
+			03F65AD4109EBF73006CADE8 /* World.m:324 */,
 			03F65ADB109EC07D006CADE8 /* BugsController.m:164 */,
 		);
 		codeSenseManager = 03E2CCB70E2729140077196A /* Code sense */;
@@ -315,8 +396,18 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 278878779;
-			PBXWorkspaceStateSaveDate = 278878779;
+			PBXPerProjectTemplateStateSaveDate = 279577259;
+			PBXWorkspaceStateSaveDate = 279577259;
+		};
+		perUserProjectItems = {
+			03BEF40210AA03DA008854C5 /* PBXTextBookmark */ = 03BEF40210AA03DA008854C5 /* PBXTextBookmark */;
+			03BEF40310AA03DA008854C5 /* PBXTextBookmark */ = 03BEF40310AA03DA008854C5 /* PBXTextBookmark */;
+			03BEF40410AA03DA008854C5 /* PBXTextBookmark */ = 03BEF40410AA03DA008854C5 /* PBXTextBookmark */;
+			03BEF40510AA03DA008854C5 /* PBXTextBookmark */ = 03BEF40510AA03DA008854C5 /* PBXTextBookmark */;
+			03BEF40610AA03DA008854C5 /* PBXTextBookmark */ = 03BEF40610AA03DA008854C5 /* PBXTextBookmark */;
+			03BEF45010AA061A008854C5 /* PBXTextBookmark */ = 03BEF45010AA061A008854C5 /* PBXTextBookmark */;
+			03BEF45110AA061A008854C5 /* PlistBookmark */ = 03BEF45110AA061A008854C5 /* PlistBookmark */;
+			03BEF45210AA061A008854C5 /* PBXTextBookmark */ = 03BEF45210AA061A008854C5 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 03E2CCB60E2729140077196A /* Source Control */;
 		userBuildSettings = {

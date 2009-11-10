@@ -39,5 +39,6 @@
 - (BOOL)alive;
 - (void)setCollectActivity:(BOOL)collectActivity;
 - (void)exportActivity:(NSString *)path;
+- (NSString *)stepKeyPath;
 
 @end

@@ -167,4 +167,9 @@
 	[handle closeFile];
 }
 
+- (NSString *)stepKeyPath;
+{
+	return @"world.ticks";
+}
+
 @end

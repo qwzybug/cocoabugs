@@ -40,13 +40,6 @@
 			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
 			remoteInfo = BugsFramework;
 		};
-		03DAE3321096F369009D10E7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 03496D7C1096BE36009BD558 /* BugsFramework.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 03DAE32B1096F368009D10E7;
-			remoteInfo = bugs;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -102,7 +95,6 @@
 			isa = PBXGroup;
 			children = (
 				03496D811096BE37009BD558 /* Bugs.framework */,
-				03DAE3331096F369009D10E7 /* libbugs.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -286,13 +278,6 @@
 			fileType = wrapper.framework;
 			path = Bugs.framework;
 			remoteRef = 03496D801096BE37009BD558 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		03DAE3331096F369009D10E7 /* libbugs.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libbugs.a;
-			remoteRef = 03DAE3321096F369009D10E7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
