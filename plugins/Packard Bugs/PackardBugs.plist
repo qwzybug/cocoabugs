@@ -66,15 +66,15 @@
 			<key>name</key>
 			<string>movementCost</string>
 			<key>title</key>
-			<string>Movement Cost</string>
+			<string>∆Energy off food</string>
 			<key>type</key>
 			<string>Integer</string>
 			<key>minValue</key>
-			<integer>0</integer>
+			<integer>-5</integer>
 			<key>maxValue</key>
-			<integer>5</integer>
+			<integer>0</integer>
 			<key>default</key>
-			<integer>1</integer>
+			<integer>-1</integer>
 			<key>keyPath</key>
 			<string>world.movementCost</string>
 		</dict>
@@ -82,7 +82,7 @@
 			<key>name</key>
 			<string>eatAmount</string>
 			<key>title</key>
-			<string>Energy Gained from Food</string>
+			<string>∆Energy on food</string>
 			<key>type</key>
 			<string>Integer</string>
 			<key>minValue</key>
