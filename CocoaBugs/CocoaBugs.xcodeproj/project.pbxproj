@@ -251,6 +251,8 @@
 		037880A4106ED41A0023E6EA /* ALifeTinkerPanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALifeTinkerPanelController.h; sourceTree = "<group>"; };
 		037880A5106ED41A0023E6EA /* ALifeTinkerPanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALifeTinkerPanelController.m; sourceTree = "<group>"; };
 		037880E5106EDA860023E6EA /* TinkerPanel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TinkerPanel.xib; sourceTree = "<group>"; };
+		03A10DB310B3DC590039B8E4 /* GameOfLife.plugin.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = GameOfLife.plugin.bundle; path = build/Release/GameOfLife.plugin.bundle; sourceTree = "<group>"; };
+		03A10DB410B3DC590039B8E4 /* GameOfLife.plugin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GameOfLife.plugin-Info.plist"; sourceTree = "<group>"; };
 		03AE61E10E4C902000C0E469 /* Shuffle.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Shuffle.tif; sourceTree = "<group>"; };
 		03B539860E230663007FCED7 /* ALifeConfigurationWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALifeConfigurationWindowController.h; sourceTree = "<group>"; };
 		03B539870E230663007FCED7 /* ALifeConfigurationWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALifeConfigurationWindowController.m; sourceTree = "<group>"; };
@@ -297,6 +299,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				03072B37109FB7A400F9DC20 /* Bugs.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03A10DB110B3DC590039B8E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +463,7 @@
 			children = (
 				8D1107320486CEB800E47090 /* CocoaBugs.app */,
 				03039EFC0E3FCDEC0043E65A /* HeadlessBugs */,
+				03A10DB310B3DC590039B8E4 /* GameOfLife.plugin.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -470,6 +480,7 @@
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				035AF0B910901B8E00725226 /* Plugins */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				03A10DB410B3DC590039B8E4 /* GameOfLife.plugin-Info.plist */,
 			);
 			name = CocoaBugs;
 			sourceTree = "<group>";
@@ -548,6 +559,23 @@
 			productReference = 03039EFC0E3FCDEC0043E65A /* HeadlessBugs */;
 			productType = "com.apple.product-type.tool";
 		};
+		03A10DB210B3DC590039B8E4 /* GameOfLife.plugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03A10DB710B3DC5A0039B8E4 /* Build configuration list for PBXNativeTarget "GameOfLife.plugin" */;
+			buildPhases = (
+				03A10DAF10B3DC590039B8E4 /* Resources */,
+				03A10DB010B3DC590039B8E4 /* Sources */,
+				03A10DB110B3DC590039B8E4 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GameOfLife.plugin;
+			productName = GameOfLife.plugin;
+			productReference = 03A10DB310B3DC590039B8E4 /* GameOfLife.plugin.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 		8D1107260486CEB800E47090 /* CocoaBugs */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "CocoaBugs" */;
@@ -603,6 +631,7 @@
 			targets = (
 				8D1107260486CEB800E47090 /* CocoaBugs */,
 				03039EFB0E3FCDEC0043E65A /* HeadlessBugs */,
+				03A10DB210B3DC590039B8E4 /* GameOfLife.plugin */,
 			);
 		};
 /* End PBXProject section */
@@ -632,6 +661,13 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
+		03A10DAF10B3DC590039B8E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D1107290486CEB800E47090 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -675,7 +711,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd $BUILT_PRODUCTS_DIR\nrm cocoabugs\nln -s CocoaBugs.app/Contents/MacOS/HeadlessBugs cocoabugs\n";
+			shellScript = "cd $BUILT_PRODUCTS_DIR\nrm -f cocoabugs;\nln -s CocoaBugs.app/Contents/MacOS/HeadlessBugs cocoabugs\n";
 		};
 		03459F801092DD9400116C5A /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -706,6 +742,13 @@
 				03BEDD7C0E54AAC800694CD2 /* ALifeRunExporter.m in Sources */,
 				03D46BCF0E58DC30000DE764 /* ALifeSimulationController.m in Sources */,
 				03D46D6D0E592E1A000DE764 /* BitmapOptionViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03A10DB010B3DC590039B8E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -856,6 +899,56 @@
 			};
 			name = Release;
 		};
+		03A10DB510B3DC5A0039B8E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "GameOfLife.plugin-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = GameOfLife.plugin;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		03A10DB610B3DC5A0039B8E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "GameOfLife.plugin-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = GameOfLife.plugin;
+				WRAPPER_EXTENSION = bundle;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 		C01FCF4B08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -946,6 +1039,15 @@
 			buildConfigurations = (
 				03039EFE0E3FCDEC0043E65A /* Debug */,
 				03039EFF0E3FCDEC0043E65A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03A10DB710B3DC5A0039B8E4 /* Build configuration list for PBXNativeTarget "GameOfLife.plugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03A10DB510B3DC5A0039B8E4 /* Debug */,
+				03A10DB610B3DC5A0039B8E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

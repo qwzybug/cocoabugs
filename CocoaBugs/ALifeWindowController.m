@@ -25,6 +25,7 @@
 
 - (void)dealloc;
 {
+	[stepLabel unbind:[simulationController.lifeController stepKeyPath]];
 	self.simulationController = nil;
 	
 	[super dealloc];
