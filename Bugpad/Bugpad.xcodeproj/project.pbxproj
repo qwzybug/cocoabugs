@@ -17,6 +17,22 @@
 		03198126111E3EC500668496 /* NSString+KeyPathComponents.m in Sources */ = {isa = PBXBuildFile; fileRef = 03198124111E3EC500668496 /* NSString+KeyPathComponents.m */; };
 		031981EF111E892C00668496 /* World+iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 031981EE111E892C00668496 /* World+iPhone.m */; };
 		0319824E111E8DCB00668496 /* UIColor+HSVSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = 0319824D111E8DCB00668496 /* UIColor+HSVSquare.m */; };
+		031982A0111F694D00668496 /* BPOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0319829E111F694D00668496 /* BPOptionsViewController.m */; };
+		031982A1111F694D00668496 /* BPOptionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0319829F111F694D00668496 /* BPOptionsViewController.xib */; };
+		031982B8111F6C9E00668496 /* PackardBugs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 031982B7111F6C9E00668496 /* PackardBugs.plist */; };
+		031982C3111F6E7400668496 /* BPIntegerOptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 031982C2111F6E7400668496 /* BPIntegerOptionView.m */; };
+		0361EE88112265ED00294A10 /* BPStatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0361EE86112265ED00294A10 /* BPStatisticsViewController.m */; };
+		0361EE89112265ED00294A10 /* BPStatisticsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0361EE87112265ED00294A10 /* BPStatisticsViewController.xib */; };
+		0361EE8F1122661D00294A10 /* BPStatisticsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0361EE8E1122661D00294A10 /* BPStatisticsView.m */; };
+		0361EE92112266A600294A10 /* StatisticsData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0361EE91112266A600294A10 /* StatisticsData.m */; };
+		0376DD451125DFD8004A8659 /* box.png in Resources */ = {isa = PBXBuildFile; fileRef = 0376DD441125DFD8004A8659 /* box.png */; };
+		038FC035121FBAD600B42BB7 /* BPEditBitmapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 038FC033121FBAD600B42BB7 /* BPEditBitmapViewController.m */; };
+		038FC036121FBAD600B42BB7 /* BPEditBitmapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 038FC034121FBAD600B42BB7 /* BPEditBitmapViewController.xib */; };
+		038FC03A121FBD3E00B42BB7 /* BPEditBitmapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 038FC039121FBD3E00B42BB7 /* BPEditBitmapView.m */; };
+		03B164111122186400996A63 /* PixelImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B164101122186400996A63 /* PixelImage.m */; };
+		03B1641A112219D700996A63 /* BitmapOptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B16419112219D700996A63 /* BitmapOptionView.m */; };
+		03BE71B71120C831009E2399 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03BE71B61120C831009E2399 /* QuartzCore.framework */; };
+		03F868411120C078005B8E78 /* BPFloatOptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F868401120C078005B8E78 /* BPFloatOptionView.m */; };
 		1D3623260D0F684500981E51 /* BugpadAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* BugpadAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -52,6 +68,32 @@
 		031981EE111E892C00668496 /* World+iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "World+iPhone.m"; sourceTree = "<group>"; };
 		0319824C111E8DCB00668496 /* UIColor+HSVSquare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HSVSquare.h"; sourceTree = "<group>"; };
 		0319824D111E8DCB00668496 /* UIColor+HSVSquare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HSVSquare.m"; sourceTree = "<group>"; };
+		0319829D111F694D00668496 /* BPOptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPOptionsViewController.h; sourceTree = "<group>"; };
+		0319829E111F694D00668496 /* BPOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPOptionsViewController.m; sourceTree = "<group>"; };
+		0319829F111F694D00668496 /* BPOptionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BPOptionsViewController.xib; sourceTree = "<group>"; };
+		031982B7111F6C9E00668496 /* PackardBugs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PackardBugs.plist; sourceTree = "<group>"; };
+		031982C1111F6E7400668496 /* BPIntegerOptionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPIntegerOptionView.h; sourceTree = "<group>"; };
+		031982C2111F6E7400668496 /* BPIntegerOptionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPIntegerOptionView.m; sourceTree = "<group>"; };
+		0361EE85112265ED00294A10 /* BPStatisticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPStatisticsViewController.h; sourceTree = "<group>"; };
+		0361EE86112265ED00294A10 /* BPStatisticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPStatisticsViewController.m; sourceTree = "<group>"; };
+		0361EE87112265ED00294A10 /* BPStatisticsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BPStatisticsViewController.xib; sourceTree = "<group>"; };
+		0361EE8D1122661D00294A10 /* BPStatisticsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPStatisticsView.h; sourceTree = "<group>"; };
+		0361EE8E1122661D00294A10 /* BPStatisticsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPStatisticsView.m; sourceTree = "<group>"; };
+		0361EE90112266A600294A10 /* StatisticsData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsData.h; sourceTree = "<group>"; };
+		0361EE91112266A600294A10 /* StatisticsData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticsData.m; sourceTree = "<group>"; };
+		0376DD441125DFD8004A8659 /* box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = box.png; sourceTree = "<group>"; };
+		038FC032121FBAD600B42BB7 /* BPEditBitmapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPEditBitmapViewController.h; sourceTree = "<group>"; };
+		038FC033121FBAD600B42BB7 /* BPEditBitmapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPEditBitmapViewController.m; sourceTree = "<group>"; };
+		038FC034121FBAD600B42BB7 /* BPEditBitmapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BPEditBitmapViewController.xib; sourceTree = "<group>"; };
+		038FC038121FBD3E00B42BB7 /* BPEditBitmapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPEditBitmapView.h; sourceTree = "<group>"; };
+		038FC039121FBD3E00B42BB7 /* BPEditBitmapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPEditBitmapView.m; sourceTree = "<group>"; };
+		03B1640F1122186400996A63 /* PixelImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PixelImage.h; sourceTree = "<group>"; };
+		03B164101122186400996A63 /* PixelImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PixelImage.m; sourceTree = "<group>"; };
+		03B16418112219D700996A63 /* BitmapOptionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitmapOptionView.h; sourceTree = "<group>"; };
+		03B16419112219D700996A63 /* BitmapOptionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BitmapOptionView.m; sourceTree = "<group>"; };
+		03BE71B61120C831009E2399 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		03F8683F1120C078005B8E78 /* BPFloatOptionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPFloatOptionView.h; sourceTree = "<group>"; };
+		03F868401120C078005B8E78 /* BPFloatOptionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPFloatOptionView.m; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* BugpadAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BugpadAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* BugpadAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BugpadAppDelegate.m; sourceTree = "<group>"; };
@@ -80,6 +122,7 @@
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
 				280420C1108EA07E000629CD /* CoreData.framework in Frameworks */,
+				03BE71B71120C831009E2399 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,9 +162,52 @@
 			name = ALife;
 			sourceTree = "<group>";
 		};
+		0319829A111F690F00668496 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				0361EE7F112265A000294A10 /* Options */,
+				0361EE7E1122659C00294A10 /* Statistics */,
+				038FC032121FBAD600B42BB7 /* BPEditBitmapViewController.h */,
+				038FC033121FBAD600B42BB7 /* BPEditBitmapViewController.m */,
+				038FC034121FBAD600B42BB7 /* BPEditBitmapViewController.xib */,
+				038FC038121FBD3E00B42BB7 /* BPEditBitmapView.h */,
+				038FC039121FBD3E00B42BB7 /* BPEditBitmapView.m */,
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
+		0361EE7E1122659C00294A10 /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				0361EE85112265ED00294A10 /* BPStatisticsViewController.h */,
+				0361EE86112265ED00294A10 /* BPStatisticsViewController.m */,
+				0361EE87112265ED00294A10 /* BPStatisticsViewController.xib */,
+				0361EE8D1122661D00294A10 /* BPStatisticsView.h */,
+				0361EE8E1122661D00294A10 /* BPStatisticsView.m */,
+			);
+			name = Statistics;
+			sourceTree = "<group>";
+		};
+		0361EE7F112265A000294A10 /* Options */ = {
+			isa = PBXGroup;
+			children = (
+				0319829D111F694D00668496 /* BPOptionsViewController.h */,
+				0319829E111F694D00668496 /* BPOptionsViewController.m */,
+				0319829F111F694D00668496 /* BPOptionsViewController.xib */,
+				031982C1111F6E7400668496 /* BPIntegerOptionView.h */,
+				031982C2111F6E7400668496 /* BPIntegerOptionView.m */,
+				03F8683F1120C078005B8E78 /* BPFloatOptionView.h */,
+				03F868401120C078005B8E78 /* BPFloatOptionView.m */,
+				03B16418112219D700996A63 /* BitmapOptionView.h */,
+				03B16419112219D700996A63 /* BitmapOptionView.m */,
+			);
+			name = Options;
+			sourceTree = "<group>";
+		};
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				0319829A111F690F00668496 /* iPad */,
 				031980C3111E3B6C00668496 /* ALife */,
 				031980A7111E3AF400668496 /* Packard's Bugs */,
 				1D3623240D0F684500981E51 /* BugpadAppDelegate.h */,
@@ -132,6 +218,10 @@
 				2804200A108E984D000629CD /* DetailViewController.m */,
 				031980BC111E3B4300668496 /* LifeView.h */,
 				031980BD111E3B4300668496 /* LifeView.m */,
+				03B1640F1122186400996A63 /* PixelImage.h */,
+				03B164101122186400996A63 /* PixelImage.m */,
+				0361EE90112266A600294A10 /* StatisticsData.h */,
+				0361EE91112266A600294A10 /* StatisticsData.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -168,6 +258,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources-iPad */ = {
 			isa = PBXGroup;
 			children = (
+				0376DD441125DFD8004A8659 /* box.png */,
+				031982B7111F6C9E00668496 /* PackardBugs.plist */,
 				280420B3108E9F58000629CD /* Bugpad.xcdatamodel */,
 				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
 				2804203B108E9BAB000629CD /* DetailView.xib */,
@@ -183,6 +275,7 @@
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */,
 				280420C0108EA07E000629CD /* CoreData.framework */,
+				03BE71B61120C831009E2399 /* QuartzCore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -238,6 +331,11 @@
 			files = (
 				28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */,
 				2804203C108E9BAB000629CD /* DetailView.xib in Resources */,
+				031982A1111F694D00668496 /* BPOptionsViewController.xib in Resources */,
+				031982B8111F6C9E00668496 /* PackardBugs.plist in Resources */,
+				0361EE89112265ED00294A10 /* BPStatisticsViewController.xib in Resources */,
+				0376DD451125DFD8004A8659 /* box.png in Resources */,
+				038FC036121FBAD600B42BB7 /* BPEditBitmapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +361,16 @@
 				03198126111E3EC500668496 /* NSString+KeyPathComponents.m in Sources */,
 				031981EF111E892C00668496 /* World+iPhone.m in Sources */,
 				0319824E111E8DCB00668496 /* UIColor+HSVSquare.m in Sources */,
+				031982A0111F694D00668496 /* BPOptionsViewController.m in Sources */,
+				031982C3111F6E7400668496 /* BPIntegerOptionView.m in Sources */,
+				03F868411120C078005B8E78 /* BPFloatOptionView.m in Sources */,
+				03B164111122186400996A63 /* PixelImage.m in Sources */,
+				03B1641A112219D700996A63 /* BitmapOptionView.m in Sources */,
+				0361EE88112265ED00294A10 /* BPStatisticsViewController.m in Sources */,
+				0361EE8F1122661D00294A10 /* BPStatisticsView.m in Sources */,
+				0361EE92112266A600294A10 /* StatisticsData.m in Sources */,
+				038FC035121FBAD600B42BB7 /* BPEditBitmapViewController.m in Sources */,
+				038FC03A121FBD3E00B42BB7 /* BPEditBitmapView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

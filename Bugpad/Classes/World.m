@@ -20,9 +20,13 @@
 @implementation World
 
 // world properties & statistics
-@synthesize width, height, population, births, deaths, lifespan, ticks, activeGeneCounts;
+@synthesize population, births, deaths, lifespan, ticks, activeGeneCounts;
 @synthesize grid, morgue, maternity;
+@synthesize initialPopulationDensity;
 @synthesize collectActivity;
+@synthesize foodImage;
+
+@synthesize currentActivity;
 
 // bug properties
 @synthesize mutationRate, reproductionFood, movementCost, eatAmount;
@@ -37,15 +41,15 @@
 	
 	int i, j;
 #ifdef TARGET_OS_IPHONE
-	UIImage *image = [configuration valueForKey:@"image"];
+	UIImage *image = [configuration valueForKey:@"foodImage"];
 	if (image) {
-		width = image.size.width;
-		height = image.size.height;
+		self.width = image.size.width;
+		self.height = image.size.height;
 	} else {
-		width = height = 100;
+		self.width = self.height = 100;
 	}
 #elif TARGET_OS_MAC
-	NSImage *image = [configuration valueForKey:@"image"];
+	NSImage *image = [configuration valueForKey:@"foodImage"];
 	if (image) {
 		width = [image size].width;
 		height = [image size].height;
@@ -58,12 +62,13 @@
 	ticks = 0;
 	
 	mutationRate = 0.5;
+	initialPopulationDensity = 0.2;
 	reproductionFood = 20;
 	movementCost = -1;
 	eatAmount = 1;
 	foodAmount = 0;
 	
-	grid = [[NSMutableArray arrayWithCapacity:height] retain];
+	grid = [[NSMutableArray arrayWithCapacity:self.height] retain];
 	
 	self.critters = [NSMutableSet set];
 	morgue = [[NSMutableSet set] retain];
@@ -71,26 +76,28 @@
 	
 	NSMutableArray *row;
 	Cell *cell;
-	for (i = 0; i < height; i++) {
-		row = [NSMutableArray arrayWithCapacity:width];
-		for (j = 0; j < width; j++) {
+	for (i = 0; i < self.height; i++) {
+		row = [NSMutableArray arrayWithCapacity:self.width];
+		for (j = 0; j < self.width; j++) {
 			cell = [[[Cell alloc] initWithFood:NO atRow:i column:j] autorelease];
 			[row addObject:cell];
 		}
 		[grid addObject:row];
 	}
 	
-//	self.foodImage = image;
+	self.foodImage = image;
 	// TODO: fuck this
-	for (int row = 0; row < height; row++) {
-		for (int col = 0; col < width; col++) {
-			if (row > 35 && row < 65 && col > 35 && col < 65) {
-				[self cellAtRow:row andColumn:col].food = YES;
-			}
-		}
-	}
+//	for (int row = 0; row < height; row++) {
+//		for (int col = 0; col < width; col++) {
+//			if (row > 35 && row < 65 && col > 35 && col < 65) {
+//				[self cellAtRow:row andColumn:col].food = YES;
+//			}
+//		}
+//	}
 
-	[self seedBugsWithDensity:0.2];
+	[self seedBugsWithDensity:self.initialPopulationDensity];
+	
+	self.collectActivity = YES; // TODO nope
 	
 	return self;
 }
@@ -142,8 +149,8 @@
 
 - (Cell *)cellAtRow:(int)row andColumn:(int)col;
 {
-	row = row < 0 ? height + row : row % height;
-	col = col < 0 ? width + col : col % width;
+	row = row < 0 ? self.height + row : row % self.height;
+	col = col < 0 ? self.width + col : col % self.width;
 	return [[grid objectAtIndex:row] objectAtIndex:col];
 }
 
@@ -165,9 +172,9 @@
 	for (Bug *bug in [[self.critters allObjects] shuffledArray]) {
 		// check for bug death
 		if (bug.food <= 0) {
+			[morgue addObject:bug];
 			[self cellAtRow:bug.y andColumn:bug.x].bug = nil;
 			[critters removeObject:bug];
-			[morgue addObject:bug];
 			lifespan += bug.age;
 			continue;
 		}
@@ -248,7 +255,7 @@
 	[self place:bug atRow:(row + move.y) andCol:(col + move.x)];
 	// update gene activity
 	if (self.collectActivity) {
-		activity[GENE_INDEX(activityStep, gene, move.mag, move.dir)] += 1;
+		activity[GENE_INDEX(0, gene, move.mag, move.dir)] += 1;
 	}
 	// remove old bug pointer
 	cell.bug = nil;
@@ -268,12 +275,18 @@
 	}
 }
 
+- (void)reset;
+{
+	[self exterminate];
+	[self seedBugsWithDensity:self.initialPopulationDensity];
+}
+
 - (void)seedBugsWithDensity:(float)density;
 {
 	Bug *bug;
 	int i, j, pop = 0;
-	for (i = 0; i < height; i++) {
-		for(j = 0; j < width; j++) {
+	for (i = 0; i < self.height; i++) {
+		for(j = 0; j < self.width; j++) {
 			if ((float)random() / INT_MAX < density) {
 				bug = [[[Bug alloc] init] autorelease];
 				[self place:bug atRow:i andCol:j];
@@ -297,7 +310,7 @@
 	
 	if (collectActivity) {
 		activityDelta = 10;
-		activitySize = 10;
+		activitySize = 1;
 		activity = calloc(activitySize * GENOME_SIZE, sizeof(long));
 		memset(activity, 0x0, GENOME_SIZE);
 	}
@@ -307,12 +320,22 @@
 {
 	int newStep = ticks / activityDelta;
 	if (newStep > activityStep) {
-		// reallocate if necessary
-		if (newStep >= activitySize) {
-			activitySize = activitySize * 2;
-			activity = realloc(activity, activitySize * GENOME_SIZE * sizeof(long));
+		// ding the current activity
+		NSMutableDictionary *theActivity = [NSMutableDictionary dictionary];
+		for (int i = 0; i < GENOME_SIZE; i++) {
+			int thisActivity = activity[i];
+			if (thisActivity > 0) {
+				[theActivity setObject:[NSNumber numberWithInt:thisActivity] forKey:[NSNumber numberWithInt:i]];
+			}
 		}
-		memcpy(&activity[newStep * GENOME_SIZE], &activity[activityStep * GENOME_SIZE], sizeof(long) * GENOME_SIZE);
+		self.currentActivity = theActivity;
+		memset(activity, 0x0, GENOME_SIZE * sizeof(long));
+		// reallocate if necessary
+//		if (newStep >= activitySize) {
+//			activitySize = activitySize * 2;
+//			activity = realloc(activity, activitySize * GENOME_SIZE * sizeof(long));
+//		}
+//		memcpy(&activity[newStep * GENOME_SIZE], &activity[activityStep * GENOME_SIZE], sizeof(long) * GENOME_SIZE);
 	}
 	activityStep = newStep;
 }
@@ -340,7 +363,7 @@
 		for (int gene = 0; gene < 32; gene++) {
 			for (int dir = 0; dir < 8; dir++) {
 				for (int mag = 1; mag < 16; mag++) {
-					[lineString appendFormat:@",%d", activity[GENE_INDEX(step, gene, mag, dir)]];
+//					[lineString appendFormat:@",%d", activity[GENE_INDEX(step, gene, mag, dir)]];
 				}
 			}
 		}
@@ -358,7 +381,7 @@
 
 - (UIColor *)colorForCellAtX:(int)x y:(int)y;
 {
-	Cell *cell = [self cellAtRow:x andColumn:y];
+	Cell *cell = [self cellAtRow:y andColumn:x];
 	if (cell.food) {
 		return [UIColor blackColor];
 	} else {
@@ -375,6 +398,48 @@
 {
 	BugMovement movement = [(Bug *)critter getMovementForGene:31];
 	return [UIColor colorForPoint:CGPointMake(movement.x, movement.y)];
+}
+
+- (void)setFoodImage:(UIImage *)newFoodImage;
+{
+	if (foodImage == newFoodImage)
+		return;
+	
+	[foodImage release];
+	
+	PixelImage *bitmap = [[[PixelImage alloc] initWithWidth:self.width height:self.height] autorelease];
+	[bitmap drawImage:newFoodImage];
+	foodImage = [[bitmap image] retain];
+	
+	BOOL sample;
+	int i = 0, j = 0;
+	float xScale = (float)(foodImage.size.width) / self.width;
+	float yScale = (float)(foodImage.size.height) / self.height;
+	foodAmount = 0;
+	for (NSArray *row in grid) {
+		j = 0;
+		for (Cell *cell in row) {
+			UIColor *color = [bitmap colorAtX:(j * xScale) y:(i * yScale)];
+			const CGFloat *components = CGColorGetComponents(color.CGColor);
+			sample = (components[0] < 0.5 && CGColorGetAlpha(color.CGColor) > 0.5);
+			cell.food = sample;
+			if (sample) foodAmount += 1;
+			j++;
+		}
+		i++;
+	}
+}
+
++ (NSArray *)configurationOptions;
+{
+	NSDictionary *config = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"PackardBugs" ofType:@"plist"]];
+	return [config valueForKey:@"configuration"];
+}
+
++ (NSDictionary *)statistics;
+{
+	NSDictionary *config = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"PackardBugs" ofType:@"plist"]];
+	return [config valueForKey:@"statistics"];
 }
 
 @end

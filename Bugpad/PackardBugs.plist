@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>simulationClass</key>
+	<string>World</string>
+	<key>configuration</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>world</string>
+			<key>title</key>
+			<string>Food Configuration</string>
+			<key>type</key>
+			<string>Bitmap</string>
+			<key>keyPath</key>
+			<string>self.foodImage</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>populationDensity</string>
+			<key>title</key>
+			<string>Initial Population Density</string>
+			<key>type</key>
+			<string>Float</string>
+			<key>minValue</key>
+			<real>0.01</real>
+			<key>maxValue</key>
+			<real>0.99</real>
+			<key>default</key>
+			<real>0.2</real>
+			<key>keyPath</key>
+			<string>initialPopulationDensity</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>mutationRate</string>
+			<key>title</key>
+			<string>Bug Mutation Rate</string>
+			<key>type</key>
+			<string>Float</string>
+			<key>minValue</key>
+			<real>0</real>
+			<key>maxValue</key>
+			<real>1</real>
+			<key>default</key>
+			<real>0.5</real>
+			<key>keyPath</key>
+			<string>mutationRate</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>reproductionFood</string>
+			<key>title</key>
+			<string>Food Required to Reproduce</string>
+			<key>type</key>
+			<string>Integer</string>
+			<key>minValue</key>
+			<integer>2</integer>
+			<key>maxValue</key>
+			<integer>40</integer>
+			<key>default</key>
+			<integer>20</integer>
+			<key>keyPath</key>
+			<string>reproductionFood</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>movementCost</string>
+			<key>title</key>
+			<string>∆Energy off food</string>
+			<key>type</key>
+			<string>Integer</string>
+			<key>minValue</key>
+			<integer>-5</integer>
+			<key>maxValue</key>
+			<integer>0</integer>
+			<key>default</key>
+			<integer>-1</integer>
+			<key>keyPath</key>
+			<string>movementCost</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>eatAmount</string>
+			<key>title</key>
+			<string>∆Energy on food</string>
+			<key>type</key>
+			<string>Integer</string>
+			<key>minValue</key>
+			<integer>0</integer>
+			<key>maxValue</key>
+			<integer>5</integer>
+			<key>default</key>
+			<integer>2</integer>
+			<key>keyPath</key>
+			<string>eatAmount</string>
+		</dict>
+	</array>
+	<key>statistics</key>
+	<dict>
+		<key>population</key>
+		<dict>
+			<key>keyPath</key>
+			<string>population</string>
+			<key>title</key>
+			<string>Population</string>
+			<key>singular</key>
+			<true/>
+		</dict>
+		<key>activity</key>
+		<dict>
+			<key>keyPath</key>
+			<string>currentActivity</string>
+			<key>title</key>
+			<string>Cumulative Gene Activity</string>
+			<key>singular</key>
+			<false/>
+		</dict>
+	</dict>
+</dict>
+</plist>

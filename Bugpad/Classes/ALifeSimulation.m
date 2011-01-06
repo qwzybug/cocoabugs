@@ -12,6 +12,7 @@
 @implementation ALifeSimulation
 
 @synthesize width, height, critters;
+@synthesize running;
 
 - (id)initWithConfiguration:(NSDictionary *)configuration;
 {
@@ -24,6 +25,22 @@
 - (void)update;
 {
 	NSAssert1(NO, @"Implement -update in %@", NSStringFromClass([self class]));
+}
+
+- (void)reset;
+{
+	NSAssert1(NO, @"Implement -reset in %@", NSStringFromClass([self class]));
+}
+
++ (NSString *)name;
+{
+	NSAssert1(NO, @"Implement +name in %@", NSStringFromClass(self));
+}
+
++ (NSArray *)configurationOptions;
+{
+	NSAssert1(NO, @"Implement +name in %@", NSStringFromClass(self));
+	return nil;
 }
 
 @end

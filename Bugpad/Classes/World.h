@@ -11,6 +11,7 @@
 #import "Cell.h"
 
 #import "ALifeSimulation.h"
+#import "PixelImage.h"
 
 @interface World : ALifeSimulation {
 	// statistics - factor out into stats collector
@@ -24,9 +25,15 @@
 	// configuration parameters
 	float mutationRate;
 	int reproductionFood;
+	float initialPopulationDensity;
 	int movementCost;
 	int eatAmount;
 	// environment
+#ifdef TARGET_OS_IPHONE
+	UIImage *foodImage;
+#else
+	NSImage *foodImage;
+#endif
 //	NSImage *foodImage;
 	int foodAmount;
 	
@@ -36,6 +43,8 @@
 	NSMutableSet *morgue;		// bugs that died each generation
 	NSMutableSet *maternity;	// bugs born each generation
 	NSCountedSet *activeGeneCounts; // counts of genes used each generation
+	
+	NSDictionary *currentActivity;
 	
 	// activity statistics
 	BOOL collectActivity;
@@ -49,17 +58,24 @@
 @property (readwrite, retain) NSMutableSet *maternity;
 @property (readwrite, retain) NSCountedSet *activeGeneCounts;
 
+@property (readwrite, copy) NSDictionary *currentActivity;
+
 @property (readwrite) int population;
 @property (readwrite) int births;
 @property (readwrite) int deaths;
 @property (readwrite) int lifespan;
 @property (readwrite) int ticks;
 @property (readwrite) float mutationRate;
+@property (readwrite) float initialPopulationDensity;
 @property (readwrite) int reproductionFood;
 @property (readwrite) int movementCost;
 @property (readwrite) int eatAmount;
 @property (copy, readwrite) NSMutableArray *grid;
-//@property (nonatomic, retain) NSImage *foodImage;
+#ifdef TARGET_OS_IPHONE
+@property (nonatomic, retain) UIImage *foodImage;
+#else
+@property (nonatomic, retain) NSImage *foodImage;
+#endif
 @property (readonly) int foodAmount;
 
 //- (id)initWithFoodImage:(NSImage *)foodImage;

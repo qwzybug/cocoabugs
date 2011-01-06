@@ -15,13 +15,6 @@
 
 @synthesize simulation;
 
-- (id)initWithFrame:(CGRect)frame {
-    if (self = [super initWithFrame:frame]) {
-        // Initialization code
-    }
-    return self;
-}
-
 - (void)drawRect:(CGRect)rect {
     float dx = self.bounds.size.width / simulation.width;
 	float dy = self.bounds.size.height / simulation.height;
@@ -35,7 +28,7 @@
 			
 			float size = [simulation sizeForCellAtX:col y:row];
 			
-			CGRect rect = CGRectMake(col * dx + (1-size)/2, row * dy + (1-size)/2, size * dx, size * dy);
+			CGRect rect = CGRectMake((col + (1.0-size)/2.0) * dx, (row + (1.0-size)/2.0) * dy, size * dx, size * dy);
 			CGContextSetFillColorWithColor(ctx, color.CGColor);
 			CGContextFillRect(ctx, rect);
 		}
@@ -47,20 +40,33 @@
 		
 		float size = [simulation sizeForCritter:critter];
 		
-		CGRect rect = CGRectMake(critter.x * dx + (1-size)/2, critter.y * dy + (1-size)/2, size * dx, size * dy);
+		CGRect rect = CGRectMake((critter.x + (1.0-size)/2.0) * dx, (critter.y + (1.0-size)/2.0) * dy, size * dx, size * dy);
 		CGContextSetFillColorWithColor(ctx, color.CGColor);
 		CGContextFillRect(ctx, rect);
 	}
-	
-//	for (ALifeCritter *critter in simulation.critters) {
-//		CGRect critterRect = CGRectMake(critter.x * dx, critter.y * dy, dx, dy);
-//		CGContextFillRect(ctx, critterRect);
-//	}
 }
 
 - (void)dealloc {
+	[simulation removeObserver:self forKeyPath:@"foodImage"];
+	[simulation release], simulation = nil;
+	
     [super dealloc];
 }
 
+- (void)setSimulation:(ALifeSimulation *)newSimulation;
+{
+	if (simulation == newSimulation)
+		return;
+	
+	[simulation removeObserver:self forKeyPath:@"foodImage"];
+	[simulation release];
+	simulation = [newSimulation retain];
+	[simulation addObserver:self forKeyPath:@"foodImage" options:NSKeyValueObservingOptionNew context:nil];
+}
+
+- (void)observeValueForKeyPath:(NSString *)theKeyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context;
+{
+	[self setNeedsDisplay];
+}
 
 @end
