@@ -314,7 +314,7 @@
 		for (int gene = 0; gene < 32; gene++) {
 			for (int dir = 0; dir < 8; dir++) {
 				for (int mag = 1; mag < 16; mag++) {
-					[lineString appendFormat:@",%d", activity[GENE_INDEX(step, gene, mag, dir)]];
+					[lineString appendFormat:@",%ld", activity[GENE_INDEX(step, gene, mag, dir)]];
 				}
 			}
 		}

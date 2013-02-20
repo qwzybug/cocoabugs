@@ -89,7 +89,7 @@ float rotationForPoint(int x, int y) {
 				food[food_count] = NSMakeRect(rectWidth*j, rectHeight*i, rectWidth, rectHeight);
 				food_count++;
 			}
-			if(bug = cell.bug) {
+			if((bug = cell.bug)) {
 				gene = [bug getMovementForGene:colorGene];
 				bugsColor[bugs_count] = [NSColor colorWithDeviceHue:rotationForPoint(gene.x, gene.y)
 														 saturation:1.0

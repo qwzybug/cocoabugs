@@ -118,7 +118,7 @@
 - (void)setObservedGene:(int)newObservedGene;
 {
 	observedGene = newObservedGene;
-	self.view.colorGene = observedGene;
+	((WorldView *)self.view).colorGene = observedGene;
 	[self redrawDisplay];
 }
 
@@ -158,7 +158,7 @@
 
 - (void)exportActivity:(NSString *)path;
 {
-	[@"" writeToFile:path atomically:NO];
+	[@"" writeToFile:path atomically:NO encoding:NSUTF8StringEncoding error:nil];
 	NSArray *activityLines = [world activityLines];
 	NSFileHandle *handle = [NSFileHandle fileHandleForWritingAtPath:path];
 	for (NSString *line in activityLines) {

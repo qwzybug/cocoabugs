@@ -8,9 +8,9 @@
 
 #import "AppController.h"
 
-#import "ALifeConfigurationWindowController.h";
-#import "ALifeWindowController.h";
-#import "ALifePluginLoader.h";
+#import "ALifeConfigurationWindowController.h"
+#import "ALifeWindowController.h"
+#import "ALifePluginLoader.h"
 
 @implementation AppController
 

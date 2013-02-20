@@ -31,7 +31,6 @@
 
 - (void)dealloc;
 {
-	NSLog(@"Game: %d", [game retainCount]);
 	self.game = nil;
 	
 	if (cellsa) free(cellsa);

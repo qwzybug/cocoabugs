@@ -22,7 +22,7 @@
 		for (j = 0; j < 31; j++) {
 			relX = (j - 15)/15.0;
 			relY = (i - 15)/15.0;
-			rotation = atan2(relY, relX)/(2*pi);
+			rotation = atan2(relY, relX)/(2*M_PI);
 			rotation = rotation < 0 ? rotation + 1.0 : rotation;
 			saturation = MAX(fabs(relX), fabs(relY));
 			rects[i*31 + j] = NSMakeRect(rectWidth * j, rectWidth * i, rectWidth, rectHeight);

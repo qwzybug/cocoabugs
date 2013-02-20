@@ -78,90 +78,90 @@
 
 - (NSArray *)availableComponents
 {
-	NSMutableArray *array = [NSMutableArray array];
-	
-	ComponentDescription cd;
-	Component c = NULL;
-	
-	cd.componentType = MovieExportType;
-	cd.componentSubType = 0;
-	cd.componentManufacturer = 0;
-	cd.componentFlags = canMovieExportFiles;
-	cd.componentFlagsMask = canMovieExportFiles;
-	
-	while((c = FindNextComponent(c, &cd)))
-	{
-		Handle name = NewHandle(4);
-		ComponentDescription exportCD;
-		
-		if (GetComponentInfo(c, &exportCD, name, nil, nil) == noErr)
-		{
-			char *namePStr = *name;
-			NSString *nameStr = [[NSString alloc] initWithBytes:&namePStr[1] length:namePStr[0] encoding:NSUTF8StringEncoding];
-			
-			NSDictionary *dictionary = [NSDictionary dictionaryWithObjectsAndKeys:
-										nameStr, @"name",
-										[NSData dataWithBytes:&c length:sizeof(c)], @"component",
-										[NSNumber numberWithLong:exportCD.componentType], @"type",
-										[NSNumber numberWithLong:exportCD.componentSubType], @"subtype",
-										[NSNumber numberWithLong:exportCD.componentManufacturer], @"manufacturer",
-										nil];
-			[array addObject:dictionary];
-			[nameStr release];
-		}
-		
-		DisposeHandle(name);
-	}
-	return array;
-}
-
-- (NSData *)getExportSettings;
-{
-	Component c;
-	memcpy(&c, [[[[self availableComponents] objectAtIndex:selectedComponentIndex] objectForKey:@"component"] bytes], sizeof(c));
-	
-	MovieExportComponent exporter = OpenComponent(c);
-	Boolean canceled;
-	QTAtomContainer settings;
-	
-	// get last settings from user defaults
-	NSData *lastSettings = [[NSUserDefaults standardUserDefaults] objectForKey:@"movieExportSettings"];
-	if (lastSettings) {
-		const void *bytes = [lastSettings bytes];
-		MovieExportSetSettingsFromAtomContainer(exporter, (QTAtomContainer)&bytes);
-	}
-	
-	Movie myMovie = [mMovie quickTimeMovie];
-	ComponentResult err = MovieExportDoUserDialog(exporter, myMovie, NULL, 0, GetMovieDuration(myMovie), &canceled);
-	if(err)
-	{
-		NSLog(@"Got error %d when calling MovieExportDoUserDialog",err);
-		CloseComponent(exporter);
-		return nil;
-	}
-	if(canceled)
-	{
-		NSLog(@"Canceled movie save.");
-		CloseComponent(exporter);
-		return nil;
-	}
-	err = MovieExportGetSettingsAsAtomContainer(exporter, &settings);
-	if(err)
-	{
-		NSLog(@"Got error %d when calling MovieExportGetSettingsAsAtomContainer",err);
-		CloseComponent(exporter);
-		return nil;
-	}
-	NSData *data = [NSData dataWithBytes:*settings length:GetHandleSize(settings)];
-	
-	// save current settings to user defaults
-	[[NSUserDefaults standardUserDefaults] setValue:data forKey:@"movieExportSettings"];
-	
-	DisposeHandle(settings);
-	
-	CloseComponent(exporter);
-	
-	return data;
+//	NSMutableArray *array = [NSMutableArray array];
+//	
+//	ComponentDescription cd;
+//	Component c = NULL;
+//	
+//	cd.componentType = MovieExportType;
+//	cd.componentSubType = 0;
+//	cd.componentManufacturer = 0;
+//	cd.componentFlags = canMovieExportFiles;
+//	cd.componentFlagsMask = canMovieExportFiles;
+//	
+//	while((c = FindNextComponent(c, &cd)))
+//	{
+//		Handle name = NewHandle(4);
+//		ComponentDescription exportCD;
+//		
+//		if (GetComponentInfo(c, &exportCD, name, nil, nil) == noErr)
+//		{
+//			char *namePStr = *name;
+//			NSString *nameStr = [[NSString alloc] initWithBytes:&namePStr[1] length:namePStr[0] encoding:NSUTF8StringEncoding];
+//			
+//			NSDictionary *dictionary = [NSDictionary dictionaryWithObjectsAndKeys:
+//										nameStr, @"name",
+//										[NSData dataWithBytes:&c length:sizeof(c)], @"component",
+//										[NSNumber numberWithLong:exportCD.componentType], @"type",
+//										[NSNumber numberWithLong:exportCD.componentSubType], @"subtype",
+//										[NSNumber numberWithLong:exportCD.componentManufacturer], @"manufacturer",
+//										nil];
+//			[array addObject:dictionary];
+//			[nameStr release];
+//		}
+//		
+//		DisposeHandle(name);
+//	}
+//	return array;
+//}
+//
+//- (NSData *)getExportSettings;
+//{
+//	Component c;
+//	memcpy(&c, [[[[self availableComponents] objectAtIndex:selectedComponentIndex] objectForKey:@"component"] bytes], sizeof(c));
+//	
+//	MovieExportComponent exporter = OpenComponent(c);
+//	Boolean canceled;
+//	QTAtomContainer settings;
+//	
+//	// get last settings from user defaults
+//	NSData *lastSettings = [[NSUserDefaults standardUserDefaults] objectForKey:@"movieExportSettings"];
+//	if (lastSettings) {
+//		const void *bytes = [lastSettings bytes];
+//		MovieExportSetSettingsFromAtomContainer(exporter, (QTAtomContainer)&bytes);
+//	}
+//	
+//	Movie myMovie = [mMovie quickTimeMovie];
+//	ComponentResult err = MovieExportDoUserDialog(exporter, myMovie, NULL, 0, GetMovieDuration(myMovie), &canceled);
+//	if(err)
+//	{
+//		NSLog(@"Got error %d when calling MovieExportDoUserDialog",err);
+//		CloseComponent(exporter);
+//		return nil;
+//	}
+//	if(canceled)
+//	{
+//		NSLog(@"Canceled movie save.");
+//		CloseComponent(exporter);
+//		return nil;
+//	}
+//	err = MovieExportGetSettingsAsAtomContainer(exporter, &settings);
+//	if(err)
+//	{
+//		NSLog(@"Got error %d when calling MovieExportGetSettingsAsAtomContainer",err);
+//		CloseComponent(exporter);
+//		return nil;
+//	}
+//	NSData *data = [NSData dataWithBytes:*settings length:GetHandleSize(settings)];
+//	
+//	// save current settings to user defaults
+//	[[NSUserDefaults standardUserDefaults] setValue:data forKey:@"movieExportSettings"];
+//	
+//	DisposeHandle(settings);
+//	
+//	CloseComponent(exporter);
+//	
+//	return data;
 }
 
 - (BOOL)writeMovie:(QTMovie *)movie toFile:(NSString *)file withComponent:(NSDictionary *)component withExportSettings:(NSData *)exportSettings

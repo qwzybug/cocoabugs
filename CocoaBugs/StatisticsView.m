@@ -81,7 +81,8 @@
 	for (i = 0; i < stats.size; i++) {
 		c += [[stats getDataSet:i] count];
 	}
-	if (title == @"Gene survival") NSLog(@"Counted %d rects", c);
+	if ([title isEqual
+         : @"Gene survival"]) NSLog(@"Counted %d rects", c);
 	
 	NSRect rects[c];
 	
@@ -128,7 +129,7 @@
 	[dividerColor set];
 	NSRectFill(NSMakeRect(0.0, height + 19.0, width, 1.0));
 	
-	if (title == @"Gene survival") NSLog(@"%d rects filled", rectCount);
+	if ([title isEqual: @"Gene survival"]) NSLog(@"%d rects filled", rectCount);
 }
 
 @end
