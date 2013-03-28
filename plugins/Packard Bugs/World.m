@@ -69,6 +69,11 @@
 	return self;
 }
 
+- (int)movementCost
+{
+    return movementCost;
+}
+
 - (void)setMovementCost:(int)newMovementCost;
 {
 	movementCost = newMovementCost;

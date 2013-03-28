@@ -17,7 +17,7 @@
 
 + (ALifeConfigurationWindowController *)configurationWindowController;
 {
-	return [[self alloc] initWithWindowNibName:@"ConfigurationWindow"];
+	return [[[self alloc] initWithWindowNibName:@"ConfigurationWindow"] autorelease];
 }
 
 - (id)initWithWindowNibName:(NSString *)windowNibName;
@@ -57,6 +57,11 @@
 		return [[simulationClasses objectsAtIndexes:selectedClassIndices] objectAtIndex:0];
 	else
 		return nil;
+}
+
+- (NSIndexSet *)selectedClassIndices
+{
+    return selectedClassIndices;
 }
 
 - (void)setSelectedClassIndices:(NSIndexSet *)newIndices;

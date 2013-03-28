@@ -20,7 +20,7 @@
 
 + (id)windowControllerForModel:(Class <ALifeController>)lifeController withConfiguration:(NSDictionary *)configuration;
 {
-	return [[self alloc] initWithSimulationClass:lifeController configuration:configuration];
+	return [[[self alloc] initWithSimulationClass:lifeController configuration:configuration] autorelease];
 }
 
 - (void)dealloc;
@@ -107,6 +107,11 @@
 {
 	self.running = NO;
 	[self autorelease];
+}
+
+- (BOOL)recording
+{
+    return recording;
 }
 
 - (void)setRecording:(BOOL)isRecording;

@@ -78,7 +78,9 @@
 
 - (NSArray *)availableComponents
 {
-//	NSMutableArray *array = [NSMutableArray array];
+    NSMutableArray *array = nil;
+    
+// array = [NSMutableArray array];
 //	
 //	ComponentDescription cd;
 //	Component c = NULL;
@@ -112,11 +114,11 @@
 //		
 //		DisposeHandle(name);
 //	}
-//	return array;
-//}
-//
-//- (NSData *)getExportSettings;
-//{
+    return array;
+}
+
+- (NSData *)getExportSettings;
+{
 //	Component c;
 //	memcpy(&c, [[[[self availableComponents] objectAtIndex:selectedComponentIndex] objectForKey:@"component"] bytes], sizeof(c));
 //	
@@ -152,7 +154,8 @@
 //		CloseComponent(exporter);
 //		return nil;
 //	}
-//	NSData *data = [NSData dataWithBytes:*settings length:GetHandleSize(settings)];
+    NSData *data = nil;
+//  data = [NSData dataWithBytes:*settings length:GetHandleSize(settings)];
 //	
 //	// save current settings to user defaults
 //	[[NSUserDefaults standardUserDefaults] setValue:data forKey:@"movieExportSettings"];
@@ -161,7 +164,7 @@
 //	
 //	CloseComponent(exporter);
 //	
-//	return data;
+	return data;
 }
 
 - (BOOL)writeMovie:(QTMovie *)movie toFile:(NSString *)file withComponent:(NSDictionary *)component withExportSettings:(NSData *)exportSettings

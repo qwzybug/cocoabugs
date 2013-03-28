@@ -27,7 +27,7 @@
 	NSString *identifier = [data objectForKey:@"identifier"];
 	NSDictionary *configuration = [data objectForKey:@"configuration"];
 	
-	Class selectedPlugin;
+	Class selectedPlugin = nil;
 	NSArray *plugins = [ALifePluginLoader allPlugIns];
 	for (Class <ALifeController> plugin in plugins) {
 		if ([[plugin name] isEqual:identifier]) {

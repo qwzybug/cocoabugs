@@ -55,7 +55,7 @@ void printUsageAndDie(BugsCommand command) {
 
 void printPluginsAndDie()
 {
-	NSSortDescriptor *titleSort = [[NSSortDescriptor alloc] initWithKey:@"title" ascending:YES];
+	NSSortDescriptor *titleSort = [[[NSSortDescriptor alloc] initWithKey:@"title" ascending:YES] autorelease];
 	printf("\nInstalled plugins:\n");
 	NSArray *configuration;
 //	NSArray *statistics;
@@ -98,7 +98,7 @@ void runSimulations(NSString *configurationFile,
 	NSString *identifier = [data objectForKey:@"identifier"];
 	NSDictionary *configuration = [data objectForKey:@"configuration"];
 	
-	Class <ALifeController> selectedPlugin;
+	Class <ALifeController> selectedPlugin = nil;
 	for (Class <ALifeController> plugin in plugins) {
 		if ([[plugin name] isEqual:identifier]) {
 			selectedPlugin = plugin;
