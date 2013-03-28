@@ -66,13 +66,26 @@
 	if (cellse) free(cellse);
 	if (lines) free(lines);
 	
-	cellsa = malloc(game.width * game.height * sizeof(NSRect));
-	cellsb = malloc(game.width * game.height * sizeof(NSRect));
-	cellsc = malloc(game.width * game.height * sizeof(NSRect));
-	cellsd = malloc(game.width * game.height * sizeof(NSRect));
-	cellse = malloc(game.width * game.height * sizeof(NSRect));
-	
-	lines = malloc((game.width + game.height - 1) * sizeof(NSRect));
+    cellsa = nil;
+    cellsb = nil;
+    cellsc = nil;
+    cellsd = nil;
+    cellse = nil;
+
+    lines = nil;
+
+    if (game.width * game.height)
+    {
+        cellsa = malloc(game.width * game.height * sizeof(NSRect));
+        cellsb = malloc(game.width * game.height * sizeof(NSRect));
+        cellsc = malloc(game.width * game.height * sizeof(NSRect));
+        cellsd = malloc(game.width * game.height * sizeof(NSRect));
+        cellse = malloc(game.width * game.height * sizeof(NSRect));
+	}
+    if (game.width + game.height - 1)
+    {
+        lines = malloc((game.width + game.height - 1) * sizeof(NSRect));
+    }
 }
 
 - (void)drawRect:(NSRect)rect {

@@ -17,7 +17,7 @@
 
 + (ALifeConfigurationWindowController *)configurationWindowController;
 {
-	return [[self alloc] initWithWindowNibName:@"ConfigurationWindow"];
+	return [[[self alloc] initWithWindowNibName:@"ConfigurationWindow"] autorelease];
 }
 
 - (id)initWithWindowNibName:(NSString *)windowNibName;

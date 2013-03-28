@@ -89,7 +89,14 @@
 	if ([title isEqual
          : @"Gene survival"]) NSLog(@"Counted %d rects", c);
 	
-	NSRect rects[c];
+    int tempC = c;
+    
+    if (tempC == 0)
+    {
+        tempC = 1;
+    }
+    
+	NSRect rects[tempC];
 	
 	// find max data point
 	int max = [stats maxValue];

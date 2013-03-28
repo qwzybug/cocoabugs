@@ -42,7 +42,7 @@
 	self.optionControllers = [[NSMutableArray arrayWithCapacity:5] retain];
 	
 	// create the option controllers
-	NSArray *configuration = [simulationClass configurationOptions];
+	NSArray *configuration = [[simulationClass configurationOptions] autorelease];
 	for (NSDictionary *options in configuration) {
 		NSString *keyPath = [options objectForKey:@"keyPath"];
 		NSString *controllerKey = nil;

@@ -18,7 +18,7 @@
 
 + (ALifeTinkerPanelController *)tinkerPanelForSimulation:(id<ALifeController>)simulation;
 {
-	return [[self alloc] initWithSimulation:simulation];
+	return [[[self alloc] initWithSimulation:simulation] autorelease];
 }
 
 - (id)initWithSimulation:(id<ALifeController>)inSimulation;
