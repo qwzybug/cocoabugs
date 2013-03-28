@@ -59,6 +59,11 @@
 		return nil;
 }
 
+- (NSIndexSet *)selectedClassIndices
+{
+    return selectedClassIndices;
+}
+
 - (void)setSelectedClassIndices:(NSIndexSet *)newIndices;
 {
 	[selectedClassIndices release];

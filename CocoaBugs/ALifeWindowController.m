@@ -109,6 +109,11 @@
 	[self autorelease];
 }
 
+- (BOOL)recording
+{
+    return recording;
+}
+
 - (void)setRecording:(BOOL)isRecording;
 {
 	if (isRecording) {

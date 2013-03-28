@@ -29,6 +29,11 @@
 	[super dealloc];
 }
 
+- (Class <ALifeController>)simulationClass
+{
+    return simulationClass;
+}
+
 - (void)setSimulationClass:(Class <ALifeController>)newSimulationClass;
 {
 	simulationClass = newSimulationClass;

@@ -20,6 +20,11 @@
 	[super dealloc];
 }
 
+- (StatisticsData *)stats
+{
+    return stats;
+}
+
 - (void)setStats:(StatisticsData *)newStats;
 {
 	if (stats) {

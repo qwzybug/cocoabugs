@@ -10,6 +10,8 @@
 
 @protocol ALifeController <NSObject>
 
++ (id<ALifeController>)alloc;
+
 // plugin information
 + (NSString *)name;
 + (NSArray *)configurationOptions;

@@ -46,6 +46,12 @@
 	[super dealloc];
 }
 
+- (SchellingSimulation *)game
+{
+    return game;
+}
+
+
 - (void)setGame:(SchellingSimulation *)myGame;
 {
 	if (game) {

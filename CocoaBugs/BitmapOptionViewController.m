@@ -52,6 +52,11 @@
 	self.selectedImageIndex = 1;
 }
 
+- (int)selectedImageIndex
+{
+    return selectedImageIndex;
+}
+
 - (void)setSelectedImageIndex:(int)imageIndex;
 {
 	if (imageIndex) {
