@@ -1,9 +1,11 @@
-Welcome to CocoaBugs!
+## Welcome to CocoaBugs!
 
 CocoaBugs is an Artificial Life experimentation framework for Mac OS X,
-written in Objective-C. It works on a plugin model.
+written in Objective-C.
 
-INSTALLATION/USAGE
+![CocoaBugs screenshot](https://doormouse.org/misc/cocoabugs.jpg)
+
+### INSTALLATION/USAGE
 
 1. Open CocoaBugs/CocoaBugs.xcodeproj. Build-and-run.
 
@@ -17,8 +19,7 @@ configuration file.
 5. Build the "HeadlessBugs" target to do batch simulation of an exported
 .cocoabugs file from the command-line.
 
-Example:
+```bash
 HeadlessBugs run openboxes.cocoabugs --output run --steps 1000 --runs 10 \
---sample mutationRate --min 0.2 --max 0.7
-
-There is no wiki yet.
+  --sample mutationRate --min 0.2 --max 0.7
+```
