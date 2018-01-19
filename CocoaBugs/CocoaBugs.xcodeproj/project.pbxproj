@@ -24,7 +24,6 @@
 		034DCD9C0E09D1950045943A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 034DCD9B0E09D1950045943A /* MainMenu.xib */; };
 		0351906E0E7DD5CC00205E7B /* record.png in Resources */ = {isa = PBXBuildFile; fileRef = 0351906D0E7DD5CC00205E7B /* record.png */; };
 		035190700E7DD65700205E7B /* record_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 0351906F0E7DD65700205E7B /* record_small.png */; };
-		0351908D0E7DD8D300205E7B /* DMQuicktimeExporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0351908C0E7DD8D300205E7B /* DMQuicktimeExporter.m */; };
 		035190920E7DD9D600205E7B /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 035190910E7DD9D600205E7B /* QTKit.framework */; };
 		0359DC9B0E7F1AA300EEAC01 /* DMQuicktimeExporter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0359DC9A0E7F1AA300EEAC01 /* DMQuicktimeExporter.xib */; };
 		035AF2101090377F00725226 /* Schelling.plugin in Copy plugins */ = {isa = PBXBuildFile; fileRef = 035AF0F010901C9D00725226 /* Schelling.plugin */; };
@@ -777,7 +776,6 @@
 				0339CD9D0E231E7A009C5D0D /* ALifeConfigurationViewController.m in Sources */,
 				031C41670E306A7D00E8B508 /* FloatOptionViewController.m in Sources */,
 				03A39B880E4E362D00490AE3 /* ALifeShuffler.m in Sources */,
-				0351908D0E7DD8D300205E7B /* DMQuicktimeExporter.m in Sources */,
 				037880A6106ED41A0023E6EA /* ALifeTinkerPanelController.m in Sources */,
 				035AF28410903F6100725226 /* NSDictionary_Merging.m in Sources */,
 				03EF0F2B1097AB8200A0ED41 /* ALifeRunExporter.m in Sources */,
@@ -970,6 +968,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/../BugsFramework/build/Release\"",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_NAME = CocoaBugs;
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = YES;
@@ -994,6 +993,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/../BugsFramework/build/Release\"",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_NAME = CocoaBugs;
 				WRAPPER_EXTENSION = app;
 			};

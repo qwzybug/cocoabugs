@@ -11,7 +11,7 @@
 #import "StatisticsController.h"
 #import "ALifeSimulationController.h"
 #import "ALifeTinkerPanelController.h"
-#import "DMQuicktimeExporter.h"
+//#import "DMQuicktimeExporter.h"
 #import "NSDictionary_Merging.h"
 
 @implementation ALifeWindowController
@@ -112,7 +112,7 @@
 - (void)setRecording:(BOOL)isRecording;
 {
 	if (isRecording) {
-		self.movieExporter = [DMQuicktimeExporter movieExporterForView:[self.window contentView]];
+//        self.movieExporter = [DMQuicktimeExporter movieExporterForView:[self.window contentView]];
 		recording = YES;
 		if (!running) {
 			self.running = YES;
