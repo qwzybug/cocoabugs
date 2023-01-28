@@ -48,7 +48,7 @@
 
 - (void)windowWillClose:(NSNotification *)notification;
 {
-	[self autorelease];
+//	[self autorelease];
 }
 
 - (Class <ALifeController>)selectedClass;

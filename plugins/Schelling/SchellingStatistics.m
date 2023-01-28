@@ -30,8 +30,8 @@
 
 - (void)dealloc;
 {
-	NSLog(@"Releasing Statistics");
-	NSLog(@"%d", [game retainCount]);
+//	NSLog(@"Releasing Statistics");
+//	NSLog(@"%d", [game retainCount]);
 	
 	[game removeObserver:self forKeyPath:@"generation"];
 	self.game = nil;
