@@ -31,14 +31,14 @@
 - (id)initWithWorld:(World *)theWorld;
 - (void)updateStatistics;
 
-@property(readwrite, retain) NSSet *population;
-@property(readwrite, retain) NSSet *deaths;
-@property(readwrite, retain) NSSet *births;
-@property(readwrite, retain) NSSet *mortalityAge;
-@property(readwrite, retain) NSSet *averageAge;
+@property(readwrite, strong) NSSet *population;
+@property(readwrite, strong) NSSet *deaths;
+@property(readwrite, strong) NSSet *births;
+@property(readwrite, strong) NSSet *mortalityAge;
+@property(readwrite, strong) NSSet *averageAge;
 
-@property(nonatomic, retain) NSSet *totalGenePresence;
-@property(nonatomic, retain) NSCountedSet *accumulatedGenePresence;
+@property(nonatomic, strong) NSSet *totalGenePresence;
+@property(nonatomic, strong) NSCountedSet *accumulatedGenePresence;
 
 - (void)updateTotalGenePresenceWithHashArrays:(NSArray *)geneHashes;
 

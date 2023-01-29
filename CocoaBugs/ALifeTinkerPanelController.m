@@ -26,7 +26,7 @@
 	if (!(self = [super initWithWindowNibName:@"TinkerPanel"]))
 		return nil;
 	
-	simulation = [inSimulation retain];
+	simulation = inSimulation;
 	
 	return self;
 }

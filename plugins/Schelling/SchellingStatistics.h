@@ -17,10 +17,10 @@
 	SchellingSimulation *game;
 }
 
-@property(readwrite, retain) NSSet *segregation;
-@property(readwrite, retain) NSSet *diversity;
-@property(readwrite, retain) NSSet *segregationRate;
-@property(readwrite, retain) SchellingSimulation *game;
+@property(readwrite, strong) NSSet *segregation;
+@property(readwrite, strong) NSSet *diversity;
+@property(readwrite, strong) NSSet *segregationRate;
+@property(readwrite, strong) SchellingSimulation *game;
 
 - (id)initWithGame:(id)theGame;
 - (void)updateStatistics;

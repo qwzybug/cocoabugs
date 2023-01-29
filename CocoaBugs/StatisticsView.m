@@ -17,17 +17,15 @@
 {
 	self.stats = nil;
 	
-	[super dealloc];
 }
 
 - (void)setStats:(StatisticsData *)newStats;
 {
 	if (stats) {
 		[stats removeObserver:self forKeyPath:@"cursor"];
-		[stats release];
 	}
 	
-	stats = [newStats retain];
+	stats = newStats;
 	
 	if (stats) {
 		[stats addObserver:self

@@ -27,9 +27,7 @@
 - (void)dealloc;
 {
 	[stepLabel unbind:[simulationController.lifeController stepKeyPath]];
-	self.simulationController = nil;
 	
-	[super dealloc];
 }
 
 - (id)initWithSimulationClass:(Class <ALifeController>)modelClass configuration:(NSDictionary *)configuration;
@@ -39,7 +37,7 @@
 	
 	simulationController = [[ALifeSimulationController alloc] initWithSimulationClass:modelClass configuration:configuration];
 	
-	tinkerPanelController = [[ALifeTinkerPanelController tinkerPanelForSimulation:simulationController.lifeController] retain];
+	tinkerPanelController = [ALifeTinkerPanelController tinkerPanelForSimulation:simulationController.lifeController];
 	
 	NSView *contentView = [[self window] contentView];
 	NSView *lifeView = [simulationController.lifeController view];

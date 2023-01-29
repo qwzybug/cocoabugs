@@ -34,11 +34,7 @@
 //	NSLog(@"%d", [game retainCount]);
 	
 	[game removeObserver:self forKeyPath:@"generation"];
-	self.game = nil;
-	self.segregation = nil;
-	self.diversity = nil;
 	
-	[super dealloc];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath

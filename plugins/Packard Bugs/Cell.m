@@ -25,11 +25,5 @@
 	return self;
 }
 
-- (void)dealloc;
-{
-	self.bug = nil;
-	
-	[super dealloc];
-}
 
 @end

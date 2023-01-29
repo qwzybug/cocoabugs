@@ -8,10 +8,11 @@
 
 #import <Cocoa/Cocoa.h>
 
-@class StatisticsController;
+#import "ALifeConfigurationWindowController.h"
 
-@interface AppController : NSObject {
-}
+@interface AppController : NSObject <ALifeConfigurationWindowControllerDelegate>
+
+@property (nonatomic, strong) NSMutableArray <NSWindowController *> *windowControllers;
 
 - (IBAction)showConfigurationWindow:(id)sender;
 

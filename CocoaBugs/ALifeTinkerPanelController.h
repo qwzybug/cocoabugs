@@ -16,7 +16,7 @@
 	id<ALifeController> simulation;
 }
 
-@property (nonatomic, retain) IBOutlet ALifeConfigurationViewController *configurationViewController;
+@property (nonatomic, strong) IBOutlet ALifeConfigurationViewController *configurationViewController;
 
 + (ALifeTinkerPanelController *)tinkerPanelForSimulation:(id<ALifeController>)simulation;
 - (id)initWithSimulation:(id<ALifeController>)inSimulation;

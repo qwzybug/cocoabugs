@@ -42,7 +42,7 @@ typedef struct _BugMovement {
 
 - (NSUInteger)hash;
 
-@property (nonatomic, readonly) NSArray *geneHashes;
+@property (weak, nonatomic, readonly) NSArray *geneHashes;
 
 // private?
 - (BugMovement)randomGene;

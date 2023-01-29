@@ -22,8 +22,8 @@
 }
 
 @property (readonly) NSDictionary *properties;
-@property (readwrite, retain) World *world;
-@property (nonatomic, retain) NSImage *foodImage;
+@property (readwrite, strong) World *world;
+@property (nonatomic, strong) NSImage *foodImage;
 
 @property (nonatomic, assign) int observedGene;
 @property (nonatomic, assign) float populationDensity;

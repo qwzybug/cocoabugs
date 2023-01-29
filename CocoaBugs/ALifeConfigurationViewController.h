@@ -22,11 +22,12 @@ typedef enum _ALifeConfigurationControllerMode {
 	ALifeConfigurationControllerMode mode;
 }*/
 
-@property(readwrite, retain) Class <ALifeController> simulationClass;
-@property(readonly) int contentHeight;
+@property (readonly) int contentHeight;
+
+@property (nonatomic, strong) Class <ALifeController> simulationClass;
 @property (nonatomic, assign) ALifeConfigurationControllerMode mode;
-@property (nonatomic, retain) NSMutableArray *optionControllers;
-@property (nonatomic, retain) id<ALifeController> simulation;
+@property (nonatomic, strong) NSMutableArray *optionControllers;
+@property (nonatomic, strong) id<ALifeController> simulation;
 
 + (ALifeConfigurationViewController *)configurationController;
 

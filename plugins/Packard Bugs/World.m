@@ -47,18 +47,18 @@
 	eatAmount = 1;
 	foodAmount = 0;
 	
-	grid = [[NSMutableArray arrayWithCapacity:height] retain];
+	grid = [NSMutableArray arrayWithCapacity:height];
 	
-	bugs = [[NSMutableSet set] retain];
-	morgue = [[NSMutableSet set] retain];
-	maternity = [[NSMutableSet set] retain];
+	bugs = [NSMutableSet set];
+	morgue = [NSMutableSet set];
+	maternity = [NSMutableSet set];
 	
 	NSMutableArray *row;
 	Cell *cell;
 	for (i = 0; i < height; i++) {
 		row = [NSMutableArray arrayWithCapacity:width];
 		for (j = 0; j < width; j++) {
-			cell = [[[Cell alloc] initWithFood:NO atRow:i column:j] autorelease];
+			cell = [[Cell alloc] initWithFood:NO atRow:i column:j];
 			[row addObject:cell];
 		}
 		[grid addObject:row];
@@ -79,8 +79,7 @@
 	if (foodImage == image)
 		return;
 	
-	[foodImage release];
-	foodImage = [image retain];
+	foodImage = image;
 	
 	NSBitmapImageRep *bitmap = [NSBitmapImageRep imageRepWithData:[image TIFFRepresentation]];
 	BOOL sample;
@@ -102,16 +101,11 @@
 
 - (void)dealloc;
 {
-	self.grid = nil;
-	self.bugs = nil;
-	self.morgue = nil;
-	self.maternity = nil;
-	[foodImage release], foodImage = nil;
+	foodImage = nil;
 	
 	if (activity)
 		free(activity);
 	
-	[super dealloc];
 }
 
 - (Cell *)cellAtRow:(int)row andColumn:(int)col;
@@ -249,7 +243,7 @@
 	for (i = 0; i < height; i++) {
 		for(j = 0; j < width; j++) {
 			if ((float)random() / INT_MAX < density) {
-				bug = [[[Bug alloc] init] autorelease];
+				bug = [[Bug alloc] init];
 				[self place:bug atRow:i andCol:j];
 				[bugs addObject:bug];
 				pop++;

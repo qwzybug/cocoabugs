@@ -17,12 +17,6 @@
 @synthesize world;
 @synthesize colorGene;
 
-- (void)dealloc;
-{
-	self.world = nil;
-	
-	[super dealloc];
-}
 
 float rotationForPoint(int x, int y) {
 	// hooray magic numbers!

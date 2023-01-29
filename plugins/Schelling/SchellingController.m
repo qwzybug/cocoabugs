@@ -55,22 +55,13 @@
 	[game seed];
 	
 	NSString *thePath = [[NSBundle bundleForClass:[self class]] pathForResource:@"Schelling" ofType:@"plist"];
-	properties = [[NSDictionary dictionaryWithContentsOfFile:thePath] retain];
+	properties = [NSDictionary dictionaryWithContentsOfFile:thePath];
 	
 	statisticsCollector = [[SchellingStatistics alloc] initWithGame:game];
 	
 	return self;
 }
 
-- (void)dealloc;
-{
-	[properties release];
-	[statisticsCollector release];
-	[board release];
-	[game release];
-	
-	[super dealloc];
-}
 
 - (void)reset;
 {

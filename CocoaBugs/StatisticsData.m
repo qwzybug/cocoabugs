@@ -22,8 +22,8 @@
 	samplingFrequency = frequency;
 	tick = -1;
 	
-	data = [[NSMutableArray arrayWithCapacity:size] retain];
-	maxes = [[NSMutableArray arrayWithCapacity:size] retain];
+	data = [NSMutableArray arrayWithCapacity:size];
+	maxes = [NSMutableArray arrayWithCapacity:size];
 	
 	int i;
 	for (i = 0; i < size; i++) {
@@ -36,10 +36,9 @@
 
 - (void)dealloc;
 {
-	[data release]; data = nil;
-	[maxes release]; maxes = nil;
+	 data = nil;
+	 maxes = nil;
 	
-	[super dealloc];
 }
 
 - (void)addDataPoint:(int)datum;

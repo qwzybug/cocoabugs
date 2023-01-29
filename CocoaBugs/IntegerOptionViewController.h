@@ -23,14 +23,14 @@
 	NSNumber *value;
 }
 
-@property (nonatomic, retain) IBOutlet NSSlider *slider;
-@property(readwrite, retain) NSString *name;
-@property(readwrite, retain) NSString *title;
+@property (nonatomic, strong) IBOutlet NSSlider *slider;
+@property(readwrite, strong) NSString *name;
+@property(readwrite, strong) NSString *title;
 
 @property (nonatomic, assign) int minValue;
 @property (nonatomic, assign) int maxValue;
 
-@property (nonatomic, retain) NSNumber *value;
+@property (nonatomic, strong) NSNumber *value;
 
 + (IntegerOptionViewController *)controllerWithOptions:(NSDictionary *)options;
 - (id)initWithOptionDictionary:(NSDictionary *)options;

@@ -17,7 +17,7 @@
 
 + (FloatOptionViewController *)controllerWithOptions:(NSDictionary *)options;
 {
-	return [[[self alloc] initWithOptionDictionary:options] autorelease];
+	return [[self alloc] initWithOptionDictionary:options];
 }
 
 - (id)initWithOptionDictionary:(NSDictionary *)options;
@@ -37,12 +37,8 @@
 
 - (void)dealloc;
 {
-	self.name = nil;
-	self.title = nil;
-	self.value = nil;
 	[self.view removeFromSuperview];
 	
-	[super dealloc];
 }
 
 @end

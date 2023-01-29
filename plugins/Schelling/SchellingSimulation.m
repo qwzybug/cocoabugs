@@ -25,7 +25,7 @@
 	height = gameHeight;
 	self.generation = 0;
 	
-	grid = [[self blankGrid] retain];
+	grid = [self blankGrid];
 	[self setCellRelations];
 	
 	return self;
@@ -61,7 +61,7 @@
 	for (int i = 0; i < height; i++) {
 		row = [NSMutableArray arrayWithCapacity:width];
 		for (int j = 0; j < width; j++) {
-			cell = [[[SchellingCell alloc] initWithRow:i column:j] autorelease];
+			cell = [[SchellingCell alloc] initWithRow:i column:j];
 			[row addObject:cell];
 		}
 		[blank addObject:row];

@@ -14,37 +14,57 @@
 
 @implementation AppController
 
-- (IBAction)showConfigurationWindow:(id)sender;
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification;
 {
-	ALifeConfigurationWindowController *windowController = [ALifeConfigurationWindowController configurationWindowController];
-	windowController.simulationClasses = [ALifePluginLoader allPlugIns];
+    self.windowControllers = [NSMutableArray array];
+    
+    [self showConfigurationWindow:self];
 }
 
 - (BOOL)application:(NSApplication *)theApplication openFile:(NSString *)filename
 {
-	NSDictionary *data = [NSDictionary dictionaryWithContentsOfFile:filename];
-	
-	NSString *identifier = [data objectForKey:@"identifier"];
-	NSDictionary *configuration = [data objectForKey:@"configuration"];
-	
-	Class selectedPlugin;
-	NSArray *plugins = [ALifePluginLoader allPlugIns];
-	for (Class <ALifeController> plugin in plugins) {
-		if ([[plugin name] isEqual:identifier]) {
-			selectedPlugin = plugin;
-			break;
-		}
-	}
-	
-	ALifeWindowController *simulationWindow = [ALifeWindowController windowControllerForModel:selectedPlugin withConfiguration:configuration];
-	[simulationWindow.window makeKeyWindow];
-
-	return YES;
+    NSDictionary *data = [NSDictionary dictionaryWithContentsOfFile:filename];
+    
+    NSString *identifier = [data objectForKey:@"identifier"];
+    NSDictionary *configuration = [data objectForKey:@"configuration"];
+    
+    Class selectedPlugin;
+    NSArray *plugins = [ALifePluginLoader allPlugIns];
+    for (Class <ALifeController> plugin in plugins) {
+        if ([[plugin name] isEqual:identifier]) {
+            selectedPlugin = plugin;
+            break;
+        }
+    }
+    
+    if (selectedPlugin == nil) {
+        return NO;
+    }
+    
+    [self showSimulationWindowForModel:selectedPlugin configuration:configuration];
+    return YES;
 }
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification;
+- (IBAction)showConfigurationWindow:(id)sender;
 {
-	[self showConfigurationWindow:self];
+    ALifeConfigurationWindowController *configurationWindow = [ALifeConfigurationWindowController configurationWindowController];
+    configurationWindow.simulationClasses = [ALifePluginLoader allPlugIns];
+    configurationWindow.delegate = self;
+    [self.windowControllers addObject:configurationWindow];
+}
+
+- (void)showSimulationWindowForModel:(Class <ALifeController>)simulationClass configuration:(NSDictionary *)configuration;
+{
+    ALifeWindowController *simulationWindow = [ALifeWindowController windowControllerForModel:simulationClass withConfiguration:configuration];
+    [simulationWindow.window makeKeyWindow];
+    // TODO: need to clean these up when they close
+    [self.windowControllers addObject:simulationWindow];
+}
+
+- (void)windowController:(ALifeConfigurationWindowController *)controller didCompleteWithSimulationClass:(Class<ALifeController>)simulationClass configuration:(NSDictionary *)configuration;
+{
+    [self.windowControllers removeObject:controller];
+    [self showSimulationWindowForModel:simulationClass configuration:configuration];
 }
 
 @end

@@ -19,19 +19,18 @@
 		return nil;
 	
 	allBugs = [bugs copy];
-	statistics = [inStatistics retain];
-	accumulatedGenePresence = [inAccumulatedGenePresence retain];
+	statistics = inStatistics;
+	accumulatedGenePresence = inAccumulatedGenePresence;
 	
 	return self;
 }
 
 - (void)dealloc;
 {
-	[allBugs release], allBugs = nil;
-	[statistics release], statistics = nil;
-	[accumulatedGenePresence release], accumulatedGenePresence = nil;
+	allBugs = nil;
+	statistics = nil;
+	accumulatedGenePresence = nil;
 	
-	[super dealloc];
 }
 
 - (void)main;
