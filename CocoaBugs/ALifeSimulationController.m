@@ -14,7 +14,7 @@
 
 @synthesize lifeController, configuration;
 
-- (id)initWithSimulationClass:(Class <ALifeController>)modelClass configuration:(NSDictionary *)theConfiguration;
+- (id)initWithSimulationClass:(Class <ALifeController, NSObject>)modelClass configuration:(NSDictionary *)theConfiguration;
 {
 	if (!(self = [super init]))
 		return nil;
@@ -22,7 +22,7 @@
 	int seed = [[theConfiguration objectForKey:@"seed"] intValue];
 	srandom(seed);
 	
-	lifeController = [[modelClass alloc] initWithConfiguration:theConfiguration];
+    lifeController = [[modelClass alloc] initWithConfiguration:theConfiguration];
 	self.configuration = [NSDictionary dictionaryWithDictionary:theConfiguration];
 	
 	return self;

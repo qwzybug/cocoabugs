@@ -9,13 +9,13 @@
 #import <Cocoa/Cocoa.h>
 
 
-@class StatisticsController, ALifeSimulationController, DMQuicktimeExporter, ALifeTinkerPanelController;
+@class StatisticsController, ALifeSimulationController, ALifeTinkerPanelController;
 
 @interface ALifeWindowController : NSWindowController {
 	IBOutlet StatisticsController *statisticsController;
 	ALifeTinkerPanelController *tinkerPanelController;
 	ALifeSimulationController *simulationController;
-	DMQuicktimeExporter *movieExporter;
+//	DMQuicktimeExporter *movieExporter;
 	
 	IBOutlet NSTextField *stepLabel;
 	
@@ -26,7 +26,7 @@
 @property(readwrite, assign) BOOL running;
 @property(readwrite, assign) BOOL recording;
 @property(readwrite, retain) ALifeSimulationController *simulationController;
-@property(readwrite, retain) DMQuicktimeExporter *movieExporter;
+//@property(readwrite, retain) DMQuicktimeExporter *movieExporter;
 
 + (id)windowControllerForModel:(Class <ALifeController>)lifeController withConfiguration:(NSDictionary *)configuration;
 - (id)initWithSimulationClass:(Class <ALifeController>)modelClass configuration:(NSDictionary *)configuration;

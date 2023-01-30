@@ -14,13 +14,13 @@ typedef enum _ALifeConfigurationControllerMode {
 	kConfigurationControllerModeTinker
 } ALifeConfigurationControllerMode;
 
-@interface ALifeConfigurationViewController : NSViewController {
+@interface ALifeConfigurationViewController : NSViewController /*{
 	NSMutableArray *optionControllers;
 	Class <ALifeController> simulationClass;
 	id <ALifeController> simulation;
 	int contentHeight;
 	ALifeConfigurationControllerMode mode;
-}
+}*/
 
 @property(readwrite, retain) Class <ALifeController> simulationClass;
 @property(readonly) int contentHeight;
