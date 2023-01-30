@@ -50,21 +50,29 @@
     ALifeConfigurationWindowController *configurationWindow = [ALifeConfigurationWindowController configurationWindowController];
     configurationWindow.simulationClasses = [ALifePluginLoader allPlugIns];
     configurationWindow.delegate = self;
+    [configurationWindow.window makeKeyWindow];
+
     [self.windowControllers addObject:configurationWindow];
 }
 
 - (void)showSimulationWindowForModel:(Class <ALifeController>)simulationClass configuration:(NSDictionary *)configuration;
 {
     ALifeWindowController *simulationWindow = [ALifeWindowController windowControllerForModel:simulationClass withConfiguration:configuration];
+    simulationWindow.delegate = self;
     [simulationWindow.window makeKeyWindow];
-    // TODO: need to clean these up when they close
+
     [self.windowControllers addObject:simulationWindow];
 }
 
-- (void)windowController:(ALifeConfigurationWindowController *)controller didCompleteWithSimulationClass:(Class<ALifeController>)simulationClass configuration:(NSDictionary *)configuration;
+- (void)configurationController:(ALifeConfigurationWindowController *)controller didCompleteWithSimulationClass:(Class<ALifeController>)simulationClass configuration:(NSDictionary *)configuration;
 {
     [self.windowControllers removeObject:controller];
     [self showSimulationWindowForModel:simulationClass configuration:configuration];
+}
+
+- (void)windowControllerDidClose:(ALifeWindowController *)controller;
+{
+    [self.windowControllers removeObject:controller];
 }
 
 @end

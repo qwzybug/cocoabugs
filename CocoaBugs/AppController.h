@@ -9,8 +9,9 @@
 #import <Cocoa/Cocoa.h>
 
 #import "ALifeConfigurationWindowController.h"
+#import "ALifeWindowController.h"
 
-@interface AppController : NSObject <ALifeConfigurationWindowControllerDelegate>
+@interface AppController : NSObject <ALifeConfigurationControllerDelegate, ALifeWindowControllerDelegate>
 
 @property (nonatomic, strong) NSMutableArray <NSWindowController *> *windowControllers;
 

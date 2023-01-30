@@ -13,12 +13,12 @@
 @interface StatisticsController : NSObject {
 	id source;
 	NSMutableDictionary *stats;
-	IBOutlet NSPanel *statisticsPanel;
 	NSMutableArray *statisticsViews;
 	int statisticsSize;
 	int samplingFrequency;
 }
 
+@property (readwrite, strong) IBOutlet NSPanel *statisticsPanel;
 @property (readwrite, strong) id source;
 @property (readwrite, strong) NSMutableArray *statisticsViews;
 @property (readwrite, assign) int statisticsSize;

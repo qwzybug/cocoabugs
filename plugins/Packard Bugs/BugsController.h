@@ -31,7 +31,6 @@
 // add method declarations here
 + (NSString *)name;
 
-- (void)showColorWindow;
 - (void)redrawDisplay;
 
 @end

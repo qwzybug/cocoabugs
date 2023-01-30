@@ -27,7 +27,6 @@
 - (void)dealloc;
 {
 	[stepLabel unbind:[simulationController.lifeController stepKeyPath]];
-	
 }
 
 - (id)initWithSimulationClass:(Class <ALifeController>)modelClass configuration:(NSDictionary *)configuration;
@@ -73,12 +72,12 @@
 
 - (IBAction)showConfigurationWindow:(id)sender;
 {
-	[[tinkerPanelController window] makeKeyAndOrderFront:self];
+	[tinkerPanelController.window makeKeyWindow];
 }
 
 - (IBAction)showColoringWindow:(id)sender;
 {
-	[simulationController.lifeController showColorWindow];
+	[simulationController.lifeController.coloringWindow makeKeyAndOrderFront:nil];
 }
 
 - (IBAction)tick:(id)sender;
@@ -105,7 +104,14 @@
 - (void)windowWillClose:(NSNotification *)notification;
 {
 	self.running = NO;
-    // TODO: close info panels and inform App Delegate that we are through.
+
+    if (tinkerPanelController.windowLoaded)
+        [tinkerPanelController.window close];
+
+    [simulationController.lifeController.coloringWindow close];
+    [statisticsController.statisticsPanel close];
+
+    [self.delegate windowControllerDidClose:self];
 }
 
 - (void)setRecording:(BOOL)isRecording;
