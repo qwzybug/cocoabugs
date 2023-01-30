@@ -8,8 +8,11 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class StatisticsController, ALifeSimulationController, ALifeTinkerPanelController, ALifeWindowController;
 
-@class StatisticsController, ALifeSimulationController, ALifeTinkerPanelController;
+@protocol ALifeWindowControllerDelegate
+- (void)windowControllerDidClose:(ALifeWindowController *)controller;
+@end
 
 @interface ALifeWindowController : NSWindowController {
 	IBOutlet StatisticsController *statisticsController;
@@ -23,9 +26,11 @@
 	BOOL recording;
 }
 
-@property(nonatomic, assign) BOOL running;
-@property(nonatomic, assign) BOOL recording;
-@property(nonatomic, strong) ALifeSimulationController *simulationController;
+@property (nonatomic, weak) id<ALifeWindowControllerDelegate> delegate;
+
+@property (nonatomic, assign) BOOL running;
+@property (nonatomic, assign) BOOL recording;
+@property (nonatomic, strong) ALifeSimulationController *simulationController;
 //@property(readwrite, retain) DMQuicktimeExporter *movieExporter;
 
 + (id)windowControllerForModel:(Class <ALifeController>)lifeController withConfiguration:(NSDictionary *)configuration;

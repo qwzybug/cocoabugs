@@ -27,20 +27,17 @@
 	
 	self.configurationViewController = [ALifeConfigurationViewController configurationController];
 	
-	[[self window] makeKeyAndOrderFront:self];
-	
 	return self;
 }
 
 - (void)awakeFromNib;
 {
-	[configurationViewController setView:scrollView.documentView];
+    scrollView.documentView = configurationViewController.view;
 }
 
 - (void)dealloc;
 {
 	self.selectedClassIndices = nil;
-	
 }
 
 - (void)windowWillClose:(NSNotification *)notification;
@@ -74,10 +71,12 @@
 	NSRect cFrame = configurationViewController.view.frame;
 	if (cFrame.size.height < scrollView.contentSize.height)
 		cFrame.size.height = scrollView.contentSize.height;
+    cFrame.size.width = scrollView.contentSize.width;
 	configurationViewController.view.frame = cFrame;
 	
 	NSPoint newScrollOrigin=NSMakePoint(0.0,NSMaxY([[scrollView documentView] frame])
 										-NSHeight([[scrollView contentView] bounds]));
+
 	[[scrollView documentView] scrollPoint:newScrollOrigin];
 }
 
@@ -87,7 +86,7 @@
 	NSDictionary *configuration = [configurationViewController configuration];
     Class <ALifeController> simulationClass = [self selectedClass];
     
-    [self.delegate windowController:self didCompleteWithSimulationClass:simulationClass configuration:configuration];
+    [self.delegate configurationController:self didCompleteWithSimulationClass:simulationClass configuration:configuration];
 	
 	[[self window] close];
 }

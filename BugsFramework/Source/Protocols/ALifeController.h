@@ -11,22 +11,22 @@
 @protocol ALifeController <NSObject>
 
 // plugin information
-+ (NSString *)name;
-+ (NSArray *)configurationOptions;
++ (NSString * _Nonnull)name;
++ (NSArray * _Nonnull)configurationOptions;
 
 // initialize with a configuration dictionary
-- (id)initWithConfiguration:(NSDictionary *)configuration;
+- (id _Nonnull)initWithConfiguration:(NSDictionary * _Nonnull)configuration;
 // reset the simulation
 - (void)reset;
 // update the simulation
 - (void)update;
 // get a view for the simulation
-- (NSView *)view;
+- (NSView * _Nonnull)view;
 // get the properties for the simulation
 // includes "statistics" key, for statistics descriptions
-- (NSDictionary *)properties;
+- (NSDictionary * _Nonnull)properties;
 // the object to listen to for statistics updates
-- (id)statisticsCollector;
+- (id _Nonnull)statisticsCollector;
 
 // also need accessors for:
 // statistics keys
@@ -35,10 +35,10 @@
 // maybe generating a plist for the current configuration?
 
 // EXPERIMENTAL
-- (void)showColorWindow;
+- (NSWindow * _Nullable)coloringWindow;
 - (BOOL)alive;
 - (void)setCollectActivity:(BOOL)collectActivity;
-- (void)exportActivity:(NSString *)path;
-- (NSString *)stepKeyPath;
+- (void)exportActivity:(NSString * _Nonnull)path;
+- (NSString * _Nullable)stepKeyPath;
 
 @end

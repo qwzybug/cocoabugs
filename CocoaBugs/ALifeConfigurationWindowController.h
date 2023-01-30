@@ -12,8 +12,8 @@
 
 @class ALifeConfigurationWindowController, ALifeConfigurationViewController, ALifeController;
 
-@protocol ALifeConfigurationWindowControllerDelegate
-- (void)windowController:(ALifeConfigurationWindowController *)controller didCompleteWithSimulationClass:(Class <ALifeController>)simulationClass configuration:(NSDictionary *)configuration;
+@protocol ALifeConfigurationControllerDelegate
+- (void)configurationController:(ALifeConfigurationWindowController *)controller didCompleteWithSimulationClass:(Class <ALifeController>)simulationClass configuration:(NSDictionary *)configuration;
 @end
 
 @interface ALifeConfigurationWindowController : NSWindowController {
@@ -29,7 +29,7 @@
 @property (nonatomic, strong) NSMutableArray *simulationClasses;
 @property (nonatomic, strong) NSIndexSet *selectedClassIndices;
 
-@property (nonatomic, weak) id<ALifeConfigurationWindowControllerDelegate> delegate;
+@property (nonatomic, weak) id<ALifeConfigurationControllerDelegate> delegate;
 
 + (ALifeConfigurationWindowController *)configurationWindowController;
 

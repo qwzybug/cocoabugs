@@ -91,9 +91,10 @@
 
 #pragma mark -
 
-- (void)showColorWindow;
+- (NSWindow * _Nullable)coloringWindow;
 {
 	NSLog(@"No coloring window for Schelling yet.");
+    return nil;
 }
 
 - (BOOL)alive;

@@ -13,7 +13,7 @@
 
 @implementation StatisticsController
 
-@synthesize source, statisticsViews, statisticsSize, stats;
+@synthesize source, statisticsPanel, statisticsViews, statisticsSize, stats;
 @synthesize samplingFrequency;
 
 - (id)init;

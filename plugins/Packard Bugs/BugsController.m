@@ -135,13 +135,13 @@
 
 #pragma mark -
 
-- (void)showColorWindow;
+- (NSWindow * _Nullable)coloringWindow;
 {
 	if (!coloringWindowController) {
 		coloringWindowController = [[BugsColoringWindowController alloc] initWithWindowNibName:@"BugsColoringWindowController"];
 		coloringWindowController.controller = self;
 	}
-	[coloringWindowController.window makeKeyAndOrderFront:self];
+    return coloringWindowController.window;
 }
 
 - (BOOL)alive;
