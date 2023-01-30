@@ -18,15 +18,13 @@
 
 + (ALifeConfigurationViewController *)configurationController;
 {
-	return [[[self alloc] initWithNibName:@"ConfigurationView" bundle:[NSBundle mainBundle]] autorelease];
+	return [[self alloc] initWithNibName:@"ConfigurationView" bundle:[NSBundle mainBundle]];
 }
 
 - (void)dealloc;
 {
-	[optionControllers release], optionControllers = nil;
-	[simulation release], simulation = nil;
-	
-	[super dealloc];
+	optionControllers = nil;
+	simulation = nil;
 }
 
 - (void)setSimulationClass:(Class <ALifeController>)newSimulationClass;
@@ -34,7 +32,7 @@
 	simulationClass = newSimulationClass;
 	
 	[self removeConfigurationControls];
-	self.optionControllers = [[NSMutableArray arrayWithCapacity:5] retain];
+	self.optionControllers = [NSMutableArray arrayWithCapacity:5];
 	
 	// create the option controllers
 	NSArray *configuration = [simulationClass configurationOptions];

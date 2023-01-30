@@ -21,11 +21,11 @@
 	if (!(self = [super init]))
 		return nil;
 	
-	world = [theWorld retain];
+	world = theWorld;
 	
 	[world addObserver:self forKeyPath:@"ticks" options:NSKeyValueObservingOptionNew context:NULL];
 	
-	accumulatedGenePresence = [[NSCountedSet setWithCapacity:2000] retain];
+	accumulatedGenePresence = [NSCountedSet setWithCapacity:2000];
 	
 	queue = [[NSOperationQueue alloc] init];
 	[queue setMaxConcurrentOperationCount:1];
@@ -36,11 +36,9 @@
 - (void)dealloc;
 {
 	[world removeObserver:self forKeyPath:@"ticks"];
-	[world release];
 	
-	[accumulatedGenePresence release], accumulatedGenePresence = nil;
+	accumulatedGenePresence = nil;
 	
-	[super dealloc];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath
@@ -103,23 +101,23 @@
 
 - (void)updateTotalGenePresenceWithHashArrays:(NSArray *)allHashes;
 {
-	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+	@autoreleasepool {
 	
 	// count gene presence
-	for (NSArray *geneHashes in allHashes) {
-		for (NSNumber *hash in geneHashes) {
-			[accumulatedGenePresence addObject:hash];
+		for (NSArray *geneHashes in allHashes) {
+			for (NSNumber *hash in geneHashes) {
+				[accumulatedGenePresence addObject:hash];
+			}
 		}
-	}
-	NSMutableSet *allCounts = [NSMutableSet setWithCapacity:[accumulatedGenePresence count]];
-	for (id gene in accumulatedGenePresence) {
-		[allCounts addObject:[NSNumber numberWithInt:[accumulatedGenePresence countForObject:gene]]];
-	}
+		NSMutableSet *allCounts = [NSMutableSet setWithCapacity:[accumulatedGenePresence count]];
+		for (id gene in accumulatedGenePresence) {
+			[allCounts addObject:[NSNumber numberWithInt:[accumulatedGenePresence countForObject:gene]]];
+		}
+		
+		[self performSelectorOnMainThread:@selector(setTotalGenePresence:) withObject:allCounts waitUntilDone:YES];
+		self.totalGenePresence = allCounts;
 	
-	[self performSelectorOnMainThread:@selector(setTotalGenePresence:) withObject:allCounts waitUntilDone:YES];
-	self.totalGenePresence = allCounts;
-	
-	[pool release];
+	}
 }
 
 @end

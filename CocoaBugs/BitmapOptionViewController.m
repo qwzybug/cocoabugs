@@ -16,7 +16,7 @@
 
 + (BitmapOptionViewController *)controllerWithOptions:(NSDictionary *)options;
 {
-	return [[[self alloc] initWithOptionDictionary:options] autorelease];
+	return [[self alloc] initWithOptionDictionary:options];
 }
 
 - (id)initWithOptionDictionary:(NSDictionary *)options;
@@ -25,8 +25,8 @@
 		return nil;
 	
 	NSString *thePath = [[NSBundle bundleForClass:[self class]] pathForResource:@"BuiltInImages" ofType:@"plist"];
-	builtInImages = [[NSMutableArray arrayWithObject:@"Pick an image..."] retain];
-	builtInImages = [[builtInImages arrayByAddingObjectsFromArray:[NSArray arrayWithContentsOfFile:thePath]] retain];
+	builtInImages = [NSMutableArray arrayWithObject:@"Pick an image..."];
+	builtInImages = [builtInImages arrayByAddingObjectsFromArray:[NSArray arrayWithContentsOfFile:thePath]];
 	
 	self.name = [options objectForKey:@"name"];
 	self.title = [options objectForKey:@"title"];
@@ -36,14 +36,11 @@
 
 - (void)dealloc;
 {
-	self.name = nil;
-	self.title = nil;
 	[self.view removeFromSuperview];
 	
-	[imageView release], imageView = nil;
-	[image release], image = nil;
+	imageView = nil;
+	image = nil;
 	
-	[super dealloc];
 }
 
 - (void)awakeFromNib;

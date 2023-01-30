@@ -63,22 +63,21 @@
 	statistics = [[BugsStatistics alloc] initWithWorld:world];
 	
 	NSString *thePath = [[NSBundle bundleForClass:[self class]] pathForResource:@"PackardBugs" ofType:@"plist"];
-	properties = [[NSDictionary dictionaryWithContentsOfFile:thePath] retain];
+	properties = [NSDictionary dictionaryWithContentsOfFile:thePath];
 	
 	return self;
 }
 
 - (void)dealloc;
 {
-	[world release], world = nil;
-	[statistics release], statistics = nil;
-	[view release], view = nil;
-	[properties release], properties = nil;
-	[foodImage release], foodImage = nil;
+	world = nil;
+	statistics = nil;
+	view = nil;
+	properties = nil;
+	foodImage = nil;
 	
-	[coloringWindowController release], coloringWindowController = nil;
+	coloringWindowController = nil;
 	
-	[super dealloc];
 }
 
 #pragma mark -
@@ -127,8 +126,7 @@
 	if (foodImage == newFoodImage)
 		return;
 	
-	[foodImage release];
-	foodImage = [newFoodImage retain];
+	foodImage = newFoodImage;
 	
 	self.world.foodImage = self.foodImage;
 	

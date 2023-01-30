@@ -26,13 +26,13 @@
 	NSImage *image;
 }
 
-@property(readwrite, retain) NSString *name;
-@property(readwrite, retain) NSString *title;
-@property(readonly, assign) NSArray *builtInImages;
+@property(readwrite, strong) NSString *name;
+@property(readwrite, strong) NSString *title;
+@property(readonly) NSArray *builtInImages;
 @property(readwrite, assign) int selectedImageIndex;
 
-@property (nonatomic, retain) NSImageView *imageView;
-@property (nonatomic, retain) NSImage *image;
+@property (nonatomic, strong) NSImageView *imageView;
+@property (nonatomic, strong) NSImage *image;
 
 - (NSData *)value;
 

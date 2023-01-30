@@ -35,12 +35,8 @@
 	for (NSString *key in stats) {
 		[source removeObserver:self forKeyPath:key];
 	}
-	[stats release];
-	[source release];
 	
-	[statisticsViews release];
 	
-	[super dealloc];
 }
 
 - (void)setSource:(id)statisticsCollector forStatistics:(NSDictionary *)descriptions;
@@ -48,7 +44,7 @@
 	self.source = statisticsCollector;
 	if (!statisticsSize) statisticsSize = 500;
 	
-	NSSortDescriptor *sort = [[[NSSortDescriptor alloc] initWithKey:@"title" ascending:NO] autorelease];
+	NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"title" ascending:NO];
 	for (NSDictionary *description in [[descriptions allValues] sortedArrayUsingDescriptors:[NSArray arrayWithObject:sort]]) {
 		[self registerForPath:[description objectForKey:@"keyPath"]
 						 name:[description objectForKey:@"title"]];
@@ -65,7 +61,7 @@
 #define STATS_WIDTH 350
 #define STATS_HEIGHT 80
 	// create stats object
-	StatisticsData *data = [[[StatisticsData alloc] initWithCapacity:statisticsSize samplingFrequency:self.samplingFrequency] autorelease];
+	StatisticsData *data = [[StatisticsData alloc] initWithCapacity:statisticsSize samplingFrequency:self.samplingFrequency];
 	[stats setObject:data forKey:path];
 	
 	// observe requested key path
@@ -79,7 +75,7 @@
 		// calculate statistics frame
 		NSRect frame = NSMakeRect(0, 80 * ([stats count] - 1), STATS_WIDTH, STATS_HEIGHT);
 		// create stats view
-		StatisticsView *view = [[[StatisticsView alloc] initWithFrame:frame] autorelease];
+		StatisticsView *view = [[StatisticsView alloc] initWithFrame:frame];
 		[view setAutoresizingMask:(NSViewWidthSizable | NSViewMaxYMargin)];
 		
 		NSRect statsFrame = statisticsPanel.frame;

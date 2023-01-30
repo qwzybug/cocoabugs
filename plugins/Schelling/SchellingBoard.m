@@ -43,15 +43,11 @@
 	
 	NSLog(@"Releasing board...");
 	
-	[super dealloc];
 }
 
 - (void)setGame:(SchellingSimulation *)myGame;
 {
-	if (game) {
-		[game release];
-	}
-	game = [myGame retain];
+	game = myGame;
 	
 	if (cellsa) free(cellsa);
 	if (cellsb) free(cellsb);

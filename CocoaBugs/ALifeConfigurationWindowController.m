@@ -39,16 +39,13 @@
 
 - (void)dealloc;
 {
-	self.simulationClasses = nil;
-	self.configurationViewController = nil;
 	self.selectedClassIndices = nil;
 	
-	[super dealloc];
 }
 
 - (void)windowWillClose:(NSNotification *)notification;
 {
-//	[self autorelease];
+    // TODO: inform app delegate that we are through
 }
 
 - (Class <ALifeController>)selectedClass;
@@ -61,8 +58,7 @@
 
 - (void)setSelectedClassIndices:(NSIndexSet *)newIndices;
 {
-	[selectedClassIndices release];
-	selectedClassIndices = [newIndices retain];
+	selectedClassIndices = newIndices;
 	if ([selectedClassIndices count] > 0)
 		[self showConfiguration];
 }
@@ -89,12 +85,10 @@
 {
 	// get configuration options
 	NSDictionary *configuration = [configurationViewController configuration];
+    Class <ALifeController> simulationClass = [self selectedClass];
+    
+    [self.delegate windowController:self didCompleteWithSimulationClass:simulationClass configuration:configuration];
 	
-	// instantiate a simulation window controller with options
-	ALifeWindowController *simulationWindow = [ALifeWindowController windowControllerForModel:[self selectedClass] withConfiguration:configuration];
-	[simulationWindow.window makeKeyWindow];
-	
-	// close our window
 	[[self window] close];
 }
 

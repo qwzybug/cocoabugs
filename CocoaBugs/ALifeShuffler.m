@@ -20,9 +20,9 @@ static NSDictionary *gShuffleTable = NULL;
 + (NSDictionary *)shuffleTable;
 {
 	if (!gShuffleTable) {
-		gShuffleTable = [[NSMutableDictionary dictionary] retain];
-		[gShuffleTable setValue:[[[IntegerShuffler alloc] init] autorelease] forKey:@"Integer"];
-		[gShuffleTable setValue:[[[FloatShuffler alloc] init] autorelease] forKey:@"Float"];
+		gShuffleTable = [NSMutableDictionary dictionary];
+		[gShuffleTable setValue:[[IntegerShuffler alloc] init] forKey:@"Integer"];
+		[gShuffleTable setValue:[[FloatShuffler alloc] init] forKey:@"Float"];
 	}
 	return gShuffleTable;
 }

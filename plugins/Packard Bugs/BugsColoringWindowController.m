@@ -19,10 +19,9 @@
 
 - (void)dealloc;
 {
-	[lastDistributionDisplay release], lastDistributionDisplay = nil;
-	[controller release], controller = nil;
+	lastDistributionDisplay = nil;
+	controller = nil;
 	
-	[super dealloc];
 }
 
 - (void)setGene:(int)newGene;

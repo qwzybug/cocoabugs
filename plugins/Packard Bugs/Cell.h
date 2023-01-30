@@ -19,7 +19,7 @@
 @property(readwrite) int row;
 @property(readwrite) int col;
 @property(readwrite) bool food;
-@property(readwrite, retain) Bug *bug;
+@property(readwrite, strong) Bug *bug;
 
 - (id)initWithFood:(bool)myFood atRow:(int)myRow column:(int)myCol;
 

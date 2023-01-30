@@ -127,49 +127,48 @@ void runSimulations(NSString *configurationFile,
 		printf("Run %d", run + 1);
 	BAIL:
 		;
-		NSAutoreleasePool *runPool = [[NSAutoreleasePool alloc] init];
+		@autoreleasepool {
 		
-		samplingOptions = [NSDictionary dictionaryWithObjectsAndKeys:
-						   shuffleKey, @"key",
-						   shuffleMin, @"minValue",
-						   shuffleMax, @"maxValue",
-						   nil];
-		simulationController = [ALifeSimulationController controllerWithSimulationClass:selectedPlugin
-																		  configuration:configuration
-																			   sampling:samplingOptions];
-		if (!simulationController) {
-			exit(1);
-		}
-		
-		statisticsController = [[[StatisticsController alloc] init] autorelease];
-		int samplingFrequency = 10;
-		statisticsController.statisticsSize = numberOfSteps / samplingFrequency;
-		// TODO: kludge! ugly horrible kludge!
-		statisticsController.samplingFrequency = samplingFrequency;
-		[statisticsController setSource:[simulationController.lifeController statisticsCollector]
-						  forStatistics:[[simulationController.lifeController properties] objectForKey:@"statistics"]];
-		
-		// activity statistics
-		[simulationController.lifeController setCollectActivity:YES];
-		
-		fflush(stdout);
-		for (step = 0; step < numberOfSteps; step++) {
-			if (!simulationController.lifeController.alive) {
-				printf("x");
-				fflush(stdout);
-				[runPool release];
-				goto BAIL;
+			samplingOptions = [NSDictionary dictionaryWithObjectsAndKeys:
+							   shuffleKey, @"key",
+							   shuffleMin, @"minValue",
+							   shuffleMax, @"maxValue",
+							   nil];
+			simulationController = [ALifeSimulationController controllerWithSimulationClass:selectedPlugin
+																			  configuration:configuration
+																				   sampling:samplingOptions];
+			if (!simulationController) {
+				exit(1);
 			}
-			if (step % runFrac == 1) {
-				printf(".");
-				fflush(stdout);
+			
+			statisticsController = [[StatisticsController alloc] init];
+			int samplingFrequency = 10;
+			statisticsController.statisticsSize = numberOfSteps / samplingFrequency;
+			// TODO: kludge! ugly horrible kludge!
+			statisticsController.samplingFrequency = samplingFrequency;
+			[statisticsController setSource:[simulationController.lifeController statisticsCollector]
+							  forStatistics:[[simulationController.lifeController properties] objectForKey:@"statistics"]];
+			
+			// activity statistics
+			[simulationController.lifeController setCollectActivity:YES];
+			
+			fflush(stdout);
+			for (step = 0; step < numberOfSteps; step++) {
+				if (!simulationController.lifeController.alive) {
+					printf("x");
+					fflush(stdout);
+					goto BAIL;
+				}
+				if (step % runFrac == 1) {
+					printf(".");
+					fflush(stdout);
+				}
+				[simulationController.lifeController update];
 			}
-			[simulationController.lifeController update];
-		}
-		NSString *dir = [NSString stringWithFormat:@"%@/%d", outputDirectory, run + 1];
-		[ALifeRunExporter exportSimulation:simulationController withStatistics:statisticsController toDirectory:dir];
+			NSString *dir = [NSString stringWithFormat:@"%@/%d", outputDirectory, run + 1];
+			[ALifeRunExporter exportSimulation:simulationController withStatistics:statisticsController toDirectory:dir];
 		
-		[runPool release];
+		}
 
 		printf("\n");
 	}
@@ -179,45 +178,45 @@ void runSimulations(NSString *configurationFile,
 
 int main(int argc, char *argv[])
 {
-	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-	NSUserDefaults *args = [NSUserDefaults standardUserDefaults];
-	
-	if (argc < 2) {
-		printHelpAndDie();
-	}
-	
-	plugins = [ALifePluginLoader allPlugIns];
-	
-	NSString *command = [NSString stringWithCString:argv[1] encoding:NSASCIIStringEncoding];
-	
-	if ([command isEqual:@"run"]) {
-		if (argc < 3) {
-			printUsageAndDie(kBugsCommandRun);
-		}
-		NSString *configurationFile = [NSString stringWithCString:argv[2] encoding:NSASCIIStringEncoding];
-		NSString *outputDirectory = [args stringForKey:@"-output"];
-		int numberOfSteps = [args integerForKey:@"-steps"];
-		int numberOfRuns  = [args integerForKey:@"-runs"];
-		numberOfRuns = numberOfRuns ? numberOfRuns : 1;
+	@autoreleasepool {
+		NSUserDefaults *args = [NSUserDefaults standardUserDefaults];
 		
-		if (!(configurationFile && outputDirectory && numberOfSteps)) {
-			printUsageAndDie(kBugsCommandRun);
+		if (argc < 2) {
+			printHelpAndDie();
 		}
 		
-		NSString *sampleKey = [args stringForKey:@"-sample"];
+		plugins = [ALifePluginLoader allPlugIns];
 		
-		NSNumber *minValue = [NSNumber numberWithFloat:[args floatForKey:@"-min"]];
-		NSNumber *maxValue = [NSNumber numberWithFloat:[args floatForKey:@"-max"]];
+		NSString *command = [NSString stringWithCString:argv[1] encoding:NSASCIIStringEncoding];
 		
-		runSimulations(configurationFile, outputDirectory, numberOfSteps, numberOfRuns, sampleKey, minValue, maxValue);
-	}
-	else if ([command isEqual:@"plugins"]) {
-		printPluginsAndDie();
-	}
-	else {
-		printHelpAndDie();
-	}
+		if ([command isEqual:@"run"]) {
+			if (argc < 3) {
+				printUsageAndDie(kBugsCommandRun);
+			}
+			NSString *configurationFile = [NSString stringWithCString:argv[2] encoding:NSASCIIStringEncoding];
+			NSString *outputDirectory = [args stringForKey:@"-output"];
+			int numberOfSteps = [args integerForKey:@"-steps"];
+			int numberOfRuns  = [args integerForKey:@"-runs"];
+			numberOfRuns = numberOfRuns ? numberOfRuns : 1;
+			
+			if (!(configurationFile && outputDirectory && numberOfSteps)) {
+				printUsageAndDie(kBugsCommandRun);
+			}
+			
+			NSString *sampleKey = [args stringForKey:@"-sample"];
+			
+			NSNumber *minValue = [NSNumber numberWithFloat:[args floatForKey:@"-min"]];
+			NSNumber *maxValue = [NSNumber numberWithFloat:[args floatForKey:@"-max"]];
+			
+			runSimulations(configurationFile, outputDirectory, numberOfSteps, numberOfRuns, sampleKey, minValue, maxValue);
+		}
+		else if ([command isEqual:@"plugins"]) {
+			printPluginsAndDie();
+		}
+		else {
+			printHelpAndDie();
+		}
 	
-	[pool release];
+	}
 	return 0;
 }

@@ -27,7 +27,7 @@
         }
 	}
 	
-	NSSortDescriptor *nameSort = [[[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES] autorelease];
+	NSSortDescriptor *nameSort = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
 	[plugIns sortUsingDescriptors:[NSArray arrayWithObjects:nameSort, nil]];
 	
 	return plugIns;

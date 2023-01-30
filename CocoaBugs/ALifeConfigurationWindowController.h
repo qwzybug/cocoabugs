@@ -8,8 +8,13 @@
 
 #import <Cocoa/Cocoa.h>
 
+#import <Bugs/ALifeController.h>
 
-@class ALifeConfigurationViewController;
+@class ALifeConfigurationWindowController, ALifeConfigurationViewController, ALifeController;
+
+@protocol ALifeConfigurationWindowControllerDelegate
+- (void)windowController:(ALifeConfigurationWindowController *)controller didCompleteWithSimulationClass:(Class <ALifeController>)simulationClass configuration:(NSDictionary *)configuration;
+@end
 
 @interface ALifeConfigurationWindowController : NSWindowController {
 	ALifeConfigurationViewController *configurationViewController;
@@ -20,9 +25,11 @@
 	IBOutlet NSScrollView *scrollView;
 }
 
-@property(readwrite, retain) ALifeConfigurationViewController *configurationViewController;
-@property(readwrite, retain) NSMutableArray *simulationClasses;
-@property(readwrite, retain) NSIndexSet *selectedClassIndices;
+@property (nonatomic, strong) ALifeConfigurationViewController *configurationViewController;
+@property (nonatomic, strong) NSMutableArray *simulationClasses;
+@property (nonatomic, strong) NSIndexSet *selectedClassIndices;
+
+@property (nonatomic, weak) id<ALifeConfigurationWindowControllerDelegate> delegate;
 
 + (ALifeConfigurationWindowController *)configurationWindowController;
 

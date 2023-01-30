@@ -51,7 +51,6 @@
 		
 		NSData *printData = [printView dataWithPDFInsideRect:printingBounds];
 		[printData writeToFile:[NSString stringWithFormat:@"%@/statistics.pdf", path] atomically:NO];
-		[printView release];
 	}
 	
 	// export statistics to CSV

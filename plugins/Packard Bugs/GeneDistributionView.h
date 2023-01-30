@@ -25,7 +25,7 @@
 
 - (void)timerTick:(NSTimer *)theTimer;
 
-@property (nonatomic, retain) NSSet *bugs;
+@property (nonatomic, strong) NSSet *bugs;
 @property (nonatomic, assign) int gene;
 
 @end

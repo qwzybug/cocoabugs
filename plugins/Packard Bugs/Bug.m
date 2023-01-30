@@ -51,10 +51,6 @@
 	return self;
 }
 
-- (void)dealloc;
-{
-	[super dealloc];
-}
 
 - (void)doEat:(int) amount;
 {
@@ -69,7 +65,7 @@
 - (Bug *)doReproduceWithMutationRate:(float) mutationRate;
 {
 	food = food / 2;
-	return [[[Bug alloc] initWithFood:food andGenes:genes mutationRate:mutationRate] autorelease];
+	return [[Bug alloc] initWithFood:food andGenes:genes mutationRate:mutationRate];
 }
 
 - (BugMovement)getMovementForGene:(int) num;

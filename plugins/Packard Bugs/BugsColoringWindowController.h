@@ -21,8 +21,8 @@
 	NSDate *lastDistributionDisplay;
 }
 
-@property (nonatomic, retain) BugsController *controller;
-@property (nonatomic, retain) NSDate *lastDistributionDisplay;
+@property (nonatomic, strong) BugsController *controller;
+@property (nonatomic, strong) NSDate *lastDistributionDisplay;
 
 - (void)setGene:(int)newGene;
 - (void)updateDistributionView;

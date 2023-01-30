@@ -14,7 +14,7 @@
 
 @synthesize lifeController, configuration;
 
-- (id)initWithSimulationClass:(Class <ALifeController, NSObject>)modelClass configuration:(NSDictionary *)theConfiguration;
+- (id)initWithSimulationClass:(Class)modelClass configuration:(NSDictionary *)theConfiguration;
 {
 	if (!(self = [super init]))
 		return nil;
@@ -22,6 +22,7 @@
 	int seed = [[theConfiguration objectForKey:@"seed"] intValue];
 	srandom(seed);
 	
+    // weird: constraining Class to protocol ALifeController makes +alloc not work...
     lifeController = [[modelClass alloc] initWithConfiguration:theConfiguration];
 	self.configuration = [NSDictionary dictionaryWithDictionary:theConfiguration];
 	
@@ -65,15 +66,8 @@
 	}
 	
 	ALifeSimulationController *controller = [[self alloc] initWithSimulationClass:modelClass configuration:theConfiguration];
-	return [controller autorelease];
+	return controller;
 }
 
-- (void)dealloc;
-{
-	self.lifeController = nil;
-	self.configuration = nil;
-	
-	[super dealloc];
-}
 
 @end

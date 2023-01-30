@@ -49,10 +49,10 @@
 	int activityDelta;
 }
 
-@property (readwrite, retain) NSMutableSet *bugs;
-@property (readwrite, retain) NSMutableSet *morgue;
-@property (readwrite, retain) NSMutableSet *maternity;
-@property (readwrite, retain) NSCountedSet *activeGeneCounts;
+@property (readwrite, strong) NSMutableSet *bugs;
+@property (readwrite, strong) NSMutableSet *morgue;
+@property (readwrite, strong) NSMutableSet *maternity;
+@property (readwrite, strong) NSCountedSet *activeGeneCounts;
 
 @property (readwrite) int height;
 @property (readwrite) int width;
@@ -66,7 +66,7 @@
 @property (readwrite) int movementCost;
 @property (readwrite) int eatAmount;
 @property (copy, readwrite) NSMutableArray *grid;
-@property (nonatomic, retain) NSImage *foodImage;
+@property (nonatomic, strong) NSImage *foodImage;
 @property (readonly) int foodAmount;
 
 - (id)initWithFoodImage:(NSImage *)foodImage;

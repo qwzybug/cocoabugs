@@ -23,7 +23,7 @@
 @property (readonly) int samplingFrequency;
 @property (readwrite) int cursor;
 @property (readwrite) bool multiway;
-@property (nonatomic, readonly) NSString *csv;
+@property (weak, nonatomic, readonly) NSString *csv;
 
 - (id)initWithCapacity:(int)capacity samplingFrequency:(int)frequency;
 - (void)addDataPoint:(int)datum;

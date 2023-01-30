@@ -17,7 +17,7 @@
 	int colorGene;
 }
 
-@property (readwrite, retain) World *world;
+@property (readwrite, strong) World *world;
 @property (nonatomic, assign) int colorGene;
 
 @end

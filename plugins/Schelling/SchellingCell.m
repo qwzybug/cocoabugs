@@ -25,15 +25,14 @@
 	row = r;
 	column = c;
 	
-	neighbors = [[NSMutableSet set] retain];
+	neighbors = [NSMutableSet set];
 	return self;
 }
 
 - (void)dealloc;
 {
-	[neighbors release], neighbors = nil;
+	neighbors = nil;
 	
-	[super dealloc];
 }
 
 - (int)liveNeighbors;

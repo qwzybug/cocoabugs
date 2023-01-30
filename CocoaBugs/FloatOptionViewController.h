@@ -22,13 +22,13 @@
 	NSNumber *value;
 }
 
-@property (nonatomic, retain) IBOutlet NSSlider *slider;
-@property (nonatomic, retain) NSString *name;
-@property (nonatomic, retain) NSString *title;
+@property (nonatomic, strong) IBOutlet NSSlider *slider;
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *title;
 
 @property (nonatomic, assign) float minValue;
 @property (nonatomic, assign) float maxValue;
-@property (nonatomic, retain) NSNumber *value;
+@property (nonatomic, strong) NSNumber *value;
 
 + (FloatOptionViewController *)controllerWithOptions:(NSDictionary *)options;
 - (id)initWithOptionDictionary:(NSDictionary *)options;

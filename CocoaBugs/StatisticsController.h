@@ -19,10 +19,10 @@
 	int samplingFrequency;
 }
 
-@property (readwrite, retain) id source;
-@property (readwrite, retain) NSMutableArray *statisticsViews;
+@property (readwrite, strong) id source;
+@property (readwrite, strong) NSMutableArray *statisticsViews;
 @property (readwrite, assign) int statisticsSize;
-@property (readwrite, retain) NSMutableDictionary *stats;
+@property (readwrite, strong) NSMutableDictionary *stats;
 @property (nonatomic, assign) int samplingFrequency;
 
 - (void)setSource:(id)statisticsCollector forStatistics:(NSDictionary *)descriptions;

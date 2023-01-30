@@ -16,6 +16,6 @@
 }
 
 @property(readwrite, copy) NSString *title;
-@property(readwrite, retain) StatisticsData *stats;
+@property(readwrite, strong) StatisticsData *stats;
 
 @end
