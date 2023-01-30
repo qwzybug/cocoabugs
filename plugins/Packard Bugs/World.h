@@ -49,24 +49,25 @@
 	int activityDelta;
 }
 
-@property (readwrite, strong) NSMutableSet *bugs;
-@property (readwrite, strong) NSMutableSet *morgue;
-@property (readwrite, strong) NSMutableSet *maternity;
-@property (readwrite, strong) NSCountedSet *activeGeneCounts;
+@property (nonatomic, strong) NSMutableSet *bugs;
+@property (nonatomic, strong) NSMutableSet *morgue;
+@property (nonatomic, strong) NSMutableSet *maternity;
+@property (nonatomic, strong) NSCountedSet *activeGeneCounts;
 
-@property (readwrite) int height;
-@property (readwrite) int width;
-@property (readwrite) int population;
-@property (readwrite) int births;
-@property (readwrite) int deaths;
-@property (readwrite) int lifespan;
-@property (readwrite) int ticks;
-@property (readwrite) float mutationRate;
-@property (readwrite) int reproductionFood;
-@property (readwrite) int movementCost;
-@property (readwrite) int eatAmount;
-@property (copy, readwrite) NSMutableArray *grid;
+@property (nonatomic, assign) int height;
+@property (nonatomic, assign) int width;
+@property (nonatomic, assign) int population;
+@property (nonatomic, assign) int births;
+@property (nonatomic, assign) int deaths;
+@property (nonatomic, assign) int lifespan;
+@property (nonatomic, assign) int ticks;
+@property (nonatomic, assign) float mutationRate;
+@property (nonatomic, assign) int reproductionFood;
+@property (nonatomic, assign) int movementCost;
+@property (nonatomic, assign) int eatAmount;
+@property (nonatomic, copy) NSMutableArray *grid;
 @property (nonatomic, strong) NSImage *foodImage;
+
 @property (readonly) int foodAmount;
 
 - (id)initWithFoodImage:(NSImage *)foodImage;

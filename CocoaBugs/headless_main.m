@@ -22,6 +22,10 @@ typedef enum {
 	kBugsCommandPlugins
 } BugsCommand;
 
+void printHelpAndDie(void);
+void printUsageAndDie(BugsCommand command);
+void printPluginsAndDie(void);
+
 void printHelpAndDie()
 {
 	NSMutableArray *usageStrings = [NSMutableArray array];
@@ -114,7 +118,7 @@ void runSimulations(NSString *configurationFile,
 	// check if directory exists
 	NSFileManager *fileManager = [NSFileManager defaultManager];
 	if (![fileManager fileExistsAtPath:outputDirectory])
-		[fileManager createDirectoryAtPath:outputDirectory attributes:NULL];	
+		[fileManager createDirectoryAtPath:outputDirectory withIntermediateDirectories:YES attributes:nil error:nil];
 	
 	int step;
 	int run;
@@ -195,8 +199,8 @@ int main(int argc, char *argv[])
 			}
 			NSString *configurationFile = [NSString stringWithCString:argv[2] encoding:NSASCIIStringEncoding];
 			NSString *outputDirectory = [args stringForKey:@"-output"];
-			int numberOfSteps = [args integerForKey:@"-steps"];
-			int numberOfRuns  = [args integerForKey:@"-runs"];
+			int numberOfSteps = (int)[args integerForKey:@"-steps"];
+			int numberOfRuns  = (int)[args integerForKey:@"-runs"];
 			numberOfRuns = numberOfRuns ? numberOfRuns : 1;
 			
 			if (!(configurationFile && outputDirectory && numberOfSteps)) {

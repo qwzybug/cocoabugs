@@ -14,7 +14,6 @@
 	bool enabled;
 }
 
-@property(assign, readwrite) bool enabled;
-@property(assign, readwrite) int neighborhoodCode;
+@property(nonatomic, assign) int neighborhoodCode;
 
 @end

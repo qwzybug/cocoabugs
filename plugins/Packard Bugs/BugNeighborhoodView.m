@@ -2,7 +2,7 @@
 
 @implementation BugNeighborhoodView
 
-@synthesize neighborhoodCode, enabled;
+@synthesize neighborhoodCode;
 
 - (id)initWithFrame:(NSRect)frame;
 {
@@ -10,7 +10,6 @@
 		return nil;
 	
 	neighborhoodCode = 0;
-	enabled = true;
 	
 	rects[0] = NSMakeRect(11.0, 22.0, 10.0, 10.0); // top-middle
 	rects[1] = NSMakeRect(0.0, 11.0, 10.0, 10.0);  // middle-left
@@ -24,7 +23,6 @@
 - (void)awakeFromNib;
 {
 	neighborhoodCode = 0;
-	enabled = true;
 	
 	rects[0] = NSMakeRect(11.0, 22.0, 10.0, 10.0); // top-middle
 	rects[1] = NSMakeRect(0.0, 11.0, 10.0, 10.0);  // middle-left
@@ -45,9 +43,9 @@
 	}
 }
 
-- (NSInteger)sendActionOn:(NSInteger)mask;
+- (NSInteger)sendActionOn:(NSEventMask)mask;
 {
-	return NSLeftMouseUpMask;
+    return NSEventMaskLeftMouseUp;
 }
 
 - (void)mouseDown:(NSEvent *)theEvent {
@@ -62,15 +60,5 @@
 	
 	[controller setGene:neighborhoodCode];
 }
-
-//- (id)initWithCoder:(NSCoder *)decoder;
-//{
-//	return [super initWithCoder:decoder];
-//}
-//
-//- (void)encodeWithCoder:(NSCoder *)encoder;
-//{
-//	[super encodeWithCoder:encoder];
-//}
 
 @end

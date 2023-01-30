@@ -21,6 +21,6 @@
 	NSRect *cellse;
 }
 
-@property(readwrite, strong) SchellingSimulation *game;
+@property(nonatomic, strong) SchellingSimulation *game;
 
 @end
