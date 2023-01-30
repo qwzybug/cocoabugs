@@ -58,13 +58,13 @@
 //		return;
 	
 	// population
-	self.population = [NSSet setWithObject:[NSNumber numberWithInt:[world.bugs count]]];
+	self.population = [NSSet setWithObject:[NSNumber numberWithInteger:[world.bugs count]]];
 	
 	// births
-	self.births = [NSSet setWithObject:[NSNumber numberWithInt:[world.maternity count]]];
+	self.births = [NSSet setWithObject:[NSNumber numberWithInteger:[world.maternity count]]];
 	
 	// deaths
-	self.deaths = [NSSet setWithObject:[NSNumber numberWithInt:[world.morgue count]]];
+	self.deaths = [NSSet setWithObject:[NSNumber numberWithInteger:[world.morgue count]]];
 	
 	// average age
 	int ages = 0;
@@ -111,7 +111,7 @@
 		}
 		NSMutableSet *allCounts = [NSMutableSet setWithCapacity:[accumulatedGenePresence count]];
 		for (id gene in accumulatedGenePresence) {
-			[allCounts addObject:[NSNumber numberWithInt:[accumulatedGenePresence countForObject:gene]]];
+			[allCounts addObject:[NSNumber numberWithInteger:[accumulatedGenePresence countForObject:gene]]];
 		}
 		
 		[self performSelectorOnMainThread:@selector(setTotalGenePresence:) withObject:allCounts waitUntilDone:YES];

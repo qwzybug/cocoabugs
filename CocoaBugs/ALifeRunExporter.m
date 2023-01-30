@@ -21,7 +21,7 @@
 	// check if directory exists
 	NSFileManager *fileManager = [NSFileManager defaultManager];
 	if (![fileManager fileExistsAtPath:path])
-		[fileManager createDirectoryAtPath:path attributes:NULL];
+        [fileManager createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:nil];
 	
 	// export configuration to .cocoabugs file
 	// TODO: DRY this up (repeated in ALifeConfigurationWindowController)

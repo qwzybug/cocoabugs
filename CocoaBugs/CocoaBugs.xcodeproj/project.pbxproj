@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,7 +24,6 @@
 		034DCD9C0E09D1950045943A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 034DCD9B0E09D1950045943A /* MainMenu.xib */; };
 		0351906E0E7DD5CC00205E7B /* record.png in Resources */ = {isa = PBXBuildFile; fileRef = 0351906D0E7DD5CC00205E7B /* record.png */; };
 		035190700E7DD65700205E7B /* record_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 0351906F0E7DD65700205E7B /* record_small.png */; };
-		035190920E7DD9D600205E7B /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 035190910E7DD9D600205E7B /* QTKit.framework */; };
 		0359DC9B0E7F1AA300EEAC01 /* DMQuicktimeExporter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0359DC9A0E7F1AA300EEAC01 /* DMQuicktimeExporter.xib */; };
 		035AF28410903F6100725226 /* NSDictionary_Merging.m in Sources */ = {isa = PBXBuildFile; fileRef = 035AF28310903F6100725226 /* NSDictionary_Merging.m */; };
 		0365F7B80E1BCEC30074AA88 /* ALifeWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0365F7B70E1BCEC30074AA88 /* ALifeWindowController.m */; };
@@ -58,11 +57,11 @@
 		03D46EE20E595C77000DE764 /* BuiltInImages.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03D46EE10E595C77000DE764 /* BuiltInImages.plist */; };
 		03EDB3360E4E26F90008990A /* ALifeShuffler.m in Sources */ = {isa = PBXBuildFile; fileRef = 03EDB3350E4E26F90008990A /* ALifeShuffler.m */; };
 		03EF0F2B1097AB8200A0ED41 /* ALifeRunExporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BEDD7B0E54AAC800694CD2 /* ALifeRunExporter.m */; };
+		03F3E15D298798B200AF1A34 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03F3E15C298798B200AF1A34 /* Cocoa.framework */; };
 		03FA837510981F7F003C6A0F /* Schelling.plugin in Copy headless plugins */ = {isa = PBXBuildFile; fileRef = 035AF0F010901C9D00725226 /* Schelling.plugin */; };
 		03FA837610981F7F003C6A0F /* Packard Bugs Plugin.plugin in Copy headless plugins */ = {isa = PBXBuildFile; fileRef = 035AF0BF10901B9F00725226 /* Packard Bugs Plugin.plugin */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
-		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,14 +140,14 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		03072B4E109FB8A000F9DC20 /* Copy headless executable */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			dstPath = Contents/MacOS;
 			dstSubfolderSpec = 1;
 			files = (
 				03072B48109FB89B00F9DC20 /* HeadlessBugs in Copy headless executable */,
 			);
 			name = "Copy headless executable";
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 		};
 		03496D1B1096BB16009BD558 /* Copy frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -220,7 +219,6 @@
 		0351906F0E7DD65700205E7B /* record_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = record_small.png; sourceTree = "<group>"; };
 		0351908B0E7DD8D300205E7B /* DMQuicktimeExporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMQuicktimeExporter.h; sourceTree = "<group>"; };
 		0351908C0E7DD8D300205E7B /* DMQuicktimeExporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMQuicktimeExporter.m; sourceTree = "<group>"; };
-		035190910E7DD9D600205E7B /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		0359DC9A0E7F1AA300EEAC01 /* DMQuicktimeExporter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DMQuicktimeExporter.xib; sourceTree = "<group>"; };
 		035AF0BA10901B9F00725226 /* Packard Bugs Plugin.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Packard Bugs Plugin.xcodeproj"; path = "../plugins/Packard Bugs/Packard Bugs Plugin.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		035AF0EB10901C9D00725226 /* Schelling.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Schelling.xcodeproj; path = ../plugins/Schelling/Schelling.xcodeproj; sourceTree = SOURCE_ROOT; };
@@ -235,7 +233,6 @@
 		037880A5106ED41A0023E6EA /* ALifeTinkerPanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALifeTinkerPanelController.m; sourceTree = "<group>"; };
 		037880E5106EDA860023E6EA /* TinkerPanel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TinkerPanel.xib; sourceTree = "<group>"; };
 		03A10DB310B3DC590039B8E4 /* GameOfLife.plugin.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameOfLife.plugin.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		03A10DB410B3DC590039B8E4 /* GameOfLife.plugin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GameOfLife.plugin-Info.plist"; sourceTree = "<group>"; };
 		03AE61E10E4C902000C0E469 /* Shuffle.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Shuffle.tif; sourceTree = "<group>"; };
 		03B539860E230663007FCED7 /* ALifeConfigurationWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALifeConfigurationWindowController.h; sourceTree = "<group>"; };
 		03B539870E230663007FCED7 /* ALifeConfigurationWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALifeConfigurationWindowController.m; sourceTree = "<group>"; };
@@ -243,7 +240,6 @@
 		03B5398F0E230938007FCED7 /* IntegerOptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntegerOptionViewController.h; sourceTree = "<group>"; };
 		03B539900E230938007FCED7 /* IntegerOptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntegerOptionViewController.m; sourceTree = "<group>"; };
 		03B539A20E230B4A007FCED7 /* IntegerOptionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IntegerOptionView.xib; sourceTree = "<group>"; };
-		03BE21B70E7F0388005E5D76 /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = /System/Library/Frameworks/QuickTime.framework; sourceTree = "<absolute>"; };
 		03BEDBD00E549AAF00694CD2 /* StatisticsTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsTableView.h; sourceTree = "<group>"; };
 		03BEDBD10E549AAF00694CD2 /* StatisticsTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticsTableView.m; sourceTree = "<group>"; };
 		03BEDD7A0E54AAC800694CD2 /* ALifeRunExporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALifeRunExporter.h; sourceTree = "<group>"; };
@@ -264,12 +260,9 @@
 		03DAE2E91096F162009D10E7 /* HeadlessBugs_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadlessBugs_Prefix.pch; sourceTree = "<group>"; };
 		03EDB3340E4E26F90008990A /* ALifeShuffler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALifeShuffler.h; sourceTree = "<group>"; };
 		03EDB3350E4E26F90008990A /* ALifeShuffler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALifeShuffler.m; sourceTree = "<group>"; };
+		03F3E15C298798B200AF1A34 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
-		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
-		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* CocoaBugs_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaBugs_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* CocoaBugs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoaBugs.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -295,8 +288,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
-				035190920E7DD9D600205E7B /* QTKit.framework in Frameworks */,
+				03F3E15D298798B200AF1A34 /* Cocoa.framework in Frameworks */,
 				03496D351096BBC8009BD558 /* Bugs.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,24 +411,12 @@
 			name = bitmaps;
 			sourceTree = "<group>";
 		};
-		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+		03F3E15B298798B200AF1A34 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				03BE21B70E7F0388005E5D76 /* QuickTime.framework */,
-				035190910E7DD9D600205E7B /* QTKit.framework */,
-				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				03F3E15C298798B200AF1A34 /* Cocoa.framework */,
 			);
-			name = "Linked Frameworks";
-			sourceTree = "<group>";
-		};
-		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
-				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
-				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
-			);
-			name = "Other Frameworks";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
@@ -458,10 +438,10 @@
 				038E9C610D71000E00325776 /* Controllers */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
-				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				03F3E15B298798B200AF1A34 /* Frameworks */,
+				03496D2F1096BBC4009BD558 /* BugsFramework.xcodeproj */,
 				035AF0B910901B8E00725226 /* Plugins */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				03A10DB410B3DC590039B8E4 /* GameOfLife.plugin-Info.plist */,
 			);
 			name = CocoaBugs;
 			sourceTree = "<group>";
@@ -504,16 +484,6 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
-				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
-				03496D2F1096BBC4009BD558 /* BugsFramework.xcodeproj */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -524,7 +494,6 @@
 				03DAE2DC1096F04C009D10E7 /* Copy Frameworks */,
 				03039EF90E3FCDEC0043E65A /* Sources */,
 				03039EFA0E3FCDEC0043E65A /* Frameworks */,
-				03459F801092DD9400116C5A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -701,7 +670,8 @@
 /* Begin PBXShellScriptBuildPhase section */
 		03072B50109FB8B900F9DC20 /* Symlink headless executable */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			alwaysOutOfDate = 1;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
@@ -709,22 +679,9 @@
 			name = "Symlink headless executable";
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "cd $BUILT_PRODUCTS_DIR\nrm -f cocoabugs;\nln -s CocoaBugs.app/Contents/MacOS/HeadlessBugs cocoabugs\n";
-		};
-		03459F801092DD9400116C5A /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -839,20 +796,12 @@
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 823BK7BSSJ;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../BugsFramework/build/Release\"",
-				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = HeadlessBugs_Prefix.pch;
 				INSTALL_PATH = /usr/local/bin;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../BugsFramework/build/Release\"",
-				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -878,18 +827,10 @@
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 823BK7BSSJ;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../BugsFramework/build/Release\"",
-				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = HeadlessBugs_Prefix.pch;
 				INSTALL_PATH = /usr/local/bin;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../BugsFramework/build/Release\"",
-				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -979,10 +920,6 @@
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 823BK7BSSJ;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../BugsFramework/build/Release\"",
-				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -990,10 +927,6 @@
 				GCC_PREFIX_HEADER = CocoaBugs_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../BugsFramework/build/Release\"",
-				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = org.doormouse.CocoaBugs;
 				PRODUCT_NAME = CocoaBugs;
@@ -1014,19 +947,11 @@
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 823BK7BSSJ;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../BugsFramework/build/Release\"",
-				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = CocoaBugs_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../BugsFramework/build/Release\"",
-				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = org.doormouse.CocoaBugs;
 				PRODUCT_NAME = CocoaBugs;
@@ -1038,6 +963,7 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
@@ -1079,6 +1005,7 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;

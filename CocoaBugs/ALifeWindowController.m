@@ -151,13 +151,15 @@
 - (IBAction)actionExportConfiguration:(id)sender;
 {
 	NSSavePanel *savePanel = [NSSavePanel savePanel];
-	[savePanel setRequiredFileType:@"cocoabugs"];
-	[savePanel beginSheetForDirectory:nil file:nil modalForWindow:[self window] modalDelegate:self didEndSelector:@selector(exportConfigurationPanelDidEnd:returnCode:contextInfo:) contextInfo:nil];
+	[savePanel setAllowedFileTypes:@[@"cocoabugs"]];
+    [savePanel beginSheetModalForWindow:[self window] completionHandler:^(NSModalResponse result) {
+        [self savePanelCompleted:savePanel result:result];
+    }];
 }
 
-- (void)exportConfigurationPanelDidEnd:(NSSavePanel *)sheet returnCode:(int)returnCode  contextInfo:(void  *)contextInfo;
+- (void)savePanelCompleted:(NSSavePanel *)sheet result:(NSModalResponse)result;
 {
-	if (returnCode == NSOKButton) {
+    if (result == NSModalResponseOK) {
 		NSDictionary *initialConfiguration = simulationController.configuration;
 		NSDictionary *currentConfiguration = [tinkerPanelController.configurationViewController configuration];
 		NSDictionary *configuration = [initialConfiguration dictionaryByMergingWithDictionary:currentConfiguration];
@@ -165,7 +167,10 @@
 							  [[simulationController.lifeController class] name], @"identifier",
 							  configuration, @"configuration",
 							  nil];
-		[data writeToFile:[sheet filename] atomically:YES];
+        NSError *err = nil;
+        if (![data writeToURL:[sheet URL] error:&err]) {
+            NSLog(@"Error exporting configuration: %@", [err localizedDescription]);
+        }
 	}
 }
 

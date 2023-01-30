@@ -16,7 +16,11 @@
 - (void)dealloc;
 {
 	self.stats = nil;
-	
+}
+
+- (StatisticsData *)stats;
+{
+    return stats;
 }
 
 - (void)setStats:(StatisticsData *)newStats;

@@ -58,7 +58,7 @@
 	
 	// check for .plugin files
 	for (NSString *currPath in bundleSearchPaths) {
-		for (NSString *currBundlePath in [[NSFileManager defaultManager] directoryContentsAtPath:currPath]) {
+        for (NSString *currBundlePath in [[NSFileManager defaultManager] contentsOfDirectoryAtPath:currPath error:nil]) {
 			if ([[currBundlePath pathExtension] isEqualToString:ext]) {
 				[allBundles addObject:[currPath stringByAppendingPathComponent:currBundlePath]];
 			}

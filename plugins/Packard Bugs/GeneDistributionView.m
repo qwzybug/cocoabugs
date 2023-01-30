@@ -50,7 +50,7 @@
 	
 	// draw gene count distribution
 	int rectCount = 0;
-	int population = [self.bugs count];
+	NSUInteger population = [self.bugs count];
 	NSRect geneRects[120];
 	for (i = 0; i < 31; i++) {
 		for (j = 0; j < 31; j++) {

@@ -23,9 +23,9 @@
 	BOOL recording;
 }
 
-@property(readwrite, assign) BOOL running;
-@property(readwrite, assign) BOOL recording;
-@property(readwrite, strong) ALifeSimulationController *simulationController;
+@property(nonatomic, assign) BOOL running;
+@property(nonatomic, assign) BOOL recording;
+@property(nonatomic, strong) ALifeSimulationController *simulationController;
 //@property(readwrite, retain) DMQuicktimeExporter *movieExporter;
 
 + (id)windowControllerForModel:(Class <ALifeController>)lifeController withConfiguration:(NSDictionary *)configuration;

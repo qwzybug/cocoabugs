@@ -24,7 +24,6 @@
 
 @property (nonatomic, strong) IBOutlet NSSlider *slider;
 @property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSString *title;
 
 @property (nonatomic, assign) float minValue;
 @property (nonatomic, assign) float maxValue;

@@ -43,7 +43,7 @@
 	}
 	NSMutableSet *allCounts = [NSMutableSet setWithCapacity:[accumulatedGenePresence count]];
 	for (id gene in accumulatedGenePresence) {
-		[allCounts addObject:[NSNumber numberWithInt:[accumulatedGenePresence countForObject:gene]]];
+		[allCounts addObject:[NSNumber numberWithInteger:[accumulatedGenePresence countForObject:gene]]];
 	}
 	
 	statistics.accumulatedGenePresence = accumulatedGenePresence;

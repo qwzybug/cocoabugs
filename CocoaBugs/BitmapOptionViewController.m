@@ -9,9 +9,11 @@
 #import "BitmapOptionViewController.h"
 
 
-@implementation BitmapOptionViewController
+@implementation BitmapOptionViewController {
+    int _selectedImageIndex;
+}
 
-@synthesize name, title, builtInImages, selectedImageIndex;
+@synthesize name, builtInImages;
 @synthesize image, imageView;
 
 + (BitmapOptionViewController *)controllerWithOptions:(NSDictionary *)options;
@@ -49,9 +51,16 @@
 	self.selectedImageIndex = 1;
 }
 
+- (int)selectedImageIndex;
+{
+    return _selectedImageIndex;
+}
+
 - (void)setSelectedImageIndex:(int)imageIndex;
 {
-	if (imageIndex) {
+    _selectedImageIndex = imageIndex;
+    
+	if (_selectedImageIndex) {
 		NSString *selectedImageName = [builtInImages objectAtIndex:imageIndex];
 		NSImage *newImage = [NSImage imageNamed:selectedImageName];
 		self.image = newImage;
