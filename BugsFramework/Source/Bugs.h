@@ -1,4 +1,4 @@
 
-#import "ALifeController.h"
-#import "NSArray+Shuffling.h"
-#import "NSString+KeyPathComponents.h"
+#import <Bugs/ALifeController.h>
+#import <Bugs/NSArray+Shuffling.h>
+#import <Bugs/NSString+KeyPathComponents.h>
