@@ -105,11 +105,12 @@
 - (void)windowWillClose:(NSNotification *)notification;
 {
 	self.running = NO;
-//	[self autorelease];
+    // TODO: close info panels and inform App Delegate that we are through.
 }
 
 - (void)setRecording:(BOOL)isRecording;
 {
+    // TODO: re-implement
 //	if (isRecording) {
 ////        self.movieExporter = [DMQuicktimeExporter movieExporterForView:[self.window contentView]];
 //		recording = YES;

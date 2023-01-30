@@ -45,7 +45,7 @@
 
 - (void)windowWillClose:(NSNotification *)notification;
 {
-//	[self autorelease];
+    // TODO: inform app delegate that we are through
 }
 
 - (Class <ALifeController>)selectedClass;
