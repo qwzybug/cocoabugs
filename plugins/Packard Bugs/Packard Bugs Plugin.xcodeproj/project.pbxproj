@@ -350,6 +350,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Packard Bugs Plugin_Prefix.pch";
 				INFOPLIST_FILE = Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = org.doormouse.CocoaBugs.PackardBugsPlugin;
 				PRODUCT_NAME = "Packard Bugs Plugin";
 				WRAPPER_EXTENSION = plugin;
@@ -363,6 +364,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Packard Bugs Plugin_Prefix.pch";
 				INFOPLIST_FILE = Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = org.doormouse.CocoaBugs.PackardBugsPlugin;
 				PRODUCT_NAME = "Packard Bugs Plugin";
 				WRAPPER_EXTENSION = plugin;
